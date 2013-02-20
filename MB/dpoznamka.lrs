@@ -1,0 +1,15 @@
+{ This is an automatically generated lazarus resource file }
+
+
+LazarusResources.Add('TfrmPoznamka','FORMDATA',[
+  'TPF0'#12'TfrmPoznamka'#11'frmPoznamka'#4'Left'#3'"'#1#6'Height'#3','#1#3'Top'
+  +#3#175#0#5'Width'#3#144#1#7'Caption'#6#9'Pozn'#195#161'mka'#12'ClientHeight'
+  +#3','#1#11'ClientWidth'#3#144#1#8'Position'#7#15'poDesktopCenter'#10'LCLVers'
+  +'ion'#6#8'0.9.28.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'('#3'Top'#3
+  +#4#1#5'Width'#3#144#1#5'Align'#7#8'alBottom'#12'ClientHeight'#2'('#11'Client'
+  +'Width'#3#144#1#8'TabOrder'#2#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3#168#0#6'He'
+  +'ight'#2#30#3'Top'#2#4#5'Width'#2'K'#7'Caption'#6#3'&OK'#7'Default'#9#4'Kind'
+  +#7#4'bkOK'#11'ModalResult'#2#1#8'TabOrder'#2#0#0#0#0#5'TMemo'#5'Memo1'#4'Lef'
+  +'t'#2#0#6'Height'#3#4#1#3'Top'#2#0#5'Width'#3#144#1#5'Align'#7#8'alClient'#8
+  +'TabOrder'#2#1#0#0#0
+]);

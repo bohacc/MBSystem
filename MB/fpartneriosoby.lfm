@@ -1,0 +1,206 @@
+﻿inherited frmPartneriOsoby: TfrmPartneriOsoby
+  Height = 324
+  Caption = 'Partneři - osoby'
+  ClientHeight = 304
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 281
+  end
+  inherited ToolBar1: TToolBar
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      ImageIndex = 0
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = nil
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = nil
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 230
+    ActivePage = tsSeznam
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 202
+      inherited DBGrid: TDBGrid
+        Height = 202
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 202
+      object Label1: TLabel[0]
+        Left = 5
+        Height = 16
+        Top = 10
+        Width = 11
+        Caption = 'Id'
+        ParentColor = False
+      end
+      object Label3: TLabel[1]
+        Left = 5
+        Height = 16
+        Top = 69
+        Width = 52
+        Caption = 'Titul před'
+        ParentColor = False
+      end
+      object Label4: TLabel[2]
+        Left = 5
+        Height = 16
+        Top = 99
+        Width = 36
+        Caption = 'Jméno'
+        ParentColor = False
+      end
+      object Label5: TLabel[3]
+        Left = 5
+        Height = 16
+        Top = 128
+        Width = 45
+        Caption = 'Příjmení'
+        ParentColor = False
+      end
+      object Label6: TLabel[4]
+        Left = 5
+        Height = 16
+        Top = 157
+        Width = 39
+        Caption = 'Titul za'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[5]
+        Left = 76
+        Height = 23
+        Top = 10
+        Width = 80
+        DataField = 'ID'
+        DataSource = dsMaster
+        ReadOnly = True
+        Color = clBtnFace
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[6]
+        Left = 76
+        Height = 23
+        Top = 39
+        Width = 80
+        DataField = 'ID_PARTNERA'
+        DataSource = dsMaster
+        ReadOnly = True
+        Color = clBtnFace
+        TabOrder = 1
+      end
+      object DBEdit3: TDBEdit[7]
+        Left = 76
+        Height = 23
+        Top = 69
+        Width = 80
+        DataField = 'TITUL_PRED'
+        DataSource = dsMaster
+        MaxLength = 10
+        TabOrder = 2
+      end
+      object DBEdit4: TDBEdit[8]
+        Left = 76
+        Height = 23
+        Top = 99
+        Width = 160
+        DataField = 'JMENO'
+        DataSource = dsMaster
+        MaxLength = 30
+        TabOrder = 3
+      end
+      object DBEdit5: TDBEdit[9]
+        Left = 76
+        Height = 23
+        Top = 128
+        Width = 160
+        DataField = 'PRIJMENI'
+        DataSource = dsMaster
+        MaxLength = 30
+        TabOrder = 4
+      end
+      object DBEdit6: TDBEdit[10]
+        Left = 76
+        Height = 23
+        Top = 157
+        Width = 80
+        DataField = 'TITUL_ZA'
+        DataSource = dsMaster
+        MaxLength = 10
+        TabOrder = 5
+      end
+      object Button1: TButton[11]
+        Left = 5
+        Height = 25
+        Top = 38
+        Width = 67
+        Caption = 'Partner'
+        TabOrder = 6
+      end
+      object Edit1: TEdit[12]
+        Left = 164
+        Height = 23
+        Top = 39
+        Width = 328
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 7
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 256
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 409
+  end
+  inherited MainMenu: TMainMenu
+    left = 452
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = nil
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = nil
+      end
+    end
+  end
+  inherited qrMaster0: TZQuery
+    Connection = DM.OracleConnection0
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMaster0AfterApplyUpdates
+    BeforeInsert = qrMaster0BeforeInsert
+    BeforeEdit = qrMaster0BeforeEdit
+    AfterPost = qrMaster0AfterPost
+    SQL.Strings = (
+      'SELECT * FROM PARTNERI_OSOBY '
+    )
+  end
+end

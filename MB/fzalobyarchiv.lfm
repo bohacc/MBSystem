@@ -1,0 +1,1102 @@
+﻿inherited frmZalobyArchiv: TfrmZalobyArchiv
+  Left = 425
+  Height = 576
+  Top = 163
+  Width = 886
+  Caption = 'Archív žalob'
+  ClientHeight = 556
+  ClientWidth = 886
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 533
+    Width = 886
+  end
+  inherited ToolBar1: TToolBar
+    Width = 886
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = NavigatorBeforeAction
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = NavigatorClick
+    end
+    inherited ToolButton10: TToolButton
+      OnClick = ToolButton10Click
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 482
+    Width = 886
+    ActivePage = tsZaznam
+    TabIndex = 1
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 454
+      ClientWidth = 878
+      inherited DBGrid: TDBGrid
+        Height = 454
+        Width = 878
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 454
+      ClientWidth = 878
+      object Panel1: TPanel[0]
+        Left = 0
+        Height = 252
+        Top = 202
+        Width = 878
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 252
+        ClientWidth = 878
+        TabOrder = 0
+        object ToolBar2: TToolBar
+          Left = 0
+          Height = 26
+          Top = 0
+          Width = 878
+          Caption = 'ToolBar1'
+          EdgeBorders = [ebTop, ebBottom]
+          TabOrder = 0
+          object ToolButton2: TToolButton
+            Left = 1
+            Top = 2
+            Width = 7
+            Caption = 'ToolButton1'
+            Style = tbsDivider
+          end
+          object btRefresh1: TToolButton
+            Left = 8
+            Hint = 'Obnovení seznamu'
+            Top = 2
+            Caption = 'btRefresh'
+            ImageIndex = 7
+            ParentShowHint = False
+            ShowHint = True
+            OnClick = btRefreshClick
+          end
+          object Navigator1: TDBNavigator
+            Left = 35
+            Height = 22
+            Top = 2
+            Width = 241
+            BeforeAction = NavigatorBeforeAction
+            BevelOuter = bvNone
+            ClientHeight = 22
+            ClientWidth = 241
+            DataSource = dsZpravy
+            Flat = True
+            OnClick = NavigatorClick
+            TabOrder = 0
+            VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+          end
+          object ToolButton8: TToolButton
+            Left = 31
+            Top = 2
+            Width = 4
+            Caption = 'ToolButton5'
+            Style = tbsDivider
+          end
+        end
+        object DBGrid1: TDBGrid
+          Left = 0
+          Height = 226
+          Top = 26
+          Width = 878
+          Align = alClient
+          Columns = <          
+            item
+              Title.Caption = 'Předmět'
+              Width = 400
+              FieldName = 'PREDMET'
+            end          
+            item
+              Title.Caption = 'Var. symb.'
+              Width = 150
+              FieldName = 'VAR_SYMB'
+            end          
+            item
+              Title.Caption = 'Podání doručené'
+              Width = 100
+              FieldName = 'PODANI_DORUCENE_DATUM'
+            end          
+            item
+              Title.Caption = 'Podání ověřeno'
+              Width = 100
+              FieldName = 'PODANI_OVERENO_DATUM'
+            end          
+            item
+              Title.Caption = 'Podpis a cert.'
+              Width = 100
+              FieldName = 'PODPIS_CERTIF_PLATNY'
+            end          
+            item
+              Title.Caption = 'Příloh'
+              FieldName = 'ZASLANYCH_PRILOH'
+            end          
+            item
+              Title.Caption = 'Účet'
+              Width = 100
+              FieldName = 'UCET'
+            end          
+            item
+              Title.Caption = 'Ke zpracování'
+              Width = 100
+              FieldName = 'KE_ZPRACOVANI'
+            end          
+            item
+              Title.Caption = 'Soud'
+              Width = 150
+              FieldName = 'SOUD'
+            end          
+            item
+              Title.Caption = 'Způs. podání'
+              Width = 100
+              FieldName = 'ZPUSOB_PODANI'
+            end          
+            item
+              Title.Caption = 'Běžné číslo'
+              Width = 100
+              FieldName = 'BEZNE_CISLO'
+            end          
+            item
+              Title.Caption = 'Typ formuláře'
+              Width = 100
+              FieldName = 'TYP_FORMULARE'
+            end          
+            item
+              Title.Caption = 'Datum odeslání'
+              Width = 100
+              FieldName = 'DATUM_ODESLANI'
+            end          
+            item
+              Title.Caption = 'Datum stažení'
+              Width = 100
+              FieldName = 'DATUM_STAZENI'
+            end          
+            item
+              Title.Caption = 'Spis. značka'
+              Width = 100
+              FieldName = 'SPISOVA_ZNACKA'
+            end          
+            item
+              Title.Caption = 'Odesílatel'
+              Width = 100
+              FieldName = 'ODESILATEL'
+            end          
+            item
+              Title.Caption = 'Id. zprávy'
+              Width = 150
+              FieldName = 'ID_ZPRAVY'
+            end          
+            item
+              Title.Caption = 'Typ zprávy'
+              Width = 100
+              FieldName = 'TYP_ZPRAVY'
+            end          
+            item
+              Title.Caption = 'GUID'
+              Width = 150
+              FieldName = 'REF_KOD'
+            end          
+            item
+              Title.Caption = 'Id'
+              Width = 100
+              FieldName = 'ID'
+            end>
+          DataSource = dsZpravy
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 1
+          TitleStyle = tsNative
+          OnDblClick = DBGrid1DblClick
+        end
+      end
+      object Panel2: TPanel[1]
+        Left = 0
+        Height = 202
+        Top = 0
+        Width = 878
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 202
+        ClientWidth = 878
+        TabOrder = 1
+        object Label1: TLabel
+          Left = 12
+          Height = 16
+          Top = 7
+          Width = 56
+          Caption = 'Var. symb.'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 261
+          Height = 16
+          Top = 7
+          Width = 32
+          Caption = 'GUID'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 607
+          Height = 16
+          Top = 7
+          Width = 12
+          Caption = 'ID'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 532
+          Height = 16
+          Top = 44
+          Width = 62
+          Caption = 'Uzamknuto'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 532
+          Height = 16
+          Top = 70
+          Width = 91
+          Caption = 'Datum uzamčení'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 532
+          Height = 16
+          Top = 94
+          Width = 83
+          Caption = 'Datum importu'
+          ParentColor = False
+        end
+        object Label7: TLabel
+          Left = 12
+          Height = 16
+          Top = 44
+          Width = 37
+          Caption = 'Datum'
+          ParentColor = False
+        end
+        object Label8: TLabel
+          Left = 12
+          Height = 16
+          Top = 70
+          Width = 36
+          Caption = 'Jméno'
+          ParentColor = False
+        end
+        object Label9: TLabel
+          Left = 12
+          Height = 16
+          Top = 119
+          Width = 27
+          Caption = 'Ulice'
+          ParentColor = False
+        end
+        object Label10: TLabel
+          Left = 12
+          Height = 16
+          Top = 94
+          Width = 47
+          Caption = 'Rodné č.'
+          ParentColor = False
+        end
+        object Label11: TLabel
+          Left = 260
+          Height = 16
+          Top = 44
+          Width = 73
+          Caption = 'Dlužná částka'
+          ParentColor = False
+        end
+        object Label12: TLabel
+          Left = 261
+          Height = 16
+          Top = 69
+          Width = 38
+          Caption = 'Pokuta'
+          ParentColor = False
+        end
+        object Label13: TLabel
+          Left = 261
+          Height = 16
+          Top = 94
+          Width = 33
+          Caption = 'Jízdné'
+          ParentColor = False
+        end
+        object Label14: TLabel
+          Left = 261
+          Height = 16
+          Top = 145
+          Width = 37
+          Caption = 'Obvod'
+          ParentColor = False
+        end
+        object Label15: TLabel
+          Left = 12
+          Height = 16
+          Top = 145
+          Width = 34
+          Caption = 'Město'
+          ParentColor = False
+        end
+        object Label16: TLabel
+          Left = 12
+          Height = 16
+          Top = 171
+          Width = 19
+          Caption = 'Psč'
+          ParentColor = False
+        end
+        object Label17: TLabel
+          Left = 261
+          Height = 16
+          Top = 119
+          Width = 22
+          Caption = 'Č.p.'
+          ParentColor = False
+        end
+        object DBEdit1: TDBEdit
+          Left = 308
+          Height = 23
+          Top = 119
+          Width = 56
+          DataField = 'CISLO_DOMU'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          MaxLength = 80
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 67
+          Width = 80
+          DataField = 'DATUM_UZAMCENI'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 1
+        end
+        object DBEdit3: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 94
+          Width = 120
+          DataField = 'JIZDNE'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 2
+        end
+        object DBEdit4: TDBEdit
+          Left = 308
+          Height = 23
+          Top = 143
+          Width = 56
+          DataField = 'OBVOD'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          MaxLength = 120
+          TabOrder = 3
+        end
+        object DBEdit5: TDBEdit
+          Left = 308
+          Height = 23
+          Top = 5
+          Width = 288
+          DataField = 'REF_KOD'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          Font.Style = [fsBold]
+          MaxLength = 240
+          ParentFont = False
+          TabOrder = 4
+        end
+        object DBEdit6: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 42
+          Width = 80
+          DataField = 'UZAMCENA'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 5
+        end
+        object DBEdit7: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 42
+          Width = 176
+          DataField = 'DATUM_CAS'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 6
+        end
+        object DBEdit8: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 42
+          Width = 120
+          DataField = 'DLUZNA_CASTKA'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 7
+        end
+        object DBEdit9: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 67
+          Width = 176
+          DataField = 'JMENO_CP'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          MaxLength = 240
+          TabOrder = 8
+        end
+        object DBEdit10: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 68
+          Width = 120
+          DataField = 'POKUTA'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 9
+        end
+        object DBEdit11: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 92
+          Width = 104
+          DataField = 'RODNE_CISLO'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          MaxLength = 80
+          TabOrder = 10
+        end
+        object DBEdit12: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 5
+          Width = 176
+          DataField = 'VAR_SYMB'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          Font.Style = [fsBold]
+          MaxLength = 360
+          ParentFont = False
+          TabOrder = 11
+        end
+        object DBEdit13: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 92
+          Width = 80
+          DataField = 'DATUM_IMPORTU'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 12
+        end
+        object DBEdit14: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 5
+          Width = 80
+          DataField = 'ID'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 13
+        end
+        object DBEdit15: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 143
+          Width = 176
+          DataField = 'MESTO'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          MaxLength = 120
+          TabOrder = 14
+        end
+        object DBEdit16: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 169
+          Width = 80
+          DataField = 'PSC'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          MaxLength = 40
+          TabOrder = 15
+        end
+        object DBEdit17: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 119
+          Width = 176
+          DataField = 'ULICE'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          MaxLength = 120
+          TabOrder = 16
+        end
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 508
+    Width = 886
+    ClientWidth = 886
+    inherited btStorno: TButton
+      Left = 806
+    end
+    inherited btOK: TButton
+      Left = 728
+    end
+  end
+  inherited MainMenu: TMainMenu
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = miZavritClick
+      end
+    end
+    inherited miUpravy: TMenuItem
+      Visible = False
+      inherited miNovyZaznam: TMenuItem
+        OnClick = miNovyZaznamClick
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = miUpravitZaznamClick
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = miSmazatZaznamClick
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = miVychoziDotazClick
+      end
+      inherited miZrusOznaceni: TMenuItem
+        OnClick = miZrusOznaceniClick
+      end
+    end
+  end
+  inherited qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    AfterOpen = qrMasterAfterOpen
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    BeforePost = qrMasterBeforePost
+    AfterPost = qrMasterAfterPost
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT'
+      '*'
+      'FROM'
+      '  ZALOBY_ARCHIV'
+      'ORDER BY'
+      '  ID DESC'
+    )
+    object qrMasterID: TLongintField[0]
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterVAR_SYMB: TStringField[1]
+      DisplayLabel = 'Var. symb.'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'VAR_SYMB'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 360
+    end
+    object qrMasterJMENO_CP: TStringField[2]
+      DisplayLabel = 'Jméno'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'JMENO_CP'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object qrMasterDATUM_CAS: TDateField[3]
+      DisplayLabel = 'Datum a čas'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_CAS'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterDLUZNA_CASTKA: TLongintField[4]
+      DisplayLabel = 'Dlužná částka'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'DLUZNA_CASTKA'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ### ##0.00'
+    end
+    object qrMasterJIZDNE: TLongintField[5]
+      DisplayLabel = 'Jízdné'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'JIZDNE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ### ##0.00'
+    end
+    object qrMasterPOKUTA: TLongintField[6]
+      DisplayLabel = 'Pokuta'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'POKUTA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ### ##0.00'
+    end
+    object qrMasterRODNE_CISLO: TStringField[7]
+      DisplayLabel = 'Rodné číslo'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'RODNE_CISLO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qrMasterULICE: TStringField[8]
+      DisplayLabel = 'Ulice'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'ULICE'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterCISLO_DOMU: TStringField[9]
+      DisplayLabel = 'Číslo domu'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CISLO_DOMU'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qrMasterMESTO: TStringField[10]
+      DisplayLabel = 'Město'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'MESTO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterOBVOD: TStringField[11]
+      DisplayLabel = 'Obvod'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'OBVOD'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterPSC: TStringField[12]
+      DisplayLabel = 'PSČ'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PSC'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qrMasterREF_KOD: TStringField[13]
+      DisplayLabel = 'GUID'
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'REF_KOD'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object qrMasterUZAMCENA: TLongintField[14]
+      DisplayLabel = 'Uzamčená'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UZAMCENA'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterDATUM_IMPORTU: TDateField[15]
+      DisplayLabel = 'Datum importu'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_IMPORTU'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterDATUM_UZAMCENI: TDateField[16]
+      DisplayLabel = 'Datum uzamčení'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_UZAMCENI'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 144
+  end
+  object dsZpravy: TDatasource[8]
+    DataSet = qrZpravy
+    left = 224
+    top = 262
+  end
+  object qrZpravy: TZQuery[9]
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT '
+      'REF_KOD,DATUM_STAZENI,ID,TYP_ZPRAVY,PREDMET,DATUM_ODESLANI,ODESILATEL,ID_ZPRAVY,UCET,VAR_SYMB,'
+      'PODANI_DORUCENE_DATUM,BEZNE_CISLO,PODANI_OVERENO_DATUM,ZASLANYCH_PRILOH,ZPUSOB_PODANI,'
+      'PODPIS_CERTIF_PLATNY,SOUD,TYP_FORMULARE,SPISOVA_ZNACKA,KE_ZPRACOVANI '
+      'FROM '
+      'ZALOBY_ZPRAVY'
+      'WHERE '
+      'REF_KOD = :REF_KOD'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'REF_KOD'
+        ParamType = ptUnknown
+      end>
+    left = 147
+    top = 262
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'REF_KOD'
+        ParamType = ptUnknown
+      end>
+    object qrZpravyREF_KOD: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'REF_KOD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object qrZpravyDATUM_STAZENI: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_STAZENI'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravyID: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravyTYP_ZPRAVY: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'TYP_ZPRAVY'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyPREDMET: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'PREDMET'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrZpravyDATUM_ODESLANI: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_ODESLANI'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravyODESILATEL: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'ODESILATEL'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object qrZpravyID_ZPRAVY: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'ID_ZPRAVY'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrZpravyUCET: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'UCET'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyVAR_SYMB: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'VAR_SYMB'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyPODANI_DORUCENE_DATUM: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'PODANI_DORUCENE_DATUM'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyBEZNE_CISLO: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'BEZNE_CISLO'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyPODANI_OVERENO_DATUM: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'PODANI_OVERENO_DATUM'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyZASLANYCH_PRILOH: TSmallintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ZASLANYCH_PRILOH'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravyZPUSOB_PODANI: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'ZPUSOB_PODANI'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyPODPIS_CERTIF_PLATNY: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'PODPIS_CERTIF_PLATNY'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravySOUD: TStringField
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'SOUD'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object qrZpravyTYP_FORMULARE: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'TYP_FORMULARE'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravySPISOVA_ZNACKA: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'SPISOVA_ZNACKA'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyKE_ZPRACOVANI: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'KE_ZPRACOVANI'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+  end
+end

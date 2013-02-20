@@ -1,0 +1,23 @@
+LazarusResources.Add('TfrmSOznameniPostupiteleOPostoupeniPohledavky','FORMDATA',[
+  'TPF0-TfrmSOznameniPostupiteleOPostoupeniPohledavky,frmSOznameniPostupiteleOP'
+  +'ostoupeniPohledavky'#4'Left'#3'Q'#1#6'Height'#2'|'#3'Top'#3#175#0#5'Width'#3
+  +'['#1#7'Caption'#6'0Ozn'#195#161'men'#195#173' postupitele o postoupen'#195
+  +#173' pohled'#195#161'vky'#10'LCLVersion'#6#8'0.9.28.3'#0#9'TfrReport'#8'frR'
+  +'eport'#7'Dataset'#7#8'dsMaster'#11'InitialZoom'#7#9'pzDefault'#14'PreviewBu'
+  +'ttons'#11#6'pbZoom'#6'pbLoad'#6'pbSave'#7'pbPrint'#6'pbFind'#6'pbHelp'#6'pb'
+  +'Exit'#0#8'DataType'#7#9'dtDataSet'#4'left'#2'0'#3'top'#2'%'#10'ReportForm'
+  +#10#4#0#0#0#24#0#0#0#0#0#12'TfrDBDataSet'#8'dsMaster'#7'DataSet'#7#8'qrMaste'
+  +'r'#4'left'#3#152#0#3'top'#2'%'#0#0#7'TZQuery'#8'qrMaster'#10'Connection'#7
+  +#19'DM.OracleConnection'#11'SQL.Strings'#1#6#6'SELECT'#6#6'  Z.*,'#6'C  L.KO'
+  +'NTAKTNI_OSOBA||''/''||L.KONTAKTNI_OSOBA_TEL AS KONTAKTNI_OSOBA,'#6#9'  L.UC'
+  +'ET,'#6#14'  L.KOD_BANKY,'#6'5  GET_PARAM(''ZALOBY_DATUM_PREDANI'') AS DATUM'
+  +'_PREDANI,'#6'/  ''ERP ''||Z.VAR_SYMB||'' - FEN'' AS VAR_SYMB_ERP,'#6')  Z.U'
+  +'LICE||'' ''||Z.CISLO_DOMU AS ULICE_CP,'#6'#  Z.PSC||'' ''||Z.MESTO AS PSC_M'
+  +'ESTO,'#6'G  Z.JMENO_CP||'', nar. ''||GET_DATUM_FROM_RC(Z.RODNE_CISLO) AS JM'
+  +'ENO_NAR,'#6'&  CASE GET_POHLAVI_Z_RC(Z.RODNE_CISLO)'#6#31'    WHEN 1 THEN '
+  +'''V'#195#161#197#190'en'#195#189' pan'''#6'!    WHEN 0 THEN ''V'#195#161#197
+  +#190'en'#195#161' pan'#195#173''''#6'(    WHEN NULL THEN ''V'#195#161#197#190
+  +'en'#195#189' pan/pan'#195#173''''#6#18'  END AS OSLOVENI,'#6'4  GET_PARAM('
+  +'''ZALOBY_OZNAMENI_UCET'') AS UCET_OZNAMENI'#6#4'FROM'#6#11'  ZALOBY Z,'#6#11
+  +'  LICENCE L'#0#6'Params'#14#0#4'left'#3#0#1#3'top'#2'%'#0#0#0
+]);

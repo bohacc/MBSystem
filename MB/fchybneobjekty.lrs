@@ -1,0 +1,65 @@
+LazarusResources.Add('TfrmChybneObjekty','FORMDATA',[
+  'TPF0'#17'TfrmChybneObjekty'#16'frmChybneObjekty'#4'Left'#3#228#1#6'Height'#3
+  +#247#0#3'Top'#3#207#0#5'Width'#3#218#1#7'Caption'#6#15'Chybn'#195#169' objek'
+  +'ty'#12'ClientHeight'#3#247#0#11'ClientWidth'#3#218#1#8'OnCreate'#7#10'FormC'
+  +'reate'#8'Position'#7#16'poMainFormCenter'#10'LCLVersion'#6#8'0.9.28.3'#0#8
+  +'TToolBar'#8'ToolBar1'#4'Left'#2#0#6'Height'#2#26#3'Top'#2#0#5'Width'#3#218#1
+  +#7'Caption'#6#8'ToolBar1'#6'Images'#7#17'frmMain.ImageList'#8'TabOrder'#2#0#0
+  +#11'TToolButton'#9'tbRefresh'#4'Left'#2#1#4'Hint'#6#17'Obnoven'#195#173' sez'
+  +'namu'#3'Top'#2#2#7'Caption'#6#9'tbRefresh'#10'ImageIndex'#2#7#14'ParentShow'
+  +'Hint'#8#8'ShowHint'#9#7'OnClick'#7#14'tbRefreshClick'#0#0#12'TDBNavigator'#9
+  +'Navigator'#4'Left'#2#24#6'Height'#2#22#3'Top'#2#2#5'Width'#3#241#0#10'Bevel'
+  +'Outer'#7#6'bvNone'#12'ClientHeight'#2#22#11'ClientWidth'#3#241#0#10'DataSou'
+  +'rce'#7#8'dsMaster'#8'TabOrder'#2#0#14'VisibleButtons'#11#7'nbFirst'#7'nbPri'
+  +'or'#6'nbNext'#6'nbLast'#0#0#0#11'TToolButton'#11'ToolButton2'#4'Left'#3#9#1
+  +#3'Top'#2#2#5'Width'#2#7#7'Caption'#6#11'ToolButton2'#5'Style'#7#12'tbsSepar'
+  +'ator'#0#0#7'TButton'#7'Button1'#4'Left'#3#16#1#6'Height'#2#22#3'Top'#2#2#5
+  +'Width'#3#144#0#7'Caption'#6#26'P'#197#153'elo'#197#190'it chybn'#195#169' o'
+  +'bjekty'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#0#10'TStatusBar'
+  +#10'StatusBar1'#4'Left'#2#0#6'Height'#2#23#3'Top'#3#224#0#5'Width'#3#218#1#6
+  +'Panels'#14#0#0#0#7'TDBGrid'#7'DBGrid1'#4'Left'#2#0#6'Height'#3#198#0#3'Top'
+  +#2#26#5'Width'#3#218#1#5'Align'#7#8'alClient'#10'DataSource'#7#8'dsMaster'#8
+  +'ReadOnly'#9#8'TabOrder'#2#2#0#0#7'TZQuery'#8'qrMaster'#10'Connection'#7#19
+  +'DM.OracleConnection'#8'ReadOnly'#9#11'SQL.Strings'#1#6'2SELECT * FROM USER_'
+  +'OBJECTS WHERE STATUS <> ''VALID'''#0#6'Params'#14#0#4'left'#3#202#0#3'top'#2
+  +'>'#0#12'TStringField'#19'qrMasterOBJECT_NAME'#12'DisplayWidth'#2#30#9'Field'
+  +'Kind'#7#6'fkData'#9'FieldName'#6#11'OBJECT_NAME'#5'Index'#2#0#11'LookupCach'
+  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
+  +'uired'#8#4'Size'#3#128#0#0#0#12'TStringField'#22'qrMasterSUBOBJECT_NAME'#12
+  +'DisplayWidth'#2#30#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'SUBOBJECT_NAM'
+  +'E'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfI'
+  +'nWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#30#0#0#14'TLargeintField'#17
+  +'qrMasterOBJECT_ID'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldNa'
+  +'me'#6#9'OBJECT_ID'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'p'
+  +'fInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'TLargeintField'
+  +#22'qrMasterDATA_OBJECT_ID'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#14'DATA_OBJECT_ID'#5'Index'#2#3#11'LookupCache'#8#13'ProviderF'
+  +'lags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#12'T'
+  +'StringField'#19'qrMasterOBJECT_TYPE'#12'DisplayWidth'#2#19#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#11'OBJECT_TYPE'#5'Index'#2#4#11'LookupCache'#8#13'Pr'
+  +'oviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4
+  +'Size'#2#19#0#0#10'TDateField'#15'qrMasterCREATED'#12'DisplayWidth'#2#10#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#7'CREATED'#5'Index'#2#5#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#0#0#10'TDateField'#21'qrMasterLAST_DDL_TIME'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#13'LAST_DDL_TIME'#5'Index'#2#6#11'Loo'
+  +'kupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
+  +#8'Required'#8#0#0#12'TStringField'#17'qrMasterTIMESTAMP'#12'DisplayWidth'#2
+  +#19#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'TIMESTAMP'#5'Index'#2#7#11'Loo'
+  +'kupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
+  +#8'Required'#8#4'Size'#2#19#0#0#12'TStringField'#14'qrMasterSTATUS'#12'Displ'
+  +'ayWidth'#2#7#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'STATUS'#5'Index'#2#8
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#8#4'Size'#2#7#0#0#12'TStringField'#17'qrMasterTEMPORARY'
+  +#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'TEMPORARY'#5
+  +'Index'#2#9#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#12'TStringField'#17'qrMast'
+  +'erGENERATED'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9
+  +'GENERATED'#5'Index'#2#10#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpda'
+  +'te'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0#12'TStringFi'
+  +'eld'#17'qrMasterSECONDARY'#12'DisplayWidth'#2#1#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#9'SECONDARY'#5'Index'#2#11#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#1#0#0
+  +#0#11'TDatasource'#8'dsMaster'#7'DataSet'#7#8'qrMaster'#4'left'#3#31#1#3'top'
+  +#2'B'#0#0#0
+]);

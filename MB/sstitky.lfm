@@ -1,0 +1,34 @@
+object frmStitkyI: TfrmStitkyI
+  Left = 324
+  Height = 300
+  Top = 154
+  Width = 400
+  Caption = 'frmStitkyI'
+  OnCreate = FormCreate
+  ParentFont = False
+  LCLVersion = '0.9.26'
+  object quickrep1: TfrReport
+    Dataset = frDBDataSet1
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    left = 86
+    top = 72
+    ReportForm = {
+      18000000
+    }
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMaster
+    left = 136
+    top = 75
+  end
+  object qrMaster: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    UsePrimaryKeyAsKey = True
+    left = 184
+    top = 75
+  end
+end

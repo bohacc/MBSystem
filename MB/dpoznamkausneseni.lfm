@@ -1,0 +1,47 @@
+object frmPoznamkaUsneseni: TfrmPoznamkaUsneseni
+  Left = 400
+  Height = 394
+  Top = 175
+  Width = 605
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Usnesení'
+  ClientHeight = 394
+  ClientWidth = 605
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.3'
+  object DBMemo1: TDBMemo
+    Left = 0
+    Height = 352
+    Top = 0
+    Width = 605
+    Align = alClient
+    DataField = 'USNESENI'
+    DataSource = dsUsneseni
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 352
+    Width = 605
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 42
+    ClientWidth = 605
+    TabOrder = 1
+    object btOk: TButton
+      Left = 280
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'OK'
+      ModalResult = 1
+      TabOrder = 0
+    end
+  end
+  object dsUsneseni: TDatasource
+    left = 66
+    top = 40
+  end
+end

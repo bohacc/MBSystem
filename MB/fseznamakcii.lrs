@@ -1,0 +1,27 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmSeznamAkcii','FORMDATA',[
+  'TPF0'#241#15'TfrmSeznamAkcii'#14'frmSeznamAkcii'#10'OnActivate'#7#12'FormAct'
+  +'ivate'#8'OnCreate'#7#10'FormCreate'#0#241#10'TStatusBar'#10'StatusBar1'#6'P'
+  +'anels'#14#1#4'Text'#6'<F2-Obnovit  F3-Nov'#195#189'   F4-Upravit   F8-Smaza'
+  +'t   F10-Zav'#197#153#195#173't'#5'Width'#2'2'#0#0#0#0#241#8'TToolBar'#8'Too'
+  +'lBar1'#0#241#11'TToolButton'#11'ToolButton1'#0#0#241#11'TToolButton'#11'Too'
+  +'lButton3'#0#0#241#11'TToolButton'#11'ToolButton4'#0#0#241#11'TToolButton'#9
+  +'btRefresh'#0#0#241#5'TEdit'#6'edFind'#7'OnKeyUp'#7#11'edFindKeyUp'#0#0#241
+  +#12'TDBNavigator'#9'Navigator'#12'BeforeAction'#7#21'NavigatorBeforeAction'
+  +#13'Hints.Strings'#1#0#0#0#0#241#12'TPageControl'#6'pcMain'#0#241#9'TTabShee'
+  +'t'#8'tsSeznam'#0#241#7'TDBGrid'#6'DBGrid'#10'OnDblClick'#7#14'DBGridDblClic'
+  +'k'#12'OnTitleClick'#7#16'DBGridTitleClick'#0#0#0#241#9'TTabSheet'#8'tsZazna'
+  +'m'#0#0#0#241#6'TPanel'#3'pOK'#0#241#7'TButton'#8'btStorno'#0#0#241#7'TButto'
+  +'n'#4'btOK'#0#0#0#241#9'TSQLQuery'#8'qrMaster'#9'AfterPost'#7#17'qrMasterAft'
+  +'erPost'#10'BeforeEdit'#7#18'qrMasterBeforeEdit'#12'BeforeInsert'#7#20'qrMas'
+  +'terBeforeInsert'#11'SQL.Strings'#1#6'>SELECT ID,CISLO,CISLO_AKCIE,SERIE,TYP'
+  +',HODNOTA,DATUM FROM AKCIE'#0#6'Params'#14#0#0#0#241#11'TDatasource'#8'dsMas'
+  +'ter'#0#0#241#9'TMainMenu'#8'MainMenu'#0#241#9'TMenuItem'#8'miSoubor'#0#241#9
+  +'TMenuItem'#8'miZavrit'#7'OnClick'#7#13'miZavritClick'#0#0#0#241#9'TMenuItem'
+  +#8'miUpravy'#0#241#9'TMenuItem'#12'miNovyZaznam'#7'OnClick'#7#17'miNovyZazna'
+  +'mClick'#0#0#241#9'TMenuItem'#15'miUpravitZaznam'#7'OnClick'#7#20'miUpravitZ'
+  +'aznamClick'#0#0#241#9'TMenuItem'#14'miSmazatZaznam'#7'OnClick'#7#19'miSmaza'
+  +'tZaznamClick'#0#0#241#9'TMenuItem'#14'miVychoziDotaz'#7'OnClick'#7#19'miVyc'
+  +'hoziDotazClick'#0#0#0#241#9'TMenuItem'#6'miOkno'#0#0#0#0
+]);

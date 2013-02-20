@@ -1,0 +1,16 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmProces','FORMDATA',[
+  'TPF0'#10'TfrmProces'#9'frmProces'#6'Cursor'#7#11'crHourGlass'#4'Left'#3#132#1
+  +#6'Height'#2'c'#3'Top'#3#175#0#5'Width'#3'B'#1#11'BorderIcons'#11#0#11'Borde'
+  +'rStyle'#7#6'bsNone'#7'Caption'#6#6'Proces'#12'ClientHeight'#2'c'#11'ClientW'
+  +'idth'#3'B'#1#12'OnDeactivate'#7#14'FormDeactivate'#8'Position'#7#16'poMainF'
+  +'ormCenter'#10'LCLVersion'#6#6'0.9.30'#0#6'TLabel'#8'lbProces'#4'Left'#2#24#6
+  +'Height'#2#16#3'Top'#2#19#5'Width'#2'.'#7'Caption'#6#8'lbProces'#11'ParentCo'
+  +'lor'#8#0#0#12'TProgressBar'#12'ProgressBar1'#4'Left'#2#24#6'Height'#2'('#3
+  +'Top'#2'('#5'Width'#3#20#1#8'TabOrder'#2#0#0#0#6'TBevel'#6'Bevel1'#6'Cursor'
+  +#7#11'crHourGlass'#4'Left'#2#0#6'Height'#2'c'#3'Top'#2#0#5'Width'#3'B'#1#5'A'
+  +'lign'#7#8'alClient'#5'Shape'#7#7'bsFrame'#0#0#6'TLabel'#5'lbPom'#4'Left'#2
+  +#23#6'Height'#2#16#3'Top'#2'R'#5'Width'#2'$'#7'Caption'#6#5'blPom'#11'Parent'
+  +'Color'#8#0#0#0
+]);

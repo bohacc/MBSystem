@@ -1,0 +1,11 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TDM','FORMDATA',[
+  'TPF0'#3'TDM'#2'DM'#8'OnCreate'#7#16'DataModuleCreate'#6'Height'#3','#1#16'Ho'
+  +'rizontalOffset'#3'D'#1#14'VerticalOffset'#3#154#0#5'Width'#3#144#1#0#15'TSQ'
+  +'LTransaction'#14'SQLTransaction'#6'Action'#7#8'caCommit'#8'Database'#7#16'O'
+  +'racleConnection'#4'left'#3#162#0#3'top'#2'/'#0#0#17'TOracleConnection'#16'O'
+  +'racleConnection'#9'Connected'#9#12'DatabaseName'#6#5'BOHAC'#8'Password'#6#6
+  +'martin'#11'Transaction'#7#14'SQLTransaction'#8'UserName'#6#6'martin'#4'left'
+  +#2'{'#3'top'#2'/'#0#0#0
+]);

@@ -1,0 +1,364 @@
+﻿inherited frmUdalosti: TfrmUdalosti
+  Left = 335
+  Height = 511
+  Top = 129
+  Width = 667
+  Caption = 'Události'
+  ClientHeight = 491
+  ClientWidth = 667
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 468
+    Width = 667
+  end
+  inherited ToolBar1: TToolBar
+    Width = 667
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = nil
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = nil
+    end
+    inherited ToolButton10: TToolButton
+      OnClick = ToolButton10Click
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 417
+    Width = 667
+    ActivePage = tsZaznam
+    TabIndex = 1
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 389
+      ClientWidth = 659
+      inherited DBGrid: TDBGrid
+        Height = 389
+        Width = 659
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 389
+      ClientWidth = 659
+      object Panel1: TPanel[0]
+        Left = 0
+        Height = 218
+        Top = 0
+        Width = 659
+        Align = alTop
+        BevelOuter = bvNone
+        Caption = 'Panel1'
+        ClientHeight = 218
+        ClientWidth = 659
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 9
+          Height = 16
+          Top = 10
+          Width = 11
+          Caption = 'Id'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 9
+          Height = 16
+          Top = 38
+          Width = 33
+          Caption = 'Název'
+          ParentColor = False
+        end
+        object Label3: TLabel
+          Left = 9
+          Height = 16
+          Top = 66
+          Width = 30
+          Caption = 'Popis'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 155
+          Height = 16
+          Top = 130
+          Width = 15
+          Caption = 'do'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 155
+          Height = 16
+          Top = 159
+          Width = 15
+          Caption = 'do'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 9
+          Height = 16
+          Top = 130
+          Width = 54
+          Caption = 'Datum od'
+          ParentColor = False
+        end
+        object Label7: TLabel
+          Left = 9
+          Height = 16
+          Top = 157
+          Width = 37
+          Caption = 'Čas od'
+          ParentColor = False
+        end
+        object Label8: TLabel
+          Left = 9
+          Height = 16
+          Top = 185
+          Width = 21
+          Caption = 'Typ'
+          ParentColor = False
+        end
+        object DBEdit1: TDBEdit
+          Left = 68
+          Height = 23
+          Top = 10
+          Width = 80
+          DataField = 'ID'
+          DataSource = dsMaster
+          ReadOnly = True
+          Color = clBtnFace
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 68
+          Height = 23
+          Top = 38
+          Width = 424
+          DataField = 'NAZEV'
+          DataSource = dsMaster
+          MaxLength = 80
+          TabOrder = 1
+        end
+        object DBEdit4: TDBEdit
+          Left = 68
+          Height = 23
+          Top = 130
+          Width = 80
+          DataField = 'DATUM_OD'
+          DataSource = dsMaster
+          TabOrder = 2
+        end
+        object DBEdit5: TDBEdit
+          Left = 173
+          Height = 23
+          Top = 130
+          Width = 80
+          DataField = 'DATUM_DO'
+          DataSource = dsMaster
+          TabOrder = 3
+        end
+        object DBEdit6: TDBEdit
+          Left = 69
+          Height = 23
+          Top = 157
+          Width = 80
+          DataField = 'CAS_OD'
+          DataSource = dsMaster
+          TabOrder = 4
+        end
+        object DBEdit7: TDBEdit
+          Left = 173
+          Height = 23
+          Top = 159
+          Width = 80
+          DataField = 'CAS_DO'
+          DataSource = dsMaster
+          TabOrder = 5
+        end
+        object DBEdit8: TDBEdit
+          Left = 69
+          Height = 23
+          Top = 185
+          Width = 80
+          DataField = 'TYP'
+          DataSource = dsMaster
+          MaxLength = 30
+          TabOrder = 6
+        end
+        object DBMemo1: TDBMemo
+          Left = 68
+          Height = 58
+          Top = 66
+          Width = 424
+          DataField = 'POPIS'
+          DataSource = dsMaster
+          Lines.Strings = (
+            'DBMemo1'
+          )
+          TabOrder = 7
+        end
+      end
+      object PageControl1: TPageControl[1]
+        Left = 0
+        Height = 171
+        Top = 218
+        Width = 659
+        ActivePage = TabSheet1
+        Align = alClient
+        TabIndex = 0
+        TabOrder = 1
+        object TabSheet1: TTabSheet
+          Caption = 'Položky'
+          ClientHeight = 143
+          ClientWidth = 651
+          object ToolBar2: TToolBar
+            Left = 0
+            Height = 26
+            Top = 0
+            Width = 651
+            Caption = 'ToolBar1'
+            EdgeBorders = [ebTop, ebBottom]
+            Images = frmMain.ImageList
+            TabOrder = 0
+            object TToolButton
+              Left = 1
+              Top = 2
+            end
+            object TToolButton
+              Left = 24
+              Top = 2
+            end
+            object ToolButton6: TToolButton
+              Left = 207
+              Top = 2
+              Width = 9
+              Caption = 'ToolButton4'
+              Style = tbsDivider
+            end
+            object btRefresh1: TToolButton
+              Left = 47
+              Top = 2
+              Caption = 'btRefresh'
+              ImageIndex = 7
+            end
+            object edFind1: TEdit
+              Left = 70
+              Height = 23
+              Top = 2
+              Width = 137
+              OnKeyUp = edFindKeyUp
+              TabOrder = 0
+            end
+            object Navigator1: TDBNavigator
+              Left = 216
+              Height = 22
+              Top = 2
+              Width = 241
+              BevelOuter = bvNone
+              ClientHeight = 22
+              ClientWidth = 241
+              DataSource = dsPolozky
+              Flat = True
+              TabOrder = 1
+              VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+            end
+          end
+          object DBGrid1: TDBGrid
+            Left = 0
+            Height = 117
+            Top = 26
+            Width = 651
+            Align = alClient
+            DataSource = dsPolozky
+            TabOrder = 1
+            TitleStyle = tsNative
+          end
+        end
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 443
+    Width = 667
+    ClientWidth = 667
+  end
+  inherited MainMenu: TMainMenu
+    left = 472
+    top = 8
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = nil
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = nil
+      end
+    end
+  end
+  inherited qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    AfterPost = qrMasterAfterPost
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 520
+    top = 8
+  end
+  object dsPolozky: TDatasource[8]
+    left = 380
+    top = 351
+  end
+  object qrPolozky: TZQuery[9]
+    UpdateObject = UpdatePolozky
+    AfterApplyUpdates = qrPolozkyAfterApplyUpdates
+    AfterPost = qrPolozkyAfterPost
+    SQL.Strings = (
+      'SELECT * FROM UDALOSTI_POL WHERE ID_UDAL=:ID'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    left = 228
+    top = 347
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+  end
+  object UpdatePolozky: TZUpdateSQL[10]
+    UseSequenceFieldForRefreshSQL = False
+    left = 225
+    top = 407
+  end
+end

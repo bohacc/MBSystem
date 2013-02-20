@@ -1,0 +1,614 @@
+object frmFirma: TfrmFirma
+  Left = 385
+  Height = 431
+  Top = 130
+  Width = 400
+  Caption = 'Uživatelské údaje'
+  ClientHeight = 431
+  ClientWidth = 400
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '0.9.30'
+  object Label1: TLabel
+    Left = 15
+    Height = 16
+    Top = 16
+    Width = 33
+    Caption = 'Název'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 15
+    Height = 16
+    Top = 40
+    Width = 27
+    Caption = 'Ulice'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 15
+    Height = 16
+    Top = 64
+    Width = 34
+    Caption = 'Město'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 15
+    Height = 16
+    Top = 88
+    Width = 19
+    Caption = 'Psč'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 15
+    Height = 16
+    Top = 112
+    Width = 12
+    Caption = 'IČ'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 15
+    Height = 16
+    Top = 136
+    Width = 20
+    Caption = 'DIČ'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 17
+    Height = 16
+    Top = 240
+    Width = 77
+    Caption = 'Doplňující text'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 15
+    Height = 16
+    Top = 330
+    Width = 84
+    Caption = 'Platnost licence'
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 15
+    Height = 16
+    Top = 362
+    Width = 43
+    Caption = 'Licence'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 16
+    Height = 16
+    Top = 262
+    Width = 86
+    Caption = 'Uživatelské číslo'
+    ParentColor = False
+  end
+  object Label11: TLabel
+    Left = 15
+    Height = 16
+    Top = 160
+    Width = 25
+    Caption = 'Účet'
+    ParentColor = False
+  end
+  object Label12: TLabel
+    Left = 274
+    Height = 16
+    Top = 160
+    Width = 33
+    Caption = 'banka'
+    ParentColor = False
+  end
+  object Label13: TLabel
+    Left = 15
+    Height = 16
+    Top = 184
+    Width = 87
+    Caption = 'Kontaktní osoba'
+    ParentColor = False
+  end
+  object Label14: TLabel
+    Left = 15
+    Height = 16
+    Top = 207
+    Width = 85
+    Caption = 'Tel. kont. osoby'
+    ParentColor = False
+  end
+  object edID: TMemo
+    Left = 104
+    Height = 58
+    Top = 262
+    Width = 288
+    Lines.Strings = (
+      'edID'
+    )
+    TabOrder = 0
+  end
+  object edPlatnost: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 323
+    Width = 120
+    DataField = 'PLATNOST_LICENCE'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 224
+    Height = 25
+    Top = 323
+    Width = 136
+    Caption = 'Uložit údaje do schránky'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 367
+    Height = 25
+    Top = 323
+    Width = 27
+    Caption = '...'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object edNazev: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 8
+    Width = 288
+    DataField = 'NAZEV'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 1000
+    TabOrder = 4
+  end
+  object edUlice: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 33
+    Width = 288
+    DataField = 'ULICE'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 320
+    TabOrder = 5
+  end
+  object edMesto: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 57
+    Width = 288
+    DataField = 'MESTO'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 320
+    TabOrder = 6
+  end
+  object edPsc: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 81
+    Width = 86
+    DataField = 'PSC'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 40
+    TabOrder = 7
+  end
+  object edIc: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 104
+    Width = 168
+    DataField = 'ICO'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 80
+    TabOrder = 8
+  end
+  object edDic: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 129
+    Width = 168
+    DataField = 'DIC'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 80
+    TabOrder = 9
+  end
+  object edDoplnijiciText: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 233
+    Width = 288
+    DataField = 'DOPLNUJICI_TEXT'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 1000
+    TabOrder = 10
+  end
+  object edLicence: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 360
+    Width = 232
+    DataField = 'LICENCNI_CISLO'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 1000
+    TabOrder = 11
+  end
+  object btok: TBitBtn
+    Left = 171
+    Height = 30
+    Top = 392
+    Width = 75
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = btokClick
+    TabOrder = 12
+  end
+  object DBEdit1: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 153
+    Width = 168
+    DataField = 'UCET'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 120
+    TabOrder = 13
+  end
+  object DBEdit2: TDBEdit
+    Left = 312
+    Height = 23
+    Top = 153
+    Width = 80
+    DataField = 'KOD_BANKY'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 40
+    TabOrder = 14
+  end
+  object DBEdit3: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 177
+    Width = 288
+    DataField = 'KONTAKTNI_OSOBA'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 200
+    TabOrder = 15
+  end
+  object DBEdit4: TDBEdit
+    Left = 104
+    Height = 23
+    Top = 201
+    Width = 168
+    DataField = 'KONTAKTNI_OSOBA_TEL'
+    DataSource = dsLicence
+    CharCase = ecNormal
+    MaxLength = 120
+    TabOrder = 16
+  end
+  object cbSit: TDBCheckBox
+    Left = 339
+    Height = 19
+    Top = 364
+    Width = 53
+    Caption = 'Síťová'
+    DataField = 'SIT'
+    DataSource = dsLicence
+    TabOrder = 17
+    ValueChecked = '1'
+    ValueUnchecked = '0'
+  end
+  object ActionList1: TActionList
+    left = 312
+    top = 88
+    object acLicence: TAction
+      Caption = 'acLicence'
+      HelpType = htKeyword
+      OnExecute = acLicenceExecute
+    end
+  end
+  object dsLicence: TDatasource
+    DataSet = qrLicence
+    OnDataChange = dsLicenceDataChange
+    left = 338
+    top = 224
+  end
+  object qrLicence: TZQuery
+    Connection = DM.OracleConnection
+    UpdateObject = UpdateLicence
+    AfterApplyUpdates = qrLicenceAfterApplyUpdates
+    AfterPost = qrLicenceAfterPost
+    SQL.Strings = (
+      'SELECT * FROM LICENCE '
+    )
+    Params = <>
+    left = 200
+    top = 84
+    object qrLicenceKOD: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'KOD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrLicenceNAZEV: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'NAZEV'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrLicenceULICE: TStringField
+      DisplayWidth = 320
+      FieldKind = fkData
+      FieldName = 'ULICE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 320
+    end
+    object qrLicenceMESTO: TStringField
+      DisplayWidth = 320
+      FieldKind = fkData
+      FieldName = 'MESTO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 320
+    end
+    object qrLicencePSC: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'PSC'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qrLicenceICO: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'ICO'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qrLicenceDIC: TStringField
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'DIC'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object qrLicenceDOPLNUJICI_TEXT: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'DOPLNUJICI_TEXT'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrLicenceLICENCNI_CISLO: TStringField
+      DisplayWidth = 1000
+      FieldKind = fkData
+      FieldName = 'LICENCNI_CISLO'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrLicencePLATNOST_LICENCE: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PLATNOST_LICENCE'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrLicenceUCET: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'UCET'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrLicenceKOD_BANKY: TStringField
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'KOD_BANKY'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object qrLicenceKONTAKTNI_OSOBA: TStringField
+      DisplayWidth = 200
+      FieldKind = fkData
+      FieldName = 'KONTAKTNI_OSOBA'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qrLicenceKONTAKTNI_OSOBA_TEL: TStringField
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'KONTAKTNI_OSOBA_TEL'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrLicenceSIT: TSmallintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'SIT'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object UpdateLicence: TZUpdateSQL
+    InsertSQL.Strings = (
+      'INSERT INTO LICENCE(KOD,NAZEV,ULICE,MESTO,PSC,ICO,DIC,DOPLNUJICI_TEXT,LICENCNI_CISLO,PLATNOST_LICENCE,UCET,KOD_BANKY,KONTAKTNI_OSOBA,KONTAKTNI_OSOBA_TEL,SIT)'
+      'VALUES(:KOD,:NAZEV,:ULICE,:MESTO,:PSC,:ICO,:DIC,:DOPLNUJICI_TEXT,:LICENCNI_CISLO,:PLATNOST_LICENCE,:UCET,:KOD_BANKY,:KONTAKTNI_OSOBA,:KONTAKTNI_OSOBA_TEL,:SIT)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE LICENCE'
+      'SET KOD = :KOD,'
+      '    NAZEV = :NAZEV,'
+      '    ULICE = :ULICE,'
+      '    MESTO = :MESTO,'
+      '    PSC = :PSC,'
+      '    ICO = :ICO,'
+      '    DIC = :DIC,'
+      '    DOPLNUJICI_TEXT = :DOPLNUJICI_TEXT,'
+      '    LICENCNI_CISLO = :LICENCNI_CISLO,'
+      '    PLATNOST_LICENCE = :PLATNOST_LICENCE,'
+      '    UCET = :UCET,'
+      '    KOD_BANKY = :KOD_BANKY,'
+      '    KONTAKTNI_OSOBA = :KONTAKTNI_OSOBA,'
+      '    KONTAKTNI_OSOBA_TEL = :KONTAKTNI_OSOBA_TEL,'
+      '    SIT = :SIT'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 121
+    top = 84
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'KOD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NAZEV'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ULICE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'MESTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PSC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ICO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DIC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DOPLNUJICI_TEXT'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'LICENCNI_CISLO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PLATNOST_LICENCE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UCET'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'KOD_BANKY'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'KONTAKTNI_OSOBA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'KONTAKTNI_OSOBA_TEL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SIT'
+        ParamType = ptUnknown
+      end>
+  end
+end

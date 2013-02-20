@@ -1,0 +1,25 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmSOPOPP2','FORMDATA',[
+  'TPF0'#11'TfrmSOPOPP2'#10'frmSOPOPP2'#4'Left'#3'Q'#1#6'Height'#2'|'#3'Top'#3
+  +#175#0#5'Width'#3'['#1#7'Caption'#6'0Ozn'#195#161'men'#195#173' postupitele '
+  +'o postoupen'#195#173' pohled'#195#161'vky'#10'LCLVersion'#6#6'0.9.30'#0#9'T'
+  +'frReport'#8'frReport'#7'Dataset'#7#8'dsMaster'#11'InitialZoom'#7#9'pzDefaul'
+  +'t'#7'Options'#11#0#14'PreviewButtons'#11#6'pbZoom'#6'pbLoad'#6'pbSave'#7'pb'
+  +'Print'#6'pbFind'#6'pbHelp'#6'pbExit'#0#8'DataType'#7#9'dtDataSet'#4'left'#2
+  +'0'#3'top'#2'%'#10'ReportForm'#10#4#0#0#0#25#0#0#0#0#0#12'TfrDBDataSet'#8'ds'
+  +'Master'#7'DataSet'#7#8'qrMaster'#4'left'#3#152#0#3'top'#2'%'#0#0#7'TZQuery'
+  +#8'qrMaster'#10'Connection'#7#19'DM.OracleConnection'#11'SQL.Strings'#1#6#6
+  +'SELECT'#6#6'  Z.*,'#6'2  TO_CHAR(SYSDATE,''DD.MM.YYYY'') AS AKTUALNI_DATUM,'
+  +#6'C  L.KONTAKTNI_OSOBA||''/''||L.KONTAKTNI_OSOBA_TEL AS KONTAKTNI_OSOBA,'#6
+  +#9'  L.UCET,'#6#14'  L.KOD_BANKY,'#6'5  GET_PARAM(''ZALOBY_DATUM_PREDANI'') '
+  +'AS DATUM_PREDANI,'#6'/  ''ERP ''||Z.VAR_SYMB||'' - FEN'' AS VAR_SYMB_ERP,'#6
+  +')  Z.ULICE||'' ''||Z.CISLO_DOMU AS ULICE_CP,'#6'#  Z.PSC||'' ''||Z.MESTO AS'
+  +' PSC_MESTO,'#6'G  Z.JMENO_CP||'', nar. ''||GET_DATUM_FROM_RC(Z.RODNE_CISLO)'
+  +' AS JMENO_NAR,'#6'&  CASE GET_POHLAVI_Z_RC(Z.RODNE_CISLO)'#6#31'    WHEN 1 '
+  +'THEN ''V'#195#161#197#190'en'#195#189' pan'''#6'!    WHEN 0 THEN ''V'#195
+  +#161#197#190'en'#195#161' pan'#195#173''''#6'(    WHEN NULL THEN ''V'#195#161
+  +#197#190'en'#195#189' pan/pan'#195#173''''#6#18'  END AS OSLOVENI,'#6'4  GET'
+  +'_PARAM(''ZALOBY_OZNAMENI_UCET'') AS UCET_OZNAMENI'#6#4'FROM'#6#11'  ZALOBY '
+  +'Z,'#6#11'  LICENCE L'#0#6'Params'#14#0#4'left'#3#0#1#3'top'#2'%'#0#0#0
+]);

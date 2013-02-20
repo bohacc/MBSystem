@@ -1,0 +1,97 @@
+object frmNastDiv: TfrmNastDiv
+  Left = 290
+  Height = 229
+  Top = 182
+  Width = 399
+  Caption = 'frmNastDiv'
+  ClientHeight = 229
+  ClientWidth = 399
+  Position = poDesktopCenter
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 30
+    Height = 16
+    Top = 19
+    Width = 167
+    Caption = 'Procento pro výplatu dividendy'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 29
+    Height = 16
+    Top = 53
+    Width = 196
+    Caption = 'Procento daně pro výplatu dividendy'
+    ParentColor = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 168
+    Height = 30
+    Top = 176
+    Width = 75
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 310
+    Height = 23
+    Top = 19
+    Width = 74
+    DataField = 'HODNOTA'
+    DataSource = dsProcDiv
+    MaxLength = 50
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 310
+    Height = 23
+    Top = 48
+    Width = 74
+    DataField = 'HODNOTA'
+    DataSource = dsProcDanDiv
+    MaxLength = 50
+    TabOrder = 2
+  end
+  object dsProcDiv: TDatasource
+    DataSet = qrProcDiv
+    left = 192
+  end
+  object qrProcDiv: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    AutoCalcFields = False
+    AfterPost = qrProcDivAfterPost
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    ReadOnly = False
+    SQL.Strings = (
+      'SELECT HODNOTA FROM PARAMETRY WHERE KOD=''PROCENTO_DIVIDENDY'''
+    )
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    left = 232
+  end
+  object qrProcDanDiv: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    AutoCalcFields = False
+    AfterPost = qrProcDanDivAfterPost
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    ReadOnly = False
+    SQL.Strings = (
+      'SELECT HODNOTA FROM PARAMETRY WHERE KOD=''PROCENTO_DANE_DIVIDENDY'''
+    )
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    left = 235
+    top = 40
+  end
+  object dsProcDanDiv: TDatasource
+    DataSet = qrProcDanDiv
+    left = 192
+    top = 40
+  end
+end

@@ -1,0 +1,38 @@
+object dlgProgram: TdlgProgram
+  Left = 363
+  Height = 187
+  Top = 175
+  Width = 400
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'MB system'
+  ClientHeight = 187
+  ClientWidth = 400
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object BitBtn1: TBitBtn
+    Left = 170
+    Height = 30
+    Top = 149
+    Width = 75
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object Memo1: TMemo
+    Left = 15
+    Height = 125
+    Top = 13
+    Width = 371
+    Color = clBtnFace
+    Lines.Strings = (
+      'Program MB system byl vytvořen v prostředí Lazarus 0.9.30'
+      'FPC 2.4.0 i386-win32-win32/win64 pod licencí GNU/LGPL.'
+      'Více informací na emailu: bohacc@seznam.cz'
+    )
+    OnChange = Memo1Change
+    TabOrder = 1
+  end
+end

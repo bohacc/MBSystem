@@ -1,0 +1,24 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmZalobyHistorie','FORMDATA',[
+  'TPF0'#18'TfrmZalobyHistorie'#17'frmZalobyHistorie'#4'Left'#3#132#1#6'Height'
+  +#3''''#1#3'Top'#3#175#0#5'Width'#3#244#0#11'BorderIcons'#11#12'biSystemMenu'
+  +#0#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6#17'Historie import'#197#175#12
+  +'ClientHeight'#3''''#1#11'ClientWidth'#3#244#0#6'OnShow'#7#8'FormShow'#8'Pos'
+  +'ition'#7#16'poMainFormCenter'#10'LCLVersion'#6#8'0.9.28.3'#0#6'TPanel'#6'Pa'
+  +'nel1'#4'Left'#2#0#6'Height'#2#30#3'Top'#3#9#1#5'Width'#3#244#0#5'Align'#7#8
+  +'alBottom'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2#30#11'ClientWidth'#3
+  +#244#0#8'TabOrder'#2#0#0#7'TButton'#7'Button1'#4'Left'#2'S'#6'Height'#2#25#3
+  +'Top'#2#3#5'Width'#2'K'#7'Anchors'#11#0#7'Caption'#6#2'OK'#11'ModalResult'#2
+  +#1#8'TabOrder'#2#0#0#0#0#7'TDBGrid'#7'DBGrid1'#4'Left'#2#0#6'Height'#3#9#1#3
+  +'Top'#2#0#5'Width'#3#244#0#5'Align'#7#8'alClient'#7'Columns'#14#1#13'Title.C'
+  +'aption'#6#13'Datum importu'#9'FieldName'#6#13'DATUM_IMPORTU'#0#0#10'DataSou'
+  +'rce'#7#8'dsMaster'#7'Options'#11#8'dgTitles'#11'dgIndicator'#14'dgColumnRes'
+  +'ize'#12'dgColumnMove'#10'dgColLines'#10'dgRowLines'#6'dgTabs'#21'dgAlwaysSh'
+  +'owSelection'#15'dgConfirmDelete'#14'dgCancelOnExit'#0#8'ReadOnly'#9#8'TabOr'
+  +'der'#2#1#0#0#11'TDatasource'#8'dsMaster'#7'DataSet'#7#8'qrMaster'#4'left'#2
+  +'J'#3'top'#2'w'#0#0#7'TZQuery'#8'qrMaster'#10'Connection'#7#19'DM.OracleConn'
+  +'ection'#11'SQL.Strings'#1#6#6'SELECT'#6#24'  DISTINCT DATUM_IMPORTU'#6#4'FR'
+  +'OM'#6#8'  ZALOBY'#6#8'ORDER BY'#6#20'  DATUM_IMPORTU DESC'#0#6'Params'#14#0
+  +#4'left'#2'P'#3'top'#2'8'#0#0#0
+]);

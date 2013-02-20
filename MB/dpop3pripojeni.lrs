@@ -1,0 +1,18 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('Tfrmpop3pripojeni','FORMDATA',[
+  'TPF0'#17'Tfrmpop3pripojeni'#16'frmpop3pripojeni'#4'Left'#3#132#1#6'Height'#3
+  +#131#0#3'Top'#3#175#0#5'Width'#3#19#1#11'BorderIcons'#11#12'biSystemMenu'#0
+  +#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6'"P'#197#153'ipojen'#195#173' k p'
+  +'o'#197#161'tovn'#195#173'mu serveru'#12'ClientHeight'#3#131#0#11'ClientWidt'
+  +'h'#3#19#1#8'Position'#7#16'poMainFormCenter'#10'LCLVersion'#6#8'0.9.28.2'#0
+  +#6'TLabel'#6'Label1'#4'Left'#2#16#6'Height'#2#16#3'Top'#2#21#5'Width'#2'?'#7
+  +'Caption'#6#13'U'#197#190'iv. jm'#195#169'no'#11'ParentColor'#8#0#0#6'TLabel'
+  +#6'Label2'#4'Left'#2#17#6'Height'#2#16#3'Top'#2'5'#5'Width'#2#31#7'Caption'#6
+  +#5'Heslo'#11'ParentColor'#8#0#0#5'TEdit'#5'Edit1'#4'Left'#2'Z'#6'Height'#2#23
+  +#3'Top'#2#16#5'Width'#3#168#0#8'TabOrder'#2#0#0#0#5'TEdit'#5'Edit2'#4'Left'#2
+  +'Z'#6'Height'#2#23#3'Top'#2'0'#5'Width'#3#168#0#8'EchoMode'#7#10'emPassword'
+  +#12'PasswordChar'#6#1'*'#8'TabOrder'#2#1#0#0#7'TButton'#7'Button1'#4'Left'#2
+  +'c'#6'Height'#2#25#3'Top'#2'`'#5'Width'#2'K'#7'Caption'#6#9'P'#197#153'ipoji'
+  +'t'#11'ModalResult'#2#1#8'TabOrder'#2#2#0#0#0
+]);

@@ -1,0 +1,14 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmHistorie_akcie','FORMDATA',[
+  'TPF0'#18'TfrmHistorie_akcie'#17'frmHistorie_akcie'#4'Left'#3'D'#1#6'Height'#3
+  +','#1#3'Top'#3#154#0#5'Width'#3#144#1#7'Caption'#6#17'frmHistorie_akcie'#10
+  +'LCLVersion'#6#8'0.9.28.3'#0#9'TfrReport'#9'quickrep1'#7'Dataset'#7#12'frDBD'
+  +'ataSet1'#11'InitialZoom'#7#9'pzDefault'#14'PreviewButtons'#11#6'pbZoom'#6'p'
+  +'bLoad'#6'pbSave'#7'pbPrint'#6'pbFind'#6'pbHelp'#6'pbExit'#0#8'DataType'#7#9
+  +'dtDataSet'#4'left'#2' '#3'top'#2'!'#10'ReportForm'#10#4#0#0#0#24#0#0#0#0#0
+  +#12'TfrDBDataSet'#12'frDBDataSet1'#7'DataSet'#7#8'qrMaster'#4'left'#2'S'#3't'
+  +'op'#2'%'#0#0#9'TSQLQuery'#8'qrMaster'#9'IndexName'#6#13'DEFAULT_ORDER'#8'Da'
+  +'tabase'#7#19'DM.OracleConnection'#11'Transaction'#7#17'DM.SQLTransaction'#8
+  +'ReadOnly'#8#6'Params'#14#0#4'left'#3#144#0#3'top'#2'%'#0#0#0
+]);

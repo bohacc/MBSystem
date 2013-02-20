@@ -1,0 +1,53 @@
+object frmSOPOPP2: TfrmSOPOPP2
+  Left = 337
+  Height = 124
+  Top = 175
+  Width = 347
+  Caption = 'Oznámení postupitele o postoupení pohledávky'
+  LCLVersion = '0.9.30'
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 48
+    top = 37
+    ReportForm = {
+      19000000
+    }
+  end
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    left = 152
+    top = 37
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT'
+      '  Z.*,'
+      '  TO_CHAR(SYSDATE,''DD.MM.YYYY'') AS AKTUALNI_DATUM,'
+      '  L.KONTAKTNI_OSOBA||''/''||L.KONTAKTNI_OSOBA_TEL AS KONTAKTNI_OSOBA,'
+      '  L.UCET,'
+      '  L.KOD_BANKY,'
+      '  GET_PARAM(''ZALOBY_DATUM_PREDANI'') AS DATUM_PREDANI,'
+      '  ''ERP ''||Z.VAR_SYMB||'' - FEN'' AS VAR_SYMB_ERP,'
+      '  Z.ULICE||'' ''||Z.CISLO_DOMU AS ULICE_CP,'
+      '  Z.PSC||'' ''||Z.MESTO AS PSC_MESTO,'
+      '  Z.JMENO_CP||'', nar. ''||GET_DATUM_FROM_RC(Z.RODNE_CISLO) AS JMENO_NAR,'
+      '  CASE GET_POHLAVI_Z_RC(Z.RODNE_CISLO)'
+      '    WHEN 1 THEN ''Vážený pan'''
+      '    WHEN 0 THEN ''Vážená paní'''
+      '    WHEN NULL THEN ''Vážený pan/paní'''
+      '  END AS OSLOVENI,'
+      '  GET_PARAM(''ZALOBY_OZNAMENI_UCET'') AS UCET_OZNAMENI'
+      'FROM'
+      '  ZALOBY Z,'
+      '  LICENCE L'
+    )
+    Params = <>
+    left = 256
+    top = 37
+  end
+end

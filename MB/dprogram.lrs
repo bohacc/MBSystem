@@ -1,0 +1,16 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TdlgProgram','FORMDATA',[
+  'TPF0'#11'TdlgProgram'#10'dlgProgram'#4'Left'#3'k'#1#6'Height'#3#187#0#3'Top'
+  +#3#175#0#5'Width'#3#144#1#11'BorderIcons'#11#12'biSystemMenu'#0#11'BorderSty'
+  +'le'#7#8'bsDialog'#7'Caption'#6#9'MB system'#12'ClientHeight'#3#187#0#11'Cli'
+  +'entWidth'#3#144#1#8'Position'#7#16'poMainFormCenter'#10'LCLVersion'#6#6'0.9'
+  +'.30'#0#7'TBitBtn'#7'BitBtn1'#4'Left'#3#170#0#6'Height'#2#30#3'Top'#3#149#0#5
+  +'Width'#2'K'#7'Caption'#6#3'&OK'#7'Default'#9#4'Kind'#7#4'bkOK'#11'ModalResu'
+  +'lt'#2#1#8'TabOrder'#2#0#0#0#5'TMemo'#5'Memo1'#4'Left'#2#15#6'Height'#2'}'#3
+  +'Top'#2#13#5'Width'#3's'#1#5'Color'#7#9'clBtnFace'#13'Lines.Strings'#1#6'<Pr'
+  +'ogram MB system byl vytvo'#197#153'en v prost'#197#153'ed'#195#173' Lazarus'
+  +' 0.9.30'#6'7FPC 2.4.0 i386-win32-win32/win64 pod licenc'#195#173' GNU/LGPL.'
+  +#6',V'#195#173'ce informac'#195#173' na emailu: bohacc@seznam.cz'#0#8'OnChan'
+  +'ge'#7#11'Memo1Change'#8'TabOrder'#2#1#0#0#0
+]);

@@ -1,0 +1,1239 @@
+﻿inherited frmAkcionari: TfrmAkcionari
+  Left = 487
+  Height = 450
+  Top = 235
+  Width = 707
+  Caption = 'Akcionáři'
+  ClientHeight = 430
+  ClientWidth = 707
+  Constraints.MinHeight = 450
+  Constraints.MinWidth = 707
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 407
+    Width = 707
+  end
+  inherited ToolBar1: TToolBar
+    Width = 707
+    Images = frmMain.ImageList
+    inherited ToolButton1: TToolButton
+      Left = 24
+    end
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      Left = 1
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = NavigatorBeforeAction
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = NavigatorClick
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 356
+    Width = 707
+    ActivePage = tsSeznam
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 328
+      ClientWidth = 699
+      inherited DBGrid: TDBGrid
+        Height = 328
+        Width = 699
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 328
+      ClientWidth = 699
+      object Panel1: TPanel[0]
+        Left = 0
+        Height = 194
+        Top = 0
+        Width = 699
+        Align = alTop
+        ClientHeight = 194
+        ClientWidth = 699
+        TabOrder = 0
+        OnClick = Panel1Click
+        object Label1: TLabel
+          Left = 8
+          Height = 16
+          Top = 17
+          Width = 36
+          Caption = 'Jméno'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 8
+          Height = 16
+          Top = 41
+          Width = 45
+          Caption = 'Příjmení'
+          ParentColor = False
+        end
+        object Label3: TLabel
+          Left = 8
+          Height = 16
+          Top = 66
+          Width = 27
+          Caption = 'Ulice'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 8
+          Height = 16
+          Top = 93
+          Width = 34
+          Caption = 'Město'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 9
+          Height = 16
+          Top = 119
+          Width = 22
+          Caption = 'PSČ'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 249
+          Height = 16
+          Top = 43
+          Width = 47
+          Caption = 'Rodné č.'
+          ParentColor = False
+        end
+        object Label7: TLabel
+          Left = 249
+          Height = 16
+          Top = 67
+          Width = 17
+          Caption = 'OP'
+          ParentColor = False
+        end
+        object Label8: TLabel
+          Left = 249
+          Height = 16
+          Top = 93
+          Width = 16
+          Caption = 'OS'
+          ParentColor = False
+        end
+        object Label9: TLabel
+          Left = 168
+          Height = 16
+          Top = 119
+          Width = 128
+          Caption = 'Celkem akcie v hodnotě'
+          ParentColor = False
+        end
+        object Label11: TLabel
+          Left = 324
+          Height = 16
+          Top = 13
+          Width = 8
+          Caption = '#'
+          ParentColor = False
+        end
+        object Bevel1: TBevel
+          Left = 10
+          Height = 41
+          Top = 145
+          Width = 411
+          Shape = bsFrame
+        end
+        object Label13: TLabel
+          Left = 13
+          Height = 16
+          Top = 136
+          Width = 54
+          Caption = 'Dividenda'
+          Color = clBtnFace
+          ParentColor = False
+          Transparent = False
+        end
+        object DBGrid2: TDBGrid
+          Left = 425
+          Height = 192
+          Top = 1
+          Width = 273
+          Align = alRight
+          Anchors = [akTop, akLeft, akRight, akBottom]
+          Color = clWindow
+          Columns = <>
+          DataSource = dsSoucty
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiselect]
+          TabOrder = 8
+          TitleStyle = tsNative
+        end
+        object edPrijmeni: TDBEdit
+          Left = 64
+          Height = 23
+          Top = 34
+          Width = 120
+          DataField = 'PRIJMENI'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 200
+          TabOrder = 1
+          OnChange = edPrijmeniChange
+        end
+        object edUlice: TDBEdit
+          Left = 64
+          Height = 23
+          Top = 60
+          Width = 170
+          DataField = 'ULICE'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 120
+          TabOrder = 2
+        end
+        object edMesto: TDBEdit
+          Left = 64
+          Height = 23
+          Top = 86
+          Width = 170
+          DataField = 'MESTO'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 320
+          TabOrder = 3
+        end
+        object edPsc: TDBEdit
+          Left = 64
+          Height = 23
+          Top = 112
+          Width = 50
+          DataField = 'PSC'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 24
+          TabOrder = 4
+        end
+        object edRodne: TDBEdit
+          Left = 300
+          Height = 23
+          Top = 34
+          Width = 120
+          DataField = 'RC'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 120
+          TabOrder = 5
+        end
+        object edOP: TDBEdit
+          Left = 300
+          Height = 23
+          Top = 60
+          Width = 120
+          DataField = 'OP'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 120
+          TabOrder = 6
+        end
+        object edOS: TDBEdit
+          Left = 300
+          Height = 23
+          Top = 86
+          Width = 120
+          DataField = 'OS'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 8
+          TabOrder = 7
+        end
+        object edAkcie: TDBEdit
+          Left = 300
+          Height = 23
+          Top = 112
+          Width = 120
+          DataField = 'AKCIE'
+          DataSource = dsMaster
+          ReadOnly = True
+          BorderSpacing.CellAlignHorizontal = ccaRightBottom
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 9
+        end
+        object edID: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 8
+          Width = 80
+          DataField = 'ID'
+          DataSource = dsMaster
+          ReadOnly = True
+          CharCase = ecNormal
+          Color = clBtnFace
+          MaxLength = 0
+          TabOrder = 10
+        end
+        object edHodnotaDiv: TDBEdit
+          Left = 16
+          Height = 23
+          Top = 156
+          Width = 100
+          DataField = 'HODNOTA'
+          DataSource = dsDividenda
+          ReadOnly = True
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 11
+        end
+        object edProcentoDiv: TDBEdit
+          Left = 121
+          Height = 23
+          Top = 156
+          Width = 33
+          DataField = 'PROC_DIV'
+          DataSource = dsDividenda
+          ReadOnly = True
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 12
+        end
+        object edHrubaDiv: TDBEdit
+          Left = 159
+          Height = 23
+          Top = 156
+          Width = 100
+          DataField = 'HRUBA_DIV'
+          DataSource = dsDividenda
+          ReadOnly = True
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 13
+          OnChange = edHrubaDivChange
+        end
+        object edDanDiv: TDBEdit
+          Left = 264
+          Height = 23
+          Top = 156
+          Width = 33
+          DataField = 'DAN_DIV'
+          DataSource = dsDividenda
+          ReadOnly = True
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 14
+        end
+        object edCistaDiv: TDBEdit
+          Left = 303
+          Height = 23
+          Top = 156
+          Width = 109
+          DataField = 'CISTA_DIV'
+          DataSource = dsDividenda
+          ReadOnly = True
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 15
+        end
+        object edJmeno: TDBEdit
+          Left = 64
+          Height = 23
+          Top = 8
+          Width = 120
+          DataField = 'JMENO'
+          DataSource = dsMaster
+          CharCase = ecNormal
+          MaxLength = 120
+          TabOrder = 0
+        end
+      end
+      object pcAkcie: TPageControl[1]
+        Left = 0
+        Height = 134
+        Top = 194
+        Width = 699
+        ActivePage = tsAkcie
+        Align = alClient
+        TabIndex = 0
+        TabOrder = 1
+        OnChange = pcAkcieChange
+        object tsAkcie: TTabSheet
+          Caption = 'Akcie'
+          ClientHeight = 106
+          ClientWidth = 691
+          object ToolBar2: TToolBar
+            Left = 0
+            Height = 24
+            Top = 0
+            Width = 691
+            AutoSize = True
+            Caption = 'ToolBar2'
+            Images = frmMain.ImageList
+            TabOrder = 0
+            object toolbtn: TToolButton
+              Left = 1
+              Hint = 'Obnovení seznamu'
+              Top = 2
+              Caption = 'toolbtn'
+              ImageIndex = 7
+              OnClick = toolbtnClick
+            end
+            object toolbtn2: TToolButton
+              Left = 24
+              Top = 2
+              Caption = 'toolbtn2'
+              OnClick = toolbtn2Click
+            end
+            object ToolButton6: TToolButton
+              Left = 288
+              Hint = 'Převede označené akcie'
+              Top = 2
+              Caption = 'ToolButton6'
+              ImageIndex = 5
+              OnClick = ToolButton6Click
+              ParentShowHint = False
+              ShowHint = True
+            end
+            object tbOznacitVse: TToolButton
+              Left = 311
+              Hint = 'Převede všechny akcie'
+              Top = 2
+              Caption = 'tbOznacitVse'
+              ImageIndex = 6
+              OnClick = tbOznacitVseClick
+            end
+            object DBNavigator1: TDBNavigator
+              Left = 47
+              Height = 22
+              Top = 2
+              Width = 241
+              BevelOuter = bvNone
+              ChildSizing.EnlargeHorizontal = crsScaleChilds
+              ChildSizing.EnlargeVertical = crsScaleChilds
+              ChildSizing.ShrinkHorizontal = crsScaleChilds
+              ChildSizing.ShrinkVertical = crsScaleChilds
+              ChildSizing.Layout = cclLeftToRightThenTopToBottom
+              ChildSizing.ControlsPerLine = 100
+              ClientHeight = 22
+              ClientWidth = 241
+              DataSource = dsPohyb
+              Flat = True
+              OnClick = DBNavigator1Click
+              TabOrder = 0
+              VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+            end
+          end
+          object DBGrid1: TDBGrid
+            Left = 0
+            Height = 56
+            Top = 24
+            Width = 691
+            Align = alClient
+            Color = clWindow
+            Columns = <>
+            DataSource = dsPohyb
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiselect]
+            TabOrder = 1
+            TitleStyle = tsNative
+            OnDblClick = DBGrid1DblClick
+          end
+          object Panel2: TPanel
+            Left = 0
+            Height = 26
+            Top = 80
+            Width = 691
+            Align = alBottom
+            BevelOuter = bvNone
+            ClientHeight = 26
+            ClientWidth = 691
+            TabOrder = 2
+            object Label10: TLabel
+              Left = 0
+              Height = 16
+              Top = 7
+              Width = 116
+              Caption = 'Poslední pohyb akcie:'
+              ParentColor = False
+            end
+            object lbAkcie: TLabel
+              Left = 125
+              Height = 16
+              Top = 7
+              Width = 40
+              Caption = 'lbAkcie'
+              ParentColor = False
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 382
+    Width = 707
+    ClientWidth = 707
+    inherited btStorno: TButton
+      Left = 632
+      Align = alRight
+    end
+    inherited btOK: TButton
+      Left = 559
+      Align = alRight
+    end
+  end
+  object Label12: TLabel[4]
+    Left = 25
+    Height = 16
+    Top = 133
+    Width = 41
+    Caption = 'Label12'
+    ParentColor = False
+  end
+  inherited MainMenu: TMainMenu[5]
+    left = 584
+    top = 8
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = miZavritClick
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = miNovyZaznamClick
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = miUpravitZaznamClick
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = miSmazatZaznamClick
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = miVychoziDotazClick
+      end
+    end
+    object miAkcionari: TMenuItem[2]
+      Caption = 'Akcionáři'
+      object miPrevod: TMenuItem
+        Caption = 'Převod akcie'
+        OnClick = miPrevodClick
+      end
+      object miPrevodAll: TMenuItem
+        Caption = 'Převod všech akcií'
+        OnClick = miPrevodAllClick
+      end
+      object miNastaveniDividendy: TMenuItem
+        Caption = 'Nastavení dividendy'
+        OnClick = miNastaveniDividendyClick
+      end
+    end
+    object miSestavy: TMenuItem[3]
+      Caption = 'Sestavy'
+    end
+    inherited miOkno: TMenuItem[4]
+    end
+  end
+  inherited qrMaster: TZQuery[6]
+    Connection = DM.OracleConnection
+    AfterOpen = qrMasterAfterOpen
+    UpdateObject = UpdateMaster
+    BeforeApplyUpdates = qrMasterBeforeApplyUpdates
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    BeforePost = qrMasterBeforePost
+    AfterPost = qrMasterAfterPost
+    OnNewRecord = qrMasterNewRecord
+    SQL.Strings = (
+      'SELECT * FROM AKCIONARI'
+    )
+    top = 64
+    object qrMasterID: TLongintField[0]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterJMENO: TStringField[1]
+      DisplayLabel = 'Jméno'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'JMENO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterPRIJMENI: TStringField[2]
+      DisplayLabel = 'Příjmení'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'PRIJMENI'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object qrMasterULICE: TStringField[3]
+      DisplayLabel = 'Ulice'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'ULICE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterMESTO: TStringField[4]
+      DisplayLabel = 'Město'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'MESTO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 320
+    end
+    object qrMasterRC: TStringField[5]
+      DisplayLabel = 'Rodné číslo'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'RC'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterOP: TStringField[6]
+      DisplayLabel = 'Opč. průkaz'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'OP'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterPSC: TStringField[7]
+      DisplayLabel = 'PSČ'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PSC'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 24
+    end
+    object qrMasterAKCIE: TFloatField[8]
+      DisplayLabel = 'Akcie'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'AKCIE'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qrMasterDIVIDENDA: TFloatField[9]
+      DisplayLabel = 'Dividenda'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DIVIDENDA'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qrMasterOS: TStringField[10]
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'OS'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 8
+    end
+  end
+  inherited UpdateMaster: TZUpdateSQL[7]
+    InsertSQL.Strings = (
+      'INSERT INTO AKCIONARI (JMENO, PRIJMENI, ULICE, MESTO, RC, OP, PSC, AKCIE, DIVIDENDA, OS)'
+      '  VALUES(:JMENO, :PRIJMENI, :ULICE, :MESTO, :RC, :OP, :PSC, :AKCIE, :DIVIDENDA, :OS)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE AKCIONARI SET'
+      'JMENO=:JMENO,'
+      'PRIJMENI=:PRIJMENI,'
+      'ULICE=:ULICE,'
+      'MESTO=:MESTO,'
+      'RC=:RC,'
+      'OP=:OP,'
+      'PSC=:PSC,'
+      'AKCIE=:AKCIE,'
+      'DIVIDENDA=:DIVIDENDA,'
+      'OS=:OS'
+      'WHERE ID=:OLD_ID'
+    )
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'JMENO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PRIJMENI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ULICE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'MESTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'RC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PSC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'AKCIE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DIVIDENDA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end>
+  end
+  inherited dsMaster: TDatasource[8]
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 72
+    top = 8
+  end
+  object dsPohyb: TDatasource[9]
+    DataSet = qrPohyb
+    left = 328
+    top = 272
+  end
+  object qrSoucty: TZQuery[10]
+    Connection = DM.OracleConnection
+    AutoCalcFields = False
+    BeforeOpen = qrSouctyBeforeOpen
+    BeforeInsert = qrSouctyBeforeInsert
+    AfterPost = qrSouctyAfterPost
+    SQL.Strings = (
+      'SELECT'
+      '*'
+      'FROM'
+      '('
+      'SELECT'
+      'TYP,'
+      '(SELECT COUNT(*) FROM AKCIE WHERE CISLO=:ID AND TYP=S.TYP) AS POCET,'
+      '(SELECT HODNOTA FROM TYPY_AKCII WHERE TYP=S.TYP) AS HODNOTA,'
+      'HODNOTA AS CELKEM'
+      'FROM'
+      '('
+      'SELECT'
+      '  TYP,'
+      '  SUM(HODNOTA) AS HODNOTA'
+      'FROM'
+      '  AKCIE'
+      'WHERE'
+      '  CISLO=:ID'
+      'GROUP BY'
+      '  TYP'
+      'ORDER BY'
+      '  HODNOTA'
+      ') S'
+      ') A'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    DataSource = dsMaster
+    left = 472
+    top = 101
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    object qrSouctyTYP: TStringField
+      DisplayLabel = 'Typ'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'TYP'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 5
+    end
+    object qrSouctyPOCET: TLongintField
+      DisplayLabel = 'Počet'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'POCET'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrSouctyHODNOTA: TLongintField
+      DisplayLabel = 'Hodnota'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'HODNOTA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrSouctyCELKEM: TFloatField
+      DisplayLabel = 'Celkem'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CELKEM'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = -1
+    end
+  end
+  object dsSoucty: TDatasource[11]
+    DataSet = qrSoucty
+    left = 526
+    top = 99
+  end
+  object qrText: TZQuery[12]
+    Connection = DM.OracleConnection
+    AutoCalcFields = False
+    AfterPost = qrTextAfterPost
+    SQL.Strings = (
+      'SELECT JMENO_ODKUD||'' ''||PRIJMENI_ODKUD||'' #''||TO_CHAR(ID_AKCIONARE_ODKUD)||'' Doklad: ''||DOKLAD||'' Datum: ''||DATUM AS TEXT,CISLO_AKCIE FROM POHYB WHERE ID IN(SELECT MAX(ID) AS ID FROM POHYB GROUP BY CISLO_AKCIE)'
+    )
+    Params = <>
+    DataSource = dsPohyb
+    left = 216
+    top = 272
+  end
+  object qrDividenda: TZQuery[13]
+    Connection = DM.OracleConnection
+    AutoCalcFields = False
+    BeforeOpen = qrDividendaBeforeOpen
+    AfterPost = qrDividendaAfterPost
+    SQL.Strings = (
+      'SELECT'
+      ' S.*,'
+      ' NVL(S.HRUBA_DIV,0)-((NVL(S.HRUBA_DIV,0)/100)*NVL(S.DAN_DIV,0)) AS CISTA_DIV'
+      'FROM'
+      '('
+      'SELECT'
+      '  A.PRIJMENI,'
+      '  A.JMENO,'
+      '  A.RC,'
+      '  A.ULICE||'', ''||A.MESTO||'' ''||A.PSC AS ADRESA,'
+      '  TO_NUMBER(GET_PARAM(''PROCENTO_DIVIDENDY'')) AS PROC_DIV,'
+      '  TO_NUMBER(GET_PARAM(''PROCENTO_DANE_DIVIDENDY'')) AS DAN_DIV,'
+      '  (SELECT SUM(HODNOTA) FROM AKCIE WHERE CISLO=A.ID) AS HODNOTA,'
+      '  ((SELECT NVL(SUM(HODNOTA),0) FROM AKCIE WHERE CISLO=A.ID)/100)*TO_NUMBER(NVL(GET_PARAM(''PROCENTO_DIVIDENDY''),0)) AS HRUBA_DIV'
+      'FROM'
+      '  AKCIONARI A'
+      'WHERE'
+      '  A.ID=:ID'
+      ') S'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    DataSource = dsMaster
+    left = 296
+    top = 168
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    object qrDividendaPRIJMENI: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'PRIJMENI'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qrDividendaJMENO: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'JMENO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qrDividendaRC: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'RC'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qrDividendaADRESA: TStringField
+      DisplayWidth = 119
+      FieldKind = fkData
+      FieldName = 'ADRESA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 119
+    end
+    object qrDividendaPROC_DIV: TFloatField
+      DefaultExpression = '### ### ###,00'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PROC_DIV'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      EditFormat = '#########,00'
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = -1
+    end
+    object qrDividendaDAN_DIV: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DAN_DIV'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ###,00'
+      EditFormat = '#########,00'
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = -1
+    end
+    object qrDividendaHODNOTA: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'HODNOTA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ###,00'
+      EditFormat = '#########,00'
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = -1
+    end
+    object qrDividendaHRUBA_DIV: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'HRUBA_DIV'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ###,00'
+      EditFormat = '#########,00'
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = -1
+    end
+    object qrDividendaCISTA_DIV: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CISTA_DIV'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ###,00'
+      EditFormat = '#########,00'
+    end
+  end
+  object dsDividenda: TDatasource[14]
+    DataSet = qrDividenda
+    left = 362
+    top = 157
+  end
+  object qrPohyb: TZQuery[15]
+    Connection = DM.OracleConnection
+    UpdateObject = UpdatePohyb
+    SQL.Strings = (
+      'SELECT * FROM AKCIE WHERE CISLO=:ID'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    DataSource = dsMaster
+    left = 391
+    top = 275
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    object qrPohybID: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrPohybCISLO: TLongintField
+      DisplayLabel = 'ID akcionáře'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CISLO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrPohybCISLO_AKCIE: TLargeintField
+      DisplayLabel = 'Číslo akcie'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CISLO_AKCIE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrPohybSERIE: TStringField
+      DisplayLabel = 'Série'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'SERIE'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrPohybTYP: TStringField
+      DisplayLabel = 'Typ'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'TYP'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrPohybHODNOTA: TFloatField
+      DisplayLabel = 'Hodnota'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'HODNOTA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qrPohybDATUM: TDateField
+      DisplayLabel = 'Datum'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrPohybPOZNAMKA: TMemoField
+      DisplayLabel = 'Poznámka'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'POZNAMKA'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object qrPohybTEXT: TBlobField
+      DisplayLabel = 'Text'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'TEXT'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+    end
+  end
+  object UpdatePohyb: TZUpdateSQL[16]
+    InsertSQL.Strings = (
+      'INSERT INTO AKCIE(ID,CISLO,CISLO_AKCIE,SERIE,TYP,HODNOTA,DATUM)'
+      '  VALUES(NULL, :CISLO, :CISLO_AKCIE, :SERIE, :TYP, :HODNOTA, :DATUM)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE AKCIE SET'
+      'CISLO=:CISLO,'
+      'CISLO_AKCIE=:CISLO_AKCIE,'
+      'SERIE=:SERIE,'
+      'TYP=:TYP,'
+      'HODNOTA=:HODNOTA,'
+      'DATUM=:DATUM'
+      'WHERE ID=:OLD_ID'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 472
+    top = 275
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'CISLO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CISLO_AKCIE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SERIE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TYP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HODNOTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end>
+  end
+end

@@ -1,0 +1,12 @@
+LazarusResources.Add('TfrmSOPOPPPodaciList','FORMDATA',[
+  'TPF0'#20'TfrmSOPOPPPodaciList'#19'frmSOPOPPPodaciList'#4'Left'#3#132#1#6'Hei'
+  +'ght'#3#161#0#3'Top'#3#175#0#5'Width'#3#142#1#7'Caption'#6#12'Podac'#195#173
+  +' list'#10'LCLVersion'#6#8'0.9.28.3'#0#9'TfrReport'#8'frReport'#7'Dataset'#7
+  +#12'frDBDataSet1'#11'InitialZoom'#7#9'pzDefault'#14'PreviewButtons'#11#6'pbZ'
+  +'oom'#6'pbLoad'#6'pbSave'#7'pbPrint'#6'pbFind'#6'pbHelp'#6'pbExit'#0#8'DataT'
+  +'ype'#7#9'dtDataSet'#4'left'#2' '#3'top'#2#30#10'ReportForm'#10#4#0#0#0#24#0
+  +#0#0#0#0#12'TfrDBDataSet'#12'frDBDataSet1'#7'DataSet'#7#8'qrMaster'#4'left'#3
+  +#128#0#3'top'#2#31#0#0#7'TZQuery'#8'qrMaster'#10'Connection'#7#19'DM.OracleC'
+  +'onnection'#11'SQL.Strings'#1#6'7SELECT Z.*,NULL AS JMENO,NULL AS PRIJMENI F'
+  +'ROM ZALOBY Z'#0#6'Params'#14#0#4'left'#3#232#0#3'top'#2' '#0#0#0
+]);

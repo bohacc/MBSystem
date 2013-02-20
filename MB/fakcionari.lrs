@@ -1,0 +1,359 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmAkcionari','FORMDATA',[
+  'TPF0'#241#13'TfrmAkcionari'#12'frmAkcionari'#4'Left'#3#231#1#6'Height'#3#194
+  +#1#3'Top'#3#235#0#5'Width'#3#195#2#7'Caption'#6#11'Akcion'#195#161#197#153'i'
+  +#12'ClientHeight'#3#174#1#11'ClientWidth'#3#195#2#21'Constraints.MinHeight'#3
+  +#194#1#20'Constraints.MinWidth'#3#195#2#4'Menu'#7#8'MainMenu'#10'OnActivate'
+  +#7#12'FormActivate'#8'OnCreate'#7#10'FormCreate'#0#241#10'TStatusBar'#10'Sta'
+  +'tusBar1'#3'Top'#3#151#1#5'Width'#3#195#2#0#0#241#8'TToolBar'#8'ToolBar1'#5
+  +'Width'#3#195#2#6'Images'#7#17'frmMain.ImageList'#0#241#11'TToolButton'#11'T'
+  +'oolButton1'#4'Left'#2#24#0#0#241#11'TToolButton'#11'ToolButton3'#7'OnClick'
+  +#7#19'miVychoziDotazClick'#0#0#241#11'TToolButton'#9'btRefresh'#4'Left'#2#1#7
+  +'OnClick'#7#14'btRefreshClick'#0#0#241#5'TEdit'#6'edFind'#7'OnKeyUp'#7#11'ed'
+  +'FindKeyUp'#0#0#241#12'TDBNavigator'#9'Navigator'#12'BeforeAction'#7#21'Navi'
+  +'gatorBeforeAction'#10'DataSource'#7#8'dsMaster'#13'Hints.Strings'#1#0#7'OnC'
+  +'lick'#7#14'NavigatorClick'#0#0#0#241#12'TPageControl'#6'pcMain'#6'Height'#3
+  +'d'#1#5'Width'#3#195#2#10'ActivePage'#7#8'tsSeznam'#0#241#9'TTabSheet'#8'tsS'
+  +'eznam'#12'ClientHeight'#3'H'#1#11'ClientWidth'#3#187#2#0#241#7'TDBGrid'#6'D'
+  +'BGrid'#6'Height'#3'H'#1#5'Width'#3#187#2#10'DataSource'#7#8'dsMaster'#10'On'
+  +'DblClick'#7#14'DBGridDblClick'#12'OnTitleClick'#7#16'DBGridTitleClick'#0#0#0
+  +#241#9'TTabSheet'#8'tsZaznam'#12'ClientHeight'#3'H'#1#11'ClientWidth'#3#187#2
+  +#0#242#2#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#3#194#0#3'Top'#2#0#5'Wi'
+  +'dth'#3#187#2#5'Align'#7#5'alTop'#12'ClientHeight'#3#194#0#11'ClientWidth'#3
+  +#187#2#8'TabOrder'#2#0#7'OnClick'#7#11'Panel1Click'#0#6'TLabel'#6'Label1'#4
+  +'Left'#2#8#6'Height'#2#16#3'Top'#2#17#5'Width'#2'$'#7'Caption'#6#6'Jm'#195
+  +#169'no'#11'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2#8#6'Height'#2#16
+  +#3'Top'#2')'#5'Width'#2'-'#7'Caption'#6#11'P'#197#153#195#173'jmen'#195#173
+  +#11'ParentColor'#8#0#0#6'TLabel'#6'Label3'#4'Left'#2#8#6'Height'#2#16#3'Top'
+  +#2'B'#5'Width'#2#27#7'Caption'#6#5'Ulice'#11'ParentColor'#8#0#0#6'TLabel'#6
+  +'Label4'#4'Left'#2#8#6'Height'#2#16#3'Top'#2']'#5'Width'#2'"'#7'Caption'#6#6
+  +'M'#196#155'sto'#11'ParentColor'#8#0#0#6'TLabel'#6'Label5'#4'Left'#2#9#6'Hei'
+  +'ght'#2#16#3'Top'#2'w'#5'Width'#2#22#7'Caption'#6#4'PS'#196#140#11'ParentCol'
+  +'or'#8#0#0#6'TLabel'#6'Label6'#4'Left'#3#249#0#6'Height'#2#16#3'Top'#2'+'#5
+  +'Width'#2'/'#7'Caption'#6#10'Rodn'#195#169' '#196#141'.'#11'ParentColor'#8#0
+  +#0#6'TLabel'#6'Label7'#4'Left'#3#249#0#6'Height'#2#16#3'Top'#2'C'#5'Width'#2
+  +#17#7'Caption'#6#2'OP'#11'ParentColor'#8#0#0#6'TLabel'#6'Label8'#4'Left'#3
+  +#249#0#6'Height'#2#16#3'Top'#2']'#5'Width'#2#16#7'Caption'#6#2'OS'#11'Parent'
+  +'Color'#8#0#0#6'TLabel'#6'Label9'#4'Left'#3#168#0#6'Height'#2#16#3'Top'#2'w'
+  +#5'Width'#3#128#0#7'Caption'#6#23'Celkem akcie v hodnot'#196#155#11'ParentCo'
+  +'lor'#8#0#0#6'TLabel'#7'Label11'#4'Left'#3'D'#1#6'Height'#2#16#3'Top'#2#13#5
+  +'Width'#2#8#7'Caption'#6#1'#'#11'ParentColor'#8#0#0#6'TBevel'#6'Bevel1'#4'Le'
+  +'ft'#2#10#6'Height'#2')'#3'Top'#3#145#0#5'Width'#3#155#1#5'Shape'#7#7'bsFram'
+  +'e'#0#0#6'TLabel'#7'Label13'#4'Left'#2#13#6'Height'#2#16#3'Top'#3#136#0#5'Wi'
+  +'dth'#2'6'#7'Caption'#6#9'Dividenda'#5'Color'#7#9'clBtnFace'#11'ParentColor'
+  +#8#11'Transparent'#8#0#0#7'TDBGrid'#7'DBGrid2'#4'Left'#3#169#1#6'Height'#3
+  +#192#0#3'Top'#2#1#5'Width'#3#17#1#5'Align'#7#7'alRight'#7'Anchors'#11#5'akTo'
+  +'p'#6'akLeft'#7'akRight'#8'akBottom'#0#5'Color'#7#8'clWindow'#7'Columns'#14#0
+  +#10'DataSource'#7#8'dsSoucty'#7'Options'#11#8'dgTitles'#11'dgIndicator'#14'd'
+  +'gColumnResize'#12'dgColumnMove'#10'dgColLines'#10'dgRowLines'#6'dgTabs'#11
+  +'dgRowSelect'#21'dgAlwaysShowSelection'#15'dgConfirmDelete'#14'dgCancelOnExi'
+  +'t'#13'dgMultiselect'#0#8'TabOrder'#2#8#10'TitleStyle'#7#8'tsNative'#0#0#7'T'
+  +'DBEdit'#10'edPrijmeni'#4'Left'#2'@'#6'Height'#2#23#3'Top'#2'"'#5'Width'#2'x'
+  +#9'DataField'#6#8'PRIJMENI'#10'DataSource'#7#8'dsMaster'#8'CharCase'#7#8'ecN'
+  +'ormal'#9'MaxLength'#3#200#0#8'TabOrder'#2#1#8'OnChange'#7#16'edPrijmeniChan'
+  +'ge'#0#0#7'TDBEdit'#7'edUlice'#4'Left'#2'@'#6'Height'#2#23#3'Top'#2'<'#5'Wid'
+  +'th'#3#170#0#9'DataField'#6#5'ULICE'#10'DataSource'#7#8'dsMaster'#8'CharCase'
+  +#7#8'ecNormal'#9'MaxLength'#2'x'#8'TabOrder'#2#2#0#0#7'TDBEdit'#7'edMesto'#4
+  +'Left'#2'@'#6'Height'#2#23#3'Top'#2'V'#5'Width'#3#170#0#9'DataField'#6#5'MES'
+  +'TO'#10'DataSource'#7#8'dsMaster'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#3'@'
+  +#1#8'TabOrder'#2#3#0#0#7'TDBEdit'#5'edPsc'#4'Left'#2'@'#6'Height'#2#23#3'Top'
+  +#2'p'#5'Width'#2'2'#9'DataField'#6#3'PSC'#10'DataSource'#7#8'dsMaster'#8'Cha'
+  +'rCase'#7#8'ecNormal'#9'MaxLength'#2#24#8'TabOrder'#2#4#0#0#7'TDBEdit'#7'edR'
+  +'odne'#4'Left'#3','#1#6'Height'#2#23#3'Top'#2'"'#5'Width'#2'x'#9'DataField'#6
+  +#2'RC'#10'DataSource'#7#8'dsMaster'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2
+  +'x'#8'TabOrder'#2#5#0#0#7'TDBEdit'#4'edOP'#4'Left'#3','#1#6'Height'#2#23#3'T'
+  +'op'#2'<'#5'Width'#2'x'#9'DataField'#6#2'OP'#10'DataSource'#7#8'dsMaster'#8
+  +'CharCase'#7#8'ecNormal'#9'MaxLength'#2'x'#8'TabOrder'#2#6#0#0#7'TDBEdit'#4
+  ,'edOS'#4'Left'#3','#1#6'Height'#2#23#3'Top'#2'V'#5'Width'#2'x'#9'DataField'#6
+  +#2'OS'#10'DataSource'#7#8'dsMaster'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2
+  +#8#8'TabOrder'#2#7#0#0#7'TDBEdit'#7'edAkcie'#4'Left'#3','#1#6'Height'#2#23#3
+  +'Top'#2'p'#5'Width'#2'x'#9'DataField'#6#5'AKCIE'#10'DataSource'#7#8'dsMaster'
+  +#8'ReadOnly'#9'!BorderSpacing.CellAlignHorizontal'#7#14'ccaRightBottom'#8'Ch'
+  +'arCase'#7#8'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#9#0#0#7'TDBEdit'#4'edI'
+  +'D'#4'Left'#3'T'#1#6'Height'#2#23#3'Top'#2#8#5'Width'#2'P'#9'DataField'#6#2
+  +'ID'#10'DataSource'#7#8'dsMaster'#8'ReadOnly'#9#8'CharCase'#7#8'ecNormal'#5
+  +'Color'#7#9'clBtnFace'#9'MaxLength'#2#0#8'TabOrder'#2#10#0#0#7'TDBEdit'#12'e'
+  +'dHodnotaDiv'#4'Left'#2#16#6'Height'#2#23#3'Top'#3#156#0#5'Width'#2'd'#9'Dat'
+  +'aField'#6#7'HODNOTA'#10'DataSource'#7#11'dsDividenda'#8'ReadOnly'#9#8'CharC'
+  +'ase'#7#8'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#11#0#0#7'TDBEdit'#13'edPr'
+  +'ocentoDiv'#4'Left'#2'y'#6'Height'#2#23#3'Top'#3#156#0#5'Width'#2'!'#9'DataF'
+  +'ield'#6#8'PROC_DIV'#10'DataSource'#7#11'dsDividenda'#8'ReadOnly'#9#8'CharCa'
+  +'se'#7#8'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#12#0#0#7'TDBEdit'#10'edHru'
+  +'baDiv'#4'Left'#3#159#0#6'Height'#2#23#3'Top'#3#156#0#5'Width'#2'd'#9'DataFi'
+  +'eld'#6#9'HRUBA_DIV'#10'DataSource'#7#11'dsDividenda'#8'ReadOnly'#9#8'CharCa'
+  +'se'#7#8'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#13#8'OnChange'#7#16'edHrub'
+  +'aDivChange'#0#0#7'TDBEdit'#8'edDanDiv'#4'Left'#3#8#1#6'Height'#2#23#3'Top'#3
+  +#156#0#5'Width'#2'!'#9'DataField'#6#7'DAN_DIV'#10'DataSource'#7#11'dsDividen'
+  +'da'#8'ReadOnly'#9#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2
+  +#14#0#0#7'TDBEdit'#10'edCistaDiv'#4'Left'#3'/'#1#6'Height'#2#23#3'Top'#3#156
+  +#0#5'Width'#2'm'#9'DataField'#6#9'CISTA_DIV'#10'DataSource'#7#11'dsDividenda'
+  +#8'ReadOnly'#9#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2#0#8'TabOrder'#2#15#0
+  +#0#7'TDBEdit'#7'edJmeno'#4'Left'#2'@'#6'Height'#2#23#3'Top'#2#8#5'Width'#2'x'
+  +#9'DataField'#6#5'JMENO'#10'DataSource'#7#8'dsMaster'#8'CharCase'#7#8'ecNorm'
+  +'al'#9'MaxLength'#2'x'#8'TabOrder'#2#0#0#0#0#242#2#1#12'TPageControl'#7'pcAk'
+  +'cie'#4'Left'#2#0#6'Height'#3#134#0#3'Top'#3#194#0#5'Width'#3#187#2#10'Activ'
+  +'ePage'#7#7'tsAkcie'#5'Align'#7#8'alClient'#8'TabIndex'#2#0#8'TabOrder'#2#1#8
+  +'OnChange'#7#13'pcAkcieChange'#0#9'TTabSheet'#7'tsAkcie'#7'Caption'#6#5'Akci'
+  +'e'#12'ClientHeight'#2'j'#11'ClientWidth'#3#179#2#0#8'TToolBar'#8'ToolBar2'#4
+  +'Left'#2#0#6'Height'#2#24#3'Top'#2#0#5'Width'#3#179#2#8'AutoSize'#9#7'Captio'
+  +'n'#6#8'ToolBar2'#6'Images'#7#17'frmMain.ImageList'#8'TabOrder'#2#0#0#11'TTo'
+  +'olButton'#7'toolbtn'#4'Left'#2#1#4'Hint'#6#17'Obnoven'#195#173' seznamu'#3
+  +'Top'#2#2#7'Caption'#6#7'toolbtn'#10'ImageIndex'#2#7#7'OnClick'#7#12'toolbtn'
+  +'Click'#0#0#11'TToolButton'#8'toolbtn2'#4'Left'#2#24#3'Top'#2#2#7'Caption'#6
+  +#8'toolbtn2'#7'OnClick'#7#13'toolbtn2Click'#0#0#11'TToolButton'#11'ToolButto'
+  +'n6'#4'Left'#3' '#1#4'Hint'#6#25'P'#197#153'evede ozna'#196#141'en'#195#169
+  +' akcie'#3'Top'#2#2#7'Caption'#6#11'ToolButton6'#10'ImageIndex'#2#5#7'OnClic'
+  +'k'#7#16'ToolButton6Click'#14'ParentShowHint'#8#8'ShowHint'#9#0#0#11'TToolBu'
+  +'tton'#12'tbOznacitVse'#4'Left'#3'7'#1#4'Hint'#6#23'P'#197#153'evede v'#197
+  +#161'echny akcie'#3'Top'#2#2#7'Caption'#6#12'tbOznacitVse'#10'ImageIndex'#2#6
+  +#7'OnClick'#7#17'tbOznacitVseClick'#0#0#12'TDBNavigator'#12'DBNavigator1'#4
+  +'Left'#2'/'#6'Height'#2#22#3'Top'#2#2#5'Width'#3#241#0#10'BevelOuter'#7#6'bv'
+  +'None'#29'ChildSizing.EnlargeHorizontal'#7#14'crsScaleChilds'#27'ChildSizing'
+  +'.EnlargeVertical'#7#14'crsScaleChilds'#28'ChildSizing.ShrinkHorizontal'#7#14
+  +'crsScaleChilds'#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'Chil'
+  +'dSizing.Layout'#7#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.Controls'
+  +'PerLine'#2'd'#12'ClientHeight'#2#22#11'ClientWidth'#3#241#0#10'DataSource'#7
+  +#7'dsPohyb'#4'Flat'#9#7'OnClick'#7#17'DBNavigator1Click'#8'TabOrder'#2#0#14
+  +'VisibleButtons'#11#7'nbFirst'#7'nbPrior'#6'nbNext'#6'nbLast'#8'nbInsert'#8
+  +'nbDelete'#6'nbEdit'#6'nbPost'#8'nbCancel'#0#0#0#0#7'TDBGrid'#7'DBGrid1'#4'L'
+  +'eft'#2#0#6'Height'#2'8'#3'Top'#2#24#5'Width'#3#179#2#5'Align'#7#8'alClient'
+  +#5'Color'#7#8'clWindow'#7'Columns'#14#0#10'DataSource'#7#7'dsPohyb'#7'Option'
+  +'s'#11#8'dgTitles'#11'dgIndicator'#14'dgColumnResize'#12'dgColumnMove'#10'dg'
+  +'ColLines'#10'dgRowLines'#6'dgTabs'#21'dgAlwaysShowSelection'#15'dgConfirmDe'
+  +'lete'#14'dgCancelOnExit'#13'dgMultiselect'#0#8'TabOrder'#2#1#10'TitleStyle'
+  +#7#8'tsNative'#10'OnDblClick'#7#15'DBGrid1DblClick'#0#0#6'TPanel'#6'Panel2'#4
+  +'Left'#2#0#6'Height'#2#26#3'Top'#2'P'#5'Width'#3#179#2#5'Align'#7#8'alBottom'
+  +#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2#26#11'ClientWidth'#3#179#2#8
+  +'TabOrder'#2#2#0#6'TLabel'#7'Label10'#4'Left'#2#0#6'Height'#2#16#3'Top'#2#7#5
+  +'Width'#2't'#7'Caption'#6#22'Posledn'#195#173' pohyb akcie:'#11'ParentColor'
+  +#8#0#0#6'TLabel'#7'lbAkcie'#4'Left'#2'}'#6'Height'#2#16#3'Top'#2#7#5'Width'#2
+  +'('#7'Caption'#6#7'lbAkcie'#11'ParentColor'#8#0#0#0#0#0#0#0#241#6'TPanel'#3
+  ,'pOK'#3'Top'#3'~'#1#5'Width'#3#195#2#11'ClientWidth'#3#195#2#0#241#7'TButton'
+  +#8'btStorno'#4'Left'#3'x'#2#5'Align'#7#7'alRight'#0#0#241#7'TButton'#4'btOK'
+  +#4'Left'#3'/'#2#5'Align'#7#7'alRight'#0#0#0#242#2#4#6'TLabel'#7'Label12'#4'L'
+  +'eft'#2#25#6'Height'#2#16#3'Top'#3#133#0#5'Width'#2')'#7'Caption'#6#7'Label1'
+  +'2'#11'ParentColor'#8#0#0#243#2#5#9'TMainMenu'#8'MainMenu'#4'left'#3'H'#2#3
+  +'top'#2#8#0#241#9'TMenuItem'#8'miSoubor'#0#241#9'TMenuItem'#8'miZavrit'#7'On'
+  +'Click'#7#13'miZavritClick'#0#0#0#241#9'TMenuItem'#8'miUpravy'#0#241#9'TMenu'
+  +'Item'#12'miNovyZaznam'#7'OnClick'#7#17'miNovyZaznamClick'#0#0#241#9'TMenuIt'
+  +'em'#15'miUpravitZaznam'#7'OnClick'#7#20'miUpravitZaznamClick'#0#0#241#9'TMe'
+  +'nuItem'#14'miSmazatZaznam'#7'OnClick'#7#19'miSmazatZaznamClick'#0#0#241#9'T'
+  +'MenuItem'#14'miVychoziDotaz'#7'OnClick'#7#19'miVychoziDotazClick'#0#0#0#242
+  +#2#2#9'TMenuItem'#11'miAkcionari'#7'Caption'#6#11'Akcion'#195#161#197#153'i'
+  +#0#9'TMenuItem'#8'miPrevod'#7'Caption'#6#13'P'#197#153'evod akcie'#7'OnClick'
+  +#7#13'miPrevodClick'#0#0#9'TMenuItem'#11'miPrevodAll'#7'Caption'#6#21'P'#197
+  +#153'evod v'#197#161'ech akci'#195#173#7'OnClick'#7#16'miPrevodAllClick'#0#0
+  +#9'TMenuItem'#20'miNastaveniDividendy'#7'Caption'#6#20'Nastaven'#195#173' di'
+  +'videndy'#7'OnClick'#7#25'miNastaveniDividendyClick'#0#0#0#242#2#3#9'TMenuIt'
+  +'em'#9'miSestavy'#7'Caption'#6#7'Sestavy'#0#0#243#2#4#9'TMenuItem'#6'miOkno'
+  +#0#0#0#243#2#6#7'TZQuery'#8'qrMaster'#10'Connection'#7#19'DM.OracleConnectio'
+  +'n'#9'AfterOpen'#7#17'qrMasterAfterOpen'#12'UpdateObject'#7#12'UpdateMaster'
+  +#18'BeforeApplyUpdates'#7#26'qrMasterBeforeApplyUpdates'#17'AfterApplyUpdate'
+  +'s'#7#25'qrMasterAfterApplyUpdates'#12'BeforeInsert'#7#20'qrMasterBeforeInse'
+  +'rt'#10'BeforeEdit'#7#18'qrMasterBeforeEdit'#10'BeforePost'#7#18'qrMasterBef'
+  +'orePost'#9'AfterPost'#7#17'qrMasterAfterPost'#11'OnNewRecord'#7#17'qrMaster'
+  +'NewRecord'#11'SQL.Strings'#1#6#23'SELECT * FROM AKCIONARI'#0#3'top'#2'@'#0
+  +#242#2#0#13'TLongintField'#10'qrMasterID'#12'DisplayWidth'#2#10#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#0#11'LookupCache'#8#13'Provider'
+  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#242
+  +#2#1#12'TStringField'#13'qrMasterJMENO'#12'DisplayLabel'#6#6'Jm'#195#169'no'
+  +#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'JMENO'#5'In'
+  +'dex'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#242#2#2#12'TStringField'#16
+  +'qrMasterPRIJMENI'#12'DisplayLabel'#6#11'P'#197#153#195#173'jmen'#195#173#12
+  +'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'PRIJMENI'#5'In'
+  +'dex'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#200#0#0#0#242#2#3#12'TStringField'
+  +#13'qrMasterULICE'#12'DisplayLabel'#6#5'Ulice'#12'DisplayWidth'#2#20#9'Field'
+  +'Kind'#7#6'fkData'#9'FieldName'#6#5'ULICE'#5'Index'#2#3#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#4'Size'#2'x'#0#0#242#2#4#12'TStringField'#13'qrMasterMESTO'#12'DisplayLabel'
+  +#6#6'M'#196#155'sto'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldN'
+  +'ame'#6#5'MESTO'#5'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfIn'
+  +'Update'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3'@'#1#0#0#242#2
+  +#5#12'TStringField'#10'qrMasterRC'#12'DisplayLabel'#6#14'Rodn'#195#169' '#196
+  +#141#195#173'slo'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'
+  +#6#2'RC'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#242#2#6#12'TStrin'
+  +'gField'#10'qrMasterOP'#12'DisplayLabel'#6#13'Op'#196#141'. pr'#197#175'kaz'
+  +#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'OP'#5'Index'
+  +#2#6#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#242#2#7#12'TStringField'#11'qrMa'
+  +'sterPSC'#12'DisplayLabel'#6#4'PS'#196#140#12'DisplayWidth'#2#10#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#3'PSC'#5'Index'#2#7#11'LookupCache'#8#13'Provide'
+  +'rFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
+  +#2#24#0#0#242#2#8#11'TFloatField'#13'qrMasterAKCIE'#12'DisplayLabel'#6#5'Akc'
+  +'ie'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'AKCIE'#5
+  +'Index'#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinVal'
+  +'ue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#12#0#0#242#2#9#11'TFloatField'#17
+  +'qrMasterDIVIDENDA'#12'DisplayLabel'#6#9'Dividenda'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#9'DIVIDENDA'#5'Index'#2#9#11'LookupCa'
+  +'che'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'R'
+  +'equired'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0
+  +#0#9'Precision'#2#12#0#0#242#2#10#12'TStringField'#10'qrMasterOS'#12'Display'
+  ,'Width'#2#8#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'OS'#5'Index'#2#10#11'L'
+  +'ookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
+  +#8#8'Required'#8#4'Size'#2#8#0#0#0#243#2#7#11'TZUpdateSQL'#12'UpdateMaster'
+  +#17'InsertSQL.Strings'#1#6'XINSERT INTO AKCIONARI (JMENO, PRIJMENI, ULICE, M'
+  +'ESTO, RC, OP, PSC, AKCIE, DIVIDENDA, OS)'#6'T  VALUES(:JMENO, :PRIJMENI, :U'
+  +'LICE, :MESTO, :RC, :OP, :PSC, :AKCIE, :DIVIDENDA, :OS)'#0#17'ModifySQL.Stri'
+  +'ngs'#1#6#20'UPDATE AKCIONARI SET'#6#13'JMENO=:JMENO,'#6#19'PRIJMENI=:PRIJME'
+  +'NI,'#6#13'ULICE=:ULICE,'#6#13'MESTO=:MESTO,'#6#7'RC=:RC,'#6#7'OP=:OP,'#6#9
+  +'PSC=:PSC,'#6#13'AKCIE=:AKCIE,'#6#21'DIVIDENDA=:DIVIDENDA,'#6#6'OS=:OS'#6#16
+  +'WHERE ID=:OLD_ID'#0#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5
+  +'JMENO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#8'PRIJMENI'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Na'
+  +'me'#6#5'ULICE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#5'MESTO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#2'RC'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#2'OP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#3'PSC'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#5'AKCIE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#9'DIVIDENDA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUn'
+  +'known'#4'Name'#6#2'OS'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUn'
+  +'known'#4'Name'#6#6'OLD_ID'#9'ParamType'#7#9'ptUnknown'#0#0#0#0#243#2#8#11'T'
+  +'Datasource'#8'dsMaster'#7'DataSet'#7#8'qrMaster'#12'OnDataChange'#7#18'dsMa'
+  +'sterDataChange'#4'left'#2'H'#3'top'#2#8#0#0#242#2#9#11'TDatasource'#7'dsPoh'
+  +'yb'#7'DataSet'#7#7'qrPohyb'#4'left'#3'H'#1#3'top'#3#16#1#0#0#242#2#10#7'TZQ'
+  +'uery'#8'qrSoucty'#10'Connection'#7#19'DM.OracleConnection'#14'AutoCalcField'
+  +'s'#8#10'BeforeOpen'#7#18'qrSouctyBeforeOpen'#12'BeforeInsert'#7#20'qrSoucty'
+  +'BeforeInsert'#9'AfterPost'#7#17'qrSouctyAfterPost'#11'SQL.Strings'#1#6#6'SE'
+  +'LECT'#6#1'*'#6#4'FROM'#6#1'('#6#6'SELECT'#6#4'TYP,'#6'D(SELECT COUNT(*) FRO'
+  +'M AKCIE WHERE CISLO=:ID AND TYP=S.TYP) AS POCET,'#6'<(SELECT HODNOTA FROM T'
+  +'YPY_AKCII WHERE TYP=S.TYP) AS HODNOTA,'#6#17'HODNOTA AS CELKEM'#6#4'FROM'#6
+  +#1'('#6#6'SELECT'#6#6'  TYP,'#6#25'  SUM(HODNOTA) AS HODNOTA'#6#4'FROM'#6#7
+  +'  AKCIE'#6#5'WHERE'#6#11'  CISLO=:ID'#6#8'GROUP BY'#6#5'  TYP'#6#8'ORDER BY'
+  +#6#9'  HODNOTA'#6#3') S'#6#3') A'#0#6'Params'#14#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#2'ID'#9'ParamType'#7#9'ptUnknown'#0#0#10'DataSource'#7#8'dsMaster'
+  +#4'left'#3#216#1#3'top'#2'e'#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#2'ID'#9'ParamType'#7#9'ptUnknown'#0#0#0#12'TStringField'#11'qrSouct'
+  +'yTYP'#12'DisplayLabel'#6#3'Typ'#12'DisplayWidth'#2#5#9'FieldKind'#7#6'fkDat'
+  +'a'#9'FieldName'#6#3'TYP'#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#5#0#0#13
+  +'TLongintField'#13'qrSouctyPOCET'#12'DisplayLabel'#6#6'Po'#196#141'et'#12'Di'
+  +'splayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'POCET'#5'Index'#2
+  +#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Re'
+  +'adOnly'#8#8'Required'#8#0#0#13'TLongintField'#15'qrSouctyHODNOTA'#12'Displa'
+  +'yLabel'#6#7'Hodnota'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Field'
+  +'Name'#6#7'HODNOTA'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'p'
+  +'fInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#11'TFloatField'#14
+  +'qrSouctyCELKEM'#12'DisplayLabel'#6#6'Celkem'#12'DisplayWidth'#2#10#9'FieldK'
+  +'ind'#7#6'fkData'#9'FieldName'#6#6'CELKEM'#5'Index'#2#3#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Preci'
+  +'sion'#2#255#0#0#0#242#2#11#11'TDatasource'#8'dsSoucty'#7'DataSet'#7#8'qrSou'
+  +'cty'#4'left'#3#14#2#3'top'#2'c'#0#0#242#2#12#7'TZQuery'#6'qrText'#10'Connec'
+  +'tion'#7#19'DM.OracleConnection'#14'AutoCalcFields'#8#9'AfterPost'#7#15'qrTe'
+  +'xtAfterPost'#11'SQL.Strings'#1#6#211'SELECT JMENO_ODKUD||'' ''||PRIJMENI_OD'
+  +'KUD||'' #''||TO_CHAR(ID_AKCIONARE_ODKUD)||'' Doklad: ''||DOKLAD||'' Datum: '
+  +'''||DATUM AS TEXT,CISLO_AKCIE FROM POHYB WHERE ID IN(SELECT MAX(ID) AS ID F'
+  +'ROM POHYB GROUP BY CISLO_AKCIE)'#0#6'Params'#14#0#10'DataSource'#7#7'dsPohy'
+  +'b'#4'left'#3#216#0#3'top'#3#16#1#0#0#242#2#13#7'TZQuery'#11'qrDividenda'#10
+  +'Connection'#7#19'DM.OracleConnection'#14'AutoCalcFields'#8#10'BeforeOpen'#7
+  +#21'qrDividendaBeforeOpen'#9'AfterPost'#7#20'qrDividendaAfterPost'#11'SQL.St'
+  +'rings'#1#6#6'SELECT'#6#5' S.*,'#6'L NVL(S.HRUBA_DIV,0)-((NVL(S.HRUBA_DIV,0)'
+  +'/100)*NVL(S.DAN_DIV,0)) AS CISTA_DIV'#6#4'FROM'#6#1'('#6#6'SELECT'#6#13'  A'
+  +'.PRIJMENI,'#6#10'  A.JMENO,'#6#7'  A.RC,'#6'/  A.ULICE||'', ''||A.MESTO||'''
+  +' ''||A.PSC AS ADRESA,'#6'9  TO_NUMBER(GET_PARAM(''PROCENTO_DIVIDENDY'')) AS'
+  ,' PROC_DIV,'#6'=  TO_NUMBER(GET_PARAM(''PROCENTO_DANE_DIVIDENDY'')) AS DAN_D'
+  +'IV,'#6'?  (SELECT SUM(HODNOTA) FROM AKCIE WHERE CISLO=A.ID) AS HODNOTA,'#6
+  +#127'  ((SELECT NVL(SUM(HODNOTA),0) FROM AKCIE WHERE CISLO=A.ID)/100)*TO_NUM'
+  +'BER(NVL(GET_PARAM(''PROCENTO_DIVIDENDY''),0)) AS HRUBA_DIV'#6#4'FROM'#6#13
+  +'  AKCIONARI A'#6#5'WHERE'#6#10'  A.ID=:ID'#6#3') S'#0#6'Params'#14#1#8'Data'
+  +'Type'#7#9'ftUnknown'#4'Name'#6#2'ID'#9'ParamType'#7#9'ptUnknown'#0#0#10'Dat'
+  +'aSource'#7#8'dsMaster'#4'left'#3'('#1#3'top'#3#168#0#9'ParamData'#14#1#8'Da'
+  +'taType'#7#9'ftUnknown'#4'Name'#6#2'ID'#9'ParamType'#7#9'ptUnknown'#0#0#0#12
+  +'TStringField'#19'qrDividendaPRIJMENI'#12'DisplayWidth'#2'2'#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#8'PRIJMENI'#5'Index'#2#0#11'LookupCache'#8#13'Provid'
+  +'erFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Siz'
+  +'e'#2'2'#0#0#12'TStringField'#16'qrDividendaJMENO'#12'DisplayWidth'#2#30#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#5'JMENO'#5'Index'#2#1#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#2#30#0#0#12'TStringField'#13'qrDividendaRC'#12'DisplayWidth'#2#30
+  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'RC'#5'Index'#2#2#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#2#30#0#0#12'TStringField'#17'qrDividendaADRESA'#12'DisplayWidth'#2
+  +'w'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'ADRESA'#5'Index'#2#3#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#4'Size'#2'w'#0#0#11'TFloatField'#19'qrDividendaPROC_DIV'#17'Def'
+  +'aultExpression'#6#14'### ### ###,00'#12'DisplayWidth'#2#10#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#8'PROC_DIV'#5'Index'#2#4#11'LookupCache'#8#13'Provid'
+  +'erFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#10'Ed'
+  +'itFormat'#6#12'#########,00'#8'Currency'#9#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0
+  +#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#255#0#0#11'TFloatField'#18
+  +'qrDividendaDAN_DIV'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldN'
+  +'ame'#6#7'DAN_DIV'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pf'
+  +'InUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#14
+  +'### ### ###,00'#10'EditFormat'#6#12'#########,00'#8'Currency'#9#8'MaxValue'
+  +#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#255#0
+  +#0#11'TFloatField'#18'qrDividendaHODNOTA'#12'DisplayWidth'#2#10#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#7'HODNOTA'#5'Index'#2#6#11'LookupCache'#8#13'Pro'
+  +'viderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13
+  +'DisplayFormat'#6#14'### ### ###,00'#10'EditFormat'#6#12'#########,00'#8'Cur'
+  +'rency'#9#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0
+  +#9'Precision'#2#255#0#0#11'TFloatField'#20'qrDividendaHRUBA_DIV'#12'DisplayW'
+  +'idth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'HRUBA_DIV'#5'Index'#2#7
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#8#13'DisplayFormat'#6#14'### ### ###,00'#10'EditFormat'
+  +#6#12'#########,00'#8'Currency'#9#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinVal'
+  +'ue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#255#0#0#13'TLongintField'#20'qrDiv'
+  +'idendaCISTA_DIV'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'
+  +#6#9'CISTA_DIV'#5'Index'#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInU'
+  +'pdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#14'##'
+  +'# ### ###,00'#10'EditFormat'#6#12'#########,00'#0#0#0#242#2#14#11'TDatasour'
+  +'ce'#11'dsDividenda'#7'DataSet'#7#11'qrDividenda'#4'left'#3'j'#1#3'top'#3#157
+  +#0#0#0#242#2#15#7'TZQuery'#7'qrPohyb'#10'Connection'#7#19'DM.OracleConnectio'
+  +'n'#12'UpdateObject'#7#11'UpdatePohyb'#11'SQL.Strings'#1#6'#SELECT * FROM AK'
+  +'CIE WHERE CISLO=:ID'#0#6'Params'#14#1#8'DataType'#7#9'ftInteger'#4'Name'#6#2
+  +'ID'#9'ParamType'#7#9'ptUnknown'#0#0#10'DataSource'#7#8'dsMaster'#4'left'#3
+  +#135#1#3'top'#3#19#1#9'ParamData'#14#1#8'DataType'#7#9'ftInteger'#4'Name'#6#2
+  +'ID'#9'ParamType'#7#9'ptUnknown'#0#0#0#13'TLongintField'#9'qrPohybID'#12'Dis'
+  +'playWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#0
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#8#0#0#13'TLongintField'#12'qrPohybCISLO'#12'DisplayLabe'
+  +'l'#6#14'ID akcion'#195#161#197#153'e'#12'DisplayWidth'#2#10#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#5'CISLO'#5'Index'#2#1#11'LookupCache'#8#13'ProviderF'
+  +'lags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#14'T'
+  +'LargeintField'#18'qrPohybCISLO_AKCIE'#12'DisplayLabel'#6#13#196#140#195#173
+  +'slo akcie'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11
+  +'CISLO_AKCIE'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpd'
+  +'ate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#12'TStringField'#12'qrP'
+  +'ohybSERIE'#12'DisplayLabel'#6#6'S'#195#169'rie'#12'DisplayWidth'#2#20#9'Fie'
+  ,'ldKind'#7#6'fkData'#9'FieldName'#6#5'SERIE'#5'Index'#2#3#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#0#0#12'TStringField'#10'qrPohybTYP'#12'DisplayLabel'#6#3'Typ'#12'DisplayW'
+  +'idth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3'TYP'#5'Index'#2#4#11'L'
+  +'ookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
+  +#8#8'Required'#8#0#0#11'TFloatField'#14'qrPohybHODNOTA'#12'DisplayLabel'#6#7
+  +'Hodnota'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'HO'
+  +'DNOTA'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
+  +'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#12#0#0#10'TDateField'#12'qrP'
+  +'ohybDATUM'#12'DisplayLabel'#6#5'Datum'#12'DisplayWidth'#2#10#9'FieldKind'#7
+  +#6'fkData'#9'FieldName'#6#5'DATUM'#5'Index'#2#6#11'LookupCache'#8#13'Provide'
+  +'rFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#10
+  +'TMemoField'#15'qrPohybPOZNAMKA'#12'DisplayLabel'#6#9'Pozn'#195#161'mka'#12
+  +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'POZNAMKA'#5'In'
+  +'dex'#2#7#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#8'BlobType'#7#6'ftBlob'#13'Transliterate'#8#0
+  +#0#10'TBlobField'#11'qrPohybTEXT'#12'DisplayLabel'#6#4'Text'#12'DisplayWidth'
+  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'TEXT'#5'Index'#2#8#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#8'BlobType'#7#6'ftBlob'#0#0#0#242#2#16#11'TZUpdateSQL'#11'Updat'
+  +'ePohyb'#17'InsertSQL.Strings'#1#6'?INSERT INTO AKCIE(ID,CISLO,CISLO_AKCIE,S'
+  +'ERIE,TYP,HODNOTA,DATUM)'#6'D  VALUES(NULL, :CISLO, :CISLO_AKCIE, :SERIE, :T'
+  +'YP, :HODNOTA, :DATUM)'#0#17'ModifySQL.Strings'#1#6#16'UPDATE AKCIE SET'#6#13
+  +'CISLO=:CISLO,'#6#25'CISLO_AKCIE=:CISLO_AKCIE,'#6#13'SERIE=:SERIE,'#6#9'TYP='
+  +':TYP,'#6#17'HODNOTA=:HODNOTA,'#6#12'DATUM=:DATUM'#6#16'WHERE ID=:OLD_ID'#0
+  +#29'UseSequenceFieldForRefreshSQL'#8#4'left'#3#216#1#3'top'#3#19#1#9'ParamDa'
+  +'ta'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'CISLO'#9'ParamType'#7#9'ptU'
+  +'nknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#11'CISLO_AKCIE'#9'ParamTyp'
+  +'e'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'SERIE'#9'Param'
+  +'Type'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'TYP'#9'Para'
+  +'mType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#7'HODNOTA'#9
+  +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'DATUM'
+  +#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#6'OLD_'
+  +'ID'#9'ParamType'#7#9'ptUnknown'#0#0#0#0#0
+]);

@@ -1,0 +1,16 @@
+LazarusResources.Add('TfrmSOPOPPPredavaciProtokol','FORMDATA',[
+  'TPF0'#27'TfrmSOPOPPPredavaciProtokol'#26'frmSOPOPPPredavaciProtokol'#4'Left'
+  +#3#132#1#6'Height'#3#148#0#3'Top'#3#175#0#5'Width'#3'M'#1#7'Caption'#6#21'P'
+  +#197#153'ed'#195#161'vac'#195#173' protokol'#10'LCLVersion'#6#8'0.9.28.3'#0
+  +#12'TfrDBDataSet'#12'frDBDataSet1'#7'DataSet'#7#8'qrMaster'#4'left'#3#136#0#3
+  +'top'#2'+'#0#0#9'TfrReport'#8'frReport'#7'Dataset'#7#12'frDBDataSet1'#11'Ini'
+  +'tialZoom'#7#9'pzDefault'#14'PreviewButtons'#11#6'pbZoom'#6'pbLoad'#6'pbSave'
+  +#7'pbPrint'#6'pbFind'#6'pbHelp'#6'pbExit'#0#8'DataType'#7#9'dtDataSet'#4'lef'
+  +'t'#2#24#3'top'#2'%'#10'ReportForm'#10#4#0#0#0#24#0#0#0#0#0#7'TZQuery'#8'qrM'
+  +'aster'#10'Connection'#7#19'DM.OracleConnection'#11'SQL.Strings'#1#6#6'SELEC'
+  +'T'#6#6'  Z.*,'#6#16'  NULL AS JMENO,'#6#19'  NULL AS PRIJMENI,'#6#18'  NULL'
+  +' AS R_POCET,'#6#19'  NULL AS R_CELKEM,'#6#24'  NULL AS JIZDNE_CELKEM,'#6#26
+  +'  NULL AS PRIRAZKA_CELKEM,'#6#24'  NULL AS DATUM_PREDANI,'#6#20'  NULL AS D'
+  +'ATUM_TIME'#6#4'FROM'#6#10'  ZALOBY Z'#0#6'Params'#14#0#4'left'#3#240#0#3'to'
+  +'p'#2'-'#0#0#0
+]);

@@ -1,0 +1,862 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmZaloby_Mlcoch','FORMDATA',[
+  'TPF0'#241#17'TfrmZaloby_Mlcoch'#16'frmZaloby_Mlcoch'#4'Left'#3'9'#1#6'Height'
+  +#3#191#2#3'Top'#3#236#0#5'Width'#3')'#4#13'ActiveControl'#7#11'RadioGroup1'#7
+  +'Caption'#6#15#197#189'aloby Ml'#196#141'och'#12'ClientHeight'#3#171#2#11'Cl'
+  +'ientWidth'#3')'#4#21'Constraints.MinHeight'#3#217#1#20'Constraints.MinWidth'
+  +#3')'#4#4'Menu'#7#8'MainMenu'#10'OnActivate'#7#12'FormActivate'#8'OnCreate'#7
+  +#10'FormCreate'#9'OnDestroy'#7#11'FormDestroy'#0#241#10'TStatusBar'#10'Statu'
+  +'sBar1'#3'Top'#3#148#2#5'Width'#3')'#4#0#0#241#8'TToolBar'#8'ToolBar1'#5'Wid'
+  +'th'#3')'#4#6'Images'#7#17'frmMain.ImageList'#0#241#11'TToolButton'#11'ToolB'
+  +'utton3'#7'OnClick'#7#19'miVychoziDotazClick'#0#0#241#11'TToolButton'#9'btRe'
+  +'fresh'#7'OnClick'#7#14'btRefreshClick'#0#0#241#5'TEdit'#6'edFind'#7'OnKeyUp'
+  +#7#11'edFindKeyUp'#0#0#241#12'TDBNavigator'#9'Navigator'#12'BeforeAction'#7
+  +#21'NavigatorBeforeAction'#10'DataSource'#7#8'dsMaster'#13'Hints.Strings'#1#0
+  +#7'OnClick'#7#14'NavigatorClick'#0#0#241#11'TToolButton'#12'ToolButton10'#4
+  +'Hint'#6#21'Vyhled'#195#161' zadan'#195#189' text'#14'ParentShowHint'#8#8'Sh'
+  +'owHint'#9#7'OnClick'#7#17'ToolButton10Click'#0#0#0#241#12'TPageControl'#6'p'
+  +'cMain'#6'Height'#3'?'#2#3'Top'#2'<'#5'Width'#3')'#4#10'ActivePage'#7#8'tsZa'
+  +'znam'#8'TabIndex'#2#1#13'OnPageChanged'#7#17'pcMainPageChanged'#0#241#9'TTa'
+  +'bSheet'#8'tsSeznam'#12'ClientHeight'#3'#'#2#11'ClientWidth'#3'!'#4#0#241#7
+  +'TDBGrid'#6'DBGrid'#6'Height'#3'#'#2#5'Width'#3'!'#4#7'Columns'#14#1#16'Pick'
+  +'List.Strings'#1#0#13'Title.Caption'#6#7#196#140#195#173'slo'#9'FieldName'#6
+  +#5'CISLO'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#10'Var. symb.'#5
+  +'Width'#3#150#0#9'FieldName'#6#8'VAR_SYMB'#0#1#16'PickList.Strings'#1#0#13'T'
+  +'itle.Caption'#6#6'Jm'#195#169'no'#5'Width'#3#200#0#9'FieldName'#6#8'JMENO_C'
+  +'P'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#12'Datum a '#196#141'as'
+  +#9'FieldName'#6#9'DATUM_CAS'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6
+  +#17'Dlu'#197#190'n'#195#161' '#196#141#195#161'stka'#5'Width'#2'P'#9'FieldNa'
+  +'me'#6#13'DLUZNA_CASTKA'#13'DisplayFormat'#6#14'### ### ##0.00'#0#1#16'PickL'
+  +'ist.Strings'#1#0#13'Title.Caption'#6#6'Pokuta'#5'Width'#2'P'#9'FieldName'#6
+  +#6'POKUTA'#13'DisplayFormat'#6#14'### ### ##0.00'#0#1#16'PickList.Strings'#1
+  +#0#13'Title.Caption'#6#8'J'#195#173'zdn'#195#169#5'Width'#2'P'#9'FieldName'#6
+  +#6'JIZDNE'#13'DisplayFormat'#6#14'### ### ##0.00'#0#1#16'PickList.Strings'#1
+  +#0#13'Title.Caption'#6#14'Rodn'#195#169' '#196#141#195#173'slo'#5'Width'#2'Z'
+  +#9'FieldName'#6#11'RODNE_CISLO'#0#1#16'PickList.Strings'#1#0#13'Title.Captio'
+  +'n'#6#6'M'#196#155'sto'#5'Width'#3#200#0#9'FieldName'#6#5'MESTO'#0#1#16'Pick'
+  +'List.Strings'#1#0#13'Title.Caption'#6#5'Ulice'#5'Width'#3#200#0#9'FieldName'
+  +#6#5'ULICE'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#12#196#140#195
+  +#173'slo domu'#5'Width'#2'2'#9'FieldName'#6#10'CISLO_DOMU'#0#1#16'PickList.S'
+  +'trings'#1#0#13'Title.Caption'#6#4'Ps'#196#141#5'Width'#2'2'#9'FieldName'#6#3
+  +'PSC'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#5'Obvod'#5'Width'#2'2'
+  +#9'FieldName'#6#5'OBVOD'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#10
+  +'Datum imp.'#5'Width'#2'P'#9'FieldName'#6#13'DATUM_IMPORTU'#0#1#16'PickList.'
+  +'Strings'#1#0#13'Title.Caption'#6#9'Uzam'#196#141'ena'#5'Width'#2'2'#9'Field'
+  +'Name'#6#8'UZAMCENA'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#13'Dat'
+  +'um uzam'#196#141'.'#5'Width'#2'P'#9'FieldName'#6#14'DATUM_UZAMCENI'#0#1#16
+  +'PickList.Strings'#1#0#13'Title.Caption'#6#4'GUID'#5'Width'#3','#1#9'FieldNa'
+  +'me'#6#7'REF_KOD'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#2'Id'#5'W'
+  +'idth'#2'P'#9'FieldName'#6#2'ID'#0#1#16'PickList.Strings'#1#0#13'Title.Capti'
+  +'on'#6#9'Splatnost'#9'FieldName'#6#9'SPLATNOST'#0#1#16'PickList.Strings'#1#0
+  +#13'Title.Caption'#6#4'Soud'#5'Width'#3#240#0#9'FieldName'#6#4'SOUD'#0#1#16
+  +'PickList.Strings'#1#0#13'Title.Caption'#6#7#197#189'aloba'#9'FieldName'#6#6
+  +'ZALOBA'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#6'N'#195#161'rok'#9
+  +'FieldName'#6#5'NAROK'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#8'VS'
+  +' soudu'#5'Width'#3#150#0#9'FieldName'#6#8'VS_SOUDU'#0#1#16'PickList.Strings'
+  +#1#0#13'Title.Caption'#6#12#196#141'.'#195#186'. soudu'#5'Width'#3#200#0#9'F'
+  +'ieldName'#6#8'CU_SOUDU'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#13
+  +'Spis. zna'#196#141'ka'#5'Width'#3#150#0#9'FieldName'#6#11'SPIS_ZNACKA'#0#1
+  +#16'PickList.Strings'#1#0#13'Title.Caption'#6#8'Uhr. SOP'#9'FieldName'#6#7'U'
+  +'HR_SOP'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#10'Pl. rozkaz'#9'F'
+  +'ieldName'#6#9'PL_PRIKAZ'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#10
+  +'Odvol'#195#161'n'#195#173#9'FieldName'#6#8'ODVOLANI'#0#1#16'PickList.String'
+  +'s'#1#0#13'Title.Caption'#6#9'Jedn'#195#161'n'#195#173#9'FieldName'#6#7'JEDN'
+  +'ANI'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#8'Rozsudek'#9'FieldNa'
+  +'me'#6#8'ROZSUDEK'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#7'Pr. mo'
+  +'c'#9'FieldName'#6#6'PR_MOC'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6
+  ,#7#195#154'hrada'#9'FieldName'#6#6'UHRADA'#0#1#16'PickList.Strings'#1#0#13'T'
+  +'itle.Caption'#6#13'Datum '#195#186'hrady'#9'FieldName'#6#12'DATUM_UHRADY'#0
+  +#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#6'N'#195#161'vrh'#9'FieldNam'
+  +'e'#6#5'NAVRH'#0#1#16'PickList.Strings'#1#0#13'Title.Caption'#6#8'P'#197#153
+  +#195#173'kaz'#9'FieldName'#6#6'PRIKAZ'#0#1#16'PickList.Strings'#1#0#13'Title'
+  +'.Caption'#6#8#196#140#195#161'stka'#9'FieldName'#6#6'CASTKA'#0#1#16'PickLis'
+  +'t.Strings'#1#0#13'Title.Caption'#6#9'Skon'#196#141'eno'#9'FieldName'#6#8'SK'
+  +'ONCENO'#0#1#16'PickList.Strings'#1#0#5'Width'#2'<'#9'FieldName'#6#6'ZEMREL'
+  +#0#1#16'PickList.Strings'#1#0#5'Width'#2'x'#9'FieldName'#6#21'ZAPLATIL_PRED_'
+  +'PODANIM'#0#1#16'PickList.Strings'#1#0#5'Width'#2'n'#9'FieldName'#6#15'ZAPLA'
+  +'TIL_CASTKA'#0#0#10'DataSource'#7#8'dsMaster'#7'Options'#11#9'dgEditing'#8'd'
+  +'gTitles'#11'dgIndicator'#14'dgColumnResize'#12'dgColumnMove'#10'dgColLines'
+  +#10'dgRowLines'#6'dgTabs'#21'dgAlwaysShowSelection'#15'dgConfirmDelete'#14'd'
+  +'gCancelOnExit'#13'dgMultiselect'#23'dgPersistentMultiSelect'#0#16'OnDrawCol'
+  +'umnCell'#7#20'DBGridDrawColumnCell'#10'OnDblClick'#7#14'DBGridDblClick'#7'O'
+  +'nEnter'#7#11'DBGridEnter'#15'OnPrepareCanvas'#7#19'DBGridPrepareCanvas'#12
+  +'OnTitleClick'#7#16'DBGridTitleClick'#0#0#0#241#9'TTabSheet'#8'tsZaznam'#12
+  +'ClientHeight'#3'#'#2#11'ClientWidth'#3'!'#4#0#242#2#0#12'TPageControl'#12'P'
+  +'ageControl1'#4'Left'#2#0#6'Height'#3#139#0#3'Top'#3#152#1#5'Width'#3'!'#4#10
+  +'ActivePage'#7#8'tsZpravy'#5'Align'#7#8'alClient'#8'TabIndex'#2#0#8'TabOrder'
+  +#2#0#0#9'TTabSheet'#8'tsZpravy'#7'Caption'#6#7'Zpr'#195#161'vy'#12'ClientHei'
+  +'ght'#2'o'#11'ClientWidth'#3#25#4#0#8'TToolBar'#8'ToolBar2'#4'Left'#2#0#6'He'
+  +'ight'#2#26#3'Top'#2#0#5'Width'#3#25#4#7'Caption'#6#8'ToolBar2'#8'TabOrder'#2
+  +#0#0#11'TToolButton'#15'btRefreshZpravy'#4'Left'#2#24#4'Hint'#6#17'Obnoven'
+  +#195#173' seznamu'#3'Top'#2#2#7'Caption'#6#15'btRefreshZpravy'#10'ImageIndex'
+  +#2#7#14'ParentShowHint'#8#8'ShowHint'#9#7'OnClick'#7#20'btRefreshZpravyClick'
+  +#0#0#11'TToolButton'#11'ToolButton2'#4'Left'#2#1#3'Top'#2#2#7'Caption'#6#11
+  +'ToolButton2'#0#0#11'TToolButton'#11'ToolButton6'#4'Left'#2'/'#3'Top'#2#2#5
+  +'Width'#2#8#7'Caption'#6#11'ToolButton6'#5'Style'#7#12'tbsSeparator'#0#0#12
+  +'TDBNavigator'#15'NavigatorZpravy'#4'Left'#2'7'#6'Height'#2#22#3'Top'#2#2#5
+  +'Width'#3#185#0#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2#22#11'ClientWi'
+  +'dth'#3#185#0#10'DataSource'#7#8'dsZpravy'#8'TabOrder'#2#0#14'VisibleButtons'
+  +#11#7'nbFirst'#7'nbPrior'#6'nbNext'#6'nbLast'#0#0#0#0#7'TDBGrid'#7'DBGrid1'#4
+  +'Left'#2#0#6'Height'#2'U'#3'Top'#2#26#5'Width'#3#25#4#5'Align'#7#8'alClient'
+  +#10'DataSource'#7#8'dsZpravy'#7'Options'#11#8'dgTitles'#11'dgIndicator'#14'd'
+  +'gColumnResize'#12'dgColumnMove'#10'dgColLines'#10'dgRowLines'#6'dgTabs'#21
+  +'dgAlwaysShowSelection'#15'dgConfirmDelete'#14'dgCancelOnExit'#0#8'ReadOnly'
+  +#9#8'TabOrder'#2#1#10'TitleStyle'#7#8'tsNative'#10'OnDblClick'#7#15'DBGrid1D'
+  +'blClick'#15'OnPrepareCanvas'#7#20'DBGrid1PrepareCanvas'#0#0#0#0#242#2#1#6'T'
+  +'Panel'#6'Panel2'#4'Left'#2#0#6'Height'#3#152#1#3'Top'#2#0#5'Width'#3'!'#4#5
+  +'Align'#7#5'alTop'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3#152#1#11'Cl'
+  +'ientWidth'#3'!'#4#8'TabOrder'#2#1#0#6'TLabel'#6'Label1'#4'Left'#2#12#6'Heig'
+  +'ht'#2#16#3'Top'#2#7#5'Width'#2'8'#7'Caption'#6#10'Var. symb.'#11'ParentColo'
+  +'r'#8#0#0#6'TLabel'#6'Label2'#4'Left'#3#5#1#6'Height'#2#16#3'Top'#2#7#5'Widt'
+  +'h'#2' '#7'Caption'#6#4'GUID'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8
+  +#10'ParentFont'#8#0#0#6'TLabel'#6'Label3'#4'Left'#3'_'#2#6'Height'#2#16#3'To'
+  +'p'#2#7#5'Width'#2#12#7'Caption'#6#2'ID'#11'ParentColor'#8#0#0#6'TLabel'#6'L'
+  +'abel4'#4'Left'#3#20#2#6'Height'#2#16#3'Top'#2','#5'Width'#2'>'#7'Caption'#6
+  +#9'Uzamknuto'#11'ParentColor'#8#0#0#6'TLabel'#6'Label5'#4'Left'#3#20#2#6'Hei'
+  +'ght'#2#16#3'Top'#2'F'#5'Width'#2'['#7'Caption'#6#16'Datum uzam'#196#141'en'
+  +#195#173#11'ParentColor'#8#0#0#6'TLabel'#6'Label7'#4'Left'#2#12#6'Height'#2
+  +#16#3'Top'#2','#5'Width'#2'%'#7'Caption'#6#5'Datum'#11'ParentColor'#8#0#0#6
+  +'TLabel'#6'Label8'#4'Left'#2#12#6'Height'#2#16#3'Top'#2'F'#5'Width'#2'$'#7'C'
+  +'aption'#6#6'Jm'#195#169'no'#11'ParentColor'#8#0#0#6'TLabel'#6'Label9'#4'Lef'
+  +'t'#2#12#6'Height'#2#16#3'Top'#2'w'#5'Width'#2#27#7'Caption'#6#5'Ulice'#11'P'
+  +'arentColor'#8#0#0#6'TLabel'#7'Label10'#4'Left'#2#12#6'Height'#2#16#3'Top'#2
+  +'^'#5'Width'#2'/'#7'Caption'#6#10'Rodn'#195#169' '#196#141'.'#11'ParentColor'
+  +#8#0#0#6'TLabel'#7'Label11'#4'Left'#3#4#1#6'Height'#2#16#3'Top'#2','#5'Width'
+  +#2'I'#7'Caption'#6#17'Dlu'#197#190'n'#195#161' '#196#141#195#161'stka'#11'Pa'
+  +'rentColor'#8#0#0#6'TLabel'#7'Label12'#4'Left'#3#5#1#6'Height'#2#16#3'Top'#2
+  +'E'#5'Width'#2'&'#7'Caption'#6#6'Pokuta'#11'ParentColor'#8#0#0#6'TLabel'#7'L'
+  +'abel13'#4'Left'#3#5#1#6'Height'#2#16#3'Top'#2'^'#5'Width'#2'!'#7'Caption'#6
+  +#8'J'#195#173'zdn'#195#169#11'ParentColor'#8#0#0#6'TLabel'#7'Label14'#4'Left'
+  +#3#4#1#6'Height'#2#16#3'Top'#3#145#0#5'Width'#2'%'#7'Caption'#6#5'Obvod'#11
+  ,'ParentColor'#8#0#0#6'TLabel'#7'Label15'#4'Left'#2#12#6'Height'#2#16#3'Top'#3
+  +#145#0#5'Width'#2'"'#7'Caption'#6#6'M'#196#155'sto'#11'ParentColor'#8#0#0#6
+  +'TLabel'#7'Label16'#4'Left'#2#12#6'Height'#2#16#3'Top'#3#171#0#5'Width'#2#19
+  +#7'Caption'#6#4'Ps'#196#141#11'ParentColor'#8#0#0#6'TLabel'#7'Label17'#4'Lef'
+  +'t'#3#5#1#6'Height'#2#16#3'Top'#2'x'#5'Width'#2#22#7'Caption'#6#5#196#140'.p'
+  +'.'#11'ParentColor'#8#0#0#7'TDBEdit'#7'DBEdit1'#4'Left'#3'T'#1#6'Height'#2#23
+  +#3'Top'#2'x'#5'Width'#2'8'#9'DataField'#6#10'CISLO_DOMU'#10'DataSource'#7#8
+  +'dsMaster'#8'AutoSize'#8#9'MaxLength'#2'P'#8'TabOrder'#2#0#0#0#7'TDBEdit'#7
+  +'DBEdit2'#4'Left'#3'p'#2#6'Height'#2#23#3'Top'#2'C'#5'Width'#2'P'#9'DataFiel'
+  +'d'#6#14'DATUM_UZAMCENI'#10'DataSource'#7#8'dsMaster'#8'ReadOnly'#9#8'AutoSi'
+  +'ze'#8#5'Color'#7#9'clBtnFace'#8'TabOrder'#2#1#0#0#7'TDBEdit'#7'DBEdit3'#4'L'
+  +'eft'#3'T'#1#6'Height'#2#23#3'Top'#2'^'#5'Width'#2'x'#9'DataField'#6#6'JIZDN'
+  +'E'#10'DataSource'#7#8'dsMaster'#8'AutoSize'#8#8'TabOrder'#2#2#0#0#7'TDBEdit'
+  +#7'DBEdit4'#4'Left'#3'T'#1#6'Height'#2#23#3'Top'#3#145#0#5'Width'#2'8'#9'Dat'
+  +'aField'#6#5'OBVOD'#10'DataSource'#7#8'dsMaster'#8'AutoSize'#8#9'MaxLength'#2
+  +'x'#8'TabOrder'#2#3#0#0#7'TDBEdit'#7'DBEdit5'#4'Left'#3'4'#1#6'Height'#2#23#3
+  +'Top'#2#5#5'Width'#3' '#1#9'DataField'#6#7'REF_KOD'#10'DataSource'#7#8'dsMas'
+  +'ter'#8'AutoSize'#8#10'Font.Style'#11#6'fsBold'#0#9'MaxLength'#3#240#0#10'Pa'
+  +'rentFont'#8#8'TabOrder'#2#4#0#0#7'TDBEdit'#7'DBEdit6'#4'Left'#3'p'#2#6'Heig'
+  +'ht'#2#23#3'Top'#2'*'#5'Width'#2'P'#9'DataField'#6#8'UZAMCENA'#10'DataSource'
+  +#7#8'dsMaster'#8'ReadOnly'#9#8'AutoSize'#8#5'Color'#7#9'clBtnFace'#8'TabOrde'
+  +'r'#2#5#0#0#7'TDBEdit'#7'DBEdit7'#4'Left'#2'L'#6'Height'#2#23#3'Top'#2'('#5
+  +'Width'#3#176#0#9'DataField'#6#9'DATUM_CAS'#10'DataSource'#7#8'dsMaster'#8'A'
+  +'utoSize'#8#8'TabOrder'#2#6#0#0#7'TDBEdit'#7'DBEdit8'#4'Left'#3'T'#1#6'Heigh'
+  +'t'#2#23#3'Top'#2'*'#5'Width'#2'x'#9'DataField'#6#13'DLUZNA_CASTKA'#10'DataS'
+  +'ource'#7#8'dsMaster'#8'AutoSize'#8#8'TabOrder'#2#7#0#0#7'TDBEdit'#7'DBEdit9'
+  +#4'Left'#2'L'#6'Height'#2#23#3'Top'#2'C'#5'Width'#3#176#0#9'DataField'#6#8'J'
+  +'MENO_CP'#10'DataSource'#7#8'dsMaster'#8'AutoSize'#8#9'MaxLength'#3#240#0#8
+  +'TabOrder'#2#8#0#0#7'TDBEdit'#8'DBEdit10'#4'Left'#3'T'#1#6'Height'#2#23#3'To'
+  +'p'#2'D'#5'Width'#2'x'#9'DataField'#6#6'POKUTA'#10'DataSource'#7#8'dsMaster'
+  +#8'AutoSize'#8#8'TabOrder'#2#9#0#0#7'TDBEdit'#8'DBEdit11'#4'Left'#2'L'#6'Hei'
+  +'ght'#2#23#3'Top'#2'\'#5'Width'#2'h'#9'DataField'#6#11'RODNE_CISLO'#10'DataS'
+  +'ource'#7#8'dsMaster'#8'AutoSize'#8#9'MaxLength'#2'P'#8'TabOrder'#2#10#0#0#7
+  +'TDBEdit'#8'DBEdit12'#4'Left'#2'L'#6'Height'#2#23#3'Top'#2#5#5'Width'#2'x'#9
+  +'DataField'#6#8'VAR_SYMB'#10'DataSource'#7#8'dsMaster'#8'AutoSize'#8#10'Font'
+  +'.Style'#11#6'fsBold'#0#9'MaxLength'#3'h'#1#10'ParentFont'#8#8'TabOrder'#2#11
+  +#0#0#7'TDBEdit'#8'DBEdit14'#4'Left'#3'p'#2#6'Height'#2#23#3'Top'#2#5#5'Width'
+  +#2'P'#9'DataField'#6#2'ID'#10'DataSource'#7#8'dsMaster'#8'ReadOnly'#9#8'Auto'
+  +'Size'#8#5'Color'#7#9'clBtnFace'#8'TabOrder'#2#12#0#0#7'TDBEdit'#8'DBEdit15'
+  +#4'Left'#2'L'#6'Height'#2#23#3'Top'#3#143#0#5'Width'#3#176#0#9'DataField'#6#5
+  +'MESTO'#10'DataSource'#7#8'dsMaster'#8'AutoSize'#8#9'MaxLength'#3#200#0#8'Ta'
+  +'bOrder'#2#13#0#0#7'TDBEdit'#8'DBEdit16'#4'Left'#2'L'#6'Height'#2#23#3'Top'#3
+  +#169#0#5'Width'#2'P'#9'DataField'#6#3'PSC'#10'DataSource'#7#8'dsMaster'#8'Au'
+  +'toSize'#8#9'MaxLength'#2'('#8'TabOrder'#2#14#0#0#7'TDBEdit'#8'DBEdit17'#4'L'
+  +'eft'#2'L'#6'Height'#2#23#3'Top'#2'w'#5'Width'#3#176#0#9'DataField'#6#5'ULIC'
+  +'E'#10'DataSource'#7#8'dsMaster'#8'AutoSize'#8#9'MaxLength'#2'x'#8'TabOrder'
+  +#2#15#0#0#9'TGroupBox'#9'GroupBox1'#4'Left'#3#204#2#6'Height'#3#142#0#3'Top'
+  +#2#0#5'Width'#3'O'#1#7'Caption'#6#21'P'#197#153'ijat'#195#169' typy zpr'#195
+  +#161'v'#12'ClientHeight'#2'|'#11'ClientWidth'#3'K'#1#8'TabOrder'#2#16#0#6'TL'
+  +'abel'#7'Label18'#4'Left'#2#3#6'Height'#2#16#3'Top'#2#10#5'Width'#3#150#0#7
+  +'Caption'#6' Potvrzen'#195#173' o doru'#196#141'en'#195#173' pod'#195#161'n'
+  +#195#173#11'ParentColor'#8#0#0#6'TLabel'#7'Label19'#4'Left'#2#3#6'Height'#2
+  +#16#3'Top'#2'$'#5'Width'#3#13#1#7'Caption'#6'8Potvrzen'#195#173' o ov'#196
+  +#155#197#153'en'#195#173' elektronick'#195#169'ho podpisu pod'#195#161'n'#195
+  +#173#11'ParentColor'#8#0#0#6'TLabel'#7'Label20'#4'Left'#2#3#6'Height'#2#16#3
+  +'Top'#2'@'#5'Width'#3#150#0#7'Caption'#6#30'Elektronick'#195#189' Platebn'
+  +#195#173' Rozkaz'#11'ParentColor'#8#0#0#6'TLabel'#7'Label21'#4'Left'#2#3#6'H'
+  +'eight'#2#16#3'Top'#2'\'#5'Width'#3#218#0#7'Caption'#6'0Potvrzen'#195#173' o'
+  +' p'#197#153'ed'#195#161'n'#195#173' pod'#195#161'n'#195#173' k zapracov'#195
+  +#161'n'#195#173#11'ParentColor'#8#0#0#6'TLabel'#11'lbPotvrzeni'#4'Left'#3'!'
+  +#1#6'Height'#2#16#3'Top'#2#10#5'Width'#2'('#8'AutoSize'#8#7'Caption'#6#11'lb'
+  +'Potvrzeni'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8
+  +#0#0#6'TLabel'#9'lbOvereni'#4'Left'#3'!'#1#6'Height'#2#16#3'Top'#2'$'#5'Widt'
+  +'h'#2'('#8'AutoSize'#8#7'Caption'#6#9'lbOvereni'#10'Font.Style'#11#6'fsBold'
+  ,#0#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'#8'lbPlatba'#4'Left'#3'!'
+  +#1#6'Height'#2#16#3'Top'#2'@'#5'Width'#2'('#8'AutoSize'#8#7'Caption'#6#8'lbP'
+  +'latba'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0#0
+  +#6'TLabel'#12'lbZpracovani'#4'Left'#3'!'#1#6'Height'#2#16#3'Top'#2'\'#5'Widt'
+  +'h'#2'('#8'AutoSize'#8#7'Caption'#6#12'lbZpracovani'#10'Font.Style'#11#6'fsB'
+  +'old'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#0#9'TGroupBox'#9'GroupBox2'#4
+  +'Left'#2#12#6'Height'#2'Q'#3'Top'#3'@'#1#5'Width'#3'O'#1#7'Caption'#6#22'Vyk'
+  +'on'#195#161'vac'#195#173' '#197#153#195#173'zen'#195#173#12'ClientHeight'#2
+  +'?'#11'ClientWidth'#3'K'#1#10'ParentFont'#8#8'TabOrder'#2#17#0#7'TDBEdit'#8
+  +'DBEdit19'#4'Left'#2'F'#6'Height'#2#23#3'Top'#2#3#5'Width'#2'P'#9'DataField'
+  +#6#5'NAVRH'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#0#0#0#7'TDBEdit'#8'DB'
+  +'Edit20'#4'Left'#3#227#0#6'Height'#2#23#3'Top'#2#3#5'Width'#2'P'#9'DataField'
+  +#6#6'CASTKA'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#1#0#0#7'TDBEdit'#8'D'
+  +'BEdit21'#4'Left'#2'F'#6'Height'#2#23#3'Top'#2' '#5'Width'#2'P'#9'DataField'
+  +#6#6'PRIKAZ'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#2#0#0#7'TDBEdit'#8'D'
+  +'BEdit22'#4'Left'#3#227#0#6'Height'#2#23#3'Top'#2#30#5'Width'#2'P'#9'DataFie'
+  +'ld'#6#8'SKONCENO'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#3#0#0#6'TLabel'
+  +#7'Label23'#4'Left'#2#6#6'Height'#2#16#3'Top'#2#3#5'Width'#2'!'#7'Caption'#6
+  +#6'N'#195#161'vrh'#11'ParentColor'#8#0#0#6'TLabel'#7'Label24'#4'Left'#2#6#6
+  +'Height'#2#16#3'Top'#2#29#5'Width'#2' '#7'Caption'#6#8'P'#197#153#195#173'ka'
+  +'z'#11'ParentColor'#8#0#0#6'TLabel'#7'Label25'#4'Left'#3#158#0#6'Height'#2#16
+  +#3'Top'#2#3#5'Width'#2'$'#7'Caption'#6#8#196#140#195#161'stka'#11'ParentColo'
+  +'r'#8#0#0#6'TLabel'#7'Label26'#4'Left'#3#158#0#6'Height'#2#16#3'Top'#2#30#5
+  +'Width'#2'5'#7'Caption'#6#9'Skon'#196#141'eno'#11'ParentColor'#8#0#0#0#9'TGr'
+  +'oupBox'#9'GroupBox3'#4'Left'#2#11#6'Height'#2'x'#3'Top'#3#200#0#5'Width'#3
+  +#18#4#7'Caption'#6'<'#195#154'daje souvisej'#195#173'c'#195#173' s veden'#195
+  +#173'm sporu - nal'#195#169'zac'#195#173' '#197#153#195#173'zen'#195#173#12
+  +'ClientHeight'#2'f'#11'ClientWidth'#3#14#4#8'TabOrder'#2#18#0#7'TDBEdit'#8'D'
+  +'BEdit18'#4'Left'#2'\'#6'Height'#2#23#3'Top'#2'H'#5'Width'#2'P'#9'DataField'
+  +#6#8'ODVOLANI'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#0#0#0#7'TDBEdit'#8
+  +'DBEdit24'#4'Left'#3'c'#3#6'Height'#2#23#3'Top'#2#24#5'Width'#2'P'#9'DataFie'
+  +'ld'#6#7'UHR_SOP'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#1#0#0#7'TDBEdit'
+  +#8'DBEdit25'#4'Left'#3#181#2#6'Height'#2#23#3'Top'#2#24#5'Width'#3#170#0#9'D'
+  +'ataField'#6#11'SPIS_ZNACKA'#10'DataSource'#7#8'dsMaster'#9'MaxLength'#2#30#8
+  +'TabOrder'#2#2#0#0#7'TDBEdit'#8'DBEdit26'#4'Left'#3#196#1#6'Height'#2#23#3'T'
+  +'op'#2#24#5'Width'#3#237#0#9'DataField'#6#8'CU_SOUDU'#10'DataSource'#7#8'dsM'
+  +'aster'#9'MaxLength'#2'x'#8'TabOrder'#2#3#0#0#7'TDBEdit'#8'DBEdit27'#4'Left'
+  +#3'['#1#6'Height'#2#23#3'Top'#2#24#5'Width'#2'd'#9'DataField'#6#8'VS_SOUDU'
+  +#10'DataSource'#7#8'dsMaster'#9'MaxLength'#2'('#8'TabOrder'#2#4#0#0#7'TDBEdi'
+  +'t'#8'DBEdit29'#4'Left'#3#7#1#6'Height'#2#23#3'Top'#2#24#5'Width'#2'P'#9'Dat'
+  +'aField'#6#6'ZALOBA'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#5#0#0#7'TDBE'
+  +'dit'#8'DBEdit30'#4'Left'#2#6#6'Height'#2#23#3'Top'#2#24#5'Width'#3#251#0#9
+  +'DataField'#6#4'SOUD'#10'DataSource'#7#8'dsMaster'#9'MaxLength'#3#144#1#8'Ta'
+  +'bOrder'#2#6#0#0#7'TDBEdit'#8'DBEdit31'#4'Left'#3'['#1#6'Height'#2#23#3'Top'
+  +#2'H'#5'Width'#2'P'#9'DataField'#6#6'PR_MOC'#10'DataSource'#7#8'dsMaster'#8
+  +'TabOrder'#2#7#0#0#7'TDBEdit'#8'DBEdit32'#4'Left'#3#176#1#6'Height'#2#23#3'T'
+  +'op'#2'H'#5'Width'#2'U'#9'DataField'#6#6'UHRADA'#10'DataSource'#7#8'dsMaster'
+  +#8'TabOrder'#2#8#0#0#7'TDBEdit'#8'DBEdit33'#4'Left'#3#7#1#6'Height'#2#23#3'T'
+  +'op'#2'H'#5'Width'#2'P'#9'DataField'#6#8'ROZSUDEK'#10'DataSource'#7#8'dsMast'
+  +'er'#8'TabOrder'#2#9#0#0#7'TDBEdit'#8'DBEdit34'#4'Left'#3#177#0#6'Height'#2
+  +#23#3'Top'#2'H'#5'Width'#2'P'#9'DataField'#6#7'JEDNANI'#10'DataSource'#7#8'd'
+  +'sMaster'#8'TabOrder'#2#10#0#0#6'TLabel'#7'Label28'#4'Left'#2#6#6'Height'#2
+  +#16#3'Top'#2#5#5'Width'#2#28#7'Caption'#6#4'Soud'#11'ParentColor'#8#0#0#6'TL'
+  +'abel'#7'Label29'#4'Left'#3#7#1#6'Height'#2#16#3'Top'#2#5#5'Width'#2'%'#7'Ca'
+  +'ption'#6#7#197#189'aloba'#11'ParentColor'#8#0#0#6'TLabel'#7'Label31'#4'Left'
+  +#3'['#1#6'Height'#2#16#3'Top'#2#5#5'Width'#2'2'#7'Caption'#6#8'VS soudu'#11
+  +'ParentColor'#8#0#0#6'TLabel'#7'Label32'#4'Left'#3#196#1#6'Height'#2#16#3'To'
+  +'p'#2#5#5'Width'#2'='#7'Caption'#6#13#196#140'. '#195#186'. soudu'#11'Parent'
+  +'Color'#8#0#0#6'TLabel'#7'Label33'#4'Left'#3#181#2#6'Height'#2#16#3'Top'#2#5
+  +#5'Width'#2'+'#7'Caption'#6#9'Spis. zn.'#11'ParentColor'#8#0#0#6'TLabel'#7'L'
+  +'abel34'#4'Left'#3'c'#3#6'Height'#2#16#3'Top'#2#5#5'Width'#2'0'#7'Caption'#6
+  +#9#195#154'hr. SOP'#11'ParentColor'#8#0#0#6'TLabel'#7'Label36'#4'Left'#2'\'#6
+  +'Height'#2#16#3'Top'#2'8'#5'Width'#2'1'#7'Caption'#6#10'Odvol'#195#161'n'#195
+  +#173#11'ParentColor'#8#0#0#6'TLabel'#7'Label37'#4'Left'#3#177#0#6'Height'#2
+  ,#16#3'Top'#2'8'#5'Width'#2')'#7'Caption'#6#9'Jedn'#195#161'n'#195#173#11'Par'
+  +'entColor'#8#0#0#6'TLabel'#7'Label38'#4'Left'#3#7#1#6'Height'#2#16#3'Top'#2
+  +'8'#5'Width'#2'3'#7'Caption'#6#8'Rozsudek'#11'ParentColor'#8#0#0#6'TLabel'#7
+  +'Label39'#4'Left'#3'['#1#6'Height'#2#16#3'Top'#2'8'#5'Width'#2'*'#7'Caption'
+  +#6#7'Pr. moc'#11'ParentColor'#8#0#0#6'TLabel'#7'Label40'#4'Left'#3#176#1#6'H'
+  +'eight'#2#16#3'Top'#2'8'#5'Width'#2''''#7'Caption'#6#7#195#154'hrada'#11'Par'
+  +'entColor'#8#0#0#6'TLabel'#6'Label6'#4'Left'#2#6#6'Height'#2#16#3'Top'#2'8'#5
+  +'Width'#2'2'#7'Caption'#6#10'Pl. rozkaz'#11'ParentColor'#8#0#0#7'TDBEdit'#8
+  +'DBEdit13'#4'Left'#2#6#6'Height'#2#23#3'Top'#2'H'#5'Width'#2'P'#9'DataField'
+  +#6#9'PL_PRIKAZ'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#11#0#0#6'TLabel'#7
+  +'Label41'#4'Left'#3#7#2#6'Height'#2#16#3'Top'#2'8'#5'Width'#2'M'#7'Caption'#6
+  +#13'Datum '#195#186'hrady'#11'ParentColor'#8#0#0#7'TDBEdit'#8'DBEdit36'#4'Le'
+  +'ft'#3#7#2#6'Height'#2#23#3'Top'#2'H'#5'Width'#2'P'#9'DataField'#6#12'DATUM_'
+  +'UHRADY'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#12#0#0#0#7'TDBEdit'#8'DB'
+  +'Edit35'#4'Left'#3'p'#2#6'Height'#2#23#3'Top'#2'w'#5'Width'#2'P'#9'DataField'
+  +#6#9'SPLATNOST'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#19#0#0#6'TLabel'#7
+  +'Label27'#4'Left'#3#20#2#6'Height'#2#16#3'Top'#2'w'#5'Width'#2'2'#7'Caption'
+  +#6#9'Splatnost'#11'ParentColor'#8#0#0#7'TDBEdit'#8'DBEdit23'#4'Left'#3'p'#2#6
+  +'Height'#2#23#3'Top'#3#145#0#5'Width'#2'P'#9'DataField'#6#5'NAROK'#10'DataSo'
+  +'urce'#7#8'dsMaster'#8'TabOrder'#2#20#0#0#6'TLabel'#7'Label30'#4'Left'#3#20#2
+  +#6'Height'#2#16#3'Top'#3#145#0#5'Width'#2'!'#7'Caption'#6#6'N'#195#161'rok'
+  +#11'ParentColor'#8#0#0#7'TDBEdit'#8'DBEdit28'#4'Left'#3#212#0#6'Height'#2#23
+  +#3'Top'#2#5#5'Width'#2'+'#9'DataField'#6#5'CISLO'#10'DataSource'#7#8'dsMaste'
+  +'r'#8'TabOrder'#2#21#0#0#6'TLabel'#7'Label35'#4'Left'#3#199#0#6'Height'#2#16
+  +#3'Top'#2#10#5'Width'#2#10#7'Caption'#6#3#196#141'.'#11'ParentColor'#8#0#0#6
+  +'TLabel'#7'Label43'#4'Left'#3#6#1#6'Height'#2#16#3'Top'#3#170#0#5'Width'#2'&'
+  +#7'Caption'#6#7'Zem'#197#153'el'#11'ParentColor'#8#0#0#7'TDBEdit'#8'DBEdit38'
+  +#4'Left'#3'T'#1#6'Height'#2#23#3'Top'#3#168#0#5'Width'#2'P'#9'DataField'#6#6
+  +'ZEMREL'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#22#0#0#7'TDBEdit'#8'DBEd'
+  +'it39'#4'Left'#3'p'#2#6'Height'#2#23#3'Top'#3#170#0#5'Width'#2'P'#9'DataFiel'
+  +'d'#6#21'ZAPLATIL_PRED_PODANIM'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#23
+  +#0#0#6'TLabel'#7'Label44'#4'Left'#3#208#1#6'Height'#2#16#3'Top'#3#170#0#5'Wi'
+  +'dth'#3#155#0#7'Caption'#6' Zaplatil p'#197#153'ed pod'#195#161'n'#195#173'm'
+  +' '#197#190'aloby'#11'ParentColor'#8#0#0#6'TLabel'#7'Label45'#4'Left'#3#207#2
+  +#6'Height'#2#16#3'Top'#3#170#0#5'Width'#2'8'#7'Caption'#6#12'Zaplatil K'#196
+  +#141#11'ParentColor'#8#0#0#7'TDBEdit'#8'DBEdit40'#4'Left'#3#12#3#6'Height'#2
+  +#23#3'Top'#3#170#0#5'Width'#2'x'#9'DataField'#6#15'ZAPLATIL_CASTKA'#10'DataS'
+  +'ource'#7#8'dsMaster'#8'TabOrder'#2#24#0#0#0#0#0#241#6'TPanel'#3'pOK'#3'Top'
+  +#3'{'#2#5'Width'#3')'#4#11'ClientWidth'#3')'#4#0#241#7'TButton'#8'btStorno'#4
+  +'Left'#3#5#3#0#0#241#7'TButton'#4'btOK'#4'Left'#3#181#2#5'Width'#2'K'#0#0#0
+  +#242#2#4#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'"'#3'Top'#2#26#5'Width'
+  +#3')'#4#5'Align'#7#5'alTop'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2'"'
+  +#11'ClientWidth'#3')'#4#8'TabOrder'#2#4#7'OnClick'#7#11'Panel1Click'#0#11'TR'
+  +'adioGroup'#11'RadioGroup1'#4'Left'#2#4#6'Height'#2'!'#3'Top'#2#254#5'Width'
+  +#3#4#1#8'AutoFill'#9#7'Caption'#6#8'Zobrazit'#28'ChildSizing.LeftRightSpacin'
+  +'g'#2#6#28'ChildSizing.TopBottomSpacing'#2#6#29'ChildSizing.EnlargeHorizonta'
+  +'l'#7#24'crsHomogenousChildResize'#27'ChildSizing.EnlargeVertical'#7#24'crsH'
+  +'omogenousChildResize'#28'ChildSizing.ShrinkHorizontal'#7#14'crsScaleChilds'
+  +#26'ChildSizing.ShrinkVertical'#7#14'crsScaleChilds'#18'ChildSizing.Layout'#7
+  +#29'cclLeftToRightThenTopToBottom'#27'ChildSizing.ControlsPerLine'#2#4#12'Cl'
+  +'ientHeight'#2#15#11'ClientWidth'#3#0#1#7'Columns'#2#4#9'ItemIndex'#2#2#13'I'
+  +'tems.Strings'#1#6#8'V'#197#161'echny'#6#10'Uzamknut'#195#169#6#12'Neuzamknu'
+  +'t'#195#169#0#7'OnClick'#7#16'RadioGroup1Click'#10'ParentFont'#8#8'TabOrder'
+  +#2#0#0#0#7'TButton'#9'btEditace'#4'Left'#3'8'#2#6'Height'#2#25#3'Top'#2#5#5
+  +'Width'#2'p'#7'Caption'#6#21'Otev'#197#153#195#173't pro editaci'#7'OnClick'
+  +#7#14'btEditaceClick'#8'TabOrder'#2#1#0#0#7'TButton'#15'btPrijmoutPostu'#4'L'
+  +'eft'#3#200#1#6'Height'#2#25#3'Top'#2#5#5'Width'#2'h'#7'Caption'#6#16'P'#197
+  +#153'ijmout po'#197#161'tu'#7'OnClick'#7#20'btPrijmoutPostuClick'#8'TabOrder'
+  +#2#2#0#0#6'TLabel'#7'Label22'#4'Left'#3#11#1#6'Height'#2#16#3'Top'#2#13#5'Wi'
+  +'dth'#2'G'#7'Caption'#6#12'Datum d'#195#161'vky'#11'ParentColor'#8#7'Visible'
+  +#8#0#0#9'TComboBox'#8'cbDatumy'#4'Left'#3'X'#1#6'Height'#2#23#3'Top'#2#6#5'W'
+  +'idth'#2'P'#10'ItemHeight'#2#15#8'OnChange'#7#14'cbDatumyChange'#5'Style'#7
+  +#14'csDropDownList'#8'TabOrder'#2#3#7'Visible'#8#0#0#0#243#2#5#9'TMainMenu'#8
+  +'MainMenu'#4'left'#3#136#1#3'top'#2'h'#0#241#9'TMenuItem'#8'miSoubor'#0#241#9
+  ,'TMenuItem'#8'miZavrit'#7'OnClick'#7#13'miZavritClick'#0#0#0#242#2#1#9'TMenu'
+  +'Item'#8'miZaloby'#7'Caption'#6#7#197#189'aloby'#0#9'TMenuItem'#13'miImportZ'
+  +'alob'#7'Caption'#6#17'Import '#197#190'alob CSV'#7'Visible'#8#7'OnClick'#7
+  +#18'miImportZalobClick'#0#0#9'TMenuItem'#16'miVytvoritPrikaz'#7'Caption'#6#28
+  +'Vytvo'#197#153'it platebn'#195#173' p'#197#153#195#173'kaz'#7'OnClick'#7#21
+  +'miVytvoritPrikazClick'#0#0#9'TMenuItem'#11'miUzamknout'#7'Caption'#6#9'Uzam'
+  +'knout'#7'OnClick'#7#16'miUzamknoutClick'#0#0#9'TMenuItem'#12'miUzavritVse'#7
+  +'Caption'#6#14'Uzamknout v'#197#161'e'#7'OnClick'#7#17'miUzavritVseClick'#0#0
+  +#9'TMenuItem'#16'miUzamknoutDatum'#7'Caption'#6#15'Uzamknout datum'#7'OnClic'
+  +'k'#7#21'miUzamknoutDatumClick'#0#0#9'TMenuItem'#11'miOdemknout'#7'Caption'#6
+  +#9'Odemknout'#7'OnClick'#7#16'miOdemknoutClick'#0#0#9'TMenuItem'#14'miOdemkn'
+  +'outVse'#7'Caption'#6#14'Odemknout v'#197#161'e'#7'OnClick'#7#19'miOdemknout'
+  +'VseClick'#0#0#9'TMenuItem'#16'miOdemknoutDatum'#7'Caption'#6#15'Odemknout d'
+  +'atum'#7'OnClick'#7#21'miOdemknoutDatumClick'#0#0#9'TMenuItem'#15'miPrijmout'
+  +'Postu'#7'Caption'#6#16'P'#197#153'ijmout po'#197#161'tu'#7'OnClick'#7#20'mi'
+  +'PrijmoutPostuClick'#0#0#9'TMenuItem'#10'miHistorie'#7'Caption'#6#17'Histori'
+  +'e import'#197#175#7'Visible'#8#7'OnClick'#7#15'miHistorieClick'#0#0#9'TMenu'
+  +'Item'#9'MenuItem2'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#12'miArchivovat'#7'Ca'
+  +'ption'#6' P'#197#153'esunout uzam'#196#141'en'#195#169' do archivu'#7'OnCli'
+  +'ck'#7#17'miArchivovatClick'#0#0#9'TMenuItem'#19'miPresunoutZArchivu'#7'Capt'
+  +'ion'#6#28'P'#197#153'esunout '#197#190'aloby z archivu'#7'OnClick'#7#24'miP'
+  +'resunoutZArchivuClick'#0#0#0#243#2#2#9'TMenuItem'#8'miUpravy'#0#241#9'TMenu'
+  +'Item'#12'miNovyZaznam'#7'Enabled'#8#7'Visible'#8#7'OnClick'#7#17'miNovyZazn'
+  +'amClick'#0#0#241#9'TMenuItem'#15'miUpravitZaznam'#7'OnClick'#7#20'miUpravit'
+  +'ZaznamClick'#0#0#241#9'TMenuItem'#14'miSmazatZaznam'#7'Enabled'#8#7'Visible'
+  +#8#7'OnClick'#7#19'miSmazatZaznamClick'#0#0#241#9'TMenuItem'#14'miVychoziDot'
+  +'az'#7'OnClick'#7#19'miVychoziDotazClick'#0#0#242#2#4#9'TMenuItem'#14'miDopl'
+  +'nitUdaje'#7'Caption'#6'#Doplnit '#195#186'daje z p'#197#153'ijat'#195#189'c'
+  +'h zpr'#195#161'v'#7'OnClick'#7#19'miDoplnitUdajeClick'#0#0#242#2#5#9'TMenuI'
+  +'tem'#20'miDoplnitDatumPlatby'#7'Caption'#6#20'Doplnit datum platby'#7'OnCli'
+  +'ck'#7#25'miDoplnitDatumPlatbyClick'#0#0#242#2#6#9'TMenuItem'#20'miVymazatDa'
+  +'tumPlatby'#7'Caption'#6#20'Vymazat datum platby'#7'OnClick'#7#25'miVymazatD'
+  +'atumPlatbyClick'#0#0#242#2#7#9'TMenuItem'#16'miKontrolaPrijmu'#7'Caption'#6
+  +'+Resetovat kontrolu p'#197#153#195#173'jmu zpr'#195#161'v na s'#195#173'ti'
+  +#0#0#243#2#8#9'TMenuItem'#14'miZrusOznaceni'#7'OnClick'#7#19'miZrusOznaceniC'
+  +'lick'#0#0#0#242#2#3#9'TMenuItem'#11'miCiselniky'#7'Caption'#6#12#196#140#195
+  +#173'seln'#195#173'ky'#0#9'TMenuItem'#11'miTypyZprav'#7'Caption'#6#11'Typy z'
+  +'pr'#195#161'v'#7'OnClick'#7#16'miTypyZpravClick'#0#0#9'TMenuItem'#13'miArch'
+  +'ivZalob'#7'Caption'#6#13'Archiv '#197#190'alob'#7'OnClick'#7#18'miArchivZal'
+  +'obClick'#0#0#0#242#2#4#9'TMenuItem'#9'miSestavy'#7'Caption'#6#7'Sestavy'#0#9
+  +'TMenuItem'#9'miSmlouva'#7'Caption'#6'0Ozn'#195#161'men'#195#173' postupitel'
+  +'e o postoupen'#195#173' pohled'#195#161'vky'#7'OnClick'#7#14'miSmlouvaClick'
+  +#0#0#9'TMenuItem'#12'miPodaciList'#7'Caption'#6'?Ozn'#195#161'men'#195#173' '
+  +'postupitele o postoupen'#195#173' pohled'#195#161'vky - podac'#195#173' lis'
+  +'t'#7'OnClick'#7#17'miPodaciListClick'#0#0#9'TMenuItem'#13'miPodaciList2'#7
+  +'Caption'#6'KOzn'#195#161'men'#195#173' postupitele o postoupen'#195#173' po'
+  +'hled'#195#161'vky - podac'#195#173' list od 1.9.2010'#7'OnClick'#7#18'miPod'
+  +'aciList2Click'#0#0#9'TMenuItem'#13'miPodaciList3'#7'Caption'#6'UOzn'#195#161
+  +'men'#195#173' postupitele o postoupen'#195#173' pohled'#195#161'vky - podac'
+  +#195#173' list od 1.9.2010 - FENICIA'#7'OnClick'#7#18'miPodaciList3Click'#0#0
+  +#9'TMenuItem'#19'miPredavaciProtokol'#7'Caption'#6'HOzn'#195#161'men'#195#173
+  +' postupitele o postoupen'#195#173' pohled'#195#161'vky - p'#197#153'ed'#195
+  +#161'vac'#195#173' protokol'#7'OnClick'#7#24'miPredavaciProtokolClick'#0#0#9
+  +'TMenuItem'#11'miProPrikaz'#7'Caption'#6#10'K '#195#186'hrad'#196#155#7'OnCl'
+  +'ick'#7#16'miProPrikazClick'#0#0#9'TMenuItem'#11'miZaplacene'#7'Caption'#6#10
+  +'Zaplacen'#195#169#7'OnClick'#7#16'miZaplaceneClick'#0#0#9'TMenuItem'#10'miB'
+  +'ezGuidu'#7'Caption'#6#14'Bez GUID k'#195#179'du'#7'OnClick'#7#15'miBezGuidu'
+  +'Click'#0#0#9'TMenuItem'#16'miBezUdajuPlatby'#7'Caption'#6#22'Bez '#195#186
+  +'daj'#197#175' pro platbu'#7'OnClick'#7#21'miBezUdajuPlatbyClick'#0#0#0#242#2
+  +#5#9'TMenuItem'#8'miExport'#7'Caption'#6#6'Export'#0#9'TMenuItem'#18'miExpor'
+  +'tPodaciList'#7'Caption'#6#12'Podac'#195#173' list'#7'OnClick'#7#23'miExport'
+  +'PodaciListClick'#0#0#9'TMenuItem'#25'miExportPredavaciProtokol'#7'Caption'#6
+  +#21'P'#197#153'ed'#195#161'vac'#195#173' protokol'#7'OnClick'#7#30'miExportP'
+  +'redavaciProtokolClick'#0#0#9'TMenuItem'#8'miPrubeh'#7'Caption'#6#15'Pr'#197
+  ,#175'b'#196#155'h d'#195#161'vky'#7'OnClick'#7#13'miPrubehClick'#0#0#0#0#243
+  +#2#6#7'TZQuery'#8'qrMaster'#10'Connection'#7#19'DM.OracleConnection'#9'After'
+  +'Open'#7#17'qrMasterAfterOpen'#12'UpdateObject'#7#12'UpdateMaster'#17'AfterA'
+  +'pplyUpdates'#7#25'qrMasterAfterApplyUpdates'#12'BeforeInsert'#7#20'qrMaster'
+  +'BeforeInsert'#10'BeforeEdit'#7#18'qrMasterBeforeEdit'#10'BeforePost'#7#18'q'
+  +'rMasterBeforePost'#9'AfterPost'#7#17'qrMasterAfterPost'#11'SQL.Strings'#1#6
+  +#7'SELECT '#6#4'  * '#6#5'FROM '#6#15'  ZALOBY_MLCOCH'#6#5'WHERE'#6#3'  ('#6
+  +'1  UPPER(VAR_SYMB) LIKE ''%''||:HLEDAT_VAR_SYMB||''%'''#6'4  OR UPPER(JMENO'
+  +'_CP) LIKE ''%''||:HLEDAT_JMENO_CP||''%'''#6'6  OR UPPER(DATUM_CAS) LIKE ''%'
+  +'''||:HLEDAT_DATUM_CAS||''%'''#6'>  OR UPPER(DLUZNA_CASTKA) LIKE ''%''||:HLE'
+  +'DAT_DLUZNA_CASTKA||''%'''#6'0  OR UPPER(JIZDNE) LIKE ''%''||:HLEDAT_JIZDNE|'
+  +'|''%'''#6'0  OR UPPER(POKUTA) LIKE ''%''||:HLEDAT_POKUTA||''%'''#6':  OR UP'
+  +'PER(RODNE_CISLO) LIKE ''%''||:HLEDAT_RODNE_CISLO||''%'''#6'.  OR UPPER(ULIC'
+  +'E) LIKE ''%''||:HLEDAT_ULICE||''%'''#6'8  OR UPPER(CISLO_DOMU) LIKE ''%''||'
+  +':HLEDAT_CISLO_DOMU||''%'''#6'.  OR UPPER(MESTO) LIKE ''%''||:HLEDAT_MESTO||'
+  +'''%'''#6'.  OR UPPER(OBVOD) LIKE ''%''||:HLEDAT_OBVOD||''%'''#6'*  OR UPPER'
+  +'(PSC) LIKE ''%''||:HLEDAT_PSC||''%'''#6'M  OR TO_CHAR(DATUM_IMPORTU,''DD.MM'
+  +'.YYYY'') LIKE ''%''||:HLEDAT_DATUM_IMPORTU||''%'''#6'E  OR TO_CHAR(SPLATNOS'
+  +'T,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_SPLATNOST||''%'''#6',  OR UPPER(SOUD)'
+  +' LIKE ''%''||:HLEDAT_SOUD||''%'''#6'?  OR TO_CHAR(ZALOBA,''DD.MM.YYYY'') LI'
+  +'KE ''%''||:HLEDAT_ZALOBA||''%'''#6'0  OR TO_CHAR(NAROK) LIKE ''%''||:HLEDAT'
+  +'_NAROK||''%'''#6'-  OR VS_SOUDU LIKE ''%''||:HLEDAT_VS_SOUDU||''%'''#6'-  O'
+  +'R CU_SOUDU LIKE ''%''||:HLEDAT_CU_SOUDU||''%'''#6'3  OR SPIS_ZNACKA LIKE '''
+  +'%''||:HLEDAT_SPIS_ZNACKA||''%'''#6'A  OR TO_CHAR(UHR_SOP,''DD.MM.YYYY'') LI'
+  +'KE ''%''||:HLEDAT_UHR_SOP||''%'''#6'E  OR TO_CHAR(PL_PRIKAZ,''DD.MM.YYYY'')'
+  +' LIKE ''%''||:HLEDAT_PL_PRIKAZ||''%'''#6'C  OR TO_CHAR(ODVOLANI,''DD.MM.YYY'
+  +'Y'') LIKE ''%''||:HLEDAT_ODVOLANI||''%'''#6'A  OR TO_CHAR(JEDNANI,''DD.MM.Y'
+  +'YYY'') LIKE ''%''||:HLEDAT_JEDNANI||''%'''#6'C  OR TO_CHAR(ROZSUDEK,''DD.MM'
+  +'.YYYY'') LIKE ''%''||:HLEDAT_ROZSUDEK||''%'''#6'?  OR TO_CHAR(PR_MOC,''DD.M'
+  +'M.YYYY'') LIKE ''%''||:HLEDAT_PR_MOC||''%'''#6'2  OR TO_CHAR(UHRADA) LIKE '
+  +'''%''||:HLEDAT_UHRADA||''%'''#6'=  OR TO_CHAR(NAVRH,''DD.MM.YYYY'') LIKE '''
+  +'%''||:HLEDAT_NAVRH||''%'''#6'?  OR TO_CHAR(PRIKAZ,''DD.MM.YYYY'') LIKE ''%'
+  +'''||:HLEDAT_PRIKAZ||''%'''#6'2  OR TO_CHAR(CASTKA) LIKE ''%''||:HLEDAT_CAST'
+  +'KA||''%'''#6'C  OR TO_CHAR(SKONCENO,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_SKO'
+  +'NCENO||''%'''#6#3'  )'#6'>  AND (DATUM_IMPORTU=:DATUM_IMPORTU OR :DATUM_IMP'
+  +'ORTU IS NULL)'#6'>  AND (NVL(UZAMCENA,0)=NVL(:UZAMCENA,0) OR NVL(:UZAMCENA,'
+  +'0)=2)'#6#9'ORDER BY '#6#10'  VAR_SYMB'#0#6'Params'#14#1#8'DataType'#7#9'ftU'
+  +'nknown'#4'Name'#6#15'HLEDAT_VAR_SYMB'#9'ParamType'#7#9'ptUnknown'#0#1#8'Dat'
+  +'aType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_JMENO_CP'#9'ParamType'#7#9'ptUnkn'
+  +'own'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#16'HLEDAT_DATUM_CAS'#9'ParamT'
+  +'ype'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#20'HLEDAT_DLUZ'
+  +'NA_CASTKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Nam'
+  +'e'#6#13'HLEDAT_JIZDNE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUn'
+  +'known'#4'Name'#6#13'HLEDAT_POKUTA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataTy'
+  +'pe'#7#9'ftUnknown'#4'Name'#6#18'HLEDAT_RODNE_CISLO'#9'ParamType'#7#9'ptUnkn'
+  +'own'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_ULICE'#9'ParamType'
+  +#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#17'HLEDAT_CISLO_DOM'
+  +'U'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12
+  +'HLEDAT_MESTO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#12'HLEDAT_OBVOD'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ft'
+  +'Unknown'#4'Name'#6#10'HLEDAT_PSC'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataTyp'
+  +'e'#7#9'ftUnknown'#4'Name'#6#20'HLEDAT_DATUM_IMPORTU'#9'ParamType'#7#9'ptUnk'
+  +'nown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#16'HLEDAT_SPLATNOST'#9'Param'
+  +'Type'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#11'HLEDAT_SOU'
+  +'D'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13
+  +'HLEDAT_ZALOBA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#12'HLEDAT_NAROK'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ft'
+  +'Unknown'#4'Name'#6#15'HLEDAT_VS_SOUDU'#9'ParamType'#7#9'ptUnknown'#0#1#8'Da'
+  +'taType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_CU_SOUDU'#9'ParamType'#7#9'ptUnk'
+  +'nown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#18'HLEDAT_SPIS_ZNACKA'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'HLEDAT_U'
+  +'HR_SOP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#16'HLEDAT_PL_PRIKAZ'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkn'
+  +'own'#4'Name'#6#15'HLEDAT_ODVOLANI'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataTy'
+  ,'pe'#7#9'ftUnknown'#4'Name'#6#14'HLEDAT_JEDNANI'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_ROZSUDEK'#9'ParamType'#7
+  +#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_PR_MOC'#9'P'
+  +'aramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT'
+  +'_UHRADA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#12'HLEDAT_NAVRH'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknow'
+  +'n'#4'Name'#6#13'HLEDAT_PRIKAZ'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#13'HLEDAT_CASTKA'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_SKONCENO'#9'ParamType'#7#9'ptU'
+  +'nknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'DATUM_IMPORTU'#9'ParamT'
+  +'ype'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#8'UZAMCENA'#9
+  +'ParamType'#7#9'ptUnknown'#0#0#4'left'#3#0#1#3'top'#2#24#9'ParamData'#14#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_VAR_SYMB'#9'ParamType'#7#9'ptU'
+  +'nknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_JMENO_CP'#9'Para'
+  +'mType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#16'HLEDAT_DA'
+  +'TUM_CAS'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#20'HLEDAT_DLUZNA_CASTKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
+  +'ftUnknown'#4'Name'#6#13'HLEDAT_JIZDNE'#9'ParamType'#7#9'ptUnknown'#0#1#8'Da'
+  +'taType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_POKUTA'#9'ParamType'#7#9'ptUnkno'
+  +'wn'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#18'HLEDAT_RODNE_CISLO'#9'Param'
+  +'Type'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_ULI'
+  +'CE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#17
+  +'HLEDAT_CISLO_DOMU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknow'
+  +'n'#4'Name'#6#12'HLEDAT_MESTO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#12'HLEDAT_OBVOD'#9'ParamType'#7#9'ptUnknown'#0#1#8'D'
+  +'ataType'#7#9'ftUnknown'#4'Name'#6#10'HLEDAT_PSC'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#20'HLEDAT_DATUM_IMPORTU'#9'ParamTy'
+  +'pe'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#16'HLEDAT_SPLAT'
+  +'NOST'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#11'HLEDAT_SOUD'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#13'HLEDAT_ZALOBA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'f'
+  +'tUnknown'#4'Name'#6#12'HLEDAT_NAROK'#9'ParamType'#7#9'ptUnknown'#0#1#8'Data'
+  +'Type'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_VS_SOUDU'#9'ParamType'#7#9'ptUnkno'
+  +'wn'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_CU_SOUDU'#9'ParamTyp'
+  +'e'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#18'HLEDAT_SPIS_Z'
+  +'NACKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#14'HLEDAT_UHR_SOP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknow'
+  +'n'#4'Name'#6#16'HLEDAT_PL_PRIKAZ'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataTyp'
+  +'e'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_ODVOLANI'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'HLEDAT_JEDNANI'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_ROZSUDEK'#9'P'
+  +'aramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT'
+  +'_PR_MOC'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#13'HLEDAT_UHRADA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkno'
+  +'wn'#4'Name'#6#12'HLEDAT_NAVRH'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#13'HLEDAT_PRIKAZ'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_CASTKA'#9'ParamType'#7#9'ptUnk'
+  +'nown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_SKONCENO'#9'ParamT'
+  +'ype'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'DATUM_IMPOR'
+  +'TU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#8
+  +'UZAMCENA'#9'ParamType'#7#9'ptUnknown'#0#0#0#242#2#0#13'TLongintField'#9'ZQu'
+  +'ery1ID'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'
+  +#5'Index'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWh'
+  +'ere'#0#8'ReadOnly'#8#8'Required'#8#0#0#242#2#1#12'TStringField'#15'ZQuery1V'
+  +'AR_SYMB'#12'DisplayWidth'#3'h'#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8
+  +'VAR_SYMB'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3'h'#1#0#0#242#2#2#12'TS'
+  +'tringField'#15'ZQuery1JMENO_CP'#12'DisplayWidth'#3#240#0#9'FieldKind'#7#6'f'
+  +'kData'#9'FieldName'#6#8'JMENO_CP'#5'Index'#2#2#11'LookupCache'#8#13'Provide'
+  +'rFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
+  +#3#240#0#0#0#242#2#3#10'TDateField'#16'ZQuery1DATUM_CAS'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'DATUM_CAS'#5'Index'#2#3#11'Loo'
+  +'kupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
+  +#8'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2#4#11'TFloatField'
+  ,#20'ZQuery1DLUZNA_CASTKA'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'F'
+  +'ieldName'#6#13'DLUZNA_CASTKA'#5'Index'#2#4#11'LookupCache'#8#13'ProviderFla'
+  +'gs'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'Display'
+  +'Format'#6#14'### ### ##0.00'#10'EditFormat'#6#12'#########.00'#8'MaxValue'#5
+  +#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#12#0#0
+  +#242#2#5#11'TFloatField'#13'ZQuery1JIZDNE'#12'DisplayWidth'#2#10#9'FieldKind'
+  +#7#6'fkData'#9'FieldName'#6#6'JIZDNE'#5'Index'#2#5#11'LookupCache'#8#13'Prov'
+  +'iderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13
+  +'DisplayFormat'#6#14'### ### ##0.00'#10'EditFormat'#6#12'#########.00'#8'Max'
+  +'Value'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'
+  +#2#12#0#0#242#2#6#11'TFloatField'#13'ZQuery1POKUTA'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#6'POKUTA'#5'Index'#2#6#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#13'DisplayFormat'#6#14'### ### ##0.00'#10'EditFormat'#6#12'#########.'
+  +'00'#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'P'
+  +'recision'#2#12#0#0#242#2#7#12'TStringField'#18'ZQuery1RODNE_CISLO'#12'Displ'
+  +'ayWidth'#2'P'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'RODNE_CISLO'#5'Ind'
+  +'ex'#2#7#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
+  +#8'ReadOnly'#8#8'Required'#8#4'Size'#2'P'#0#0#242#2#8#12'TStringField'#12'ZQ'
+  +'uery1ULICE'#12'DisplayWidth'#2'x'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5
+  +'ULICE'#5'Index'#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#242#2#9#12'TStrin'
+  +'gField'#17'ZQuery1CISLO_DOMU'#12'DisplayWidth'#2'P'#9'FieldKind'#7#6'fkData'
+  +#9'FieldName'#6#10'CISLO_DOMU'#5'Index'#2#9#11'LookupCache'#8#13'ProviderFla'
+  +'gs'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2
+  +'P'#0#0#242#2#10#12'TStringField'#12'ZQuery1MESTO'#12'DisplayWidth'#3#200#0#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#5'MESTO'#5'Index'#2#10#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#4'Size'#3#200#0#0#0#242#2#11#12'TStringField'#12'ZQuery1OBVOD'#12'Dis'
+  +'playWidth'#2'x'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'OBVOD'#5'Index'#2
+  +#11#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'R'
+  +'eadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#242#2#12#12'TStringField'#10'ZQue'
+  +'ry1PSC'#12'DisplayWidth'#2'('#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3'PSC'
+  +#5'Index'#2#12#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInW'
+  +'here'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'('#0#0#242#2#13#12'TStringFie'
+  +'ld'#14'ZQuery1REF_KOD'#12'DisplayWidth'#3#240#0#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#7'REF_KOD'#5'Index'#2#13#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#240#0#0
+  +#0#242#2#14#14'TSmallintField'#15'ZQuery1UZAMCENA'#12'DisplayWidth'#2#10#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#8'UZAMCENA'#5'Index'#2#14#11'LookupCac'
+  +'he'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Re'
+  +'quired'#8#0#0#242#2#15#10'TDateField'#20'ZQuery1DATUM_IMPORTU'#12'DisplayWi'
+  +'dth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#13'DATUM_IMPORTU'#5'Index'
+  +#2#15#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2#16#10
+  +'TDateField'#21'ZQuery1DATUM_UZAMCENI'#12'DisplayWidth'#2#10#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#14'DATUM_UZAMCENI'#5'Index'#2#16#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2#17#10'TDateField'#16'ZQuery1PL'
+  +'_PRIKAZ'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PL'
+  +'_PRIKAZ'#5'Index'#2#17#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYY'
+  +'Y'#0#0#242#2#18#11'TFloatField'#13'ZQuery1UHRADA'#12'DisplayWidth'#2#10#9'F'
+  +'ieldKind'#7#6'fkData'#9'FieldName'#6#6'UHRADA'#5'Index'#2#18#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#13'DisplayFormat'#6#15'### ### ##0 K'#196#141#10'EditFormat'#6#9'####'
+  +'#####'#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9
+  +'Precision'#2#9#0#0#242#2#19#10'TDateField'#16'ZQuery1SPLATNOST'#12'DisplayW'
+  +'idth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'SPLATNOST'#5'Index'#2
+  +#19#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'R'
+  +'eadOnly'#8#8'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2#20#12
+  +'TStringField'#11'ZQuery1SOUD'#12'DisplayWidth'#3#144#1#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#4'SOUD'#5'Index'#2#20#11'LookupCache'#8#13'ProviderFlag'
+  +'s'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3
+  ,#144#1#0#0#242#2#21#10'TDateField'#13'ZQuery1ZALOBA'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#6'ZALOBA'#5'Index'#2#21#11'LookupCach'
+  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
+  +'uired'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2#22#11'TFloatField'#12
+  +'ZQuery1NAROK'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#5'NAROK'#5'Index'#2#22#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#14'### ### #'
+  +'#0.00'#10'EditFormat'#6#12'#########.00'#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
+  +'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#9#0#0#242#2#23#12'TStringFie'
+  +'ld'#15'ZQuery1VS_SOUDU'#12'DisplayWidth'#2'('#9'FieldKind'#7#6'fkData'#9'Fi'
+  +'eldName'#6#8'VS_SOUDU'#5'Index'#2#23#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'('#0#0
+  +#242#2#24#12'TStringField'#15'ZQuery1CU_SOUDU'#12'DisplayWidth'#2'x'#9'Field'
+  +'Kind'#7#6'fkData'#9'FieldName'#6#8'CU_SOUDU'#5'Index'#2#24#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#2'x'#0#0#242#2#25#12'TStringField'#18'ZQuery1SPIS_ZNACKA'#12'Disp'
+  +'layWidth'#2#30#9'FieldKind'#7#6'fkData'#9'FieldName'#6#11'SPIS_ZNACKA'#5'In'
+  +'dex'#2#25#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2#30#0#0#242#2#26#10'TDateField'#14'Z'
+  +'Query1UHR_SOP'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#7'UHR_SOP'#5'Index'#2#26#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpda'
+  +'te'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#10'DD.MM'
+  +'.YYYY'#0#0#242#2#27#10'TDateField'#15'ZQuery1ODVOLANI'#12'DisplayWidth'#2#10
+  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'ODVOLANI'#5'Index'#2#27#11'Lookup'
+  +'Cache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2#28#10'TDateField'
+  +#14'ZQuery1JEDNANI'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldNa'
+  +'me'#6#7'JEDNANI'#5'Index'#2#28#11'LookupCache'#8#13'ProviderFlags'#11#10'pf'
+  +'InUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#10
+  +'DD.MM.YYYY'#0#0#242#2#29#10'TDateField'#15'ZQuery1ROZSUDEK'#12'DisplayWidth'
+  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'ROZSUDEK'#5'Index'#2#29#11'L'
+  +'ookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
+  +#8#8'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2#30#10'TDateFie'
+  +'ld'#13'ZQuery1PR_MOC'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fiel'
+  +'dName'#6#6'PR_MOC'#5'Index'#2#30#11'LookupCache'#8#13'ProviderFlags'#11#10
+  +'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6
+  +#10'DD.MM.YYYY'#0#0#242#2#31#10'TDateField'#12'ZQuery1NAVRH'#12'DisplayWidth'
+  +#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'NAVRH'#5'Index'#2#31#11'Look'
+  +'upCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8
+  +#8'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2' '#10'TDateField'
+  +#13'ZQuery1PRIKAZ'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldNam'
+  +'e'#6#6'PRIKAZ'#5'Index'#2' '#11'LookupCache'#8#13'ProviderFlags'#11#10'pfIn'
+  +'Update'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6#10'D'
+  +'D.MM.YYYY'#0#0#242#2'!'#11'TFloatField'#13'ZQuery1CASTKA'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'CASTKA'#5'Index'#2'!'#11'Looku'
+  +'pCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#13'DisplayFormat'#6#14'### ### ##0.00'#10'EditFormat'#6#12'####'
+  +'#####.00'#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0#0#0#0
+  +#0#9'Precision'#2#9#0#0#242#2'"'#10'TDateField'#15'ZQuery1SKONCENO'#12'Displ'
+  +'ayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'SKONCENO'#5'Index'#2
+  +'"'#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'R'
+  +'eadOnly'#8#8'Required'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2'#'#13
+  +'TLongintField'#13'qrMasterCISLO'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#5'CISLO'#5'Index'#2'#'#11'LookupCache'#8#13'ProviderFla'
+  +'gs'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#242#2
+  +'$'#10'TDateField'#20'qrMasterDATUM_UHRADY'#12'DisplayWidth'#2#10#9'FieldKin'
+  +'d'#7#6'fkData'#9'FieldName'#6#12'DATUM_UHRADY'#5'Index'#2'$'#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2'%'#10'TDateField'#14'qrM'
+  +'asterZEMREL'#12'DisplayLabel'#6#7'Zem'#197#153'el'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#6'ZEMREL'#5'Index'#2'%'#11'LookupCach'
+  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
+  +'uired'#8#13'DisplayFormat'#6#10'DD.MM.YYYY'#0#0#242#2'&'#10'TDateField'#29
+  +'qrMasterZAPLATIL_PRED_PODANIM'#12'DisplayLabel'#6#19'Zaplatil p'#197#153'ed'
+  ,' pod.'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#21'ZAP'
+  +'LATIL_PRED_PODANIM'#5'Index'#2'&'#11'LookupCache'#8#13'ProviderFlags'#11#10
+  +'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#13'DisplayFormat'#6
+  +#10'DD.MM.YYYY'#0#0#242#2''''#11'TFloatField'#23'qrMasterZAPLATIL_CASTKA'#12
+  +'DisplayLabel'#6#17'Zaplatil '#196#141#195#161'stka'#12'DisplayWidth'#2#10#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#15'ZAPLATIL_CASTKA'#5'Index'#2''''#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#8#13'DisplayFormat'#6#14'### ### ##0.00'#10'EditFormat'#6
+  +#12'#########.00'#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinValue'#5#0#0#0#0#0#0
+  +#0#0#0#0#9'Precision'#2#12#0#0#0#243#2#7#11'TZUpdateSQL'#12'UpdateMaster'#17
+  +'DeleteSQL.Strings'#1#6'*DELETE FROM ZALOBY_MLCOCH WHERE ID=:OLD_ID'#0#17'In'
+  +'sertSQL.Strings'#1#6#26'INSERT INTO ZALOBY_MLCOCH '#6#137'VALUES (:ID, :VAR'
+  +'_SYMB, :JMENO_CP, :DATUM_CAS, :DLUZNA_CASTKA, :JIZDNE, :POKUTA, :RODNE_CISL'
+  +'O, :ULICE, :CISLO_DOMU, :MESTO, :OBVOD, :PSC,'#6#132':REF_KOD, :UZAMCENA, :'
+  +'DATUM_IMPORTU, :DATUM_UZAMCENI, :PL_PRIKAZ, :UHRADA, :SPLATNOST, :SOUD, :ZA'
+  +'LOBA, :NAROK, :VS_SOUDU, :CU_SOUDU,'#6#130':SPIS_ZNACKA, :UHR_SOP, :ODVOLAN'
+  +'I, :JEDNANI, :ROZSUDEK, :PR_MOC, :NAVRH, :PRIKAZ, :CASTKA, :SKONCENO,:CISLO'
+  +',:DATUM_UHRADY,:ZEMREL,'#6'(:ZAPLATIL_PRED_PODANIM,:ZAPLATIL_CASTKA)'#0#17
+  +'ModifySQL.Strings'#1#6#20'UPDATE ZALOBY_MLCOCH'#6#4'SET '#6#20'JMENO_CP =:J'
+  +'MENO_CP,'#6#22'DATUM_CAS =:DATUM_CAS,'#6#20'VAR_SYMB =:VAR_SYMB,'#6#30'DLUZ'
+  +'NA_CASTKA =:DLUZNA_CASTKA,'#6#16'JIZDNE =:JIZDNE,'#6#16'POKUTA =:POKUTA,'#6
+  +#26'RODNE_CISLO =:RODNE_CISLO,'#6#14'ULICE =:ULICE,'#6#24'CISLO_DOMU =:CISLO'
+  +'_DOMU,'#6#14'MESTO =:MESTO,'#6#14'OBVOD =:OBVOD,'#6#10'PSC =:PSC,'#6#19'REF'
+  +'_KOD = :REF_KOD,'#6#22'SPLATNOST =:SPLATNOST,'#6#12'SOUD =:SOUD,'#6#16'ZALO'
+  +'BA =:ZALOBA,'#6#15'NAROK = :NAROK,'#6#20'VS_SOUDU =:VS_SOUDU,'#6#20'CU_SOUD'
+  +'U =:CU_SOUDU,'#6#26'SPIS_ZNACKA =:SPIS_ZNACKA,'#6#18'UHR_SOP =:UHR_SOP,'#6
+  +#22'PL_PRIKAZ =:PL_PRIKAZ,'#6#20'ODVOLANI =:ODVOLANI,'#6#18'JEDNANI =:JEDNAN'
+  +'I,'#6#20'ROZSUDEK =:ROZSUDEK,'#6#16'PR_MOC =:PR_MOC,'#6#16'UHRADA =:UHRADA,'
+  +#6#14'NAVRH =:NAVRH,'#6#16'PRIKAZ =:PRIKAZ,'#6#16'CASTKA =:CASTKA,'#6#20'SKO'
+  +'NCENO =:SKONCENO,'#6#14'CISLO =:CISLO,'#6#28'DATUM_UHRADY =:DATUM_UHRADY,'#6
+  +#17'ZEMREL = :ZEMREL,'#6'/ZAPLATIL_PRED_PODANIM = :ZAPLATIL_PRED_PODANIM,'#6
+  +'"ZAPLATIL_CASTKA = :ZAPLATIL_CASTKA'#6#18'WHERE ID = :OLD_ID'#0#18'RefreshS'
+  +'QL.Strings'#1#6#0#0#15'BeforeInsertSQL'#7#27'UpdateMasterBeforeInsertSQL'#24
+  +'BeforeInsertSQLStatement'#7'$UpdateMasterBeforeInsertSQLStatement'#4'left'#3
+  +#184#0#3'top'#2#16#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#8
+  +'JMENO_CP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#9'DATUM_CAS'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#8'VAR_SYMB'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkno'
+  +'wn'#4'Name'#6#13'DLUZNA_CASTKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'
+  +#7#9'ftUnknown'#4'Name'#6#6'JIZDNE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataTy'
+  +'pe'#7#9'ftUnknown'#4'Name'#6#6'POKUTA'#9'ParamType'#7#9'ptUnknown'#0#1#8'Da'
+  +'taType'#7#9'ftUnknown'#4'Name'#6#11'RODNE_CISLO'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'ULICE'#9'ParamType'#7#9'ptUnknow'
+  +'n'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'CISLO_DOMU'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'MESTO'#9'ParamType'#7
+  +#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'OBVOD'#9'ParamType'
+  +#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'PSC'#9'ParamType'
+  +#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#7'REF_KOD'#9'ParamT'
+  +'ype'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#9'SPLATNOST'#9
+  +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#4'SOUD'#9
+  +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#6'ZALOBA'
+  +#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'NARO'
+  +'K'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#8'V'
+  +'S_SOUDU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#8'CU_SOUDU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#11'SPIS_ZNACKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftU'
+  +'nknown'#4'Name'#6#7'UHR_SOP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
+  +'ftUnknown'#4'Name'#6#9'PL_PRIKAZ'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataTyp'
+  +'e'#7#9'ftUnknown'#4'Name'#6#8'ODVOLANI'#9'ParamType'#7#9'ptUnknown'#0#1#8'D'
+  +'ataType'#7#9'ftUnknown'#4'Name'#6#7'JEDNANI'#9'ParamType'#7#9'ptUnknown'#0#1
+  +#8'DataType'#7#9'ftUnknown'#4'Name'#6#8'ROZSUDEK'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#6'PR_MOC'#9'ParamType'#7#9'ptUnkno'
+  +'wn'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#6'UHRADA'#9'ParamType'#7#9'ptU'
+  +'nknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'NAVRH'#9'ParamType'#7#9
+  ,'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#6'PRIKAZ'#9'ParamType'#7
+  +#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#6'CASTKA'#9'ParamType'
+  +#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#8'SKONCENO'#9'Param'
+  +'Type'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'CISLO'#9'Pa'
+  +'ramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'DATUM_U'
+  +'HRADY'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#6'ZEMREL'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#21'ZAPLATIL_PRED_PODANIM'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
+  +'ftUnknown'#4'Name'#6#15'ZAPLATIL_CASTKA'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#6'OLD_ID'#9'ParamType'#7#9'ptUnknown'#0#1
+  +#8'DataType'#7#9'ftUnknown'#4'Name'#6#2'ID'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#8'UZAMCENA'#9'ParamType'#7#9'ptUnknown'#0
+  +#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'DATUM_IMPORTU'#9'ParamType'#7#9'p'
+  +'tUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'DATUM_UZAMCENI'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#0#0#0#243#2#8#11'TDatasource'#8'dsMaster'#7'DataSe'
+  +'t'#7#8'qrMaster'#12'OnDataChange'#7#18'dsMasterDataChange'#4'left'#2'p'#3't'
+  +'op'#2#24#0#0#242#2#9#11'TOpenDialog'#10'OpenDialog'#6'Filter'#6'9Soubory ty'
+  +'pu CSV (*.csv)|*.csv|V'#197#161'echny soubory (*.*)|*.*'#4'left'#3'h'#1#3't'
+  +'op'#2' '#0#0#242#2#10#11'TDatasource'#8'dsZpravy'#7'DataSet'#7#8'qrZpravy'#4
+  +'left'#3#176#1#3'top'#3#248#1#0#0#242#2#11#7'TZQuery'#13'qrImportZprav'#10'C'
+  +'onnection'#7#19'DM.OracleConnection'#12'UpdateObject'#7#17'UpdateImportZpra'
+  +'v'#11'SQL.Strings'#1#6#27'SELECT * FROM ZALOBY_ZPRAVY'#0#6'Params'#14#0#4'l'
+  +'eft'#3'P'#3#0#0#242#2#12#11'TZUpdateSQL'#17'UpdateImportZprav'#17'InsertSQL'
+  +'.Strings'#1#6#12' INSERT INTO'#6'lZALOBY_ZPRAVY(REF_KOD,DATUM_STAZENI,ID,TY'
+  +'P_ZPRAVY,PREDMET,DATUM_ODESLANI,ODESILATEL,ID_ZPRAVY,UCET,VAR_SYMB,'#6'X  P'
+  +'ODANI_DORUCENE_DATUM,BEZNE_CISLO,PODANI_OVERENO_DATUM,ZASLANYCH_PRILOH,ZPUS'
+  +'OB_PODANI,'#6'L  PODPIS_CERTIF_PLATNY,SOUD,TYP_FORMULARE,SPISOVA_ZNACKA,KE_'
+  +'ZPRACOVANI,TELO)'#6'oVALUES(:REF_KOD,:DATUM_STAZENI,:ID,:TYP_ZPRAVY,:PREDME'
+  +'T,:DATUM_ODESLANI,:ODESILATEL,:ID_ZPRAVY,:UCET,:VAR_SYMB,'#6'[:PODANI_DORUC'
+  +'ENE_DATUM,:BEZNE_CISLO,:PODANI_OVERENO_DATUM,:ZASLANYCH_PRILOH,:ZPUSOB_PODA'
+  +'NI,'#6'P:PODPIS_CERTIF_PLATNY,:SOUD,:TYP_FORMULARE,:SPISOVA_ZNACKA,:KE_ZPRA'
+  +'COVANI,:TELO)'#0#29'UseSequenceFieldForRefreshSQL'#8#4'left'#3#200#2#9'Para'
+  +'mData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#7'REF_KOD'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'DATUM_STAZENI'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#2'ID'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'TYP_ZPRA'
+  +'VY'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#7
+  +'PREDMET'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#14'DATUM_ODESLANI'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkn'
+  +'own'#4'Name'#6#10'ODESILATEL'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#9'ID_ZPRAVY'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataT'
+  +'ype'#7#9'ftUnknown'#4'Name'#6#4'UCET'#9'ParamType'#7#9'ptUnknown'#0#1#8'Dat'
+  +'aType'#7#9'ftUnknown'#4'Name'#6#8'VAR_SYMB'#9'ParamType'#7#9'ptUnknown'#0#1
+  +#8'DataType'#7#9'ftUnknown'#4'Name'#6#21'PODANI_DORUCENE_DATUM'#9'ParamType'
+  +#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#11'BEZNE_CISLO'#9'P'
+  +'aramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#20'PODANI'
+  +'_OVERENO_DATUM'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#16'ZASLANYCH_PRILOH'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
+  +'ftUnknown'#4'Name'#6#13'ZPUSOB_PODANI'#9'ParamType'#7#9'ptUnknown'#0#1#8'Da'
+  +'taType'#7#9'ftUnknown'#4'Name'#6#20'PODPIS_CERTIF_PLATNY'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#4'SOUD'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'TYP_FORMULARE'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'SPISOVA_'
+  +'ZNACKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#13'KE_ZPRACOVANI'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#4'TELO'#9'ParamType'#7#9'ptUnknown'#0#0#0#0#242#2#13#7'TZQuery'#8
+  +'qrZpravy'#10'Connection'#7#19'DM.OracleConnection'#12'SortedFields'#6#10'TY'
+  +'P_ZPRAVY'#12'UpdateObject'#7#12'UpdateZpravy'#17'AfterApplyUpdates'#7#25'qr'
+  +'ZpravyAfterApplyUpdates'#9'AfterPost'#7#17'qrZpravyAfterPost'#11'SQL.String'
+  +'s'#1#6#7'SELECT '#6'^REF_KOD,DATUM_STAZENI,ID,TYP_ZPRAVY,PREDMET,DATUM_ODES'
+  +'LANI,ODESILATEL,ID_ZPRAVY,UCET,VAR_SYMB,'#6'VPODANI_DORUCENE_DATUM,BEZNE_CI'
+  +'SLO,PODANI_OVERENO_DATUM,ZASLANYCH_PRILOH,ZPUSOB_PODANI,'#6'EPODPIS_CERTIF_'
+  +'PLATNY,SOUD,TYP_FORMULARE,SPISOVA_ZNACKA,KE_ZPRACOVANI '#6#5'FROM '#6#13'ZA'
+  +'LOBY_ZPRAVY'#6#6'WHERE '#6#18'REF_KOD = :REF_KOD'#0#6'Params'#14#1#8'DataTy'
+  ,'pe'#7#8'ftString'#4'Name'#6#7'REF_KOD'#9'ParamType'#7#9'ptUnknown'#0#0#10'D'
+  +'ataSource'#7#8'dsMaster'#15'IndexFieldNames'#6#14'TYP_ZPRAVY Asc'#4'left'#3
+  +#0#1#3'top'#3#248#1#9'ParamData'#14#1#8'DataType'#7#8'ftString'#4'Name'#6#7
+  +'REF_KOD'#9'ParamType'#7#9'ptUnknown'#0#0#0#12'TStringField'#15'qrZpravyPRED'
+  +'MET'#12'DisplayLabel'#6#9'P'#197#153'edm'#196#155't'#12'DisplayWidth'#2'2'#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#7'PREDMET'#5'Index'#2#0#11'LookupCach'
+  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
+  +'uired'#8#4'Size'#3#232#3#0#0#12'TStringField'#16'qrZpravyVAR_SYMB'#12'Displ'
+  +'ayLabel'#6#10'Var. symb.'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#8'VAR_SYMB'#5'Index'#2#1#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0
+  +#10'TDateField'#21'qrZpravyDATUM_STAZENI'#12'DisplayLabel'#6#15'Datum sta'
+  +#197#190'en'#195#173#12'DisplayWidth'#2#5#9'FieldKind'#7#6'fkData'#9'FieldNa'
+  +'me'#6#13'DATUM_STAZENI'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11
+  +#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#12'TStringFie'
+  +'ld'#18'qrZpravyTYP_ZPRAVY'#12'DisplayLabel'#6#11'Typ zpr'#195#161'vy'#12'Di'
+  +'splayWidth'#2#5#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10'TYP_ZPRAVY'#5'In'
+  +'dex'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#10'TDateField'#22'qrZpravyDA'
+  +'TUM_ODESLANI'#12'DisplayLabel'#6#16'Datum odesl'#195#161'n'#195#173#12'Disp'
+  +'layWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'DATUM_ODESLANI'#5
+  +'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#0#0#12'TStringField'#12'qrZpravyUCET'#12'D'
+  +'isplayLabel'#6#6#195#154#196#141'et'#12'DisplayWidth'#2#25#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#4'UCET'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFl'
+  +'ags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2
+  +'x'#0#0#12'TStringField'#28'qrZpravyPODPIS_CERTIF_PLATNY'#12'DisplayLabel'#6
+  +#20'Podpis a certifik'#195#161't'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#20'PODPIS_CERTIF_PLATNY'#5'Index'#2#6#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#2'x'#0#0#12'TStringField'#29'qrZpravyPODANI_DORUCENE_DATUM'#12'Di'
+  +'splayLabel'#6#19'Pod'#195#161'n'#195#173' doru'#196#141'en'#195#169#12'Disp'
+  +'layWidth'#2#5#9'FieldKind'#7#6'fkData'#9'FieldName'#6#21'PODANI_DORUCENE_DA'
+  +'TUM'#5'Index'#2#7#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'p'
+  +'fInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#12'TStringField'#28
+  +'qrZpravyPODANI_OVERENO_DATUM'#12'DisplayLabel'#6#18'Pod'#195#161'n'#195#173
+  +' ov'#196#155#197#153'eno'#12'DisplayWidth'#2#5#9'FieldKind'#7#6'fkData'#9'F'
+  +'ieldName'#6#20'PODANI_OVERENO_DATUM'#5'Index'#2#8#11'LookupCache'#8#13'Prov'
+  +'iderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'S'
+  +'ize'#2'x'#0#0#12'TStringField'#21'qrZpravyKE_ZPRACOVANI'#12'DisplayLabel'#6
+  +#15'Ke zpracov'#195#161'n'#195#173#12'DisplayWidth'#2#5#9'FieldKind'#7#6'fkD'
+  +'ata'#9'FieldName'#6#13'KE_ZPRACOVANI'#5'Index'#2#9#11'LookupCache'#8#13'Pro'
+  +'viderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4
+  +'Size'#2'x'#0#0#14'TSmallintField'#24'qrZpravyZASLANYCH_PRILOH'#12'DisplayLa'
+  +'bel'#6#19'Zaslan'#195#189'ch p'#197#153#195#173'loh'#12'DisplayWidth'#2#5#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#16'ZASLANYCH_PRILOH'#5'Index'#2#10#11
+  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
+  +'y'#8#8'Required'#8#0#0#12'TStringField'#12'qrZpravySOUD'#12'DisplayLabel'#6
+  +#4'Soud'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9'FieldName'#6#4'SOU'
+  +'D'#5'Index'#2#11#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pf'
+  +'InWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#240#0#0#0#12'TStringField'
+  +#19'qrZpravyBEZNE_CISLO'#12'DisplayLabel'#6#16'B'#196#155#197#190'n'#195#169
+  +' '#196#141#195#173'slo'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'Fi'
+  +'eldName'#6#11'BEZNE_CISLO'#5'Index'#2#12#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0
+  +#0#12'TStringField'#22'qrZpravySPISOVA_ZNACKA'#12'DisplayLabel'#6#16'Spisov'
+  +#195#161' zna'#196#141'ka'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#14'SPISOVA_ZNACKA'#5'Index'#2#13#11'LookupCache'#8#13'Provider'
+  +'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
+  +#2'x'#0#0#12'TStringField'#21'qrZpravyZPUSOB_PODANI'#12'DisplayLabel'#6#16'Z'
+  +'p'#197#175'sob pod'#195#161'n'#195#173#12'DisplayWidth'#2#20#9'FieldKind'#7
+  +#6'fkData'#9'FieldName'#6#13'ZPUSOB_PODANI'#5'Index'#2#14#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#2'x'#0#0#12'TStringField'#21'qrZpravyTYP_FORMULARE'#12'DisplayLab'
+  ,'el'#6#15'Typ formul'#195#161#197#153'e'#12'DisplayWidth'#2#10#9'FieldKind'#7
+  +#6'fkData'#9'FieldName'#6#13'TYP_FORMULARE'#5'Index'#2#15#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#4'Size'#2'x'#0#0#12'TStringField'#18'qrZpravyODESILATEL'#12'DisplayLabel'
+  +#6#11'Odes'#195#173'latel'#12'DisplayWidth'#2#20#9'FieldKind'#7#6'fkData'#9
+  +'FieldName'#6#10'ODESILATEL'#5'Index'#2#16#11'LookupCache'#8#13'ProviderFlag'
+  +'s'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3
+  +#240#0#0#0#12'TStringField'#17'qrZpravyID_ZPRAVY'#12'DisplayLabel'#6#10'Id z'
+  +'pr'#195#161'vy'#12'DisplayWidth'#2#30#9'FieldKind'#7#6'fkData'#9'FieldName'
+  +#6#9'ID_ZPRAVY'#5'Index'#2#17#11'LookupCache'#8#13'ProviderFlags'#11#10'pfIn'
+  +'Update'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#232#3#0#0#13'T'
+  +'LongintField'#10'qrZpravyID'#12'DisplayLabel'#6#2'Id'#12'DisplayWidth'#2#5#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#18#11'LookupCache'#8
+  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
+  +#8#0#0#12'TStringField'#15'qrZpravyREF_KOD'#12'DisplayLabel'#6#4'GUID'#12'Di'
+  +'splayWidth'#2#25#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'REF_KOD'#5'Index'
+  +#2#19#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#8#4'Size'#3#240#0#0#0#0#242#2#14#11'TZUpdateSQL'#12
+  +'UpdateZpravy'#29'UseSequenceFieldForRefreshSQL'#8#4'left'#3'P'#1#3'top'#3
+  +#248#1#0#0#242#2#15#15'TZReadOnlyQuery'#8'qrDatumy'#10'Connection'#7#19'DM.O'
+  +'racleConnection'#11'SQL.Strings'#1#6'bSELECT DISTINCT(DATUM_IMPORTU) AS DAT'
+  +'UM FROM ZALOBY WHERE NVL(UZAMCENA,0)=0 ORDER BY DATUM_IMPORTU'#0#6'Params'
+  +#14#0#4'left'#3#216#1#0#10'TDateField'#13'qrDatumyDATUM'#12'DisplayWidth'#2
+  +#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'DATUM'#5'Index'#2#0#11'LookupC'
+  +'ache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#9#8
+  +'Required'#8#0#0#0#0
+]);

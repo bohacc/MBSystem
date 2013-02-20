@@ -1,0 +1,33 @@
+object frmHesloD: TfrmHesloD
+  Left = 290
+  Height = 108
+  Top = 175
+  Width = 278
+  Caption = 'Zadejte heslo'
+  ClientHeight = 108
+  ClientWidth = 278
+  OnShow = FormShow
+  Position = poDesktopCenter
+  LCLVersion = '0.9.28.2'
+  object Edit1: TEdit
+    Left = 17
+    Height = 23
+    Top = 24
+    Width = 248
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 104
+    Height = 30
+    Top = 56
+    Width = 75
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 1
+  end
+end

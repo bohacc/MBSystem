@@ -1,0 +1,39 @@
+object frmSBezUdajuPlatby: TfrmSBezUdajuPlatby
+  Left = 368
+  Height = 300
+  Top = 179
+  Width = 400
+  Caption = 'frmSBezUdajuPlatby'
+  LCLVersion = '0.9.28.3'
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 56
+    top = 56
+    ReportForm = {
+      18000000
+    }
+  end
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    left = 165
+    top = 56
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT '
+      '  ROWNUM AS RADEK, '
+      '  Z.*, '
+      '  SUBSTR(Z.JMENO_CP,1,INSTR(Z.JMENO_CP,'' '')) AS JMENO,'
+      '  SUBSTR(Z.JMENO_CP,INSTR(JMENO_CP,'' '')+1) AS PRIJMENI '
+      'FROM '
+      '  ZALOBY Z'
+    )
+    Params = <>
+    left = 270
+    top = 56
+  end
+end

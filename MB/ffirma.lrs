@@ -1,0 +1,166 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmFirma','FORMDATA',[
+  'TPF0'#9'TfrmFirma'#8'frmFirma'#4'Left'#3#129#1#6'Height'#3#175#1#3'Top'#3#130
+  +#0#5'Width'#3#144#1#7'Caption'#6#20'U'#197#190'ivatelsk'#195#169' '#195#186
+  +'daje'#12'ClientHeight'#3#175#1#11'ClientWidth'#3#144#1#6'OnShow'#7#8'FormSh'
+  +'ow'#8'Position'#7#15'poDesktopCenter'#10'LCLVersion'#6#6'0.9.30'#0#6'TLabel'
+  +#6'Label1'#4'Left'#2#15#6'Height'#2#16#3'Top'#2#16#5'Width'#2'!'#7'Caption'#6
+  +#6'N'#195#161'zev'#11'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2#15#6
+  +'Height'#2#16#3'Top'#2'('#5'Width'#2#27#7'Caption'#6#5'Ulice'#11'ParentColor'
+  +#8#0#0#6'TLabel'#6'Label3'#4'Left'#2#15#6'Height'#2#16#3'Top'#2'@'#5'Width'#2
+  +'"'#7'Caption'#6#6'M'#196#155'sto'#11'ParentColor'#8#0#0#6'TLabel'#6'Label4'
+  +#4'Left'#2#15#6'Height'#2#16#3'Top'#2'X'#5'Width'#2#19#7'Caption'#6#4'Ps'#196
+  +#141#11'ParentColor'#8#0#0#6'TLabel'#6'Label5'#4'Left'#2#15#6'Height'#2#16#3
+  +'Top'#2'p'#5'Width'#2#12#7'Caption'#6#3'I'#196#140#11'ParentColor'#8#0#0#6'T'
+  +'Label'#6'Label6'#4'Left'#2#15#6'Height'#2#16#3'Top'#3#136#0#5'Width'#2#20#7
+  +'Caption'#6#4'DI'#196#140#11'ParentColor'#8#0#0#6'TLabel'#6'Label7'#4'Left'#2
+  +#17#6'Height'#2#16#3'Top'#3#240#0#5'Width'#2'M'#7'Caption'#6#18'Dopl'#197#136
+  +'uj'#195#173'c'#195#173' text'#11'ParentColor'#8#0#0#6'TLabel'#6'Label8'#4'L'
+  +'eft'#2#15#6'Height'#2#16#3'Top'#3'J'#1#5'Width'#2'T'#7'Caption'#6#16'Platno'
+  +'st licence'#11'ParentColor'#8#0#0#6'TLabel'#6'Label9'#4'Left'#2#15#6'Height'
+  +#2#16#3'Top'#3'j'#1#5'Width'#2'+'#7'Caption'#6#7'Licence'#10'Font.Style'#11#6
+  +'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabel'#7'Label10'#4'Lef'
+  +'t'#2#16#6'Height'#2#16#3'Top'#3#6#1#5'Width'#2'V'#7'Caption'#6#21'U'#197#190
+  +'ivatelsk'#195#169' '#196#141#195#173'slo'#11'ParentColor'#8#0#0#6'TLabel'#7
+  +'Label11'#4'Left'#2#15#6'Height'#2#16#3'Top'#3#160#0#5'Width'#2#25#7'Caption'
+  +#6#6#195#154#196#141'et'#11'ParentColor'#8#0#0#6'TLabel'#7'Label12'#4'Left'#3
+  +#18#1#6'Height'#2#16#3'Top'#3#160#0#5'Width'#2'!'#7'Caption'#6#5'banka'#11'P'
+  +'arentColor'#8#0#0#6'TLabel'#7'Label13'#4'Left'#2#15#6'Height'#2#16#3'Top'#3
+  +#184#0#5'Width'#2'W'#7'Caption'#6#16'Kontaktn'#195#173' osoba'#11'ParentColo'
+  +'r'#8#0#0#6'TLabel'#7'Label14'#4'Left'#2#15#6'Height'#2#16#3'Top'#3#207#0#5
+  +'Width'#2'U'#7'Caption'#6#16'Tel. kont. osoby'#11'ParentColor'#8#0#0#5'TMemo'
+  +#4'edID'#4'Left'#2'h'#6'Height'#2':'#3'Top'#3#6#1#5'Width'#3' '#1#13'Lines.S'
+  +'trings'#1#6#4'edID'#0#8'TabOrder'#2#0#0#0#7'TDBEdit'#10'edPlatnost'#4'Left'
+  +#2'h'#6'Height'#2#23#3'Top'#3'C'#1#5'Width'#2'x'#9'DataField'#6#16'PLATNOST_'
+  +'LICENCE'#10'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'#9'MaxLengt'
+  +'h'#2#0#8'TabOrder'#2#1#0#0#7'TButton'#7'Button1'#4'Left'#3#224#0#6'Height'#2
+  +#25#3'Top'#3'C'#1#5'Width'#3#136#0#7'Caption'#6#27'Ulo'#197#190'it '#195#186
+  +'daje do schr'#195#161'nky'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#2#0#0
+  +#7'TButton'#7'Button2'#4'Left'#3'o'#1#6'Height'#2#25#3'Top'#3'C'#1#5'Width'#2
+  +#27#7'Caption'#6#3'...'#7'OnClick'#7#12'Button2Click'#8'TabOrder'#2#3#0#0#7
+  +'TDBEdit'#7'edNazev'#4'Left'#2'h'#6'Height'#2#23#3'Top'#2#8#5'Width'#3' '#1#9
+  +'DataField'#6#5'NAZEV'#10'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNorma'
+  +'l'#9'MaxLength'#3#232#3#8'TabOrder'#2#4#0#0#7'TDBEdit'#7'edUlice'#4'Left'#2
+  +'h'#6'Height'#2#23#3'Top'#2'!'#5'Width'#3' '#1#9'DataField'#6#5'ULICE'#10'Da'
+  +'taSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#3'@'#1#8'Ta'
+  +'bOrder'#2#5#0#0#7'TDBEdit'#7'edMesto'#4'Left'#2'h'#6'Height'#2#23#3'Top'#2
+  +'9'#5'Width'#3' '#1#9'DataField'#6#5'MESTO'#10'DataSource'#7#9'dsLicence'#8
+  +'CharCase'#7#8'ecNormal'#9'MaxLength'#3'@'#1#8'TabOrder'#2#6#0#0#7'TDBEdit'#5
+  +'edPsc'#4'Left'#2'h'#6'Height'#2#23#3'Top'#2'Q'#5'Width'#2'V'#9'DataField'#6
+  +#3'PSC'#10'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'#9'MaxLength'
+  +#2'('#8'TabOrder'#2#7#0#0#7'TDBEdit'#4'edIc'#4'Left'#2'h'#6'Height'#2#23#3'T'
+  +'op'#2'h'#5'Width'#3#168#0#9'DataField'#6#3'ICO'#10'DataSource'#7#9'dsLicenc'
+  +'e'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2'P'#8'TabOrder'#2#8#0#0#7'TDBEdi'
+  +'t'#5'edDic'#4'Left'#2'h'#6'Height'#2#23#3'Top'#3#129#0#5'Width'#3#168#0#9'D'
+  +'ataField'#6#3'DIC'#10'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'#9
+  +'MaxLength'#2'P'#8'TabOrder'#2#9#0#0#7'TDBEdit'#16'edDoplnijiciText'#4'Left'
+  +#2'h'#6'Height'#2#23#3'Top'#3#233#0#5'Width'#3' '#1#9'DataField'#6#15'DOPLNU'
+  +'JICI_TEXT'#10'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'#9'MaxLen'
+  +'gth'#3#232#3#8'TabOrder'#2#10#0#0#7'TDBEdit'#9'edLicence'#4'Left'#2'h'#6'He'
+  +'ight'#2#23#3'Top'#3'h'#1#5'Width'#3#232#0#9'DataField'#6#14'LICENCNI_CISLO'
+  +#10'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#3#232#3
+  +#8'TabOrder'#2#11#0#0#7'TBitBtn'#4'btok'#4'Left'#3#171#0#6'Height'#2#30#3'To'
+  +'p'#3#136#1#5'Width'#2'K'#7'Caption'#6#3'&OK'#7'Default'#9#4'Kind'#7#4'bkOK'
+  +#11'ModalResult'#2#1#7'OnClick'#7#9'btokClick'#8'TabOrder'#2#12#0#0#7'TDBEdi'
+  +'t'#7'DBEdit1'#4'Left'#2'h'#6'Height'#2#23#3'Top'#3#153#0#5'Width'#3#168#0#9
+  +'DataField'#6#4'UCET'#10'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'
+  ,#9'MaxLength'#2'x'#8'TabOrder'#2#13#0#0#7'TDBEdit'#7'DBEdit2'#4'Left'#3'8'#1
+  +#6'Height'#2#23#3'Top'#3#153#0#5'Width'#2'P'#9'DataField'#6#9'KOD_BANKY'#10
+  +'DataSource'#7#9'dsLicence'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2'('#8'Ta'
+  +'bOrder'#2#14#0#0#7'TDBEdit'#7'DBEdit3'#4'Left'#2'h'#6'Height'#2#23#3'Top'#3
+  +#177#0#5'Width'#3' '#1#9'DataField'#6#15'KONTAKTNI_OSOBA'#10'DataSource'#7#9
+  +'dsLicence'#8'CharCase'#7#8'ecNormal'#9'MaxLength'#3#200#0#8'TabOrder'#2#15#0
+  +#0#7'TDBEdit'#7'DBEdit4'#4'Left'#2'h'#6'Height'#2#23#3'Top'#3#201#0#5'Width'
+  +#3#168#0#9'DataField'#6#19'KONTAKTNI_OSOBA_TEL'#10'DataSource'#7#9'dsLicence'
+  +#8'CharCase'#7#8'ecNormal'#9'MaxLength'#2'x'#8'TabOrder'#2#16#0#0#11'TDBChec'
+  +'kBox'#5'cbSit'#4'Left'#3'S'#1#6'Height'#2#19#3'Top'#3'l'#1#5'Width'#2'5'#7
+  +'Caption'#6#9'S'#195#173#197#165'ov'#195#161#9'DataField'#6#3'SIT'#10'DataSo'
+  +'urce'#7#9'dsLicence'#8'TabOrder'#2#17#12'ValueChecked'#6#1'1'#14'ValueUnche'
+  +'cked'#6#1'0'#0#0#11'TActionList'#11'ActionList1'#4'left'#3'8'#1#3'top'#2'X'
+  +#0#7'TAction'#9'acLicence'#7'Caption'#6#9'acLicence'#8'HelpType'#7#9'htKeywo'
+  +'rd'#9'OnExecute'#7#16'acLicenceExecute'#0#0#0#11'TDatasource'#9'dsLicence'#7
+  +'DataSet'#7#9'qrLicence'#12'OnDataChange'#7#19'dsLicenceDataChange'#4'left'#3
+  +'R'#1#3'top'#3#224#0#0#0#7'TZQuery'#9'qrLicence'#10'Connection'#7#19'DM.Orac'
+  +'leConnection'#12'UpdateObject'#7#13'UpdateLicence'#17'AfterApplyUpdates'#7
+  +#26'qrLicenceAfterApplyUpdates'#9'AfterPost'#7#18'qrLicenceAfterPost'#11'SQL'
+  +'.Strings'#1#6#22'SELECT * FROM LICENCE '#0#6'Params'#14#0#4'left'#3#200#0#3
+  +'top'#2'T'#0#12'TStringField'#12'qrLicenceKOD'#12'DisplayWidth'#2'x'#9'Field'
+  +'Kind'#7#6'fkData'#9'FieldName'#6#3'KOD'#5'Index'#2#0#11'LookupCache'#8#13'P'
+  +'roviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4
+  +'Size'#2'x'#0#0#12'TStringField'#14'qrLicenceNAZEV'#12'DisplayWidth'#3#232#3
+  +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'NAZEV'#5'Index'#2#1#11'LookupCach'
+  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
+  +'uired'#8#4'Size'#3#232#3#0#0#12'TStringField'#14'qrLicenceULICE'#12'Display'
+  +'Width'#3'@'#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'ULICE'#5'Index'#2#2
+  +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
+  +'Only'#8#8'Required'#8#4'Size'#3'@'#1#0#0#12'TStringField'#14'qrLicenceMESTO'
+  +#12'DisplayWidth'#3'@'#1#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'MESTO'#5
+  +'Index'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3'@'#1#0#0#12'TStringField'#12'qrL'
+  +'icencePSC'#12'DisplayWidth'#2'('#9'FieldKind'#7#6'fkData'#9'FieldName'#6#3
+  +'PSC'#5'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'p'
+  +'fInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'('#0#0#12'TStringField'#12
+  +'qrLicenceICO'#12'DisplayWidth'#2'P'#9'FieldKind'#7#6'fkData'#9'FieldName'#6
+  +#3'ICO'#5'Index'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'P'#0#0#12'TStringField'
+  +#12'qrLicenceDIC'#12'DisplayWidth'#2'P'#9'FieldKind'#7#6'fkData'#9'FieldName'
+  +#6#3'DIC'#5'Index'#2#6#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'
+  +#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'P'#0#0#12'TStringField'
+  +#24'qrLicenceDOPLNUJICI_TEXT'#12'DisplayWidth'#3#232#3#9'FieldKind'#7#6'fkDa'
+  +'ta'#9'FieldName'#6#15'DOPLNUJICI_TEXT'#5'Index'#2#7#11'LookupCache'#8#13'Pr'
+  +'oviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4
+  +'Size'#3#232#3#0#0#12'TStringField'#23'qrLicenceLICENCNI_CISLO'#12'DisplayWi'
+  +'dth'#3#232#3#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'LICENCNI_CISLO'#5'I'
+  +'ndex'#2#8#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#232#3#0#0#10'TDateField'#25'qrLicen'
+  +'cePLATNOST_LICENCE'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldN'
+  +'ame'#6#16'PLATNOST_LICENCE'#5'Index'#2#9#11'LookupCache'#8#13'ProviderFlags'
+  +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#12'TString'
+  +'Field'#13'qrLicenceUCET'#12'DisplayWidth'#2'x'#9'FieldKind'#7#6'fkData'#9'F'
+  +'ieldName'#6#4'UCET'#5'Index'#2#10#11'LookupCache'#8#13'ProviderFlags'#11#10
+  +'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#12
+  +'TStringField'#18'qrLicenceKOD_BANKY'#12'DisplayWidth'#2'('#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#9'KOD_BANKY'#5'Index'#2#11#11'LookupCache'#8#13'Prov'
+  +'iderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'S'
+  +'ize'#2'('#0#0#12'TStringField'#24'qrLicenceKONTAKTNI_OSOBA'#12'DisplayWidth'
+  +#3#200#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#15'KONTAKTNI_OSOBA'#5'Index'
+  +#2#12#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8
+  +'ReadOnly'#8#8'Required'#8#4'Size'#3#200#0#0#0#12'TStringField'#28'qrLicence'
+  +'KONTAKTNI_OSOBA_TEL'#12'DisplayWidth'#2'x'#9'FieldKind'#7#6'fkData'#9'Field'
+  +'Name'#6#19'KONTAKTNI_OSOBA_TEL'#5'Index'#2#13#11'LookupCache'#8#13'Provider'
+  ,'Flags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'
+  +#2'x'#0#0#14'TSmallintField'#12'qrLicenceSIT'#12'DisplayWidth'#2#10#9'FieldK'
+  +'ind'#7#6'fkData'#9'FieldName'#6#3'SIT'#5'Index'#2#14#11'LookupCache'#8#13'P'
+  +'roviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0
+  +#0#0#11'TZUpdateSQL'#13'UpdateLicence'#17'InsertSQL.Strings'#1#6#157'INSERT '
+  +'INTO LICENCE(KOD,NAZEV,ULICE,MESTO,PSC,ICO,DIC,DOPLNUJICI_TEXT,LICENCNI_CIS'
+  +'LO,PLATNOST_LICENCE,UCET,KOD_BANKY,KONTAKTNI_OSOBA,KONTAKTNI_OSOBA_TEL,SIT)'
+  +#6#159'VALUES(:KOD,:NAZEV,:ULICE,:MESTO,:PSC,:ICO,:DIC,:DOPLNUJICI_TEXT,:LIC'
+  +'ENCNI_CISLO,:PLATNOST_LICENCE,:UCET,:KOD_BANKY,:KONTAKTNI_OSOBA,:KONTAKTNI_'
+  +'OSOBA_TEL,:SIT)'#0#17'ModifySQL.Strings'#1#6#14'UPDATE LICENCE'#6#15'SET KO'
+  +'D = :KOD,'#6#19'    NAZEV = :NAZEV,'#6#19'    ULICE = :ULICE,'#6#19'    MES'
+  +'TO = :MESTO,'#6#15'    PSC = :PSC,'#6#15'    ICO = :ICO,'#6#15'    DIC = :D'
+  +'IC,'#6'''    DOPLNUJICI_TEXT = :DOPLNUJICI_TEXT,'#6'%    LICENCNI_CISLO = :'
+  +'LICENCNI_CISLO,'#6')    PLATNOST_LICENCE = :PLATNOST_LICENCE,'#6#17'    UCE'
+  +'T = :UCET,'#6#27'    KOD_BANKY = :KOD_BANKY,'#6'''    KONTAKTNI_OSOBA = :KO'
+  +'NTAKTNI_OSOBA,'#6'/    KONTAKTNI_OSOBA_TEL = :KONTAKTNI_OSOBA_TEL,'#6#14'  '
+  +'  SIT = :SIT'#0#29'UseSequenceFieldForRefreshSQL'#8#4'left'#2'y'#3'top'#2'T'
+  +#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'KOD'#9'ParamType'#7
+  +#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'NAZEV'#9'ParamType'
+  +#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'ULICE'#9'ParamTyp'
+  +'e'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#5'MESTO'#9'Param'
+  +'Type'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'PSC'#9'Para'
+  +'mType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'ICO'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'DIC'#9'Pa'
+  +'ramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'DOPLNUJ'
+  +'ICI_TEXT'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#14'LICENCNI_CISLO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkn'
+  +'own'#4'Name'#6#16'PLATNOST_LICENCE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataT'
+  +'ype'#7#9'ftUnknown'#4'Name'#6#4'UCET'#9'ParamType'#7#9'ptUnknown'#0#1#8'Dat'
+  +'aType'#7#9'ftUnknown'#4'Name'#6#9'KOD_BANKY'#9'ParamType'#7#9'ptUnknown'#0#1
+  +#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'KONTAKTNI_OSOBA'#9'ParamType'#7#9'p'
+  +'tUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#19'KONTAKTNI_OSOBA_TEL'#9
+  +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'SIT'#9
+  +'ParamType'#7#9'ptUnknown'#0#0#0#0#0
+]);

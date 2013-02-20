@@ -1,0 +1,30 @@
+object frmProcesQuery: TfrmProcesQuery
+  Left = 629
+  Height = 79
+  Top = 410
+  Width = 181
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'MB system'
+  ClientHeight = 79
+  ClientWidth = 181
+  Position = poDesktopCenter
+  LCLVersion = '0.9.28.3'
+  Visible = True
+  object Bevel1: TBevel
+    Left = 0
+    Height = 79
+    Top = 0
+    Width = 181
+    Align = alClient
+    Shape = bsFrame
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 16
+    Top = 32
+    Width = 135
+    Caption = 'Probíhá proces, čekejte ...'
+    ParentColor = False
+  end
+end

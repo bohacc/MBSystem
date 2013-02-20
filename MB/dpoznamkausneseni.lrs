@@ -1,0 +1,16 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmPoznamkaUsneseni','FORMDATA',[
+  'TPF0'#20'TfrmPoznamkaUsneseni'#19'frmPoznamkaUsneseni'#4'Left'#3#144#1#6'Hei'
+  +'ght'#3#138#1#3'Top'#3#175#0#5'Width'#3']'#2#11'BorderIcons'#11#12'biSystemM'
+  +'enu'#0#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6#9'Usnesen'#195#173#12'Cli'
+  +'entHeight'#3#138#1#11'ClientWidth'#3']'#2#8'Position'#7#16'poMainFormCenter'
+  +#10'LCLVersion'#6#8'0.9.28.3'#0#7'TDBMemo'#7'DBMemo1'#4'Left'#2#0#6'Height'#3
+  +'`'#1#3'Top'#2#0#5'Width'#3']'#2#5'Align'#7#8'alClient'#9'DataField'#6#8'USN'
+  +'ESENI'#10'DataSource'#7#10'dsUsneseni'#8'TabOrder'#2#0#0#0#6'TPanel'#6'Pane'
+  +'l1'#4'Left'#2#0#6'Height'#2'*'#3'Top'#3'`'#1#5'Width'#3']'#2#5'Align'#7#8'a'
+  +'lBottom'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2'*'#11'ClientWidth'#3
+  +']'#2#8'TabOrder'#2#1#0#7'TButton'#4'btOk'#4'Left'#3#24#1#6'Height'#2#25#3'T'
+  +'op'#2#8#5'Width'#2'K'#7'Caption'#6#2'OK'#11'ModalResult'#2#1#8'TabOrder'#2#0
+  +#0#0#0#11'TDatasource'#10'dsUsneseni'#4'left'#2'B'#3'top'#2'('#0#0#0
+]);

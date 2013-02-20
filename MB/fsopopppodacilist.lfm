@@ -1,0 +1,33 @@
+object frmSOPOPPPodaciList: TfrmSOPOPPPodaciList
+  Left = 388
+  Height = 161
+  Top = 175
+  Width = 398
+  Caption = 'Podací list'
+  LCLVersion = '0.9.28.3'
+  object frReport: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 32
+    top = 30
+    ReportForm = {
+      18000000
+    }
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMaster
+    left = 128
+    top = 31
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT Z.*,NULL AS JMENO,NULL AS PRIJMENI FROM ZALOBY Z'
+    )
+    Params = <>
+    left = 232
+    top = 32
+  end
+end

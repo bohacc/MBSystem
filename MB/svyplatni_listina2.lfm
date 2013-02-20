@@ -1,0 +1,33 @@
+object frmVyplatniListina2: TfrmVyplatniListina2
+  Left = 324
+  Height = 300
+  Top = 154
+  Width = 400
+  Caption = 'frmVyplatniListina2'
+  ParentFont = False
+  LCLVersion = '0.9.26'
+  object qrMaster: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    UsePrimaryKeyAsKey = True
+    left = 135
+    top = 58
+  end
+  object quickrep1: TfrReport
+    Dataset = frDBDataSet1
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    left = 31
+    top = 54
+    ReportForm = {
+      18000000
+    }
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMaster
+    left = 90
+    top = 59
+  end
+end

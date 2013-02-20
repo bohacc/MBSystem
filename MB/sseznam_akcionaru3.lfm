@@ -1,0 +1,48 @@
+object frmSeznamAkcionaru3: TfrmSeznamAkcionaru3
+  Left = 324
+  Height = 300
+  Top = 154
+  Width = 400
+  Caption = 'frmSeznamAkcionaru3'
+  ParentFont = False
+  LCLVersion = '0.9.26'
+  object qrMaster: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    UsePrimaryKeyAsKey = True
+    left = 157
+    top = 86
+  end
+  object quickrep1: TfrReport
+    Dataset = frDBDataSet1
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    left = 44
+    top = 86
+    ReportForm = {
+      18000000
+    }
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMaster
+    left = 104
+    top = 93
+  end
+  object frDBDataSet2: TfrDBDataSet
+    DataSet = qrFirma
+    left = 106
+    top = 141
+  end
+  object qrFirma: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    UsePrimaryKeyAsKey = True
+    left = 167
+    top = 142
+  end
+end

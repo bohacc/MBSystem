@@ -1,0 +1,246 @@
+﻿inherited frmPartneriAdresy: TfrmPartneriAdresy
+  Height = 422
+  Caption = 'Partneři - adresy'
+  ClientHeight = 402
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 379
+  end
+  inherited ToolBar1: TToolBar
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      ImageIndex = 0
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = nil
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = nil
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 328
+    ActivePage = tsSeznam
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 300
+      inherited DBGrid: TDBGrid
+        Height = 300
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 300
+      object Label2: TLabel[0]
+        Left = 4
+        Height = 16
+        Top = 10
+        Width = 11
+        Caption = 'Id'
+        ParentColor = False
+      end
+      object Label3: TLabel[1]
+        Left = 4
+        Height = 16
+        Top = 67
+        Width = 33
+        Caption = 'Název'
+        ParentColor = False
+      end
+      object Label4: TLabel[2]
+        Left = 4
+        Height = 16
+        Top = 96
+        Width = 30
+        Caption = 'Popis'
+        ParentColor = False
+      end
+      object Label5: TLabel[3]
+        Left = 4
+        Height = 16
+        Top = 162
+        Width = 27
+        Caption = 'Ulice'
+        ParentColor = False
+      end
+      object Label6: TLabel[4]
+        Left = 4
+        Height = 16
+        Top = 191
+        Width = 34
+        Caption = 'Město'
+        ParentColor = False
+      end
+      object Label7: TLabel[5]
+        Left = 4
+        Height = 16
+        Top = 220
+        Width = 19
+        Caption = 'Psč'
+        ParentColor = False
+      end
+      object Label8: TLabel[6]
+        Left = 4
+        Height = 16
+        Top = 249
+        Width = 21
+        Caption = 'Stát'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[7]
+        Left = 76
+        Height = 23
+        Top = 10
+        Width = 80
+        DataField = 'ID'
+        DataSource = dsMaster
+        ReadOnly = True
+        Color = clBtnFace
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[8]
+        Left = 76
+        Height = 23
+        Top = 38
+        Width = 80
+        DataField = 'ID_PARTNERA'
+        DataSource = dsMaster
+        ReadOnly = True
+        Color = clBtnFace
+        TabOrder = 1
+      end
+      object DBEdit3: TDBEdit[9]
+        Left = 76
+        Height = 23
+        Top = 67
+        Width = 416
+        DataField = 'NAZEV'
+        DataSource = dsMaster
+        MaxLength = 80
+        TabOrder = 2
+      end
+      object DBEdit5: TDBEdit[10]
+        Left = 76
+        Height = 23
+        Top = 162
+        Width = 176
+        DataField = 'ULICE'
+        DataSource = dsMaster
+        MaxLength = 30
+        TabOrder = 3
+      end
+      object DBEdit6: TDBEdit[11]
+        Left = 76
+        Height = 23
+        Top = 191
+        Width = 176
+        DataField = 'MESTO'
+        DataSource = dsMaster
+        MaxLength = 30
+        TabOrder = 4
+      end
+      object DBEdit7: TDBEdit[12]
+        Left = 76
+        Height = 23
+        Top = 220
+        Width = 80
+        DataField = 'PSC'
+        DataSource = dsMaster
+        MaxLength = 6
+        TabOrder = 5
+      end
+      object DBEdit8: TDBEdit[13]
+        Left = 76
+        Height = 23
+        Top = 249
+        Width = 80
+        DataField = 'STAT'
+        DataSource = dsMaster
+        MaxLength = 3
+        TabOrder = 6
+      end
+      object DBMemo1: TDBMemo[14]
+        Left = 76
+        Height = 61
+        Top = 96
+        Width = 416
+        DataField = 'POPIS'
+        DataSource = dsMaster
+        Lines.Strings = (
+          'DBMemo1'
+        )
+        TabOrder = 7
+      end
+      object Button1: TButton[15]
+        Left = 4
+        Height = 25
+        Top = 37
+        Width = 67
+        Caption = 'Partner'
+        TabOrder = 8
+      end
+      object Edit1: TEdit[16]
+        Left = 164
+        Height = 23
+        Top = 38
+        Width = 328
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 9
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 354
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 401
+    top = 90
+  end
+  inherited MainMenu: TMainMenu
+    left = 452
+    top = 56
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = nil
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = nil
+      end
+    end
+  end
+  inherited qrMaster0: TZQuery
+    Connection = DM.OracleConnection0
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMaster0AfterApplyUpdates
+    BeforeInsert = qrMaster0BeforeInsert
+    BeforeEdit = qrMaster0BeforeEdit
+    AfterPost = qrMaster0AfterPost
+    SQL.Strings = (
+      'SELECT * FROM PARTNERI_ADRESY'
+    )
+  end
+end

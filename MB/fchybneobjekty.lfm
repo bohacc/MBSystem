@@ -1,0 +1,219 @@
+object frmChybneObjekty: TfrmChybneObjekty
+  Left = 484
+  Height = 247
+  Top = 207
+  Width = 474
+  Caption = 'Chybné objekty'
+  ClientHeight = 247
+  ClientWidth = 474
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.3'
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 474
+    Caption = 'ToolBar1'
+    Images = frmMain.ImageList
+    TabOrder = 0
+    object tbRefresh: TToolButton
+      Left = 1
+      Hint = 'Obnovení seznamu'
+      Top = 2
+      Caption = 'tbRefresh'
+      ImageIndex = 7
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = tbRefreshClick
+    end
+    object Navigator: TDBNavigator
+      Left = 24
+      Height = 22
+      Top = 2
+      Width = 241
+      BevelOuter = bvNone
+      ClientHeight = 22
+      ClientWidth = 241
+      DataSource = dsMaster
+      TabOrder = 0
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+    object ToolButton2: TToolButton
+      Left = 265
+      Top = 2
+      Width = 7
+      Caption = 'ToolButton2'
+      Style = tbsSeparator
+    end
+    object Button1: TButton
+      Left = 272
+      Height = 22
+      Top = 2
+      Width = 144
+      Caption = 'Přeložit chybné objekty'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 224
+    Width = 474
+    Panels = <>
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 198
+    Top = 26
+    Width = 474
+    Align = alClient
+    DataSource = dsMaster
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT * FROM USER_OBJECTS WHERE STATUS <> ''VALID'''
+    )
+    Params = <>
+    left = 202
+    top = 62
+    object qrMasterOBJECT_NAME: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'OBJECT_NAME'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 128
+    end
+    object qrMasterSUBOBJECT_NAME: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'SUBOBJECT_NAME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qrMasterOBJECT_ID: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'OBJECT_ID'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterDATA_OBJECT_ID: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATA_OBJECT_ID'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterOBJECT_TYPE: TStringField
+      DisplayWidth = 19
+      FieldKind = fkData
+      FieldName = 'OBJECT_TYPE'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 19
+    end
+    object qrMasterCREATED: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CREATED'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterLAST_DDL_TIME: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'LAST_DDL_TIME'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterTIMESTAMP: TStringField
+      DisplayWidth = 19
+      FieldKind = fkData
+      FieldName = 'TIMESTAMP'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 19
+    end
+    object qrMasterSTATUS: TStringField
+      DisplayWidth = 7
+      FieldKind = fkData
+      FieldName = 'STATUS'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 7
+    end
+    object qrMasterTEMPORARY: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'TEMPORARY'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qrMasterGENERATED: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'GENERATED'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+    object qrMasterSECONDARY: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'SECONDARY'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1
+    end
+  end
+  object dsMaster: TDatasource
+    DataSet = qrMaster
+    left = 287
+    top = 66
+  end
+end

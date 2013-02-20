@@ -1,0 +1,48 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmParametry','FORMDATA',[
+  'TPF0'#13'TfrmParametry'#12'frmParametry'#4'Left'#3'S'#1#6'Height'#3'U'#2#3'T'
+  +'op'#3#163#0#5'Width'#3#19#4#7'Caption'#6#9'Parametry'#12'ClientHeight'#3'U'
+  +#2#11'ClientWidth'#3#19#4#8'OnCreate'#7#10'FormCreate'#8'Position'#7#16'poMa'
+  +'inFormCenter'#10'LCLVersion'#6#8'0.9.28.3'#0#7'TDBGrid'#7'DBGrid1'#4'Left'#2
+  +#0#6'Height'#3#22#2#3'Top'#2#26#5'Width'#3#19#4#5'Align'#7#8'alClient'#7'Col'
+  +'umns'#14#1#8'ReadOnly'#9#13'Title.Caption'#6#4'K'#195#179'd'#5'Width'#3#200
+  +#0#9'FieldName'#6#3'KOD'#0#1#13'Title.Caption'#6#7'Hodnota'#5'Width'#3#200#0
+  +#9'FieldName'#6#7'HODNOTA'#0#1#8'ReadOnly'#9#13'Title.Caption'#6#5'Popis'#5
+  +'Width'#3#144#1#9'FieldName'#6#5'POPIS'#0#0#10'DataSource'#7#11'dsParametry'
+  +#8'TabOrder'#2#0#10'TitleStyle'#7#8'tsNative'#10'OnDblClick'#7#15'DBGrid1Dbl'
+  +'Click'#0#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#2'%'#3'Top'#3'0'#2#5'W'
+  +'idth'#3#19#4#5'Align'#7#8'alBottom'#10'BevelOuter'#7#6'bvNone'#12'ClientHei'
+  +'ght'#2'%'#11'ClientWidth'#3#19#4#8'TabOrder'#2#1#0#7'TBitBtn'#7'BitBtn1'#4
+  +'Left'#3#245#1#6'Height'#2#30#3'Top'#2#0#5'Width'#2'J'#7'Anchors'#11#5'akTop'
+  +#0#7'Caption'#6#3'&OK'#7'Default'#9#4'Kind'#7#4'bkOK'#11'ModalResult'#2#1#7
+  +'OnClick'#7#12'BitBtn1Click'#8'TabOrder'#2#0#0#0#0#8'TToolBar'#8'ToolBar1'#4
+  +'Left'#2#0#6'Height'#2#26#3'Top'#2#0#5'Width'#3#19#4#7'Caption'#6#8'ToolBar1'
+  +#8'TabOrder'#2#2#0#12'TDBNavigator'#12'DBNavigator1'#4'Left'#2#1#6'Height'#2
+  +#22#3'Top'#2#2#5'Width'#3#241#0#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2
+  +#22#11'ClientWidth'#3#241#0#10'DataSource'#7#11'dsParametry'#8'TabOrder'#2#0
+  +#14'VisibleButtons'#11#7'nbFirst'#7'nbPrior'#6'nbNext'#6'nbLast'#6'nbEdit'#6
+  +'nbPost'#8'nbCancel'#0#0#0#0#11'TDatasource'#11'dsParametry'#7'DataSet'#7#11
+  +'qrParametry'#12'OnDataChange'#7#21'dsParametryDataChange'#4'left'#3'H'#1#3
+  +'top'#2'8'#0#0#7'TZQuery'#11'qrParametry'#10'Connection'#7#19'DM.OracleConne'
+  +'ction'#12'UpdateObject'#7#15'UpdateParametry'#17'AfterApplyUpdates'#7#28'qr'
+  +'ParametryAfterApplyUpdates'#9'AfterPost'#7#20'qrParametryAfterPost'#11'SQL.'
+  +'Strings'#1#6#23'SELECT * FROM PARAMETRY'#0#6'Params'#14#0#4'left'#3#168#1#3
+  +'top'#2'8'#0#12'TStringField'#14'qrParametryKOD'#12'DisplayWidth'#2'2'#9'Fie'
+  +'ldKind'#7#6'fkData'#9'FieldName'#6#3'KOD'#5'Index'#2#0#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#4'Size'#2'2'#0#0#12'TStringField'#18'qrParametryHODNOTA'#12'DisplayWidth'#2
+  +'2'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#7'HODNOTA'#5'Index'#2#1#11'Looku'
+  +'pCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
+  +'Required'#8#9'OnGetText'#7#25'qrParametryHODNOTAGetText'#9'OnSetText'#7#25
+  +'qrParametryHODNOTASetText'#4'Size'#2'2'#0#0#12'TStringField'#16'qrParametry'
+  +'POPIS'#12'DisplayWidth'#3#250#0#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'P'
+  +'OPIS'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9
+  +'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#9'OnGetText'#7#23'qrParametryPOPIS'
+  +'GetText'#9'OnSetText'#7#23'qrParametryPOPISSetText'#4'Size'#3#250#0#0#0#0#11
+  +'TZUpdateSQL'#15'UpdateParametry'#17'ModifySQL.Strings'#1#6#16'UPDATE PARAME'
+  +'TRY'#6#22'SET HODNOTA = :HODNOTA'#6#16'WHERE KOD = :KOD'#0#29'UseSequenceFi'
+  +'eldForRefreshSQL'#8#4'left'#3#8#2#3'top'#2'8'#9'ParamData'#14#1#8'DataType'
+  +#7#9'ftUnknown'#4'Name'#6#7'HODNOTA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataT'
+  +'ype'#7#9'ftUnknown'#4'Name'#6#3'KOD'#9'ParamType'#7#9'ptUnknown'#0#0#0#0#0
+]);

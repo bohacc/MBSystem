@@ -1,0 +1,247 @@
+object frmSablona: TfrmSablona
+  Left = 466
+  Height = 229
+  Top = 304
+  Width = 538
+  Align = alClient
+  Caption = 'frmSablona'
+  ClientHeight = 209
+  ClientWidth = 538
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 186
+    Width = 538
+    Panels = <    
+      item
+        Text = 'F2-Obnovit  F3-Nový   F4-Upravit   F8-Smazat   F10-Zavřít   CTRL + MOUSE LEFT - označení záznamu'
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 538
+    Caption = 'ToolBar1'
+    EdgeBorders = [ebTop, ebBottom]
+    Images = frmMain.ImageList
+    TabOrder = 1
+    object ToolButton1: TToolButton
+      Left = 1
+      Top = 2
+      Width = 4
+      Caption = 'ToolButton1'
+      Style = tbsDivider
+    end
+    object ToolButton3: TToolButton
+      Left = 192
+      Hint = 'Výchozí dotaz'
+      Top = 2
+      Caption = 'ToolButton3'
+      ImageIndex = 9
+      OnClick = miVychoziDotazClick
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object ToolButton4: TToolButton
+      Left = 215
+      Top = 2
+      Width = 4
+      Caption = 'ToolButton4'
+      Style = tbsDivider
+    end
+    object btRefresh: TToolButton
+      Left = 5
+      Hint = 'Obnovení seznamu'
+      Top = 2
+      Caption = 'btRefresh'
+      ImageIndex = 7
+      OnClick = btRefreshClick
+      ParentShowHint = False
+      ShowHint = True
+    end
+    object edFind: TEdit
+      Left = 28
+      Height = 22
+      Top = 2
+      Width = 137
+      AutoSize = False
+      OnKeyUp = edFindKeyUp
+      TabOrder = 0
+    end
+    object Navigator: TDBNavigator
+      Left = 219
+      Height = 22
+      Top = 2
+      Width = 241
+      BeforeAction = NavigatorBeforeAction
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 22
+      ClientWidth = 241
+      Flat = True
+      OnClick = NavigatorClick
+      TabOrder = 1
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
+    end
+    object ToolButton10: TToolButton
+      Left = 165
+      Top = 2
+      Caption = 'ToolButton10'
+      ImageIndex = 10
+      OnClick = ToolButton10Click
+    end
+    object ToolButton5: TToolButton
+      Left = 188
+      Top = 2
+      Width = 4
+      Caption = 'ToolButton5'
+      Style = tbsDivider
+    end
+  end
+  object pcMain: TPageControl
+    Left = 0
+    Height = 135
+    Top = 26
+    Width = 538
+    ActivePage = tsZaznam
+    Align = alClient
+    TabIndex = 1
+    TabOrder = 2
+    TabPosition = tpBottom
+    object tsSeznam: TTabSheet
+      Caption = 'Seznam'
+      ClientHeight = 107
+      ClientWidth = 530
+      object DBGrid: TDBGrid
+        Left = 0
+        Height = 107
+        Top = 0
+        Width = 530
+        Align = alClient
+        BorderStyle = bsNone
+        Color = clWindow
+        Columns = <>
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiselect, dgPersistentMultiSelect]
+        TabOrder = 0
+        TitleStyle = tsNative
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    object tsZaznam: TTabSheet
+      Caption = 'Záznam'
+    end
+  end
+  object pOK: TPanel
+    Left = 0
+    Height = 25
+    Top = 161
+    Width = 538
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 25
+    ClientWidth = 538
+    TabOrder = 3
+    Visible = False
+    object btStorno: TButton
+      Left = 458
+      Height = 25
+      Top = 0
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Storno'
+      TabOrder = 0
+    end
+    object btOK: TButton
+      Left = 380
+      Height = 25
+      Top = 0
+      Width = 73
+      Anchors = [akTop, akRight]
+      Caption = 'OK'
+      TabOrder = 1
+    end
+  end
+  object MainMenu: TMainMenu
+    left = 256
+    top = 74
+    object miSoubor: TMenuItem
+      Caption = 'Soubor'
+      object miZavrit: TMenuItem
+        Caption = 'Zavřít'
+        ShortCut = 121
+        OnClick = miZavritClick
+      end
+    end
+    object miUpravy: TMenuItem
+      Caption = 'Úpravy'
+      object miNovyZaznam: TMenuItem
+        Caption = 'Nový záznam'
+        ShortCut = 114
+        OnClick = miNovyZaznamClick
+      end
+      object miUpravitZaznam: TMenuItem
+        Caption = 'Upravit záznam'
+        ShortCut = 115
+        OnClick = miUpravitZaznamClick
+      end
+      object miSmazatZaznam: TMenuItem
+        Caption = 'Smazat záznam'
+        ShortCut = 119
+        OnClick = miSmazatZaznamClick
+      end
+      object miVychoziDotaz: TMenuItem
+        Caption = 'Výchozí dotaz'
+        ShortCut = 113
+        OnClick = miVychoziDotazClick
+      end
+      object miZrusOznaceni: TMenuItem
+        Caption = 'Zrušit označení záznamů'
+        OnClick = miZrusOznaceniClick
+      end
+    end
+    object miOkno: TMenuItem
+      Caption = 'Okno'
+    end
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    AfterOpen = qrMasterAfterOpen
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    BeforePost = qrMasterBeforePost
+    AfterPost = qrMasterAfterPost
+    OnNewRecord = qrMasterNewRecord
+    SQL.Strings = (
+      'SELECT * FROM DUAL'
+    )
+    Params = <>
+    left = 72
+    top = 56
+  end
+  object UpdateMaster: TZUpdateSQL
+    UseSequenceFieldForRefreshSQL = False
+    left = 16
+    top = 72
+  end
+  object dsMaster: TDatasource
+    DataSet = qrMaster
+    left = 156
+    top = 65
+  end
+end

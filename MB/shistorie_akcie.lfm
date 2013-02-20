@@ -1,0 +1,33 @@
+object frmHistorie_akcie: TfrmHistorie_akcie
+  Left = 324
+  Height = 300
+  Top = 154
+  Width = 400
+  Caption = 'frmHistorie_akcie'
+  LCLVersion = '0.9.28.3'
+  object quickrep1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 32
+    top = 33
+    ReportForm = {
+      18000000
+    }
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMaster
+    left = 83
+    top = 37
+  end
+  object qrMaster: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    ReadOnly = False
+    Params = <>
+    left = 144
+    top = 37
+  end
+end

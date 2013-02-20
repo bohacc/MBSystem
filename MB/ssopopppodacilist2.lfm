@@ -1,0 +1,33 @@
+object frmSOPOPPPodaciList2: TfrmSOPOPPPodaciList2
+  Left = 369
+  Height = 300
+  Top = 179
+  Width = 400
+  Caption = 'frmSOPOPPPodaciList2'
+  LCLVersion = '0.9.28.3'
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 61
+    top = 39
+    ReportForm = {
+      18000000
+    }
+  end
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    left = 148
+    top = 45
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT Z.*,NULL AS JMENO,NULL AS PRIJMENI,NULL AS ULICE_CP, NULL AS PSC_MESTO FROM ZALOBY Z WHERE NVL(UZAMCENA,0)=0'
+    )
+    Params = <>
+    left = 236
+    top = 46
+  end
+end

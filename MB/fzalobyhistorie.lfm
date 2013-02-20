@@ -1,0 +1,70 @@
+object frmZalobyHistorie: TfrmZalobyHistorie
+  Left = 388
+  Height = 295
+  Top = 175
+  Width = 244
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Historie importů'
+  ClientHeight = 295
+  ClientWidth = 244
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.3'
+  object Panel1: TPanel
+    Left = 0
+    Height = 30
+    Top = 265
+    Width = 244
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 30
+    ClientWidth = 244
+    TabOrder = 0
+    object Button1: TButton
+      Left = 83
+      Height = 25
+      Top = 3
+      Width = 75
+      Anchors = []
+      Caption = 'OK'
+      ModalResult = 1
+      TabOrder = 0
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 265
+    Top = 0
+    Width = 244
+    Align = alClient
+    Columns = <    
+      item
+        Title.Caption = 'Datum importu'
+        FieldName = 'DATUM_IMPORTU'
+      end>
+    DataSource = dsMaster
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object dsMaster: TDatasource
+    DataSet = qrMaster
+    left = 74
+    top = 119
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT'
+      '  DISTINCT DATUM_IMPORTU'
+      'FROM'
+      '  ZALOBY'
+      'ORDER BY'
+      '  DATUM_IMPORTU DESC'
+    )
+    Params = <>
+    left = 80
+    top = 56
+  end
+end

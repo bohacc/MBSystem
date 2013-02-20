@@ -1,0 +1,33 @@
+object frmSSoucetAkciiZaTypAll: TfrmSSoucetAkciiZaTypAll
+  Left = 324
+  Height = 300
+  Top = 154
+  Width = 400
+  Caption = 'frmSSoucetAkciiZaTypAll'
+  ParentFont = False
+  LCLVersion = '0.9.26'
+  object qrMaster: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    UsePrimaryKeyAsKey = True
+    left = 163
+    top = 82
+  end
+  object quickrep1: TfrReport
+    Dataset = frDBDataSet1
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    left = 30
+    top = 78
+    ReportForm = {
+      18000000
+    }
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMaster
+    left = 104
+    top = 83
+  end
+end

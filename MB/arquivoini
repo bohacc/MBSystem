@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <TApplication>
+    <frmZalobyOstatni nazev="edite o texto e feche o programa" hodnota=""/>
+    <frmZalobyOstatni hodnota="xxvalor"/>
+  </TApplication>
+  <TApplication>
+    <frmZalobyOstatni nazev="edite o texto e feche o programa2"/>
+    <frmZalobyOstatni hodnota="xxvalor2"/>
+  </TApplication>
+</CONFIG>

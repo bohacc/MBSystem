@@ -1,0 +1,161 @@
+object frmParametry: TfrmParametry
+  Left = 339
+  Height = 597
+  Top = 163
+  Width = 1043
+  Caption = 'Parametry'
+  ClientHeight = 597
+  ClientWidth = 1043
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.3'
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 534
+    Top = 26
+    Width = 1043
+    Align = alClient
+    Columns = <    
+      item
+        ReadOnly = True
+        Title.Caption = 'Kód'
+        Width = 200
+        FieldName = 'KOD'
+      end    
+      item
+        Title.Caption = 'Hodnota'
+        Width = 200
+        FieldName = 'HODNOTA'
+      end    
+      item
+        ReadOnly = True
+        Title.Caption = 'Popis'
+        Width = 400
+        FieldName = 'POPIS'
+      end>
+    DataSource = dsParametry
+    TabOrder = 0
+    TitleStyle = tsNative
+    OnDblClick = DBGrid1DblClick
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 37
+    Top = 560
+    Width = 1043
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 37
+    ClientWidth = 1043
+    TabOrder = 1
+    object BitBtn1: TBitBtn
+      Left = 501
+      Height = 30
+      Top = 0
+      Width = 74
+      Anchors = [akTop]
+      Caption = '&OK'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = BitBtn1Click
+      TabOrder = 0
+    end
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 1043
+    Caption = 'ToolBar1'
+    TabOrder = 2
+    object DBNavigator1: TDBNavigator
+      Left = 1
+      Height = 22
+      Top = 2
+      Width = 241
+      BevelOuter = bvNone
+      ClientHeight = 22
+      ClientWidth = 241
+      DataSource = dsParametry
+      TabOrder = 0
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbEdit, nbPost, nbCancel]
+    end
+  end
+  object dsParametry: TDatasource
+    DataSet = qrParametry
+    OnDataChange = dsParametryDataChange
+    left = 328
+    top = 56
+  end
+  object qrParametry: TZQuery
+    Connection = DM.OracleConnection
+    UpdateObject = UpdateParametry
+    AfterApplyUpdates = qrParametryAfterApplyUpdates
+    AfterPost = qrParametryAfterPost
+    SQL.Strings = (
+      'SELECT * FROM PARAMETRY'
+    )
+    Params = <>
+    left = 424
+    top = 56
+    object qrParametryKOD: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'KOD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qrParametryHODNOTA: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'HODNOTA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qrParametryHODNOTAGetText
+      OnSetText = qrParametryHODNOTASetText
+      Size = 50
+    end
+    object qrParametryPOPIS: TStringField
+      DisplayWidth = 250
+      FieldKind = fkData
+      FieldName = 'POPIS'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qrParametryPOPISGetText
+      OnSetText = qrParametryPOPISSetText
+      Size = 250
+    end
+  end
+  object UpdateParametry: TZUpdateSQL
+    ModifySQL.Strings = (
+      'UPDATE PARAMETRY'
+      'SET HODNOTA = :HODNOTA'
+      'WHERE KOD = :KOD'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 520
+    top = 56
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'HODNOTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'KOD'
+        ParamType = ptUnknown
+      end>
+  end
+end

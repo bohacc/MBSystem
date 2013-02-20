@@ -1,0 +1,149 @@
+﻿inherited frmPsc: TfrmPsc
+  Height = 312
+  Width = 520
+  Caption = 'PSČ'
+  ClientHeight = 292
+  ClientWidth = 520
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 269
+    Width = 520
+  end
+  inherited ToolBar1: TToolBar
+    Width = 520
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = NavigatorBeforeAction
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = NavigatorClick
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 218
+    Width = 520
+    ActivePage = tsSeznam
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 190
+      ClientWidth = 512
+      inherited DBGrid: TDBGrid
+        Height = 190
+        Width = 512
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 190
+      ClientWidth = 512
+      object Label1: TLabel[0]
+        Left = 12
+        Height = 16
+        Top = 17
+        Width = 22
+        Caption = 'Kód'
+        ParentColor = False
+      end
+      object Label2: TLabel[1]
+        Left = 12
+        Height = 16
+        Top = 41
+        Width = 29
+        Caption = 'Obec'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[2]
+        Left = 51
+        Height = 23
+        Top = 10
+        Width = 80
+        DataField = 'KOD'
+        DataSource = dsMaster
+        CharCase = ecNormal
+        MaxLength = 6
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[3]
+        Left = 51
+        Height = 23
+        Top = 35
+        Width = 440
+        DataField = 'OBEC'
+        DataSource = dsMaster
+        CharCase = ecNormal
+        MaxLength = 40
+        TabOrder = 1
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 244
+    Width = 520
+    ClientWidth = 520
+  end
+  inherited MainMenu: TMainMenu
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = miZavritClick
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = miNovyZaznamClick
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = miUpravitZaznamClick
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = miSmazatZaznamClick
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = miVychoziDotazClick
+      end
+    end
+  end
+  inherited qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    AfterPost = qrMasterAfterPost
+    SQL.Strings = (
+      'SELECT * FROM PSC'
+    )
+  end
+  inherited UpdateMaster: TZUpdateSQL
+    ModifySQL.Strings = (
+      'UPDATE PSC SET OBEC=:OBEC'
+      'WHERE KOD=:OLD_KOD'
+    )
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'OBEC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_KOD'
+        ParamType = ptUnknown
+      end>
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+  end
+end

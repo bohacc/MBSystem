@@ -1,0 +1,51 @@
+object frmNesparovaneZpravy: TfrmNesparovaneZpravy
+  Left = 345
+  Height = 240
+  Top = 183
+  Width = 320
+  Caption = 'frmNesparovaneZpravy'
+  LCLVersion = '0.9.30'
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    OnCheckEOF = dsMasterCheckEOF
+    left = 136
+    top = 56
+  end
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 32
+    top = 60
+    ReportForm = {
+      19000000
+    }
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT '
+      '  REF_KOD,'
+      '  VAR_SYMB,'
+      '  SPISOVA_ZNACKA AS SPIS_ZNACKA,'
+      '  DATUM_ODESLANI,'
+      '  BEZNE_CISLO,'
+      '  UCET,'
+      '  VAR_SYMB,'
+      '  SOUD,'
+      '  PODANI_DORUCENE_DATUM AS DORUCENO,'
+      '  ODESILATEL'
+      'FROM '
+      '  ZALOBY_ZPRAVY Z '
+      'WHERE '
+      '  NOT EXISTS(SELECT 1 FROM ZALOBY WHERE REF_KOD=Z.REF_KOD) '
+      '  AND NOT EXISTS(SELECT 1 FROM ZALOBY_OSTATNI WHERE REF_KOD=Z.REF_KOD)'
+      '  AND NOT EXISTS(SELECT 1 FROM ZALOBY_MLCOCH WHERE REF_KOD=Z.REF_KOD)'
+    )
+    Params = <>
+    left = 234
+    top = 66
+  end
+end

@@ -1,0 +1,19 @@
+object DM: TDM
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 194
+  HorizontalOffset = 408
+  VerticalOffset = 189
+  Width = 390
+  object OracleConnection: TZConnection
+    Protocol = 'oracle'
+    Database = 'XE'
+    User = 'mbsystem'
+    Password = 'mbsystem'
+    TransactIsolationLevel = tiReadCommitted
+    DesignConnection = True
+    SQLHourGlass = True
+    left = 72
+    top = 48
+  end
+end

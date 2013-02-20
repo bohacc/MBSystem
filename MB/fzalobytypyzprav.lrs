@@ -1,0 +1,91 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmZalobyTypyZprav','FORMDATA',[
+  'TPF0'#241#19'TfrmZalobyTypyZprav'#18'frmZalobyTypyZprav'#6'Height'#3#25#1#5
+  +'Width'#3'*'#2#7'Caption'#6#21#197#189'aloby - Typy zpr'#195#161'v'#12'Clien'
+  +'tHeight'#3#5#1#11'ClientWidth'#3'*'#2#4'Menu'#7#8'MainMenu'#10'OnActivate'#7
+  +#12'FormActivate'#8'OnCreate'#7#10'FormCreate'#0#241#10'TStatusBar'#10'Statu'
+  +'sBar1'#3'Top'#3#238#0#5'Width'#3'*'#2#0#0#241#8'TToolBar'#8'ToolBar1'#5'Wid'
+  +'th'#3'*'#2#6'Images'#7#17'frmMain.ImageList'#0#241#11'TToolButton'#11'ToolB'
+  +'utton3'#7'OnClick'#7#16'ToolButton3Click'#0#0#241#11'TToolButton'#9'btRefre'
+  +'sh'#7'OnClick'#7#14'btRefreshClick'#0#0#241#5'TEdit'#6'edFind'#7'OnKeyUp'#7
+  +#11'edFindKeyUp'#0#0#241#12'TDBNavigator'#9'Navigator'#12'BeforeAction'#7#21
+  +'NavigatorBeforeAction'#10'DataSource'#7#8'dsMaster'#13'Hints.Strings'#1#0#7
+  +'OnClick'#7#14'NavigatorClick'#0#0#241#11'TToolButton'#12'ToolButton10'#7'On'
+  +'Click'#7#17'ToolButton10Click'#0#0#0#241#12'TPageControl'#6'pcMain'#6'Heigh'
+  +'t'#3#187#0#5'Width'#3'*'#2#10'ActivePage'#7#8'tsZaznam'#8'TabIndex'#2#1#0
+  +#241#9'TTabSheet'#8'tsSeznam'#12'ClientHeight'#3#159#0#11'ClientWidth'#3'"'#2
+  +#0#241#7'TDBGrid'#6'DBGrid'#6'Height'#3#159#0#5'Width'#3'"'#2#10'DataSource'
+  +#7#8'dsMaster'#10'OnDblClick'#7#14'DBGridDblClick'#15'OnPrepareCanvas'#7#19
+  +'DBGridPrepareCanvas'#12'OnTitleClick'#7#16'DBGridTitleClick'#0#0#0#241#9'TT'
+  +'abSheet'#8'tsZaznam'#12'ClientHeight'#3#159#0#11'ClientWidth'#3'"'#2#0#242#2
+  +#0#7'TDBEdit'#7'DBEdit1'#4'Left'#2'L'#6'Height'#2#23#3'Top'#2#2#5'Width'#2'P'
+  +#9'DataField'#6#2'ID'#10'DataSource'#7#8'dsMaster'#8'TabOrder'#2#0#0#0#242#2
+  +#1#7'TDBEdit'#7'DBEdit2'#4'Left'#2'L'#6'Height'#2#23#3'Top'#2#26#5'Width'#3
+  +#208#1#9'DataField'#6#7'PREDMET'#10'DataSource'#7#8'dsMaster'#7'Anchors'#11#5
+  +'akTop'#6'akLeft'#7'akRight'#0#9'MaxLength'#3#232#3#8'TabOrder'#2#1#0#0#242#2
+  +#2#7'TDBEdit'#7'DBEdit3'#4'Left'#2'L'#6'Height'#2#23#3'Top'#2'2'#5'Width'#3
+  +#208#1#9'DataField'#6#5'NAZEV'#10'DataSource'#7#8'dsMaster'#7'Anchors'#11#5
+  +'akTop'#6'akLeft'#7'akRight'#0#9'MaxLength'#2'x'#8'TabOrder'#2#2#0#0#242#2#3
+  +#7'TDBEdit'#7'DBEdit4'#4'Left'#2'L'#6'Height'#2#23#3'Top'#2'J'#5'Width'#3#208
+  +#1#9'DataField'#6#5'POPIS'#10'DataSource'#7#8'dsMaster'#7'Anchors'#11#5'akTo'
+  +'p'#6'akLeft'#7'akRight'#0#9'MaxLength'#3#232#3#8'TabOrder'#2#3#0#0#242#2#4#6
+  +'TLabel'#6'Label1'#4'Left'#2#12#6'Height'#2#16#3'Top'#2#9#5'Width'#2#11#7'Ca'
+  +'ption'#6#2'Id'#11'ParentColor'#8#0#0#242#2#5#6'TLabel'#6'Label2'#4'Left'#2
+  +#12#6'Height'#2#16#3'Top'#2'!'#5'Width'#2'.'#7'Caption'#6#9'P'#197#153'edm'
+  +#196#155't'#11'ParentColor'#8#0#0#242#2#6#6'TLabel'#6'Label3'#4'Left'#2#12#6
+  +'Height'#2#16#3'Top'#2'9'#5'Width'#2'!'#7'Caption'#6#6'N'#195#161'zev'#11'Pa'
+  +'rentColor'#8#0#0#242#2#7#6'TLabel'#6'Label4'#4'Left'#2#12#6'Height'#2#16#3
+  +'Top'#2'Q'#5'Width'#2#30#7'Caption'#6#5'Popis'#11'ParentColor'#8#0#0#242#2#8
+  +#6'TLabel'#6'Label5'#4'Left'#2#12#6'Height'#2#16#3'Top'#2'm'#5'Width'#2#21#7
+  +'Caption'#6#3'Typ'#11'ParentColor'#8#0#0#242#2#9#7'TDBEdit'#7'DBEdit5'#4'Lef'
+  +'t'#2'L'#6'Height'#2#23#3'Top'#2'f'#5'Width'#2'P'#9'DataField'#6#3'TYP'#10'D'
+  +'ataSource'#7#8'dsMaster'#8'TabOrder'#2#4#0#0#0#0#241#6'TPanel'#3'pOK'#3'Top'
+  +#3#213#0#5'Width'#3'*'#2#11'ClientWidth'#3'*'#2#0#241#7'TButton'#8'btStorno'
+  +#4'Left'#3#218#1#0#0#241#7'TButton'#4'btOK'#4'Left'#3#140#1#0#0#0#241#9'TMai'
+  +'nMenu'#8'MainMenu'#4'left'#3#248#0#3'top'#2#24#0#241#9'TMenuItem'#8'miSoubo'
+  +'r'#0#241#9'TMenuItem'#8'miZavrit'#7'OnClick'#7#13'miZavritClick'#0#0#0#241#9
+  +'TMenuItem'#8'miUpravy'#0#241#9'TMenuItem'#12'miNovyZaznam'#7'OnClick'#7#17
+  +'miNovyZaznamClick'#0#0#241#9'TMenuItem'#15'miUpravitZaznam'#7'OnClick'#7#20
+  +'miUpravitZaznamClick'#0#0#241#9'TMenuItem'#14'miSmazatZaznam'#7'OnClick'#7
+  +#19'miSmazatZaznamClick'#0#0#241#9'TMenuItem'#14'miVychoziDotaz'#7'OnClick'#7
+  +#19'miVychoziDotazClick'#0#0#0#0#241#7'TZQuery'#8'qrMaster'#10'Connection'#7
+  +#19'DM.OracleConnection'#9'AfterOpen'#7#17'qrMasterAfterOpen'#12'UpdateObjec'
+  +'t'#7#12'UpdateMaster'#17'AfterApplyUpdates'#7#25'qrMasterAfterApplyUpdates'
+  +#12'BeforeInsert'#7#20'qrMasterBeforeInsert'#10'BeforeEdit'#7#18'qrMasterBef'
+  +'oreEdit'#10'BeforePost'#7#18'qrMasterBeforePost'#9'AfterPost'#7#17'qrMaster'
+  +'AfterPost'#11'SQL.Strings'#1#6#25'SELECT * FROM ZPRAVY_TYPY'#0#4'left'#2'`'
+  +#3'top'#2#24#0#242#2#0#13'TLongintField'#10'qrMasterID'#12'DisplayLabel'#6#2
+  +'Id'#12'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'I'
+  +'ndex'#2#0#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +#0#8'ReadOnly'#8#8'Required'#8#0#0#242#2#1#12'TStringField'#15'qrMasterPREDM'
+  +'ET'#12'DisplayLabel'#6#9'P'#197#153'edm'#196#155't'#12'DisplayWidth'#2'2'#9
+  +'FieldKind'#7#6'fkData'#9'FieldName'#6#7'PREDMET'#5'Index'#2#1#11'LookupCach'
+  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
+  +'uired'#8#4'Size'#3#232#3#0#0#242#2#2#12'TStringField'#13'qrMasterNAZEV'#12
+  +'DisplayLabel'#6#6'N'#195#161'zev'#12'DisplayWidth'#2'2'#9'FieldKind'#7#6'fk'
+  +'Data'#9'FieldName'#6#5'NAZEV'#5'Index'#2#2#11'LookupCache'#8#13'ProviderFla'
+  ,'gs'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2
+  +'x'#0#0#242#2#3#12'TStringField'#13'qrMasterPOPIS'#12'DisplayLabel'#6#5'Popi'
+  +'s'#12'DisplayWidth'#2'P'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#5'POPIS'#5
+  +'Index'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWher'
+  +'e'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#232#3#0#0#242#2#4#14'TSmallintFi'
+  +'eld'#11'qrMasterTYP'#12'DisplayLabel'#6#3'Typ'#12'DisplayWidth'#2#10#9'Fiel'
+  +'dKind'#7#6'fkData'#9'FieldName'#6#3'TYP'#5'Index'#2#4#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#0#0#0#241#11'TZUpdateSQL'#12'UpdateMaster'#17'DeleteSQL.Strings'#1#6'#DELET'
+  +'E ZPRAVY_TYPY WHERE ID=:OLD_ID'#0#17'InsertSQL.Strings'#1#6'3INSERT INTO ZP'
+  +'RAVY_TYPY(ID,PREDMET,NAZEV,POPIS,TYP)'#6'''VALUES(:ID,:PREDMET,:NAZEV,:POPI'
+  +'S,:TYP)'#0#17'ModifySQL.Strings'#1#6#18'UPDATE ZPRAVY_TYPY'#6#3'SET'#6#16' '
+  +'    ID = :ID,  '#6#24'     PREDMET = :PREDMET,'#6#20'     NAZEV = :NAZEV,'#6
+  +#20'     POPIS = :POPIS,'#6#15'     TYP = :TYP'#6#5'WHERE'#6#14'  ID = :OLD_'
+  +'ID'#0#4'left'#2#24#3'top'#2#24#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#2'ID'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
+  +'Name'#6#7'PREDMET'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknow'
+  +'n'#4'Name'#6#5'NAZEV'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnk'
+  +'nown'#4'Name'#6#5'POPIS'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ft'
+  +'Unknown'#4'Name'#6#3'TYP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'f'
+  +'tUnknown'#4'Name'#6#6'OLD_ID'#9'ParamType'#7#9'ptUnknown'#0#0#0#0#241#11'TD'
+  +'atasource'#8'dsMaster'#7'DataSet'#7#8'qrMaster'#12'OnDataChange'#7#18'dsMas'
+  +'terDataChange'#4'left'#3#168#0#3'top'#2#24#0#0#0
+]);

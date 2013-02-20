@@ -1,0 +1,33 @@
+object frmSNezaplacene: TfrmSNezaplacene
+  Left = 368
+  Height = 300
+  Top = 179
+  Width = 400
+  Caption = 'frmSNezaplacene'
+  LCLVersion = '0.9.28.3'
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 82
+    top = 62
+    ReportForm = {
+      18000000
+    }
+  end
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    left = 206
+    top = 62
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT ROWNUM AS RADEK,Z.*,SUBSTR(Z.JMENO_CP,1,INSTR(Z.JMENO_CP,'' '')) AS JMENO,SUBSTR(Z.JMENO_CP,INSTR(JMENO_CP,'' '')+1) AS PRIJMENI FROM ZALOBY Z'
+    )
+    Params = <>
+    left = 311
+    top = 67
+  end
+end

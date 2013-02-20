@@ -1,0 +1,90 @@
+object frmSExekuce: TfrmSExekuce
+  Left = 547
+  Height = 240
+  Top = 201
+  Width = 320
+  Caption = 'frmSExekuce'
+  LCLVersion = '0.9.30'
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 40
+    top = 64
+    ReportForm = {
+      19000000
+    }
+  end
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    left = 144
+    top = 65
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT'
+      '  Z.*,'
+      '  TO_CHAR(SYSDATE,''DD.MM.YYYY'') AS AKTUALNI_DATUM,'
+      '  L.KONTAKTNI_OSOBA||''/''||L.KONTAKTNI_OSOBA_TEL AS KONTAKTNI_OSOBA,'
+      '  L.UCET,'
+      '  L.KOD_BANKY,'
+      '  GET_PARAM(''ZALOBY_DATUM_PREDANI'') AS DATUM_PREDANI,'
+      '  ''ERP ''||Z.VAR_SYMB||'' - FEN'' AS VAR_SYMB_ERP,'
+      '  Z.ULICE||'' ''||Z.CISLO_DOMU AS ULICE_CP,'
+      '  Z.PSC||'' ''||Z.MESTO AS PSC_MESTO,'
+      '  Z.JMENO_CP||'', nar. ''||GET_DATUM_FROM_RC(Z.RODNE_CISLO) AS JMENO_NAR,'
+      '  CASE GET_POHLAVI_Z_RC(Z.RODNE_CISLO)'
+      '    WHEN 1 THEN ''Vážený pan'''
+      '    WHEN 0 THEN ''Vážená paní'''
+      '    WHEN NULL THEN ''Vážený pan/paní'''
+      '  END AS OSLOVENI,'
+      '  GET_PARAM(''ZALOBY_OZNAMENI_UCET'') AS UCET_OZNAMENI,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'')),1,''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 30.6.2006 z částky'',NULL) AS UROK1,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA1,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA1,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'')),1,''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 31.12.2006 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'')),1,''- 9% ročně od 1.7.2006 do 31.12.2006 z částky'',NULL)) AS UROK2,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA2,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA2,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'')),1,''- 9,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 30.6.2007 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'')),1,''- 9,5% ročně od 1.1.2007 do 30.6.2007 z částky'',NULL)) AS UROK3,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA3,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA3,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'')),1,''- 9,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 31.12.2007 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'')),1,''- 9,75% ročně od 1.7.2007 do 31.12.2007 z částky'',NULL)) AS UROK4,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA4,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA4,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'')),1,''- 10,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 30.6.2008 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'')),1,''- 10,5% ročně od 1.1.2008 do 30.6.2008 z částky'',NULL)) AS UROK5,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA5,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA5,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'')),1,''- 10,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 31.12.2008 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'')),1,''- 10,75% ročně od 1.7.2008 do 31.12.2008 z částky'',NULL)) AS UROK6,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA6,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA6,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'')),1,''- 9,25% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 30.6.2009 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'')),1,''- 9,25% ročně od 1.1.2009 do 30.6.2009 z částky'',NULL)) AS UROK7,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA7,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA7,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'')),1,''- 8,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 31.12.2009 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'')),1,''- 8,5% ročně od 1.7.2009 do 31.12.2009 z částky'',NULL)) AS UROK8,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA8,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA8,'
+      ''
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'')),1,''- 8% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do 30.6.2010 z částky'',DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'')),1,''- 8% ročně od 1.1.2010 do 30.6.2010 z částky'',NULL)) AS UROK9,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA9,'
+      '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA9'
+      ''
+      'FROM'
+      '  ZALOBY Z,'
+      '  LICENCE L'
+    )
+    Params = <>
+    left = 240
+    top = 64
+  end
+end

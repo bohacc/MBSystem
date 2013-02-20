@@ -1,0 +1,180 @@
+﻿inherited frmPartneriSpojeni: TfrmPartneriSpojeni
+  Height = 250
+  Caption = 'Partneři - spojení'
+  ClientHeight = 230
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 207
+  end
+  inherited ToolBar1: TToolBar
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      ImageIndex = 0
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = nil
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = nil
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 156
+    ActivePage = tsSeznam
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 128
+      inherited DBGrid: TDBGrid
+        Height = 128
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 128
+      object Label1: TLabel[0]
+        Left = 4
+        Height = 16
+        Top = 10
+        Width = 11
+        Caption = 'Id'
+        ParentColor = False
+      end
+      object Label3: TLabel[1]
+        Left = 4
+        Height = 16
+        Top = 66
+        Width = 21
+        Caption = 'Typ'
+        ParentColor = False
+      end
+      object Label4: TLabel[2]
+        Left = 4
+        Height = 16
+        Top = 90
+        Width = 48
+        Caption = 'Hodnota'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[3]
+        Left = 76
+        Height = 23
+        Top = 10
+        Width = 80
+        DataField = 'ID'
+        DataSource = dsMaster
+        ReadOnly = True
+        Color = clBtnFace
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[4]
+        Left = 76
+        Height = 23
+        Top = 38
+        Width = 80
+        DataField = 'ID_PARTNERA'
+        DataSource = dsMaster
+        ReadOnly = True
+        Color = clBtnFace
+        TabOrder = 1
+      end
+      object DBEdit4: TDBEdit[5]
+        Left = 76
+        Height = 23
+        Top = 94
+        Width = 416
+        DataField = 'HODNOTA'
+        DataSource = dsMaster
+        MaxLength = 1000
+        TabOrder = 2
+      end
+      object DBComboBox1: TDBComboBox[6]
+        Left = 76
+        Height = 23
+        Top = 66
+        Width = 184
+        DataField = 'TYP'
+        DataSource = dsMaster
+        ItemHeight = 15
+        Items.Strings = (
+          'EMAIL'
+          'TELEFON'
+          'FAX'
+          'WWW'
+          'MOBIL'
+        )
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object Button1: TButton[7]
+        Left = 4
+        Height = 25
+        Top = 37
+        Width = 67
+        Caption = 'Partner'
+        TabOrder = 4
+      end
+      object Edit1: TEdit[8]
+        Left = 164
+        Height = 23
+        Top = 38
+        Width = 328
+        Color = clBtnFace
+        ReadOnly = True
+        TabOrder = 5
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 182
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 417
+    top = 91
+  end
+  inherited MainMenu: TMainMenu
+    left = 460
+    top = 56
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = nil
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = nil
+      end
+    end
+  end
+  inherited qrMaster0: TZQuery
+    Connection = DM.OracleConnection0
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMaster0AfterApplyUpdates
+    BeforeInsert = qrMaster0BeforeInsert
+    BeforeEdit = qrMaster0BeforeEdit
+    AfterPost = qrMaster0AfterPost
+    SQL.Strings = (
+      'SELECT * FROM PARTNERI_SPOJENI'
+    )
+  end
+end

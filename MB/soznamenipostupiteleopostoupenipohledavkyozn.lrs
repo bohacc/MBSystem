@@ -1,0 +1,16 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmSOznameniPostupiteleOPostoupeniPohledavkyOzn','FORMDATA',[
+  'TPF00TfrmSOznameniPostupiteleOPostoupeniPohledavkyOzn/frmSOznameniPostupitel'
+  +'eOPostoupeniPohledavkyOzn'#4'Left'#3'Q'#1#6'Height'#3#181#0#3'Top'#3#175#0#5
+  +'Width'#3#174#1#7'Caption'#6'/frmSOznameniPostupiteleOPostoupeniPohledavkyOz'
+  +'n'#10'LCLVersion'#6#8'0.9.28.2'#0#9'TfrReport'#9'frReport1'#11'InitialZoom'
+  +#7#9'pzDefault'#14'PreviewButtons'#11#6'pbZoom'#6'pbLoad'#6'pbSave'#7'pbPrin'
+  +'t'#6'pbFind'#6'pbHelp'#6'pbExit'#0#8'DataType'#7#9'dtDataSet'#4'left'#2'='#3
+  +'top'#2'8'#10'ReportForm'#10#4#0#0#0#24#0#0#0#0#0#9'TSQLQuery'#8'qrMaster'#9
+  +'IndexName'#6#13'DEFAULT_ORDER'#14'AutoCalcFields'#8#8'Database'#7#19'DM.Ora'
+  +'cleConnection'#11'Transaction'#7#17'DM.SQLTransaction'#8'ReadOnly'#8#11'SQL'
+  +'.Strings'#1#6#8'SELECT *'#6#4'FROM'#6#11'  ZALOBY Z,'#6#19'  HROMADNE_TISKY'
+  +' HT'#6#5'WHERE'#6#24'  Z.ID=TO_NUMBER(HT.PK1)'#0#6'Params'#14#0#10'UpdateMo'
+  +'de'#7#14'upWhereKeyOnly'#4'left'#3#151#0#3'top'#2'8'#0#0#0
+]);

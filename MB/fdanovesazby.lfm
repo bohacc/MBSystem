@@ -1,0 +1,127 @@
+﻿inherited frmDanoveSazby: TfrmDanoveSazby
+  Caption = 'Daňové sazby'
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited ToolBar1: TToolBar
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = nil
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = nil
+    end
+  end
+  inherited pcMain: TPageControl
+    ActivePage = tsZaznam
+    TabIndex = 1
+    inherited tsSeznam: TTabSheet
+      inherited DBGrid: TDBGrid
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      object Label1: TLabel[0]
+        Left = 3
+        Height = 16
+        Top = 8
+        Width = 22
+        Caption = 'Kód'
+        ParentColor = False
+      end
+      object Label2: TLabel[1]
+        Left = 3
+        Height = 16
+        Top = 37
+        Width = 33
+        Caption = 'Název'
+        ParentColor = False
+      end
+      object Label3: TLabel[2]
+        Left = 3
+        Height = 16
+        Top = 66
+        Width = 42
+        Caption = 'Procent'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[3]
+        Left = 55
+        Height = 23
+        Top = 8
+        Width = 133
+        DataField = 'KOD'
+        DataSource = dsMaster
+        MaxLength = 10
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[4]
+        Left = 55
+        Height = 23
+        Top = 37
+        Width = 437
+        DataField = 'NAZEV'
+        DataSource = dsMaster
+        MaxLength = 80
+        TabOrder = 1
+      end
+      object DBEdit3: TDBEdit[5]
+        Left = 55
+        Height = 23
+        Top = 66
+        Width = 45
+        DataField = 'PROCENT'
+        DataSource = dsMaster
+        TabOrder = 2
+      end
+    end
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 401
+    top = 91
+  end
+  inherited MainMenu: TMainMenu
+    left = 444
+    top = 56
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = nil
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = nil
+      end
+    end
+  end
+  inherited qrMaster0: TZQuery
+    Connection = DM.OracleConnection0
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMaster0AfterApplyUpdates
+    BeforeInsert = qrMaster0BeforeInsert
+    BeforeEdit = qrMaster0BeforeEdit
+    AfterPost = qrMaster0AfterPost
+  end
+end

@@ -1,0 +1,8 @@
+object frmUzamknoutZaloby: TfrmUzamknoutZaloby
+  Left = 337
+  Height = 300
+  Top = 175
+  Width = 400
+  Caption = 'frmUzamknoutZaloby'
+  LCLVersion = '0.9.28.2'
+end

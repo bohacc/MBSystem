@@ -1,0 +1,13 @@
+object frmDataModule: TfrmDataModule
+  Left = 324
+  Height = 300
+  Top = 154
+  Width = 400
+  Caption = 'frmDataModule'
+  ParentFont = False
+  LCLVersion = '0.9.26'
+  object OracleConnection1: TOracleConnection
+    left = 51
+    top = 46
+  end
+end

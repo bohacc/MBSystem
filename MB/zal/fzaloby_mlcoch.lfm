@@ -1,0 +1,3003 @@
+﻿inherited frmZaloby_Mlcoch: TfrmZaloby_Mlcoch
+  Left = 313
+  Height = 703
+  Top = 236
+  Width = 1065
+  ActiveControl = RadioGroup1
+  Caption = 'Žaloby Mlčoch'
+  ClientHeight = 683
+  ClientWidth = 1065
+  Constraints.MinHeight = 473
+  Constraints.MinWidth = 1065
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  inherited StatusBar1: TStatusBar
+    Top = 660
+    Width = 1065
+  end
+  inherited ToolBar1: TToolBar
+    Width = 1065
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = NavigatorBeforeAction
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = NavigatorClick
+    end
+    inherited ToolButton10: TToolButton
+      Hint = 'Vyhledá zadaný text'
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = ToolButton10Click
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 575
+    Top = 60
+    Width = 1065
+    ActivePage = tsZaznam
+    TabIndex = 1
+    OnPageChanged = pcMainPageChanged
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 547
+      ClientWidth = 1057
+      inherited DBGrid: TDBGrid
+        Height = 547
+        Width = 1057
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Číslo'
+            FieldName = 'CISLO'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Var. symb.'
+            Width = 150
+            FieldName = 'VAR_SYMB'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Jméno'
+            Width = 200
+            FieldName = 'JMENO_CP'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Datum a čas'
+            FieldName = 'DATUM_CAS'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Dlužná částka'
+            Width = 80
+            FieldName = 'DLUZNA_CASTKA'
+            DisplayFormat = '### ### ##0.00'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Pokuta'
+            Width = 80
+            FieldName = 'POKUTA'
+            DisplayFormat = '### ### ##0.00'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Jízdné'
+            Width = 80
+            FieldName = 'JIZDNE'
+            DisplayFormat = '### ### ##0.00'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Rodné číslo'
+            Width = 90
+            FieldName = 'RODNE_CISLO'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Město'
+            Width = 200
+            FieldName = 'MESTO'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Ulice'
+            Width = 200
+            FieldName = 'ULICE'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Číslo domu'
+            Width = 50
+            FieldName = 'CISLO_DOMU'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Psč'
+            Width = 50
+            FieldName = 'PSC'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Obvod'
+            Width = 50
+            FieldName = 'OBVOD'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Datum imp.'
+            Width = 80
+            FieldName = 'DATUM_IMPORTU'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Uzamčena'
+            Width = 50
+            FieldName = 'UZAMCENA'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Datum uzamč.'
+            Width = 80
+            FieldName = 'DATUM_UZAMCENI'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'GUID'
+            Width = 300
+            FieldName = 'REF_KOD'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Id'
+            Width = 80
+            FieldName = 'ID'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Splatnost'
+            FieldName = 'SPLATNOST'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Soud'
+            Width = 240
+            FieldName = 'SOUD'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Žaloba'
+            FieldName = 'ZALOBA'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Nárok'
+            FieldName = 'NAROK'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'VS soudu'
+            Width = 150
+            FieldName = 'VS_SOUDU'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'č.ú. soudu'
+            Width = 200
+            FieldName = 'CU_SOUDU'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Spis. značka'
+            Width = 150
+            FieldName = 'SPIS_ZNACKA'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Uhr. SOP'
+            FieldName = 'UHR_SOP'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Pl. rozkaz'
+            FieldName = 'PL_PRIKAZ'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Odvolání'
+            FieldName = 'ODVOLANI'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Jednání'
+            FieldName = 'JEDNANI'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Rozsudek'
+            FieldName = 'ROZSUDEK'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Pr. moc'
+            FieldName = 'PR_MOC'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Úhrada'
+            FieldName = 'UHRADA'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Datum úhrady'
+            FieldName = 'DATUM_UHRADY'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Návrh'
+            FieldName = 'NAVRH'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Příkaz'
+            FieldName = 'PRIKAZ'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Částka'
+            FieldName = 'CASTKA'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Skončeno'
+            FieldName = 'SKONCENO'
+          end        
+          item
+            PickList.Strings = (            )
+            Width = 60
+            FieldName = 'ZEMREL'
+          end        
+          item
+            PickList.Strings = (            )
+            Width = 120
+            FieldName = 'ZAPLATIL_PRED_PODANIM'
+          end        
+          item
+            PickList.Strings = (            )
+            Width = 110
+            FieldName = 'ZAPLATIL_CASTKA'
+          end>
+        DataSource = dsMaster
+        Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgMultiselect, dgPersistentMultiSelect]
+        OnDrawColumnCell = DBGridDrawColumnCell
+        OnDblClick = DBGridDblClick
+        OnEnter = DBGridEnter
+        OnPrepareCanvas = DBGridPrepareCanvas
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 547
+      ClientWidth = 1057
+      object PageControl1: TPageControl[0]
+        Left = 0
+        Height = 139
+        Top = 408
+        Width = 1057
+        ActivePage = tsZpravy
+        Align = alClient
+        TabIndex = 0
+        TabOrder = 0
+        object tsZpravy: TTabSheet
+          Caption = 'Zprávy'
+          ClientHeight = 111
+          ClientWidth = 1049
+          object ToolBar2: TToolBar
+            Left = 0
+            Height = 26
+            Top = 0
+            Width = 1049
+            Caption = 'ToolBar2'
+            TabOrder = 0
+            object btRefreshZpravy: TToolButton
+              Left = 24
+              Hint = 'Obnovení seznamu'
+              Top = 2
+              Caption = 'btRefreshZpravy'
+              ImageIndex = 7
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btRefreshZpravyClick
+            end
+            object ToolButton2: TToolButton
+              Left = 1
+              Top = 2
+              Caption = 'ToolButton2'
+            end
+            object ToolButton6: TToolButton
+              Left = 47
+              Top = 2
+              Width = 8
+              Caption = 'ToolButton6'
+              Style = tbsSeparator
+            end
+            object NavigatorZpravy: TDBNavigator
+              Left = 55
+              Height = 22
+              Top = 2
+              Width = 185
+              BevelOuter = bvNone
+              ClientHeight = 22
+              ClientWidth = 185
+              DataSource = dsZpravy
+              TabOrder = 0
+              VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+            end
+          end
+          object DBGrid1: TDBGrid
+            Left = 0
+            Height = 85
+            Top = 26
+            Width = 1049
+            Align = alClient
+            DataSource = dsZpravy
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+            ReadOnly = True
+            TabOrder = 1
+            TitleStyle = tsNative
+            OnDblClick = DBGrid1DblClick
+            OnPrepareCanvas = DBGrid1PrepareCanvas
+          end
+        end
+      end
+      object Panel2: TPanel[1]
+        Left = 0
+        Height = 408
+        Top = 0
+        Width = 1057
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 408
+        ClientWidth = 1057
+        TabOrder = 1
+        object Label1: TLabel
+          Left = 12
+          Height = 16
+          Top = 7
+          Width = 56
+          Caption = 'Var. symb.'
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 261
+          Height = 16
+          Top = 7
+          Width = 32
+          Caption = 'GUID'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label3: TLabel
+          Left = 607
+          Height = 16
+          Top = 7
+          Width = 12
+          Caption = 'ID'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 532
+          Height = 16
+          Top = 44
+          Width = 62
+          Caption = 'Uzamknuto'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 532
+          Height = 16
+          Top = 70
+          Width = 91
+          Caption = 'Datum uzamčení'
+          ParentColor = False
+        end
+        object Label7: TLabel
+          Left = 12
+          Height = 16
+          Top = 44
+          Width = 37
+          Caption = 'Datum'
+          ParentColor = False
+        end
+        object Label8: TLabel
+          Left = 12
+          Height = 16
+          Top = 70
+          Width = 36
+          Caption = 'Jméno'
+          ParentColor = False
+        end
+        object Label9: TLabel
+          Left = 12
+          Height = 16
+          Top = 119
+          Width = 27
+          Caption = 'Ulice'
+          ParentColor = False
+        end
+        object Label10: TLabel
+          Left = 12
+          Height = 16
+          Top = 94
+          Width = 47
+          Caption = 'Rodné č.'
+          ParentColor = False
+        end
+        object Label11: TLabel
+          Left = 260
+          Height = 16
+          Top = 44
+          Width = 73
+          Caption = 'Dlužná částka'
+          ParentColor = False
+        end
+        object Label12: TLabel
+          Left = 261
+          Height = 16
+          Top = 69
+          Width = 38
+          Caption = 'Pokuta'
+          ParentColor = False
+        end
+        object Label13: TLabel
+          Left = 261
+          Height = 16
+          Top = 94
+          Width = 33
+          Caption = 'Jízdné'
+          ParentColor = False
+        end
+        object Label14: TLabel
+          Left = 260
+          Height = 16
+          Top = 145
+          Width = 37
+          Caption = 'Obvod'
+          ParentColor = False
+        end
+        object Label15: TLabel
+          Left = 12
+          Height = 16
+          Top = 145
+          Width = 34
+          Caption = 'Město'
+          ParentColor = False
+        end
+        object Label16: TLabel
+          Left = 12
+          Height = 16
+          Top = 171
+          Width = 19
+          Caption = 'Psč'
+          ParentColor = False
+        end
+        object Label17: TLabel
+          Left = 261
+          Height = 16
+          Top = 120
+          Width = 22
+          Caption = 'Č.p.'
+          ParentColor = False
+        end
+        object DBEdit1: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 120
+          Width = 56
+          DataField = 'CISLO_DOMU'
+          DataSource = dsMaster
+          AutoSize = False
+          MaxLength = 80
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 67
+          Width = 80
+          DataField = 'DATUM_UZAMCENI'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 1
+        end
+        object DBEdit3: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 94
+          Width = 120
+          DataField = 'JIZDNE'
+          DataSource = dsMaster
+          AutoSize = False
+          TabOrder = 2
+        end
+        object DBEdit4: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 145
+          Width = 56
+          DataField = 'OBVOD'
+          DataSource = dsMaster
+          AutoSize = False
+          MaxLength = 120
+          TabOrder = 3
+        end
+        object DBEdit5: TDBEdit
+          Left = 308
+          Height = 23
+          Top = 5
+          Width = 288
+          DataField = 'REF_KOD'
+          DataSource = dsMaster
+          AutoSize = False
+          Font.Style = [fsBold]
+          MaxLength = 240
+          ParentFont = False
+          TabOrder = 4
+        end
+        object DBEdit6: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 42
+          Width = 80
+          DataField = 'UZAMCENA'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 5
+        end
+        object DBEdit7: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 40
+          Width = 176
+          DataField = 'DATUM_CAS'
+          DataSource = dsMaster
+          AutoSize = False
+          TabOrder = 6
+        end
+        object DBEdit8: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 42
+          Width = 120
+          DataField = 'DLUZNA_CASTKA'
+          DataSource = dsMaster
+          AutoSize = False
+          TabOrder = 7
+        end
+        object DBEdit9: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 67
+          Width = 176
+          DataField = 'JMENO_CP'
+          DataSource = dsMaster
+          AutoSize = False
+          MaxLength = 240
+          TabOrder = 8
+        end
+        object DBEdit10: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 68
+          Width = 120
+          DataField = 'POKUTA'
+          DataSource = dsMaster
+          AutoSize = False
+          TabOrder = 9
+        end
+        object DBEdit11: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 92
+          Width = 104
+          DataField = 'RODNE_CISLO'
+          DataSource = dsMaster
+          AutoSize = False
+          MaxLength = 80
+          TabOrder = 10
+        end
+        object DBEdit12: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 5
+          Width = 120
+          DataField = 'VAR_SYMB'
+          DataSource = dsMaster
+          AutoSize = False
+          Font.Style = [fsBold]
+          MaxLength = 360
+          ParentFont = False
+          TabOrder = 11
+        end
+        object DBEdit14: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 5
+          Width = 80
+          DataField = 'ID'
+          DataSource = dsMaster
+          ReadOnly = True
+          AutoSize = False
+          Color = clBtnFace
+          TabOrder = 12
+        end
+        object DBEdit15: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 143
+          Width = 176
+          DataField = 'MESTO'
+          DataSource = dsMaster
+          AutoSize = False
+          MaxLength = 200
+          TabOrder = 13
+        end
+        object DBEdit16: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 169
+          Width = 80
+          DataField = 'PSC'
+          DataSource = dsMaster
+          AutoSize = False
+          MaxLength = 40
+          TabOrder = 14
+        end
+        object DBEdit17: TDBEdit
+          Left = 76
+          Height = 23
+          Top = 119
+          Width = 176
+          DataField = 'ULICE'
+          DataSource = dsMaster
+          AutoSize = False
+          MaxLength = 120
+          TabOrder = 15
+        end
+        object GroupBox1: TGroupBox
+          Left = 716
+          Height = 142
+          Top = 0
+          Width = 335
+          Caption = 'Přijaté typy zpráv'
+          ClientHeight = 124
+          ClientWidth = 331
+          TabOrder = 16
+          object Label18: TLabel
+            Left = 3
+            Height = 16
+            Top = 10
+            Width = 150
+            Caption = 'Potvrzení o doručení podání'
+            ParentColor = False
+          end
+          object Label19: TLabel
+            Left = 3
+            Height = 16
+            Top = 36
+            Width = 269
+            Caption = 'Potvrzení o ověření elektronického podpisu podání'
+            ParentColor = False
+          end
+          object Label20: TLabel
+            Left = 3
+            Height = 16
+            Top = 64
+            Width = 150
+            Caption = 'Elektronický Platební Rozkaz'
+            ParentColor = False
+          end
+          object Label21: TLabel
+            Left = 3
+            Height = 16
+            Top = 92
+            Width = 218
+            Caption = 'Potvrzení o předání podání k zapracování'
+            ParentColor = False
+          end
+          object lbPotvrzeni: TLabel
+            Left = 289
+            Height = 16
+            Top = 10
+            Width = 40
+            AutoSize = False
+            Caption = 'lbPotvrzeni'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+          end
+          object lbOvereni: TLabel
+            Left = 289
+            Height = 16
+            Top = 36
+            Width = 40
+            AutoSize = False
+            Caption = 'lbOvereni'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+          end
+          object lbPlatba: TLabel
+            Left = 289
+            Height = 16
+            Top = 64
+            Width = 40
+            AutoSize = False
+            Caption = 'lbPlatba'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+          end
+          object lbZpracovani: TLabel
+            Left = 289
+            Height = 16
+            Top = 92
+            Width = 40
+            AutoSize = False
+            Caption = 'lbZpracovani'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+          end
+        end
+        object GroupBox2: TGroupBox
+          Left = 12
+          Height = 81
+          Top = 320
+          Width = 335
+          Caption = 'Vykonávací řízení'
+          ClientHeight = 63
+          ClientWidth = 331
+          ParentFont = False
+          TabOrder = 17
+          object DBEdit19: TDBEdit
+            Left = 70
+            Height = 23
+            Top = 3
+            Width = 80
+            DataField = 'NAVRH'
+            DataSource = dsMaster
+            TabOrder = 0
+          end
+          object DBEdit20: TDBEdit
+            Left = 227
+            Height = 23
+            Top = 3
+            Width = 80
+            DataField = 'CASTKA'
+            DataSource = dsMaster
+            TabOrder = 1
+          end
+          object DBEdit21: TDBEdit
+            Left = 70
+            Height = 23
+            Top = 32
+            Width = 80
+            DataField = 'PRIKAZ'
+            DataSource = dsMaster
+            TabOrder = 2
+          end
+          object DBEdit22: TDBEdit
+            Left = 227
+            Height = 23
+            Top = 30
+            Width = 80
+            DataField = 'SKONCENO'
+            DataSource = dsMaster
+            TabOrder = 3
+          end
+          object Label23: TLabel
+            Left = 6
+            Height = 16
+            Top = 3
+            Width = 33
+            Caption = 'Návrh'
+            ParentColor = False
+          end
+          object Label24: TLabel
+            Left = 6
+            Height = 16
+            Top = 29
+            Width = 32
+            Caption = 'Příkaz'
+            ParentColor = False
+          end
+          object Label25: TLabel
+            Left = 158
+            Height = 16
+            Top = 3
+            Width = 36
+            Caption = 'Částka'
+            ParentColor = False
+          end
+          object Label26: TLabel
+            Left = 158
+            Height = 16
+            Top = 30
+            Width = 53
+            Caption = 'Skončeno'
+            ParentColor = False
+          end
+        end
+        object GroupBox3: TGroupBox
+          Left = 11
+          Height = 120
+          Top = 200
+          Width = 1042
+          Caption = 'Údaje související s vedením sporu - nalézací řízení'
+          ClientHeight = 102
+          ClientWidth = 1038
+          TabOrder = 18
+          object DBEdit18: TDBEdit
+            Left = 92
+            Height = 23
+            Top = 72
+            Width = 80
+            DataField = 'ODVOLANI'
+            DataSource = dsMaster
+            TabOrder = 0
+          end
+          object DBEdit24: TDBEdit
+            Left = 867
+            Height = 23
+            Top = 24
+            Width = 80
+            DataField = 'UHR_SOP'
+            DataSource = dsMaster
+            TabOrder = 1
+          end
+          object DBEdit25: TDBEdit
+            Left = 693
+            Height = 23
+            Top = 24
+            Width = 170
+            DataField = 'SPIS_ZNACKA'
+            DataSource = dsMaster
+            MaxLength = 30
+            TabOrder = 2
+          end
+          object DBEdit26: TDBEdit
+            Left = 452
+            Height = 23
+            Top = 24
+            Width = 237
+            DataField = 'CU_SOUDU'
+            DataSource = dsMaster
+            MaxLength = 120
+            TabOrder = 3
+          end
+          object DBEdit27: TDBEdit
+            Left = 347
+            Height = 23
+            Top = 24
+            Width = 100
+            DataField = 'VS_SOUDU'
+            DataSource = dsMaster
+            MaxLength = 40
+            TabOrder = 4
+          end
+          object DBEdit29: TDBEdit
+            Left = 263
+            Height = 23
+            Top = 24
+            Width = 80
+            DataField = 'ZALOBA'
+            DataSource = dsMaster
+            TabOrder = 5
+          end
+          object DBEdit30: TDBEdit
+            Left = 6
+            Height = 23
+            Top = 24
+            Width = 251
+            DataField = 'SOUD'
+            DataSource = dsMaster
+            MaxLength = 400
+            TabOrder = 6
+          end
+          object DBEdit31: TDBEdit
+            Left = 347
+            Height = 23
+            Top = 72
+            Width = 80
+            DataField = 'PR_MOC'
+            DataSource = dsMaster
+            TabOrder = 7
+          end
+          object DBEdit32: TDBEdit
+            Left = 432
+            Height = 23
+            Top = 72
+            Width = 85
+            DataField = 'UHRADA'
+            DataSource = dsMaster
+            TabOrder = 8
+          end
+          object DBEdit33: TDBEdit
+            Left = 263
+            Height = 23
+            Top = 72
+            Width = 80
+            DataField = 'ROZSUDEK'
+            DataSource = dsMaster
+            TabOrder = 9
+          end
+          object DBEdit34: TDBEdit
+            Left = 177
+            Height = 23
+            Top = 72
+            Width = 80
+            DataField = 'JEDNANI'
+            DataSource = dsMaster
+            TabOrder = 10
+          end
+          object Label28: TLabel
+            Left = 6
+            Height = 16
+            Top = 5
+            Width = 28
+            Caption = 'Soud'
+            ParentColor = False
+          end
+          object Label29: TLabel
+            Left = 263
+            Height = 16
+            Top = 5
+            Width = 37
+            Caption = 'Žaloba'
+            ParentColor = False
+          end
+          object Label31: TLabel
+            Left = 347
+            Height = 16
+            Top = 5
+            Width = 50
+            Caption = 'VS soudu'
+            ParentColor = False
+          end
+          object Label32: TLabel
+            Left = 452
+            Height = 16
+            Top = 5
+            Width = 61
+            Caption = 'Č. ú. soudu'
+            ParentColor = False
+          end
+          object Label33: TLabel
+            Left = 693
+            Height = 16
+            Top = 5
+            Width = 43
+            Caption = 'Spis. zn.'
+            ParentColor = False
+          end
+          object Label34: TLabel
+            Left = 867
+            Height = 16
+            Top = 5
+            Width = 48
+            Caption = 'Úhr. SOP'
+            ParentColor = False
+          end
+          object Label36: TLabel
+            Left = 92
+            Height = 16
+            Top = 56
+            Width = 49
+            Caption = 'Odvolání'
+            ParentColor = False
+          end
+          object Label37: TLabel
+            Left = 177
+            Height = 16
+            Top = 56
+            Width = 41
+            Caption = 'Jednání'
+            ParentColor = False
+          end
+          object Label38: TLabel
+            Left = 263
+            Height = 16
+            Top = 56
+            Width = 51
+            Caption = 'Rozsudek'
+            ParentColor = False
+          end
+          object Label39: TLabel
+            Left = 347
+            Height = 16
+            Top = 56
+            Width = 42
+            Caption = 'Pr. moc'
+            ParentColor = False
+          end
+          object Label40: TLabel
+            Left = 432
+            Height = 16
+            Top = 56
+            Width = 39
+            Caption = 'Úhrada'
+            ParentColor = False
+          end
+          object Label6: TLabel
+            Left = 6
+            Height = 16
+            Top = 56
+            Width = 50
+            Caption = 'Pl. rozkaz'
+            ParentColor = False
+          end
+          object DBEdit13: TDBEdit
+            Left = 6
+            Height = 23
+            Top = 72
+            Width = 80
+            DataField = 'PL_PRIKAZ'
+            DataSource = dsMaster
+            TabOrder = 11
+          end
+          object Label41: TLabel
+            Left = 519
+            Height = 16
+            Top = 56
+            Width = 77
+            Caption = 'Datum úhrady'
+            ParentColor = False
+          end
+          object DBEdit36: TDBEdit
+            Left = 519
+            Height = 23
+            Top = 72
+            Width = 80
+            DataField = 'DATUM_UHRADY'
+            DataSource = dsMaster
+            TabOrder = 12
+          end
+        end
+        object DBEdit35: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 119
+          Width = 80
+          DataField = 'SPLATNOST'
+          DataSource = dsMaster
+          TabOrder = 19
+        end
+        object Label27: TLabel
+          Left = 532
+          Height = 16
+          Top = 119
+          Width = 50
+          Caption = 'Splatnost'
+          ParentColor = False
+        end
+        object DBEdit23: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 145
+          Width = 80
+          DataField = 'NAROK'
+          DataSource = dsMaster
+          TabOrder = 20
+        end
+        object Label30: TLabel
+          Left = 532
+          Height = 16
+          Top = 145
+          Width = 33
+          Caption = 'Nárok'
+          ParentColor = False
+        end
+        object DBEdit28: TDBEdit
+          Left = 212
+          Height = 23
+          Top = 5
+          Width = 43
+          DataField = 'CISLO'
+          DataSource = dsMaster
+          TabOrder = 21
+        end
+        object Label35: TLabel
+          Left = 199
+          Height = 16
+          Top = 10
+          Width = 10
+          Caption = 'č.'
+          ParentColor = False
+        end
+        object Label43: TLabel
+          Left = 262
+          Height = 16
+          Top = 170
+          Width = 38
+          Caption = 'Zemřel'
+          ParentColor = False
+        end
+        object DBEdit38: TDBEdit
+          Left = 340
+          Height = 23
+          Top = 168
+          Width = 80
+          DataField = 'ZEMREL'
+          DataSource = dsMaster
+          TabOrder = 22
+        end
+        object DBEdit39: TDBEdit
+          Left = 624
+          Height = 23
+          Top = 170
+          Width = 80
+          DataField = 'ZAPLATIL_PRED_PODANIM'
+          DataSource = dsMaster
+          TabOrder = 23
+        end
+        object Label44: TLabel
+          Left = 464
+          Height = 16
+          Top = 170
+          Width = 155
+          Caption = 'Zaplatil před podáním žaloby'
+          ParentColor = False
+        end
+        object Label45: TLabel
+          Left = 719
+          Height = 16
+          Top = 170
+          Width = 56
+          Caption = 'Zaplatil Kč'
+          ParentColor = False
+        end
+        object DBEdit40: TDBEdit
+          Left = 780
+          Height = 23
+          Top = 170
+          Width = 120
+          DataField = 'ZAPLATIL_CASTKA'
+          DataSource = dsMaster
+          TabOrder = 24
+        end
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 635
+    Width = 1065
+    ClientWidth = 1065
+    inherited btStorno: TButton
+      Left = 773
+    end
+    inherited btOK: TButton
+      Left = 693
+      Width = 75
+    end
+  end
+  object Panel1: TPanel[4]
+    Left = 0
+    Height = 34
+    Top = 26
+    Width = 1065
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 34
+    ClientWidth = 1065
+    TabOrder = 4
+    OnClick = Panel1Click
+    object RadioGroup1: TRadioGroup
+      Left = 4
+      Height = 33
+      Top = -2
+      Width = 260
+      AutoFill = True
+      Caption = 'Zobrazit'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 4
+      ClientHeight = 15
+      ClientWidth = 256
+      Columns = 4
+      ItemIndex = 2
+      Items.Strings = (
+        'Všechny'
+        'Uzamknuté'
+        'Neuzamknuté'
+      )
+      OnClick = RadioGroup1Click
+      ParentFont = False
+      TabOrder = 0
+    end
+    object btEditace: TButton
+      Left = 568
+      Height = 25
+      Top = 5
+      Width = 112
+      Caption = 'Otevřít pro editaci'
+      OnClick = btEditaceClick
+      TabOrder = 1
+    end
+    object btPrijmoutPostu: TButton
+      Left = 456
+      Height = 25
+      Top = 5
+      Width = 104
+      Caption = 'Přijmout poštu'
+      OnClick = btPrijmoutPostuClick
+      TabOrder = 2
+    end
+    object Label22: TLabel
+      Left = 267
+      Height = 16
+      Top = 13
+      Width = 71
+      Caption = 'Datum dávky'
+      ParentColor = False
+      Visible = False
+    end
+    object cbDatumy: TComboBox
+      Left = 344
+      Height = 23
+      Top = 6
+      Width = 80
+      ItemHeight = 15
+      OnChange = cbDatumyChange
+      Style = csDropDownList
+      TabOrder = 3
+      Visible = False
+    end
+  end
+  inherited MainMenu: TMainMenu[5]
+    left = 392
+    top = 104
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = miZavritClick
+      end
+    end
+    object miZaloby: TMenuItem[1]
+      Caption = 'Žaloby'
+      object miImportZalob: TMenuItem
+        Caption = 'Import žalob CSV'
+        Visible = False
+        OnClick = miImportZalobClick
+      end
+      object miVytvoritPrikaz: TMenuItem
+        Caption = 'Vytvořit platební příkaz'
+        OnClick = miVytvoritPrikazClick
+      end
+      object miUzamknout: TMenuItem
+        Caption = 'Uzamknout'
+        OnClick = miUzamknoutClick
+      end
+      object miUzavritVse: TMenuItem
+        Caption = 'Uzamknout vše'
+        OnClick = miUzavritVseClick
+      end
+      object miUzamknoutDatum: TMenuItem
+        Caption = 'Uzamknout datum'
+        OnClick = miUzamknoutDatumClick
+      end
+      object miOdemknout: TMenuItem
+        Caption = 'Odemknout'
+        OnClick = miOdemknoutClick
+      end
+      object miOdemknoutVse: TMenuItem
+        Caption = 'Odemknout vše'
+        OnClick = miOdemknoutVseClick
+      end
+      object miOdemknoutDatum: TMenuItem
+        Caption = 'Odemknout datum'
+        OnClick = miOdemknoutDatumClick
+      end
+      object miPrijmoutPostu: TMenuItem
+        Caption = 'Přijmout poštu'
+        OnClick = miPrijmoutPostuClick
+      end
+      object miHistorie: TMenuItem
+        Caption = 'Historie importů'
+        Visible = False
+        OnClick = miHistorieClick
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+      end
+      object miArchivovat: TMenuItem
+        Caption = 'Přesunout uzamčené do archivu'
+        OnClick = miArchivovatClick
+      end
+      object miPresunoutZArchivu: TMenuItem
+        Caption = 'Přesunout žaloby z archivu'
+        OnClick = miPresunoutZArchivuClick
+      end
+    end
+    inherited miUpravy: TMenuItem[2]
+      inherited miNovyZaznam: TMenuItem
+        Enabled = False
+        Visible = False
+        OnClick = miNovyZaznamClick
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = miUpravitZaznamClick
+      end
+      inherited miSmazatZaznam: TMenuItem
+        Enabled = False
+        Visible = False
+        OnClick = miSmazatZaznamClick
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = miVychoziDotazClick
+      end
+      object miDoplnitUdaje: TMenuItem[4]
+        Caption = 'Doplnit údaje z přijatých zpráv'
+        OnClick = miDoplnitUdajeClick
+      end
+      object miDoplnitDatumPlatby: TMenuItem[5]
+        Caption = 'Doplnit datum platby'
+        OnClick = miDoplnitDatumPlatbyClick
+      end
+      object miVymazatDatumPlatby: TMenuItem[6]
+        Caption = 'Vymazat datum platby'
+        OnClick = miVymazatDatumPlatbyClick
+      end
+      object miKontrolaPrijmu: TMenuItem[7]
+        Caption = 'Resetovat kontrolu příjmu zpráv na síti'
+      end
+      inherited miZrusOznaceni: TMenuItem[8]
+        OnClick = miZrusOznaceniClick
+      end
+    end
+    object miCiselniky: TMenuItem[3]
+      Caption = 'Číselníky'
+      object miTypyZprav: TMenuItem
+        Caption = 'Typy zpráv'
+        OnClick = miTypyZpravClick
+      end
+      object miArchivZalob: TMenuItem
+        Caption = 'Archiv žalob'
+        OnClick = miArchivZalobClick
+      end
+    end
+    object miSestavy: TMenuItem[4]
+      Caption = 'Sestavy'
+      object miSmlouva: TMenuItem
+        Caption = 'Oznámení postupitele o postoupení pohledávky'
+        OnClick = miSmlouvaClick
+      end
+      object miPodaciList: TMenuItem
+        Caption = 'Oznámení postupitele o postoupení pohledávky - podací list'
+        OnClick = miPodaciListClick
+      end
+      object miPodaciList2: TMenuItem
+        Caption = 'Oznámení postupitele o postoupení pohledávky - podací list od 1.9.2010'
+        OnClick = miPodaciList2Click
+      end
+      object miPodaciList3: TMenuItem
+        Caption = 'Oznámení postupitele o postoupení pohledávky - podací list od 1.9.2010 - FENICIA'
+        OnClick = miPodaciList3Click
+      end
+      object miPredavaciProtokol: TMenuItem
+        Caption = 'Oznámení postupitele o postoupení pohledávky - předávací protokol'
+        OnClick = miPredavaciProtokolClick
+      end
+      object miProPrikaz: TMenuItem
+        Caption = 'K úhradě'
+        OnClick = miProPrikazClick
+      end
+      object miZaplacene: TMenuItem
+        Caption = 'Zaplacené'
+        OnClick = miZaplaceneClick
+      end
+      object miBezGuidu: TMenuItem
+        Caption = 'Bez GUID kódu'
+        OnClick = miBezGuiduClick
+      end
+      object miBezUdajuPlatby: TMenuItem
+        Caption = 'Bez údajů pro platbu'
+        OnClick = miBezUdajuPlatbyClick
+      end
+    end
+    object miExport: TMenuItem[5]
+      Caption = 'Export'
+      object miExportPodaciList: TMenuItem
+        Caption = 'Podací list'
+        OnClick = miExportPodaciListClick
+      end
+      object miExportPredavaciProtokol: TMenuItem
+        Caption = 'Předávací protokol'
+        OnClick = miExportPredavaciProtokolClick
+      end
+      object miPrubeh: TMenuItem
+        Caption = 'Průběh dávky'
+        OnClick = miPrubehClick
+      end
+    end
+  end
+  inherited qrMaster: TZQuery[6]
+    Connection = DM.OracleConnection
+    AfterOpen = qrMasterAfterOpen
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    BeforePost = qrMasterBeforePost
+    AfterPost = qrMasterAfterPost
+    SQL.Strings = (
+      'SELECT '
+      '  * '
+      'FROM '
+      '  ZALOBY_MLCOCH'
+      'WHERE'
+      '  ('
+      '  UPPER(VAR_SYMB) LIKE ''%''||:HLEDAT_VAR_SYMB||''%'''
+      '  OR UPPER(JMENO_CP) LIKE ''%''||:HLEDAT_JMENO_CP||''%'''
+      '  OR UPPER(DATUM_CAS) LIKE ''%''||:HLEDAT_DATUM_CAS||''%'''
+      '  OR UPPER(DLUZNA_CASTKA) LIKE ''%''||:HLEDAT_DLUZNA_CASTKA||''%'''
+      '  OR UPPER(JIZDNE) LIKE ''%''||:HLEDAT_JIZDNE||''%'''
+      '  OR UPPER(POKUTA) LIKE ''%''||:HLEDAT_POKUTA||''%'''
+      '  OR UPPER(RODNE_CISLO) LIKE ''%''||:HLEDAT_RODNE_CISLO||''%'''
+      '  OR UPPER(ULICE) LIKE ''%''||:HLEDAT_ULICE||''%'''
+      '  OR UPPER(CISLO_DOMU) LIKE ''%''||:HLEDAT_CISLO_DOMU||''%'''
+      '  OR UPPER(MESTO) LIKE ''%''||:HLEDAT_MESTO||''%'''
+      '  OR UPPER(OBVOD) LIKE ''%''||:HLEDAT_OBVOD||''%'''
+      '  OR UPPER(PSC) LIKE ''%''||:HLEDAT_PSC||''%'''
+      '  OR TO_CHAR(DATUM_IMPORTU,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_DATUM_IMPORTU||''%'''
+      '  OR TO_CHAR(SPLATNOST,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_SPLATNOST||''%'''
+      '  OR UPPER(SOUD) LIKE ''%''||:HLEDAT_SOUD||''%'''
+      '  OR TO_CHAR(ZALOBA,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_ZALOBA||''%'''
+      '  OR TO_CHAR(NAROK) LIKE ''%''||:HLEDAT_NAROK||''%'''
+      '  OR VS_SOUDU LIKE ''%''||:HLEDAT_VS_SOUDU||''%'''
+      '  OR CU_SOUDU LIKE ''%''||:HLEDAT_CU_SOUDU||''%'''
+      '  OR SPIS_ZNACKA LIKE ''%''||:HLEDAT_SPIS_ZNACKA||''%'''
+      '  OR TO_CHAR(UHR_SOP,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_UHR_SOP||''%'''
+      '  OR TO_CHAR(PL_PRIKAZ,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_PL_PRIKAZ||''%'''
+      '  OR TO_CHAR(ODVOLANI,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_ODVOLANI||''%'''
+      '  OR TO_CHAR(JEDNANI,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_JEDNANI||''%'''
+      '  OR TO_CHAR(ROZSUDEK,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_ROZSUDEK||''%'''
+      '  OR TO_CHAR(PR_MOC,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_PR_MOC||''%'''
+      '  OR TO_CHAR(UHRADA) LIKE ''%''||:HLEDAT_UHRADA||''%'''
+      '  OR TO_CHAR(NAVRH,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_NAVRH||''%'''
+      '  OR TO_CHAR(PRIKAZ,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_PRIKAZ||''%'''
+      '  OR TO_CHAR(CASTKA) LIKE ''%''||:HLEDAT_CASTKA||''%'''
+      '  OR TO_CHAR(SKONCENO,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_SKONCENO||''%'''
+      '  )'
+      '  AND (DATUM_IMPORTU=:DATUM_IMPORTU OR :DATUM_IMPORTU IS NULL)'
+      '  AND (NVL(UZAMCENA,0)=NVL(:UZAMCENA,0) OR NVL(:UZAMCENA,0)=2)'
+      'ORDER BY '
+      '  VAR_SYMB'
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_VAR_SYMB'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_JMENO_CP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_DATUM_CAS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_DLUZNA_CASTKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_JIZDNE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_POKUTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_RODNE_CISLO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ULICE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_CISLO_DOMU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_MESTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_OBVOD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PSC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_DATUM_IMPORTU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SPLATNOST'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SOUD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ZALOBA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_NAROK'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_VS_SOUDU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_CU_SOUDU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SPIS_ZNACKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_UHR_SOP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PL_PRIKAZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ODVOLANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_JEDNANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ROZSUDEK'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PR_MOC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_UHRADA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_NAVRH'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PRIKAZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_CASTKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SKONCENO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_IMPORTU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UZAMCENA'
+        ParamType = ptUnknown
+      end>
+    left = 256
+    top = 24
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_VAR_SYMB'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_JMENO_CP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_DATUM_CAS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_DLUZNA_CASTKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_JIZDNE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_POKUTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_RODNE_CISLO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ULICE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_CISLO_DOMU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_MESTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_OBVOD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PSC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_DATUM_IMPORTU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SPLATNOST'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SOUD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ZALOBA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_NAROK'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_VS_SOUDU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_CU_SOUDU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SPIS_ZNACKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_UHR_SOP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PL_PRIKAZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ODVOLANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_JEDNANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_ROZSUDEK'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PR_MOC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_UHRADA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_NAVRH'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_PRIKAZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_CASTKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'HLEDAT_SKONCENO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_IMPORTU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UZAMCENA'
+        ParamType = ptUnknown
+      end>
+    object ZQuery1ID: TLongintField[0]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQuery1VAR_SYMB: TStringField[1]
+      DisplayWidth = 360
+      FieldKind = fkData
+      FieldName = 'VAR_SYMB'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 360
+    end
+    object ZQuery1JMENO_CP: TStringField[2]
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'JMENO_CP'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ZQuery1DATUM_CAS: TDateField[3]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_CAS'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1DLUZNA_CASTKA: TFloatField[4]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DLUZNA_CASTKA'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ##0.00'
+      EditFormat = '#########.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1JIZDNE: TFloatField[5]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'JIZDNE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ##0.00'
+      EditFormat = '#########.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1POKUTA: TFloatField[6]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'POKUTA'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ##0.00'
+      EditFormat = '#########.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object ZQuery1RODNE_CISLO: TStringField[7]
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'RODNE_CISLO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ZQuery1ULICE: TStringField[8]
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'ULICE'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object ZQuery1CISLO_DOMU: TStringField[9]
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'CISLO_DOMU'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 80
+    end
+    object ZQuery1MESTO: TStringField[10]
+      DisplayWidth = 200
+      FieldKind = fkData
+      FieldName = 'MESTO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 200
+    end
+    object ZQuery1OBVOD: TStringField[11]
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'OBVOD'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object ZQuery1PSC: TStringField[12]
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'PSC'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ZQuery1REF_KOD: TStringField[13]
+      DisplayWidth = 240
+      FieldKind = fkData
+      FieldName = 'REF_KOD'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object ZQuery1UZAMCENA: TSmallintField[14]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UZAMCENA'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ZQuery1DATUM_IMPORTU: TDateField[15]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_IMPORTU'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1DATUM_UZAMCENI: TDateField[16]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_UZAMCENI'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1PL_PRIKAZ: TDateField[17]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PL_PRIKAZ'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1UHRADA: TFloatField[18]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UHRADA'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ##0 Kč'
+      EditFormat = '#########'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 9
+    end
+    object ZQuery1SPLATNOST: TDateField[19]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'SPLATNOST'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1SOUD: TStringField[20]
+      DisplayWidth = 400
+      FieldKind = fkData
+      FieldName = 'SOUD'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 400
+    end
+    object ZQuery1ZALOBA: TDateField[21]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ZALOBA'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1NAROK: TFloatField[22]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'NAROK'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ##0.00'
+      EditFormat = '#########.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 9
+    end
+    object ZQuery1VS_SOUDU: TStringField[23]
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'VS_SOUDU'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+    object ZQuery1CU_SOUDU: TStringField[24]
+      DisplayWidth = 120
+      FieldKind = fkData
+      FieldName = 'CU_SOUDU'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object ZQuery1SPIS_ZNACKA: TStringField[25]
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'SPIS_ZNACKA'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object ZQuery1UHR_SOP: TDateField[26]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UHR_SOP'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1ODVOLANI: TDateField[27]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ODVOLANI'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1JEDNANI: TDateField[28]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'JEDNANI'
+      Index = 28
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1ROZSUDEK: TDateField[29]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ROZSUDEK'
+      Index = 29
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1PR_MOC: TDateField[30]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PR_MOC'
+      Index = 30
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1NAVRH: TDateField[31]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'NAVRH'
+      Index = 31
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1PRIKAZ: TDateField[32]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PRIKAZ'
+      Index = 32
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object ZQuery1CASTKA: TFloatField[33]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CASTKA'
+      Index = 33
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ##0.00'
+      EditFormat = '#########.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 9
+    end
+    object ZQuery1SKONCENO: TDateField[34]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'SKONCENO'
+      Index = 34
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object qrMasterCISLO: TLongintField[35]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CISLO'
+      Index = 35
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterDATUM_UHRADY: TDateField[36]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_UHRADY'
+      Index = 36
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object qrMasterZEMREL: TDateField[37]
+      DisplayLabel = 'Zemřel'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ZEMREL'
+      Index = 37
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object qrMasterZAPLATIL_PRED_PODANIM: TDateField[38]
+      DisplayLabel = 'Zaplatil před pod.'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ZAPLATIL_PRED_PODANIM'
+      Index = 38
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'DD.MM.YYYY'
+    end
+    object qrMasterZAPLATIL_CASTKA: TFloatField[39]
+      DisplayLabel = 'Zaplatil částka'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ZAPLATIL_CASTKA'
+      Index = 39
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '### ### ##0.00'
+      EditFormat = '#########.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+  end
+  inherited UpdateMaster: TZUpdateSQL[7]
+    DeleteSQL.Strings = (
+      'DELETE FROM ZALOBY_MLCOCH WHERE ID=:OLD_ID'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO ZALOBY_MLCOCH '
+      'VALUES (:ID, :VAR_SYMB, :JMENO_CP, :DATUM_CAS, :DLUZNA_CASTKA, :JIZDNE, :POKUTA, :RODNE_CISLO, :ULICE, :CISLO_DOMU, :MESTO, :OBVOD, :PSC,'
+      ':REF_KOD, :UZAMCENA, :DATUM_IMPORTU, :DATUM_UZAMCENI, :PL_PRIKAZ, :UHRADA, :SPLATNOST, :SOUD, :ZALOBA, :NAROK, :VS_SOUDU, :CU_SOUDU,'
+      ':SPIS_ZNACKA, :UHR_SOP, :ODVOLANI, :JEDNANI, :ROZSUDEK, :PR_MOC, :NAVRH, :PRIKAZ, :CASTKA, :SKONCENO,:CISLO,:DATUM_UHRADY,:ZEMREL,'
+      ':ZAPLATIL_PRED_PODANIM,:ZAPLATIL_CASTKA)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE ZALOBY_MLCOCH'
+      'SET '
+      'JMENO_CP =:JMENO_CP,'
+      'DATUM_CAS =:DATUM_CAS,'
+      'VAR_SYMB =:VAR_SYMB,'
+      'DLUZNA_CASTKA =:DLUZNA_CASTKA,'
+      'JIZDNE =:JIZDNE,'
+      'POKUTA =:POKUTA,'
+      'RODNE_CISLO =:RODNE_CISLO,'
+      'ULICE =:ULICE,'
+      'CISLO_DOMU =:CISLO_DOMU,'
+      'MESTO =:MESTO,'
+      'OBVOD =:OBVOD,'
+      'PSC =:PSC,'
+      'REF_KOD = :REF_KOD,'
+      'SPLATNOST =:SPLATNOST,'
+      'SOUD =:SOUD,'
+      'ZALOBA =:ZALOBA,'
+      'NAROK = :NAROK,'
+      'VS_SOUDU =:VS_SOUDU,'
+      'CU_SOUDU =:CU_SOUDU,'
+      'SPIS_ZNACKA =:SPIS_ZNACKA,'
+      'UHR_SOP =:UHR_SOP,'
+      'PL_PRIKAZ =:PL_PRIKAZ,'
+      'ODVOLANI =:ODVOLANI,'
+      'JEDNANI =:JEDNANI,'
+      'ROZSUDEK =:ROZSUDEK,'
+      'PR_MOC =:PR_MOC,'
+      'UHRADA =:UHRADA,'
+      'NAVRH =:NAVRH,'
+      'PRIKAZ =:PRIKAZ,'
+      'CASTKA =:CASTKA,'
+      'SKONCENO =:SKONCENO,'
+      'CISLO =:CISLO,'
+      'DATUM_UHRADY =:DATUM_UHRADY,'
+      'ZEMREL = :ZEMREL,'
+      'ZAPLATIL_PRED_PODANIM = :ZAPLATIL_PRED_PODANIM,'
+      'ZAPLATIL_CASTKA = :ZAPLATIL_CASTKA'
+      'WHERE ID = :OLD_ID'
+    )
+    RefreshSQL.Strings = (
+      ''
+    )
+    BeforeInsertSQL = UpdateMasterBeforeInsertSQL
+    BeforeInsertSQLStatement = UpdateMasterBeforeInsertSQLStatement
+    left = 184
+    top = 16
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'JMENO_CP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_CAS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'VAR_SYMB'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DLUZNA_CASTKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'JIZDNE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'POKUTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'RODNE_CISLO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ULICE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CISLO_DOMU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'MESTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OBVOD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PSC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'REF_KOD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SPLATNOST'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SOUD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZALOBA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NAROK'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'VS_SOUDU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CU_SOUDU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SPIS_ZNACKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UHR_SOP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PL_PRIKAZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ODVOLANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'JEDNANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ROZSUDEK'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PR_MOC'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UHRADA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NAVRH'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PRIKAZ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CASTKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SKONCENO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CISLO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_UHRADY'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZEMREL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZAPLATIL_PRED_PODANIM'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZAPLATIL_CASTKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UZAMCENA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_IMPORTU'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_UZAMCENI'
+        ParamType = ptUnknown
+      end>
+  end
+  inherited dsMaster: TDatasource[8]
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 112
+    top = 24
+  end
+  object OpenDialog: TOpenDialog[9]
+    Filter = 'Soubory typu CSV (*.csv)|*.csv|Všechny soubory (*.*)|*.*'
+    left = 360
+    top = 32
+  end
+  object dsZpravy: TDatasource[10]
+    DataSet = qrZpravy
+    left = 432
+    top = 504
+  end
+  object qrImportZprav: TZQuery[11]
+    Connection = DM.OracleConnection
+    UpdateObject = UpdateImportZprav
+    SQL.Strings = (
+      'SELECT * FROM ZALOBY_ZPRAVY'
+    )
+    Params = <>
+    left = 848
+  end
+  object UpdateImportZprav: TZUpdateSQL[12]
+    InsertSQL.Strings = (
+      ' INSERT INTO'
+      'ZALOBY_ZPRAVY(REF_KOD,DATUM_STAZENI,ID,TYP_ZPRAVY,PREDMET,DATUM_ODESLANI,ODESILATEL,ID_ZPRAVY,UCET,VAR_SYMB,'
+      '  PODANI_DORUCENE_DATUM,BEZNE_CISLO,PODANI_OVERENO_DATUM,ZASLANYCH_PRILOH,ZPUSOB_PODANI,'
+      '  PODPIS_CERTIF_PLATNY,SOUD,TYP_FORMULARE,SPISOVA_ZNACKA,KE_ZPRACOVANI,TELO)'
+      'VALUES(:REF_KOD,:DATUM_STAZENI,:ID,:TYP_ZPRAVY,:PREDMET,:DATUM_ODESLANI,:ODESILATEL,:ID_ZPRAVY,:UCET,:VAR_SYMB,'
+      ':PODANI_DORUCENE_DATUM,:BEZNE_CISLO,:PODANI_OVERENO_DATUM,:ZASLANYCH_PRILOH,:ZPUSOB_PODANI,'
+      ':PODPIS_CERTIF_PLATNY,:SOUD,:TYP_FORMULARE,:SPISOVA_ZNACKA,:KE_ZPRACOVANI,:TELO)'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 712
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'REF_KOD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_STAZENI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TYP_ZPRAVY'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PREDMET'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATUM_ODESLANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ODESILATEL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ID_ZPRAVY'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UCET'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'VAR_SYMB'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PODANI_DORUCENE_DATUM'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'BEZNE_CISLO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PODANI_OVERENO_DATUM'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZASLANYCH_PRILOH'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ZPUSOB_PODANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PODPIS_CERTIF_PLATNY'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SOUD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TYP_FORMULARE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SPISOVA_ZNACKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'KE_ZPRACOVANI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TELO'
+        ParamType = ptUnknown
+      end>
+  end
+  object qrZpravy: TZQuery[13]
+    Connection = DM.OracleConnection
+    SortedFields = 'TYP_ZPRAVY'
+    UpdateObject = UpdateZpravy
+    AfterApplyUpdates = qrZpravyAfterApplyUpdates
+    AfterPost = qrZpravyAfterPost
+    SQL.Strings = (
+      'SELECT '
+      'REF_KOD,DATUM_STAZENI,ID,TYP_ZPRAVY,PREDMET,DATUM_ODESLANI,ODESILATEL,ID_ZPRAVY,UCET,VAR_SYMB,'
+      'PODANI_DORUCENE_DATUM,BEZNE_CISLO,PODANI_OVERENO_DATUM,ZASLANYCH_PRILOH,ZPUSOB_PODANI,'
+      'PODPIS_CERTIF_PLATNY,SOUD,TYP_FORMULARE,SPISOVA_ZNACKA,KE_ZPRACOVANI '
+      'FROM '
+      'ZALOBY_ZPRAVY'
+      'WHERE '
+      'REF_KOD = :REF_KOD'
+    )
+    Params = <    
+      item
+        DataType = ftString
+        Name = 'REF_KOD'
+        ParamType = ptUnknown
+      end>
+    DataSource = dsMaster
+    IndexFieldNames = 'TYP_ZPRAVY Asc'
+    left = 256
+    top = 504
+    ParamData = <    
+      item
+        DataType = ftString
+        Name = 'REF_KOD'
+        ParamType = ptUnknown
+      end>
+    object qrZpravyPREDMET: TStringField
+      DisplayLabel = 'Předmět'
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'PREDMET'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrZpravyVAR_SYMB: TStringField
+      DisplayLabel = 'Var. symb.'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'VAR_SYMB'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyDATUM_STAZENI: TDateField
+      DisplayLabel = 'Datum stažení'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'DATUM_STAZENI'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravyTYP_ZPRAVY: TStringField
+      DisplayLabel = 'Typ zprávy'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'TYP_ZPRAVY'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyDATUM_ODESLANI: TDateField
+      DisplayLabel = 'Datum odeslání'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM_ODESLANI'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravyUCET: TStringField
+      DisplayLabel = 'Účet'
+      DisplayWidth = 25
+      FieldKind = fkData
+      FieldName = 'UCET'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyPODPIS_CERTIF_PLATNY: TStringField
+      DisplayLabel = 'Podpis a certifikát'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PODPIS_CERTIF_PLATNY'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyPODANI_DORUCENE_DATUM: TStringField
+      DisplayLabel = 'Podání doručené'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'PODANI_DORUCENE_DATUM'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyPODANI_OVERENO_DATUM: TStringField
+      DisplayLabel = 'Podání ověřeno'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'PODANI_OVERENO_DATUM'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyKE_ZPRACOVANI: TStringField
+      DisplayLabel = 'Ke zpracování'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'KE_ZPRACOVANI'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyZASLANYCH_PRILOH: TSmallintField
+      DisplayLabel = 'Zaslaných příloh'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'ZASLANYCH_PRILOH'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravySOUD: TStringField
+      DisplayLabel = 'Soud'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'SOUD'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object qrZpravyBEZNE_CISLO: TStringField
+      DisplayLabel = 'Běžné číslo'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'BEZNE_CISLO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravySPISOVA_ZNACKA: TStringField
+      DisplayLabel = 'Spisová značka'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'SPISOVA_ZNACKA'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyZPUSOB_PODANI: TStringField
+      DisplayLabel = 'Způsob podání'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'ZPUSOB_PODANI'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyTYP_FORMULARE: TStringField
+      DisplayLabel = 'Typ formuláře'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'TYP_FORMULARE'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrZpravyODESILATEL: TStringField
+      DisplayLabel = 'Odesílatel'
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'ODESILATEL'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+    object qrZpravyID_ZPRAVY: TStringField
+      DisplayLabel = 'Id zprávy'
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'ID_ZPRAVY'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrZpravyID: TLongintField
+      DisplayLabel = 'Id'
+      DisplayWidth = 5
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrZpravyREF_KOD: TStringField
+      DisplayLabel = 'GUID'
+      DisplayWidth = 25
+      FieldKind = fkData
+      FieldName = 'REF_KOD'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 240
+    end
+  end
+  object UpdateZpravy: TZUpdateSQL[14]
+    UseSequenceFieldForRefreshSQL = False
+    left = 336
+    top = 504
+  end
+  object qrDatumy: TZReadOnlyQuery[15]
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT DISTINCT(DATUM_IMPORTU) AS DATUM FROM ZALOBY WHERE NVL(UZAMCENA,0)=0 ORDER BY DATUM_IMPORTU'
+    )
+    Params = <>
+    left = 472
+    object qrDatumyDATUM: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATUM'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+    end
+  end
+end

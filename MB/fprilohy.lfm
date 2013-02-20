@@ -1,0 +1,144 @@
+﻿inherited frmPrilohy: TfrmPrilohy
+  Height = 287
+  Caption = 'Přílohy'
+  ClientHeight = 267
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 244
+  end
+  inherited ToolBar1: TToolBar
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      ImageIndex = 0
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = nil
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = nil
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 193
+    ActivePage = tsSeznam
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 165
+      inherited DBGrid: TDBGrid
+        Height = 165
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 165
+      object Label1: TLabel[0]
+        Left = 12
+        Height = 16
+        Top = 10
+        Width = 11
+        Caption = 'Id'
+        ParentColor = False
+      end
+      object Label2: TLabel[1]
+        Left = 12
+        Height = 16
+        Top = 39
+        Width = 33
+        Caption = 'Název'
+        ParentColor = False
+      end
+      object Label3: TLabel[2]
+        Left = 12
+        Height = 16
+        Top = 69
+        Width = 30
+        Caption = 'Popis'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[3]
+        Left = 68
+        Height = 23
+        Top = 10
+        Width = 80
+        DataField = 'ID'
+        DataSource = dsMaster
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[4]
+        Left = 68
+        Height = 23
+        Top = 39
+        Width = 424
+        DataField = 'NAZEV'
+        DataSource = dsMaster
+        MaxLength = 80
+        TabOrder = 1
+      end
+      object DBMemo1: TDBMemo[5]
+        Left = 68
+        Height = 90
+        Top = 69
+        Width = 424
+        DataField = 'POPIS'
+        DataSource = dsMaster
+        Lines.Strings = (
+          'DBMemo1'
+        )
+        TabOrder = 2
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 219
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 425
+    top = 75
+  end
+  inherited MainMenu: TMainMenu
+    left = 468
+    top = 40
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = nil
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = nil
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = nil
+      end
+    end
+  end
+  inherited qrMaster0: TZQuery
+    Connection = DM.OracleConnection0
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMaster0AfterApplyUpdates
+    BeforeInsert = qrMaster0BeforeInsert
+    BeforeEdit = qrMaster0BeforeEdit
+    AfterPost = qrMaster0AfterPost
+    SQL.Strings = (
+      'SELECT * FROM PRILOHY'
+    )
+  end
+end

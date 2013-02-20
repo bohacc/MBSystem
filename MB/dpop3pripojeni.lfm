@@ -1,0 +1,54 @@
+object frmpop3pripojeni: Tfrmpop3pripojeni
+  Left = 388
+  Height = 131
+  Top = 175
+  Width = 275
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Připojení k poštovnímu serveru'
+  ClientHeight = 131
+  ClientWidth = 275
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 16
+    Height = 16
+    Top = 21
+    Width = 63
+    Caption = 'Uživ. jméno'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 17
+    Height = 16
+    Top = 53
+    Width = 31
+    Caption = 'Heslo'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 90
+    Height = 23
+    Top = 16
+    Width = 168
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 90
+    Height = 23
+    Top = 48
+    Width = 168
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 99
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Připojit'
+    ModalResult = 1
+    TabOrder = 2
+  end
+end

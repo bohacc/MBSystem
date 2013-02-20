@@ -1,0 +1,37 @@
+object frmSOznameniPostupiteleOPostoupeniPohledavkyOzn: TfrmSOznameniPostupiteleOPostoupeniPohledavkyOzn
+  Left = 337
+  Height = 181
+  Top = 175
+  Width = 430
+  Caption = 'frmSOznameniPostupiteleOPostoupeniPohledavkyOzn'
+  LCLVersion = '0.9.28.2'
+  object frReport1: TfrReport
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 61
+    top = 56
+    ReportForm = {
+      18000000
+    }
+  end
+  object qrMaster: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    AutoCalcFields = False
+    Database = DM.OracleConnection
+    Transaction = DM.SQLTransaction
+    ReadOnly = False
+    SQL.Strings = (
+      'SELECT *'
+      'FROM'
+      '  ZALOBY Z,'
+      '  HROMADNE_TISKY HT'
+      'WHERE'
+      '  Z.ID=TO_NUMBER(HT.PK1)'
+    )
+    Params = <>
+    UpdateMode = upWhereKeyOnly
+    left = 151
+    top = 56
+  end
+end

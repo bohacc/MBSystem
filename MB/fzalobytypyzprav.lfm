@@ -1,0 +1,315 @@
+﻿inherited frmZalobyTypyZprav: TfrmZalobyTypyZprav
+  Height = 281
+  Width = 554
+  Caption = 'Žaloby - Typy zpráv'
+  ClientHeight = 261
+  ClientWidth = 554
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 238
+    Width = 554
+  end
+  inherited ToolBar1: TToolBar
+    Width = 554
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = ToolButton3Click
+    end
+    inherited btRefresh: TToolButton
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = NavigatorBeforeAction
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = NavigatorClick
+    end
+    inherited ToolButton10: TToolButton
+      OnClick = ToolButton10Click
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 187
+    Width = 554
+    ActivePage = tsZaznam
+    TabIndex = 1
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 159
+      ClientWidth = 546
+      inherited DBGrid: TDBGrid
+        Height = 159
+        Width = 546
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnPrepareCanvas = DBGridPrepareCanvas
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 159
+      ClientWidth = 546
+      object DBEdit1: TDBEdit[0]
+        Left = 76
+        Height = 23
+        Top = 2
+        Width = 80
+        DataField = 'ID'
+        DataSource = dsMaster
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[1]
+        Left = 76
+        Height = 23
+        Top = 26
+        Width = 464
+        DataField = 'PREDMET'
+        DataSource = dsMaster
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 1000
+        TabOrder = 1
+      end
+      object DBEdit3: TDBEdit[2]
+        Left = 76
+        Height = 23
+        Top = 50
+        Width = 464
+        DataField = 'NAZEV'
+        DataSource = dsMaster
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 120
+        TabOrder = 2
+      end
+      object DBEdit4: TDBEdit[3]
+        Left = 76
+        Height = 23
+        Top = 74
+        Width = 464
+        DataField = 'POPIS'
+        DataSource = dsMaster
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 1000
+        TabOrder = 3
+      end
+      object Label1: TLabel[4]
+        Left = 12
+        Height = 16
+        Top = 9
+        Width = 11
+        Caption = 'Id'
+        ParentColor = False
+      end
+      object Label2: TLabel[5]
+        Left = 12
+        Height = 16
+        Top = 33
+        Width = 46
+        Caption = 'Předmět'
+        ParentColor = False
+      end
+      object Label3: TLabel[6]
+        Left = 12
+        Height = 16
+        Top = 57
+        Width = 33
+        Caption = 'Název'
+        ParentColor = False
+      end
+      object Label4: TLabel[7]
+        Left = 12
+        Height = 16
+        Top = 81
+        Width = 30
+        Caption = 'Popis'
+        ParentColor = False
+      end
+      object Label5: TLabel[8]
+        Left = 12
+        Height = 16
+        Top = 109
+        Width = 21
+        Caption = 'Typ'
+        ParentColor = False
+      end
+      object DBEdit5: TDBEdit[9]
+        Left = 76
+        Height = 23
+        Top = 102
+        Width = 80
+        DataField = 'TYP'
+        DataSource = dsMaster
+        TabOrder = 4
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 213
+    Width = 554
+    ClientWidth = 554
+    inherited btStorno: TButton
+      Left = 474
+    end
+    inherited btOK: TButton
+      Left = 396
+    end
+  end
+  inherited MainMenu: TMainMenu
+    left = 248
+    top = 24
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = miZavritClick
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = miNovyZaznamClick
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = miUpravitZaznamClick
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = miSmazatZaznamClick
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = miVychoziDotazClick
+      end
+    end
+  end
+  inherited qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    AfterOpen = qrMasterAfterOpen
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    BeforePost = qrMasterBeforePost
+    AfterPost = qrMasterAfterPost
+    SQL.Strings = (
+      'SELECT * FROM ZPRAVY_TYPY'
+    )
+    left = 96
+    top = 24
+    object qrMasterID: TLongintField[0]
+      DisplayLabel = 'Id'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterPREDMET: TStringField[1]
+      DisplayLabel = 'Předmět'
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'PREDMET'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrMasterNAZEV: TStringField[2]
+      DisplayLabel = 'Název'
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'NAZEV'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 120
+    end
+    object qrMasterPOPIS: TStringField[3]
+      DisplayLabel = 'Popis'
+      DisplayWidth = 80
+      FieldKind = fkData
+      FieldName = 'POPIS'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1000
+    end
+    object qrMasterTYP: TSmallintField[4]
+      DisplayLabel = 'Typ'
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'TYP'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  inherited UpdateMaster: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE ZPRAVY_TYPY WHERE ID=:OLD_ID'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO ZPRAVY_TYPY(ID,PREDMET,NAZEV,POPIS,TYP)'
+      'VALUES(:ID,:PREDMET,:NAZEV,:POPIS,:TYP)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE ZPRAVY_TYPY'
+      'SET'
+      '     ID = :ID,  '
+      '     PREDMET = :PREDMET,'
+      '     NAZEV = :NAZEV,'
+      '     POPIS = :POPIS,'
+      '     TYP = :TYP'
+      'WHERE'
+      '  ID = :OLD_ID'
+    )
+    left = 24
+    top = 24
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PREDMET'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NAZEV'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'POPIS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TYP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end>
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+    left = 168
+    top = 24
+  end
+end

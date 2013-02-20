@@ -1,0 +1,36 @@
+LazarusResources.Add('TfrmDanoveSazby','FORMDATA',[
+  'TPF0'#241#15'TfrmDanoveSazby'#14'frmDanoveSazby'#7'Caption'#6#14'Da'#197#136
+  +'ov'#195#169' sazby'#4'Menu'#7#8'MainMenu'#10'OnActivate'#7#12'FormActivate'
+  +#8'OnCreate'#7#10'FormCreate'#0#241#8'TToolBar'#8'ToolBar1'#6'Images'#7#17'f'
+  +'rmMain.ImageList'#0#241#11'TToolButton'#11'ToolButton3'#7'OnClick'#7#19'miV'
+  +'ychoziDotazClick'#0#0#241#11'TToolButton'#9'btRefresh'#7'OnClick'#7#14'btRe'
+  +'freshClick'#0#0#241#5'TEdit'#6'edFind'#7'OnKeyUp'#7#11'edFindKeyUp'#0#0#241
+  +#12'TDBNavigator'#9'Navigator'#12'BeforeAction'#13#10'DataSource'#7#8'dsMast'
+  +'er'#13'Hints.Strings'#1#0#7'OnClick'#13#0#0#0#241#12'TPageControl'#6'pcMain'
+  +#10'ActivePage'#7#8'tsZaznam'#8'TabIndex'#2#1#0#241#9'TTabSheet'#8'tsSeznam'
+  +#0#241#7'TDBGrid'#6'DBGrid'#10'DataSource'#7#8'dsMaster'#10'OnDblClick'#7#14
+  +'DBGridDblClick'#12'OnTitleClick'#7#16'DBGridTitleClick'#0#0#0#241#9'TTabShe'
+  +'et'#8'tsZaznam'#0#242#2#0#6'TLabel'#6'Label1'#4'Left'#2#3#6'Height'#2#16#3
+  +'Top'#2#8#5'Width'#2#22#7'Caption'#6#4'K'#195#179'd'#11'ParentColor'#8#0#0
+  +#242#2#1#6'TLabel'#6'Label2'#4'Left'#2#3#6'Height'#2#16#3'Top'#2'%'#5'Width'
+  +#2'!'#7'Caption'#6#6'N'#195#161'zev'#11'ParentColor'#8#0#0#242#2#2#6'TLabel'
+  +#6'Label3'#4'Left'#2#3#6'Height'#2#16#3'Top'#2'B'#5'Width'#2'*'#7'Caption'#6
+  +#7'Procent'#11'ParentColor'#8#0#0#242#2#3#7'TDBEdit'#7'DBEdit1'#4'Left'#2'7'
+  +#6'Height'#2#23#3'Top'#2#8#5'Width'#3#133#0#9'DataField'#6#3'KOD'#10'DataSou'
+  +'rce'#7#8'dsMaster'#9'MaxLength'#2#10#8'TabOrder'#2#0#0#0#242#2#4#7'TDBEdit'
+  +#7'DBEdit2'#4'Left'#2'7'#6'Height'#2#23#3'Top'#2'%'#5'Width'#3#181#1#9'DataF'
+  +'ield'#6#5'NAZEV'#10'DataSource'#7#8'dsMaster'#9'MaxLength'#2'P'#8'TabOrder'
+  +#2#1#0#0#242#2#5#7'TDBEdit'#7'DBEdit3'#4'Left'#2'7'#6'Height'#2#23#3'Top'#2
+  +'B'#5'Width'#2'-'#9'DataField'#6#7'PROCENT'#10'DataSource'#7#8'dsMaster'#8'T'
+  +'abOrder'#2#2#0#0#0#0#241#11'TDatasource'#8'dsMaster'#7'DataSet'#7#8'qrMaste'
+  +'r'#12'OnDataChange'#7#18'dsMasterDataChange'#4'left'#3#145#1#3'top'#2'['#0#0
+  +#241#9'TMainMenu'#8'MainMenu'#4'left'#3#188#1#3'top'#2'8'#0#241#9'TMenuItem'
+  +#8'miSoubor'#0#241#9'TMenuItem'#8'miZavrit'#7'OnClick'#13#0#0#0#241#9'TMenuI'
+  +'tem'#8'miUpravy'#0#241#9'TMenuItem'#12'miNovyZaznam'#7'OnClick'#13#0#0#241#9
+  +'TMenuItem'#15'miUpravitZaznam'#7'OnClick'#13#0#0#241#9'TMenuItem'#14'miSmaz'
+  +'atZaznam'#7'OnClick'#13#0#0#241#9'TMenuItem'#14'miVychoziDotaz'#7'OnClick'
+  +#13#0#0#0#0#241#7'TZQuery'#9'qrMaster0'#10'Connection'#7#20'DM.OracleConnect'
+  +'ion0'#12'UpdateObject'#7#12'UpdateMaster'#17'AfterApplyUpdates'#7#26'qrMast'
+  +'er0AfterApplyUpdates'#12'BeforeInsert'#7#21'qrMaster0BeforeInsert'#10'Befor'
+  +'eEdit'#7#19'qrMaster0BeforeEdit'#9'AfterPost'#7#18'qrMaster0AfterPost'#0#0#0
+]);

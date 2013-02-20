@@ -1,0 +1,12 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmProcesQuery','FORMDATA',[
+  'TPF0'#15'TfrmProcesQuery'#14'frmProcesQuery'#4'Left'#3'u'#2#6'Height'#2'O'#3
+  +'Top'#3#154#1#5'Width'#3#181#0#11'BorderIcons'#11#0#11'BorderStyle'#7#6'bsNo'
+  +'ne'#7'Caption'#6#9'MB system'#12'ClientHeight'#2'O'#11'ClientWidth'#3#181#0
+  +#8'Position'#7#15'poDesktopCenter'#10'LCLVersion'#6#8'0.9.28.3'#7'Visible'#9
+  +#0#6'TBevel'#6'Bevel1'#4'Left'#2#0#6'Height'#2'O'#3'Top'#2#0#5'Width'#3#181#0
+  +#5'Align'#7#8'alClient'#5'Shape'#7#7'bsFrame'#0#0#6'TLabel'#6'Label1'#4'Left'
+  +#2#24#6'Height'#2#16#3'Top'#2' '#5'Width'#3#135#0#7'Caption'#6#30'Prob'#195
+  +#173'h'#195#161' proces, '#196#141'ekejte ...'#11'ParentColor'#8#0#0#0
+]);

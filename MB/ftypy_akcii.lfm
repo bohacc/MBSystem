@@ -1,0 +1,253 @@
+﻿inherited frmTypyAkcii: TfrmTypyAkcii
+  Height = 333
+  Width = 507
+  Caption = 'Typy akcií'
+  ClientHeight = 313
+  ClientWidth = 507
+  Menu = MainMenu
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  inherited StatusBar1: TStatusBar
+    Top = 290
+    Width = 507
+  end
+  inherited ToolBar1: TToolBar
+    Width = 507
+    Images = frmMain.ImageList
+    inherited ToolButton3: TToolButton
+      OnClick = miVychoziDotazClick
+    end
+    inherited btRefresh: TToolButton
+      OnClick = btRefreshClick
+    end
+    inherited edFind: TEdit
+      OnKeyUp = edFindKeyUp
+    end
+    inherited Navigator: TDBNavigator
+      BeforeAction = NavigatorBeforeAction
+      DataSource = dsMaster
+      Hints.Strings = (      )
+      OnClick = nil
+    end
+  end
+  inherited pcMain: TPageControl
+    Height = 239
+    Width = 507
+    ActivePage = tsSeznam
+    inherited tsSeznam: TTabSheet
+      ClientHeight = 211
+      ClientWidth = 499
+      inherited DBGrid: TDBGrid
+        Height = 211
+        Width = 499
+        DataSource = dsMaster
+        OnDblClick = DBGridDblClick
+        OnTitleClick = DBGridTitleClick
+      end
+    end
+    inherited tsZaznam: TTabSheet
+      ClientHeight = 211
+      ClientWidth = 499
+      object Label1: TLabel[0]
+        Left = 13
+        Height = 16
+        Top = 11
+        Width = 21
+        Caption = 'Typ'
+        ParentColor = False
+      end
+      object Label2: TLabel[1]
+        Left = 13
+        Height = 16
+        Top = 42
+        Width = 48
+        Caption = 'Hodnota'
+        ParentColor = False
+      end
+      object Label3: TLabel[2]
+        Left = 13
+        Height = 16
+        Top = 71
+        Width = 25
+        Caption = 'Krok'
+        ParentColor = False
+      end
+      object Label4: TLabel[3]
+        Left = 13
+        Height = 16
+        Top = 98
+        Width = 56
+        Caption = 'Poznámka'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[4]
+        Left = 76
+        Height = 23
+        Top = 10
+        Width = 184
+        DataField = 'TYP'
+        DataSource = dsMaster
+        CharCase = ecNormal
+        MaxLength = 5
+        TabOrder = 0
+      end
+      object DBEdit2: TDBEdit[5]
+        Left = 76
+        Height = 23
+        Top = 36
+        Width = 184
+        DataField = 'HODNOTA'
+        DataSource = dsMaster
+        CharCase = ecNormal
+        MaxLength = 20
+        TabOrder = 1
+      end
+      object DBEdit3: TDBEdit[6]
+        Left = 76
+        Height = 23
+        Top = 64
+        Width = 184
+        DataField = 'KROK'
+        DataSource = dsMaster
+        CharCase = ecNormal
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object DBMemo1: TDBMemo[7]
+        Left = 76
+        Height = 104
+        Top = 98
+        Width = 414
+        DataField = 'POZNAMKA'
+        DataSource = dsMaster
+        TabOrder = 3
+      end
+    end
+  end
+  inherited pOK: TPanel
+    Top = 265
+    Width = 507
+    ClientWidth = 507
+  end
+  inherited MainMenu: TMainMenu
+    inherited miSoubor: TMenuItem
+      inherited miZavrit: TMenuItem
+        OnClick = miZavritClick
+      end
+    end
+    inherited miUpravy: TMenuItem
+      inherited miNovyZaznam: TMenuItem
+        OnClick = miNovyZaznamClick
+      end
+      inherited miUpravitZaznam: TMenuItem
+        OnClick = miUpravitZaznamClick
+      end
+      inherited miSmazatZaznam: TMenuItem
+        OnClick = miSmazatZaznamClick
+      end
+      inherited miVychoziDotaz: TMenuItem
+        OnClick = miVychoziDotazClick
+      end
+    end
+  end
+  inherited qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    AfterOpen = qrMasterAfterOpen
+    UpdateObject = UpdateMaster
+    AfterApplyUpdates = qrMasterAfterApplyUpdates
+    BeforeInsert = qrMasterBeforeInsert
+    BeforeEdit = qrMasterBeforeEdit
+    BeforePost = qrMasterBeforePost
+    AfterPost = qrMasterAfterPost
+    SQL.Strings = (
+      'SELECT * FROM TYPY_AKCII '
+    )
+    object qrMasterTYP: TStringField[0]
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'TYP'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterHODNOTA: TFloatField[1]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'HODNOTA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
+    end
+    object qrMasterKROK: TSmallintField[2]
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'KROK'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterPOZNAMKA: TStringField[3]
+      DisplayWidth = 1020
+      FieldKind = fkData
+      FieldName = 'POZNAMKA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 1020
+    end
+  end
+  inherited UpdateMaster: TZUpdateSQL
+    InsertSQL.Strings = (
+      'INSERT INTO TYPY_AKCII(TYP,HODNOTA,KROK,POZNAMKA)'
+      '  VALUES(:TYP, :HODNOTA, :KROK, :POZNAMKA)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE TYPY_AKCII SET'
+      'HODNOTA=:HODNOTA,'
+      'KROK=:KROOK,'
+      'POZNAMKA=:POZNAMKA'
+      'WHERE TYP=:TYP'
+    )
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'HODNOTA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'KROOK'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'POZNAMKA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TYP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'KROK'
+        ParamType = ptUnknown
+      end>
+  end
+  inherited dsMaster: TDatasource
+    DataSet = qrMaster
+    OnDataChange = dsMasterDataChange
+  end
+end

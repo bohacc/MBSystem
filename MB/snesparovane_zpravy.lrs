@@ -1,0 +1,21 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmNesparovaneZpravy','FORMDATA',[
+  'TPF0'#21'TfrmNesparovaneZpravy'#20'frmNesparovaneZpravy'#4'Left'#3'Y'#1#6'He'
+  +'ight'#3#240#0#3'Top'#3#183#0#5'Width'#3'@'#1#7'Caption'#6#20'frmNesparovane'
+  +'Zpravy'#10'LCLVersion'#6#6'0.9.30'#0#12'TfrDBDataSet'#8'dsMaster'#7'DataSet'
+  +#7#8'qrMaster'#10'OnCheckEOF'#7#16'dsMasterCheckEOF'#4'left'#3#136#0#3'top'#2
+  +'8'#0#0#9'TfrReport'#8'frReport'#7'Dataset'#7#8'dsMaster'#11'InitialZoom'#7#9
+  +'pzDefault'#7'Options'#11#0#14'PreviewButtons'#11#6'pbZoom'#6'pbLoad'#6'pbSa'
+  +'ve'#7'pbPrint'#6'pbFind'#6'pbHelp'#6'pbExit'#0#8'DataType'#7#9'dtDataSet'#4
+  +'left'#2' '#3'top'#2'<'#10'ReportForm'#10#4#0#0#0#25#0#0#0#0#0#7'TZQuery'#8
+  +'qrMaster'#10'Connection'#7#19'DM.OracleConnection'#11'SQL.Strings'#1#6#7'SE'
+  +'LECT '#6#10'  REF_KOD,'#6#11'  VAR_SYMB,'#6'   SPISOVA_ZNACKA AS SPIS_ZNACK'
+  +'A,'#6#17'  DATUM_ODESLANI,'#6#14'  BEZNE_CISLO,'#6#7'  UCET,'#6#11'  VAR_SY'
+  +'MB,'#6#7'  SOUD,'#6'$  PODANI_DORUCENE_DATUM AS DORUCENO,'#6#12'  ODESILATE'
+  +'L'#6#5'FROM '#6#18'  ZALOBY_ZPRAVY Z '#6#6'WHERE '#6';  NOT EXISTS(SELECT 1'
+  +' FROM ZALOBY WHERE REF_KOD=Z.REF_KOD) '#6'F  AND NOT EXISTS(SELECT 1 FROM Z'
+  +'ALOBY_OSTATNI WHERE REF_KOD=Z.REF_KOD)'#6'E  AND NOT EXISTS(SELECT 1 FROM Z'
+  +'ALOBY_MLCOCH WHERE REF_KOD=Z.REF_KOD)'#0#6'Params'#14#0#4'left'#3#234#0#3't'
+  +'op'#2'B'#0#0#0
+]);

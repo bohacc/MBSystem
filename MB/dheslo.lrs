@@ -1,0 +1,12 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmHesloD','FORMDATA',[
+  'TPF0'#10'TfrmHesloD'#9'frmHesloD'#4'Left'#3'"'#1#6'Height'#2'l'#3'Top'#3#175
+  +#0#5'Width'#3#22#1#7'Caption'#6#13'Zadejte heslo'#12'ClientHeight'#2'l'#11'C'
+  +'lientWidth'#3#22#1#6'OnShow'#7#8'FormShow'#8'Position'#7#15'poDesktopCenter'
+  +#10'LCLVersion'#6#8'0.9.28.2'#0#5'TEdit'#5'Edit1'#4'Left'#2#17#6'Height'#2#23
+  +#3'Top'#2#24#5'Width'#3#248#0#8'EchoMode'#7#10'emPassword'#12'PasswordChar'#6
+  +#1'*'#8'TabOrder'#2#0#0#0#7'TBitBtn'#7'BitBtn1'#4'Left'#2'h'#6'Height'#2#30#3
+  +'Top'#2'8'#5'Width'#2'K'#7'Caption'#6#3'&OK'#7'Default'#9#4'Kind'#7#4'bkOK'
+  +#11'ModalResult'#2#1#7'OnClick'#7#12'BitBtn1Click'#8'TabOrder'#2#1#0#0#0
+]);

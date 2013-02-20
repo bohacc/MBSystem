@@ -1,0 +1,44 @@
+object frmSOPOPPPredavaciProtokol: TfrmSOPOPPPredavaciProtokol
+  Left = 388
+  Height = 148
+  Top = 175
+  Width = 333
+  Caption = 'Předávací protokol'
+  LCLVersion = '0.9.28.3'
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = qrMaster
+    left = 136
+    top = 43
+  end
+  object frReport: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 24
+    top = 37
+    ReportForm = {
+      18000000
+    }
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT'
+      '  Z.*,'
+      '  NULL AS JMENO,'
+      '  NULL AS PRIJMENI,'
+      '  NULL AS R_POCET,'
+      '  NULL AS R_CELKEM,'
+      '  NULL AS JIZDNE_CELKEM,'
+      '  NULL AS PRIRAZKA_CELKEM,'
+      '  NULL AS DATUM_PREDANI,'
+      '  NULL AS DATUM_TIME'
+      'FROM'
+      '  ZALOBY Z'
+    )
+    Params = <>
+    left = 240
+    top = 45
+  end
+end

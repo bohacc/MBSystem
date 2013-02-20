@@ -1,0 +1,544 @@
+object frmZpravyDetail: TfrmZpravyDetail
+  Left = 399
+  Height = 527
+  Top = 124
+  Width = 768
+  Caption = 'Zpravy - detail'
+  ClientHeight = 527
+  ClientWidth = 768
+  Constraints.MinHeight = 312
+  Constraints.MinWidth = 768
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '0.9.28.3'
+  object Panel1: TPanel
+    Left = 0
+    Height = 312
+    Top = 24
+    Width = 768
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 312
+    ClientWidth = 768
+    TabOrder = 0
+    object DBEdit1: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 17
+      Width = 80
+      DataField = 'ID'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 0
+    end
+    object DBEdit2: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 40
+      Width = 277
+      DataField = 'REF_KOD'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 64
+      Width = 80
+      DataField = 'DATUM_STAZENI'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 2
+    end
+    object DBEdit4: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 88
+      Width = 277
+      DataField = 'ODESILATEL'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 3
+    end
+    object DBEdit5: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 126
+      Width = 635
+      DataField = 'PREDMET'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 4
+    end
+    object DBEdit6: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 150
+      Width = 200
+      DataField = 'UCET'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 5
+    end
+    object DBEdit7: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 176
+      Width = 200
+      DataField = 'VAR_SYMB'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 6
+    end
+    object DBEdit8: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 200
+      Width = 200
+      DataField = 'PODANI_DORUCENE_DATUM'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 7
+    end
+    object DBEdit9: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 17
+      Width = 256
+      DataField = 'ID_ZPRAVY'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 8
+    end
+    object DBEdit10: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 40
+      Width = 80
+      DataField = 'TYP_ZPRAVY'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 9
+    end
+    object DBEdit11: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 64
+      Width = 80
+      DataField = 'DATUM_ODESLANI'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 10
+    end
+    object DBEdit12: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 175
+      Width = 256
+      DataField = 'BEZNE_CISLO'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 11
+    end
+    object DBEdit13: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 200
+      Width = 200
+      DataField = 'PODANI_OVERENO_DATUM'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 12
+    end
+    object DBEdit14: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 150
+      Width = 256
+      DataField = 'ZPUSOB_PODANI'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 13
+    end
+    object DBEdit15: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 225
+      Width = 256
+      DataField = 'SOUD'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 14
+    end
+    object DBEdit16: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 225
+      Width = 80
+      DataField = 'ZASLANYCH_PRILOH'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 15
+    end
+    object DBEdit17: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 250
+      Width = 200
+      DataField = 'PODPIS_CERTIF_PLATNY'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 16
+    end
+    object DBEdit18: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 250
+      Width = 256
+      DataField = 'TYP_FORMULARE'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 17
+    end
+    object DBEdit19: TDBEdit
+      Left = 499
+      Height = 23
+      Top = 275
+      Width = 256
+      DataField = 'SPISOVA_ZNACKA'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 18
+    end
+    object DBEdit20: TDBEdit
+      Left = 120
+      Height = 23
+      Top = 275
+      Width = 200
+      DataField = 'KE_ZPRACOVANI'
+      DataSource = dsDetail
+      ReadOnly = True
+      Color = clSilver
+      TabOrder = 19
+    end
+    object Label1: TLabel
+      Left = 19
+      Height = 16
+      Top = 24
+      Width = 11
+      Caption = 'Id'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 19
+      Height = 16
+      Top = 47
+      Width = 32
+      Caption = 'GUID'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 19
+      Height = 16
+      Top = 71
+      Width = 76
+      Caption = 'Datum stažení'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 19
+      Height = 16
+      Top = 95
+      Width = 53
+      Caption = 'Odesílatel'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 406
+      Height = 16
+      Top = 24
+      Width = 48
+      Caption = 'Id zprávy'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 406
+      Height = 16
+      Top = 47
+      Width = 58
+      Caption = 'Typ zprávy'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 406
+      Height = 16
+      Top = 71
+      Width = 84
+      Caption = 'Datum odeslání'
+      ParentColor = False
+    end
+    object Label8: TLabel
+      Left = 19
+      Height = 16
+      Top = 133
+      Width = 46
+      Caption = 'Předmět'
+      ParentColor = False
+    end
+    object Label9: TLabel
+      Left = 19
+      Height = 16
+      Top = 157
+      Width = 25
+      Caption = 'Účet'
+      ParentColor = False
+    end
+    object Label10: TLabel
+      Left = 19
+      Height = 16
+      Top = 182
+      Width = 56
+      Caption = 'Var. symb.'
+      ParentColor = False
+    end
+    object Label11: TLabel
+      Left = 19
+      Height = 16
+      Top = 207
+      Width = 92
+      Caption = 'Podání doručeno'
+      ParentColor = False
+    end
+    object Label12: TLabel
+      Left = 406
+      Height = 16
+      Top = 207
+      Width = 84
+      Caption = 'Podání ověřeno'
+      ParentColor = False
+    end
+    object Label13: TLabel
+      Left = 406
+      Height = 16
+      Top = 182
+      Width = 59
+      Caption = 'Běžné číslo'
+      ParentColor = False
+    end
+    object Label14: TLabel
+      Left = 19
+      Height = 16
+      Top = 231
+      Width = 88
+      Caption = 'Zaslaných příloh'
+      ParentColor = False
+    end
+    object Label15: TLabel
+      Left = 406
+      Height = 16
+      Top = 157
+      Width = 81
+      Caption = 'Způsob podání'
+      ParentColor = False
+    end
+    object Bevel1: TBevel
+      Left = 16
+      Height = 11
+      Top = 120
+      Width = 746
+      Shape = bsTopLine
+    end
+    object Label16: TLabel
+      Left = 19
+      Height = 16
+      Top = 257
+      Width = 95
+      Caption = 'Podpis a certifikát'
+      ParentColor = False
+    end
+    object Label17: TLabel
+      Left = 406
+      Height = 16
+      Top = 232
+      Width = 28
+      Caption = 'Soud'
+      ParentColor = False
+    end
+    object Label18: TLabel
+      Left = 406
+      Height = 16
+      Top = 257
+      Width = 76
+      Caption = 'Typ formuláře'
+      ParentColor = False
+    end
+    object Label19: TLabel
+      Left = 406
+      Height = 16
+      Top = 282
+      Width = 80
+      Caption = 'Spisová značka'
+      ParentColor = False
+    end
+    object Label20: TLabel
+      Left = 19
+      Height = 16
+      Top = 282
+      Width = 74
+      Caption = 'Ke zpracování'
+      ParentColor = False
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 10
+    Height = 146
+    Top = 336
+    Width = 748
+    Align = alClient
+    BorderSpacing.Left = 10
+    BorderSpacing.Right = 10
+    BorderSpacing.Bottom = 10
+    Caption = 'Tělo zprávy'
+    ClientHeight = 128
+    ClientWidth = 744
+    TabOrder = 1
+    object DBMemo1: TDBMemo
+      Left = 0
+      Height = 128
+      Top = 0
+      Width = 744
+      Align = alClient
+      DataField = 'TELO'
+      DataSource = dsTelo
+      Lines.Strings = (
+        'DBMemo1'
+      )
+      ReadOnly = True
+      ScrollBars = ssBoth
+      TabOrder = 0
+    end
+  end
+  object ToolBar1: TToolBar
+    Left = 20
+    Height = 24
+    Top = 0
+    Width = 748
+    BorderSpacing.Left = 20
+    Caption = 'ToolBar1'
+    TabOrder = 2
+    object DBNavigator1: TDBNavigator
+      Left = 1
+      Height = 22
+      Top = 2
+      Width = 241
+      BevelOuter = bvNone
+      ClientHeight = 22
+      ClientWidth = 241
+      DataSource = dsDetail
+      TabOrder = 0
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 35
+    Top = 492
+    Width = 768
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 35
+    ClientWidth = 768
+    TabOrder = 3
+    object BitBtn1: TBitBtn
+      Left = 362
+      Height = 30
+      Top = 2
+      Width = 75
+      Anchors = [akTop, akLeft, akRight]
+      Caption = '&OK'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = BitBtn1Click
+      TabOrder = 0
+    end
+  end
+  object dsDetail: TDatasource
+    OnDataChange = dsDetailDataChange
+    left = 278
+    top = 38
+  end
+  object dsTelo: TDatasource
+    DataSet = qrTelo
+    left = 264
+    top = 376
+  end
+  object qrTelo: TZQuery
+    Connection = DM.OracleConnection
+    AfterApplyUpdates = qrTeloAfterApplyUpdates
+    AfterPost = qrTeloAfterPost
+    ReadOnly = True
+    SQL.Strings = (
+      'SELECT ID,TELO FROM ZALOBY_ZPRAVY WHERE ID = :ID'
+    )
+    Params = <    
+      item
+        DataType = ftInteger
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    left = 208
+    top = 376
+    ParamData = <    
+      item
+        DataType = ftInteger
+        Name = 'ID'
+        ParamType = ptUnknown
+      end>
+    object qrTeloTELO: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'TELO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftOraClob
+      Transliterate = False
+    end
+    object qrTeloID: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+end

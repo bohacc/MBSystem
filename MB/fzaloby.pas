@@ -1455,10 +1455,10 @@ try
               '  DECODE(OPRAVNE_USNESENI_DATUM,null,'''',''ze dne ''||to_char(OPRAVNE_USNESENI_DATUM,''DD.MM.YYYY''))||'+
               '    '', který vydal ''||SOUD||'', právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', exekuci pro:'' AS ROZROZ_ROW3,'+
               '    DECODE(TRIM(ROZSUDEK),NULL,''vykonatelného elektronického platebního rozkazu č.j. '',''vykonatelného rozsudku č.j.'')||'+
-              '    DECODE(TRIM(ROZSUDEK),NULL,SPIS_ZNACKA,NULL)||'' ze dne ''||TO_CHAR(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'', ''||'+
+              '    SPIS_ZNACKA||'' ze dne ''||TO_CHAR(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'', ''||'+
               '    DECODE(OPRAVNE_USNESENI_DATUM,null,'''',''ve znění opravného usnesení č.j. ''||USNESENI_CJ||'' ze dne ''||to_char(OPRAVNE_USNESENI_DATUM,''DD.MM.YYYY'')||'', '')||'+
               '    DECODE(OPRAVNE_USNESENI_DATUM,null,''který'',''které'')||'' vydal ''||SOUD||'',''||'+
-              '    ''právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', k vymožení:'' AS ROZROZ_ROW,'+
+              '    '' právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', k vymožení:'' AS ROZROZ_ROW,'+
               '  TO_CHAR(SYSDATE,''DD.MM.YYYY'') AS AKTUALNI_DATUM,'+
               '  CEIL(DLUZNA_CASTKA) AS DLUZNA_CASTKA_KC, '+
               '  TO_CHAR(SPLATNOST,''DD.MM.YYYY'') AS SPLATNOST_DATUM,'+
@@ -1630,10 +1630,10 @@ try
               '  DECODE(OPRAVNE_USNESENI_DATUM,null,'''',''ze dne ''||to_char(OPRAVNE_USNESENI_DATUM,''DD.MM.YYYY''))||'+
               '    '', který vydal ''||SOUD||'', právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', exekuci pro:'' AS ROZROZ_ROW3,'+
               '    DECODE(TRIM(ROZSUDEK),NULL,''vykonatelného elektronického platebního rozkazu č.j. '',''vykonatelného rozsudku č.j.'')||'+
-              '    DECODE(TRIM(ROZSUDEK),NULL,SPIS_ZNACKA,NULL)||'' ze dne ''||TO_CHAR(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'', ''||'+
+              '    SPIS_ZNACKA||'' ze dne ''||TO_CHAR(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'', ''||'+
               '    DECODE(OPRAVNE_USNESENI_DATUM,null,'''',''ve znění opravného usnesení č.j. ''||USNESENI_CJ||'' ze dne ''||to_char(OPRAVNE_USNESENI_DATUM,''DD.MM.YYYY'')||'', '')||'+
               '    DECODE(OPRAVNE_USNESENI_DATUM,null,''který'',''které'')||'' vydal ''||SOUD||'',''||'+
-              '    ''právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', k vymožení:'' AS ROZROZ_ROW,'+
+              '    '' právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', k vymožení:'' AS ROZROZ_ROW,'+
               '  TO_CHAR(SYSDATE,''DD.MM.YYYY'') AS AKTUALNI_DATUM,'+
               '  CEIL(DLUZNA_CASTKA) AS DLUZNA_CASTKA_KC, '+
               '  TO_CHAR(SPLATNOST,''DD.MM.YYYY'') AS SPLATNOST_DATUM,'+
@@ -1803,10 +1803,10 @@ try
               '  DECODE(OPRAVNE_USNESENI_DATUM,null,'''',''ze dne ''||to_char(OPRAVNE_USNESENI_DATUM,''DD.MM.YYYY''))||'+
               '    '', který vydal ''||SOUD||'', právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', exekuci pro:'' AS ROZROZ_ROW3,'+
               '    DECODE(TRIM(ROZSUDEK),NULL,''vykonatelného elektronického platebního rozkazu č.j. '',''vykonatelného rozsudku č.j.'')||'+
-              '    DECODE(TRIM(ROZSUDEK),NULL,SPIS_ZNACKA,NULL)||'' ze dne ''||TO_CHAR(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'', ''||'+
+              '    SPIS_ZNACKA||'' ze dne ''||TO_CHAR(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'', ''||'+
               '    DECODE(OPRAVNE_USNESENI_DATUM,null,'''',''ve znění opravného usnesení č.j. ''||USNESENI_CJ||'' ze dne ''||to_char(OPRAVNE_USNESENI_DATUM,''DD.MM.YYYY'')||'', '')||'+
               '    DECODE(OPRAVNE_USNESENI_DATUM,null,''který'',''které'')||'' vydal ''||SOUD||'',''||'+
-              '    ''právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', k vymožení:'' AS ROZROZ_ROW,'+
+              '    '' právní moc dne ''||TO_CHAR(PR_MOC,''DD.MM.YYYY'')||'', k vymožení:'' AS ROZROZ_ROW,'+
               '  TO_CHAR(SYSDATE,''DD.MM.YYYY'') AS AKTUALNI_DATUM,'+
               '  CEIL(DLUZNA_CASTKA) AS DLUZNA_CASTKA_KC, '+
               '  TO_CHAR(SPLATNOST,''DD.MM.YYYY'') AS SPLATNOST_DATUM,'+

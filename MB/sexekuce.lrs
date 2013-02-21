@@ -2,8 +2,8 @@
 
 LazarusResources.Add('TfrmSExekuce','FORMDATA',[
   'TPF0'#12'TfrmSExekuce'#11'frmSExekuce'#4'Left'#3'#'#2#6'Height'#3#240#0#3'To'
-  +'p'#3#201#0#5'Width'#3'@'#1#7'Caption'#6#11'frmSExekuce'#10'LCLVersion'#6#6
-  +'0.9.30'#0#9'TfrReport'#8'frReport'#7'Dataset'#7#8'dsMaster'#11'InitialZoom'
+  +'p'#3#201#0#5'Width'#3'@'#1#7'Caption'#6#11'frmSExekuce'#10'LCLVersion'#6#7
+  +'1.0.2.0'#0#9'TfrReport'#8'frReport'#7'Dataset'#7#8'dsMaster'#11'InitialZoom'
   +#7#9'pzDefault'#7'Options'#11#0#14'PreviewButtons'#11#6'pbZoom'#6'pbLoad'#6
   +'pbSave'#7'pbPrint'#6'pbFind'#6'pbHelp'#6'pbExit'#0#8'DataType'#7#9'dtDataSe'
   +'t'#4'left'#2'('#3'top'#2'@'#10'ReportForm'#10#4#0#0#0#25#0#0#0#0#0#12'TfrDB'

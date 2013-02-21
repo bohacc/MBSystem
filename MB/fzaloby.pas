@@ -1482,123 +1482,137 @@ try
               '    WHEN NULL THEN ''Vážený pan/paní'' '+
               '  END AS OSLOVENI, '+
               '  GET_PARAM(''ZALOBY_OZNAMENI_UCET'') AS UCET_OZNAMENI, '+
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2006'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9% ročně od 1.1.2006 do 30.6.2006 z částky'',NULL)) AS UROK1,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA1,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA1,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2006'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9% ročně od 1.7.2006 do 31.12.2006 z částky'',NULL)) AS UROK2,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA2,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA2,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2007'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,5% ročně od 1.1.2007 do 30.6.2007 z částky'',NULL)) AS UROK3,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA3,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA3,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2007'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,75% ročně od 1.7.2007 do 31.12.2007 z částky'',NULL)) AS UROK4,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA4,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA4,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 10,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2008'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 10,5% ročně od 1.1.2008 do 30.6.2008 z částky'',NULL)) AS UROK5,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA5,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA5,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 10,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2008'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 10,75% ročně od 1.7.2008 do 31.12.2008 z částky'',NULL)) AS UROK6,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA6,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA6,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,25% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2009'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,25% ročně od 1.1.2009 do 30.6.2009 z částky'',NULL)) AS UROK7,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA7,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA7,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 8,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2009'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 8,5% ročně od 1.7.2009 do 31.12.2009 z částky'',NULL)) AS UROK8,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA8,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA8,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 8% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2010'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 8% ročně od 1.1.2010 do 30.6.2010 z částky'',NULL)) AS UROK9,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA9,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA9,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 7,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2012'',''DD.MM.YYYY'')),'+
-	      '	          1,'+
-              '	          ''- 7,75% ročně od 1.7.2010 do 30.6.2012 z částky'',NULL)) AS UROK10,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA10,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA10,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2012'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 7,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2012'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 7,5% ročně od 1.7.2012 do 31.12.2012 z částky'',NULL)) AS UROK11,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA11,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA11,'+
-
-              '  DECODE('+
-	      '    (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2013'',''DD.MM.YYYY'')),'+
-	      '    1,'+
-	      '    DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''- 7,05% ročně od 1.1.2013 do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', NULL),'+
-              '    NULL) AS UROK12,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, DLUZNA_CASTKA, NULL) AS CASTKA12,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''Kč'', NULL) AS MENA12 '+
+              'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9% ročně od 1.1.2006 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK1, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA1, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA1, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9% ročně od 1.7.2006 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK2, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA2, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA2, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,5% ročně od 1.1.2007 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK3, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA3, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA3, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,75% ročně od 1.7.2007 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK4, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA4, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA4, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 10,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 10,5% ročně od 1.1.2008 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK5, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA5, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA5, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 10,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 10,75% ročně od 1.7.2008 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK6, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA6, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA6, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,25% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,25% ročně od 1.1.2009 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK7, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA7, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA7, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 8,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 8,5% ročně od 1.7.2009 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK8, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA8, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA8, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 8% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 8% ročně od 1.1.2010 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK9, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA9, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA9, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,75% ročně od 1.7.2010 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK10, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA10, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA10, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2012'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,5% ročně od 1.7.2012 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK11, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA11, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA11, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,05% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST < to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,05% ročně od 1.1.2013 do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK12, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, DLUZNA_CASTKA, NULL) AS CASTKA12, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''Kč'', NULL) AS MENA12 '+
               'FROM '+
               '  ZALOBY Z,'+
               '  LICENCE L '+
@@ -1657,123 +1671,137 @@ try
               '    WHEN NULL THEN ''Vážený pan/paní'' '+
               '  END AS OSLOVENI, '+
               '  GET_PARAM(''ZALOBY_OZNAMENI_UCET'') AS UCET_OZNAMENI, '+
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2006'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9% ročně od 1.1.2006 do 30.6.2006 z částky'',NULL)) AS UROK1,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA1,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA1,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2006'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9% ročně od 1.7.2006 do 31.12.2006 z částky'',NULL)) AS UROK2,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA2,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA2,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2007'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,5% ročně od 1.1.2007 do 30.6.2007 z částky'',NULL)) AS UROK3,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA3,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA3,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2007'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,75% ročně od 1.7.2007 do 31.12.2007 z částky'',NULL)) AS UROK4,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA4,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA4,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 10,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2008'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 10,5% ročně od 1.1.2008 do 30.6.2008 z částky'',NULL)) AS UROK5,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA5,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA5,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 10,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2008'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 10,75% ročně od 1.7.2008 do 31.12.2008 z částky'',NULL)) AS UROK6,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA6,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA6,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,25% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2009'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,25% ročně od 1.1.2009 do 30.6.2009 z částky'',NULL)) AS UROK7,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA7,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA7,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 8,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2009'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 8,5% ročně od 1.7.2009 do 31.12.2009 z částky'',NULL)) AS UROK8,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA8,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA8,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 8% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2010'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 8% ročně od 1.1.2010 do 30.6.2010 z částky'',NULL)) AS UROK9,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA9,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA9,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 7,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2012'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 7,75% ročně od 1.7.2010 do 30.6.2012 z částky'',NULL)) AS UROK10,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA10,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA10,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2012'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 7,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2012'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 7,5% ročně od 1.7.2012 do 31.12.2012 z částky'',NULL)) AS UROK11,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA11,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA11,'+
-
-              '  DECODE('+
-	      '    (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2013'',''DD.MM.YYYY'')),'+
-	      '    1,'+
-	      '    DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''- 7,05% ročně od 1.1.2013 do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', NULL),'+
-              '    NULL) AS UROK12,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, DLUZNA_CASTKA, NULL) AS CASTKA12,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''Kč'', NULL) AS MENA12 '+
+              'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9% ročně od 1.1.2006 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK1, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA1, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA1, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9% ročně od 1.7.2006 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK2, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA2, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA2, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,5% ročně od 1.1.2007 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK3, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA3, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA3, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,75% ročně od 1.7.2007 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK4, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA4, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA4, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 10,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 10,5% ročně od 1.1.2008 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK5, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA5, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA5, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 10,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 10,75% ročně od 1.7.2008 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK6, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA6, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA6, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,25% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,25% ročně od 1.1.2009 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK7, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA7, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA7, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 8,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 8,5% ročně od 1.7.2009 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK8, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA8, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA8, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 8% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 8% ročně od 1.1.2010 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK9, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA9, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA9, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,75% ročně od 1.7.2010 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK10, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA10, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA10, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2012'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,5% ročně od 1.7.2012 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK11, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA11, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA11, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,05% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST < to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,05% ročně od 1.1.2013 do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK12, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, DLUZNA_CASTKA, NULL) AS CASTKA12, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''Kč'', NULL) AS MENA12 '+
               'FROM '+
               '  ZALOBY Z,'+
               '  LICENCE L '+
@@ -1830,123 +1858,137 @@ try
               '    WHEN NULL THEN ''Vážený pan/paní'' '+
               '  END AS OSLOVENI, '+
               '  GET_PARAM(''ZALOBY_OZNAMENI_UCET'') AS UCET_OZNAMENI, '+
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2006'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9% ročně od 1.1.2006 do 30.6.2006 z částky'',NULL)) AS UROK1,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA1,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA1,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2006'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9% ročně od 1.7.2006 do 31.12.2006 z částky'',NULL)) AS UROK2,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA2,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA2,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2007'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,5% ročně od 1.1.2007 do 30.6.2007 z částky'',NULL)) AS UROK3,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA3,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA3,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2007'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,75% ročně od 1.7.2007 do 31.12.2007 z částky'',NULL)) AS UROK4,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA4,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA4,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 10,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2008'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 10,5% ročně od 1.1.2008 do 30.6.2008 z částky'',NULL)) AS UROK5,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA5,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA5,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 10,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2008'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 10,75% ročně od 1.7.2008 do 31.12.2008 z částky'',NULL)) AS UROK6,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA6,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA6,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 9,25% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2009'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 9,25% ročně od 1.1.2009 do 30.6.2009 z částky'',NULL)) AS UROK7,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA7,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA7,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 8,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2009'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 8,5% ročně od 1.7.2009 do 31.12.2009 z částky'',NULL)) AS UROK8,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA8,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA8,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 8% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2010'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 8% ročně od 1.1.2010 do 30.6.2010 z částky'',NULL)) AS UROK9,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA9,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA9,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 7,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''30.6.2012'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 7,75% ročně od 1.7.2010 do 30.6.2012 z částky'',NULL)) AS UROK10,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA10,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA10,'+
-
-              '  DECODE('+
-              '	   (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2012'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),'+
-              '	   1,'+
-              '    ''- 7,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'','+
-              '    DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) > to_date(''31.12.2012'',''DD.MM.YYYY'')),'+
-	      '	   1,'+
-              '	   ''- 7,5% ročně od 1.7.2012 do 31.12.2012 z částky'',NULL)) AS UROK11,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA11,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA11,'+
-
-              '  DECODE('+
-	      '    (SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2013'',''DD.MM.YYYY'')),'+
-	      '    1,'+
-	      '    DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''- 7,05% ročně od 1.1.2013 do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', NULL),'+
-              '    NULL) AS UROK12,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, DLUZNA_CASTKA, NULL) AS CASTKA12,'+
-              '  DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''Kč'', NULL) AS MENA12 '+
+              'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9% ročně od 1.1.2006 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2006'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK1, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA1, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA1, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2006'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9% ročně od 1.7.2006 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2006'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2006'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK2, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA2, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2006'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2006'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA2, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,5% ročně od 1.1.2007 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2007'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK3, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA3, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA3, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2007'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,75% ročně od 1.7.2007 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2007'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2007'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK4, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA4, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2007'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2007'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA4, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 10,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 10,5% ročně od 1.1.2008 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2008'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK5, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA5, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA5, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2008'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 10,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 10,75% ročně od 1.7.2008 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2008'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2008'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK6, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA6, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2008'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2008'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA6, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 9,25% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 9,25% ročně od 1.1.2009 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2009'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK7, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA7, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA7, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2009'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 8,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 8,5% ročně od 1.7.2009 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2009'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2009'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK8, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA8, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2009'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2009'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA8, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 8% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 8% ročně od 1.1.2010 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2010'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2010'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK9, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA9, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2010'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA9, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2010'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,75% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,75% ročně od 1.7.2010 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''30.6.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''30.6.2012'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK10, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA10, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''30.6.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2010'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA10, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.7.2012'',''DD.MM.YYYY'') AND Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,5% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,5% ročně od 1.7.2012 do ''||DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) <= to_date(''31.12.2012'',''DD.MM.YYYY'')), 1, to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY''), ''31.12.2012'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK11, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,DLUZNA_CASTKA,NULL) AS CASTKA11, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST <= to_date(''31.12.2012'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.7.2012'',''DD.MM.YYYY'')),1,''Kč'',NULL) AS MENA11, '+
+	      ' '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST >= to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), '+
+	      '       1, '+
+	      '       ''- 7,05% ročně od ''||to_char(SPLATNOST,''DD.MM.YYYY'')||'' do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', '+
+	      '       DECODE((SELECT 1 FROM DUAL WHERE Z.SPLATNOST < to_date(''1.1.2013'',''DD.MM.YYYY'') AND NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), '+
+	      '              1, '+
+	      '              ''- 7,05% ročně od 1.1.2013 do ''||to_char(NVL(ROZSUDEK,PL_PRIKAZ),''DD.MM.YYYY'')||'' z částky'', '+
+	      '              NULL) '+
+	      '       ) AS UROK12, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, DLUZNA_CASTKA, NULL) AS CASTKA12, '+
+	      'DECODE((SELECT 1 FROM DUAL WHERE NVL(ROZSUDEK,PL_PRIKAZ) >= to_date(''1.1.2013'',''DD.MM.YYYY'')), 1, ''Kč'', NULL) AS MENA12 '+
               'FROM '+
               '  ZALOBY Z,'+
               '  LICENCE L '+

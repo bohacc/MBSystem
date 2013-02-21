@@ -19,7 +19,7 @@
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="19"/>
+      <BuildNr Value="20"/>
       <Language Value="0405"/>
       <CharSet Value="04E2"/>
       <StringTable ProductVersion="0.0.0.5"/>
@@ -633,8 +633,8 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1778"/>
-        <CursorPos X="109" Y="1809"/>
+        <TopLine Value="2904"/>
+        <CursorPos X="33" Y="2912"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -1175,124 +1175,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="887" Column="36" TopLine="874"/>
-      </Position1>
-      <Position2>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1059" Column="36" TopLine="1046"/>
-      </Position2>
-      <Position3>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1224" Column="38" TopLine="1212"/>
-      </Position3>
-      <Position4>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1341" Column="38" TopLine="1329"/>
-      </Position4>
-      <Position5>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1407" Column="38" TopLine="1395"/>
-      </Position5>
-      <Position6>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1473" Column="38" TopLine="1461"/>
-      </Position6>
-      <Position7>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1555" Column="38" TopLine="1537"/>
-      </Position7>
-      <Position8>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1606" Column="38" TopLine="1594"/>
-      </Position8>
-      <Position9>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1656" Column="38" TopLine="1643"/>
-      </Position9>
-      <Position10>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1721" Column="38" TopLine="1708"/>
-      </Position10>
-      <Position11>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1774" Column="38" TopLine="1762"/>
-      </Position11>
-      <Position12>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1827" Column="38" TopLine="1815"/>
-      </Position12>
-      <Position13>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="2013" Column="38" TopLine="2001"/>
-      </Position13>
-      <Position14>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="2079" Column="36" TopLine="2066"/>
-      </Position14>
-      <Position15>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="2563" Column="25" TopLine="2561"/>
-      </Position15>
-      <Position16>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="731" Column="36" TopLine="717"/>
-      </Position16>
-      <Position17>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="883" Column="36" TopLine="870"/>
-      </Position17>
-      <Position18>
+      </Position1>
+      <Position2>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1055" Column="36" TopLine="1042"/>
-      </Position18>
-      <Position19>
+      </Position2>
+      <Position3>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1220" Column="38" TopLine="1208"/>
-      </Position19>
-      <Position20>
+      </Position3>
+      <Position4>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1337" Column="61" TopLine="1325"/>
-      </Position20>
-      <Position21>
+      </Position4>
+      <Position5>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1403" Column="38" TopLine="1391"/>
-      </Position21>
-      <Position22>
+      </Position5>
+      <Position6>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1469" Column="38" TopLine="1457"/>
-      </Position22>
-      <Position23>
+      </Position6>
+      <Position7>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1561" Column="38" TopLine="1549"/>
-      </Position23>
-      <Position24>
+      </Position7>
+      <Position8>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1612" Column="38" TopLine="1600"/>
-      </Position24>
-      <Position25>
+      </Position8>
+      <Position9>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1662" Column="38" TopLine="1649"/>
-      </Position25>
-      <Position26>
+      </Position9>
+      <Position10>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1727" Column="38" TopLine="1714"/>
-      </Position26>
-      <Position27>
+      </Position10>
+      <Position11>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1780" Column="38" TopLine="1768"/>
-      </Position27>
-      <Position28>
+      </Position11>
+      <Position12>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="1833" Column="38" TopLine="1821"/>
-      </Position28>
-      <Position29>
+      </Position12>
+      <Position13>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="2019" Column="38" TopLine="2007"/>
-      </Position29>
-      <Position30>
+      </Position13>
+      <Position14>
         <Filename Value="fzalobymlcoch.pas"/>
         <Caret Line="2085" Column="36" TopLine="2072"/>
+      </Position14>
+      <Position15>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="1809" Column="109" TopLine="1778"/>
+      </Position15>
+      <Position16>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="791" Column="35" TopLine="770"/>
+      </Position16>
+      <Position17>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="944" Column="59" TopLine="926"/>
+      </Position17>
+      <Position18>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="1176" Column="61" TopLine="1158"/>
+      </Position18>
+      <Position19>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="1242" Column="61" TopLine="1224"/>
+      </Position19>
+      <Position20>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="1308" Column="61" TopLine="1290"/>
+      </Position20>
+      <Position21>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="1427" Column="59" TopLine="1409"/>
+      </Position21>
+      <Position22>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2160" Column="38" TopLine="2142"/>
+      </Position22>
+      <Position23>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2225" Column="38" TopLine="2207"/>
+      </Position23>
+      <Position24>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2269" Column="38" TopLine="2251"/>
+      </Position24>
+      <Position25>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2320" Column="38" TopLine="2301"/>
+      </Position25>
+      <Position26>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2384" Column="38" TopLine="2366"/>
+      </Position26>
+      <Position27>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2437" Column="38" TopLine="2419"/>
+      </Position27>
+      <Position28>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2489" Column="38" TopLine="2471"/>
+      </Position28>
+      <Position29>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2706" Column="38" TopLine="2688"/>
+      </Position29>
+      <Position30>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2772" Column="36" TopLine="2754"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

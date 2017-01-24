@@ -49,6 +49,7 @@ type
     procedure DBGrid1DblClick(Sender: TObject);
     procedure DBGridTitleClick(Column: TColumn);
     procedure dsMasterDataChange(Sender: TObject; Field: TField);
+    procedure edFindKeyPress(Sender: TObject; var Key: char);
     procedure edFindKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -353,7 +354,7 @@ try
   for i:=0 to qrMaster.Params.Count-1 do
   begin
     if copy(qrMaster.Params.Items[i].Name,1,7)='HLEDAT_' then
-      qrMaster.Params.Items[i].AsString:=UpperCase(s);
+      qrMaster.Params.Items[i].AsString:=s;
   end;
   qrMaster.Open;
   {
@@ -401,8 +402,8 @@ end;
 procedure TfrmSablona.edFindKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
-  //if Key=$13 then
-  //  najdi(edFind.Text);
+{  if Key=#13 then
+    najdi(edFind.Text);}
 end;
 
 procedure TfrmSablona.DBGridTitleClick(Column: TColumn);
@@ -413,6 +414,12 @@ end;
 procedure TfrmSablona.dsMasterDataChange(Sender: TObject; Field: TField);
 begin
   //Field.AsString:=AnstiToUTF8(Field.AsSring);
+end;
+
+procedure TfrmSablona.edFindKeyPress(Sender: TObject; var Key: char);
+begin
+  if Key=#13 then
+    najdi(edFind.Text);
 end;
 
 procedure TfrmSablona.miVychoziDotazClick(Sender: TObject);

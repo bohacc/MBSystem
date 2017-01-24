@@ -41,7 +41,7 @@
   inherited pcMain: TPageControl
     Height = 356
     Width = 707
-    ActivePage = tsSeznam
+    ActivePage = tsZaznam
     inherited tsSeznam: TTabSheet
       ClientHeight = 328
       ClientWidth = 699
@@ -535,6 +535,15 @@
     end
     object miSestavy: TMenuItem[3]
       Caption = 'Sestavy'
+      OnClick = miSestavyClick
+      object miPrezencni: TMenuItem
+        Caption = 'Prezenční listina'
+        OnClick = miPrezencniClick
+      end
+      object miAkcionariAkcie: TMenuItem
+        Caption = 'Akcionáři - přehled akcií'
+        OnClick = miAkcionariAkcieClick
+      end
     end
     inherited miOkno: TMenuItem[4]
     end

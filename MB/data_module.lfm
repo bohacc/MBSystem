@@ -2,17 +2,23 @@ object DM: TDM
   OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 194
-  HorizontalOffset = 408
-  VerticalOffset = 189
+  HorizontalOffset = 703
+  VerticalOffset = 380
   Width = 390
   object OracleConnection: TZConnection
-    Protocol = 'oracle'
-    Database = 'XE'
-    User = 'mbsystem'
-    Password = 'mbsystem'
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
     TransactIsolationLevel = tiReadCommitted
     DesignConnection = True
     SQLHourGlass = True
+    Port = 0
+    Database = 'XE'
+    User = 'mbsystem'
+    Password = 'mbsystem'
+    Protocol = 'oracle'
     left = 72
     top = 48
   end

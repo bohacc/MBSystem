@@ -2,9 +2,11 @@
 
 LazarusResources.Add('TDM','FORMDATA',[
   'TPF0'#3'TDM'#2'DM'#8'OnCreate'#7#16'DataModuleCreate'#14'OldCreateOrder'#8#6
-  +'Height'#3#194#0#16'HorizontalOffset'#3#152#1#14'VerticalOffset'#3#189#0#5'W'
-  +'idth'#3#134#1#0#12'TZConnection'#16'OracleConnection'#8'Protocol'#6#6'oracl'
-  +'e'#8'Database'#6#2'XE'#4'User'#6#8'mbsystem'#8'Password'#6#8'mbsystem'#22'T'
-  +'ransactIsolationLevel'#7#15'tiReadCommitted'#16'DesignConnection'#9#12'SQLH'
-  +'ourGlass'#9#4'left'#2'H'#3'top'#2'0'#0#0#0
+  +'Height'#3#194#0#16'HorizontalOffset'#3#191#2#14'VerticalOffset'#3'|'#1#5'Wi'
+  +'dth'#3#134#1#0#12'TZConnection'#16'OracleConnection'#16'ControlsCodePage'#7
+  +#8'cCP_UTF8'#17'AutoEncodeStrings'#8#18'Properties.Strings'#1#6#18'AutoEncod'
+  +'eStrings='#0#22'TransactIsolationLevel'#7#15'tiReadCommitted'#16'DesignConn'
+  +'ection'#9#12'SQLHourGlass'#9#4'Port'#2#0#8'Database'#6#2'XE'#4'User'#6#8'mb'
+  +'system'#8'Password'#6#8'mbsystem'#8'Protocol'#6#6'oracle'#4'left'#2'H'#3'to'
+  +'p'#2'0'#0#0#0
 ]);

@@ -11,7 +11,7 @@ object frmSablona: TfrmSablona
   OnActivate = FormActivate
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '0.9.30'
+  LCLVersion = '1.0.14.0'
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
@@ -36,12 +36,12 @@ object frmSablona: TfrmSablona
     object ToolButton1: TToolButton
       Left = 1
       Top = 2
-      Width = 4
+      Width = 5
       Caption = 'ToolButton1'
       Style = tbsDivider
     end
     object ToolButton3: TToolButton
-      Left = 192
+      Left = 194
       Hint = 'Výchozí dotaz'
       Top = 2
       Caption = 'ToolButton3'
@@ -51,14 +51,14 @@ object frmSablona: TfrmSablona
       ShowHint = True
     end
     object ToolButton4: TToolButton
-      Left = 215
+      Left = 217
       Top = 2
-      Width = 4
+      Width = 5
       Caption = 'ToolButton4'
       Style = tbsDivider
     end
     object btRefresh: TToolButton
-      Left = 5
+      Left = 6
       Hint = 'Obnovení seznamu'
       Top = 2
       Caption = 'btRefresh'
@@ -68,16 +68,17 @@ object frmSablona: TfrmSablona
       ShowHint = True
     end
     object edFind: TEdit
-      Left = 28
+      Left = 29
       Height = 22
       Top = 2
       Width = 137
       AutoSize = False
+      OnKeyPress = edFindKeyPress
       OnKeyUp = edFindKeyUp
       TabOrder = 0
     end
     object Navigator: TDBNavigator
-      Left = 219
+      Left = 222
       Height = 22
       Top = 2
       Width = 241
@@ -93,20 +94,21 @@ object frmSablona: TfrmSablona
       ClientWidth = 241
       Flat = True
       OnClick = NavigatorClick
+      Options = []
       TabOrder = 1
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert, nbDelete, nbEdit, nbPost, nbCancel]
     end
     object ToolButton10: TToolButton
-      Left = 165
+      Left = 166
       Top = 2
       Caption = 'ToolButton10'
       ImageIndex = 10
       OnClick = ToolButton10Click
     end
     object ToolButton5: TToolButton
-      Left = 188
+      Left = 189
       Top = 2
-      Width = 4
+      Width = 5
       Caption = 'ToolButton5'
       Style = tbsDivider
     end

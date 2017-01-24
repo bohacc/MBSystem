@@ -22,6 +22,8 @@ type
     lbVerze: TLabel;
     MainMenu: TMainMenu;
     MenuItem1: TMenuItem;
+    miImportTxt: TMenuItem;
+    miZalohaTxt: TMenuItem;
     miZiskatDataZeZprav: TMenuItem;
     miServis: TMenuItem;
     miNenalezene: TMenuItem;
@@ -69,6 +71,7 @@ type
     procedure miAgendy1Click(Sender: TObject);
     procedure miChybneObjektyClick(Sender: TObject);
     procedure miCloseClick(Sender: TObject);
+    procedure miImportTxtClick(Sender: TObject);
     procedure miLicenceClick(Sender: TObject);
     procedure miMainMenuClick(Sender : TObject);
     procedure FormCreate(Sender: TObject);
@@ -82,6 +85,7 @@ type
     procedure miParametryClick(Sender: TObject);
     procedure miPrelozitClick(Sender: TObject);
     procedure miZalohaDatClick(Sender: TObject);
+    procedure miZalohaTxtClick(Sender: TObject);
     procedure miZiskatDataZeZpravClick(Sender: TObject);
     procedure PopupClick(Sender: TObject);
     procedure TimerTimer(Sender: TObject);
@@ -702,6 +706,16 @@ begin
   Close;
 end;
 
+procedure TfrmMain.miImportTxtClick(Sender: TObject);
+begin
+  //importZalobyZpravyTypyTxt('ZPRAVY_TYPY');
+  importZalobyTxt('ZALOBY');
+  //importZalobyTxt('ZALOBY_OSTATNI');
+  //importZalobyTxt('ZALOBY_MLCOCH');
+  //importZalobyZpravyTxt('ZALOBY_ZPRAVY','ZALOBY');
+  ShowMessage('Import skončil');
+end;
+
 procedure TfrmMain.miParametryClick(Sender: TObject);
 begin
   if not Assigned(frmParametry) then
@@ -748,6 +762,16 @@ on E : Exception do
     MessageDlg('Záloha dat skončila chybou: '+E.Message+'!',mtError,[mbOK],0);
   end;
 end;
+end;
+
+procedure TfrmMain.miZalohaTxtClick(Sender: TObject);
+begin
+  exportZalobyTxt('ZALOBY');
+  exportZalobyTxt('ZALOBY_OSTATNI');
+  exportZalobyTxt('ZALOBY_MLCOCH');
+  exportZalobyZpravyTxt('ZALOBY_ZPRAVY');
+  exportZalobyZpravyTypyTxt('ZPRAVY_TYPY');
+  ShowMessage('Export skončil');
 end;
 
 procedure TfrmMain.miZiskatDataZeZpravClick(Sender: TObject);

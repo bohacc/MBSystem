@@ -1,5 +1,5 @@
 object frmMain: TfrmMain
-  Left = 636
+  Left = 555
   Height = 277
   Top = 289
   Width = 464
@@ -12,7 +12,7 @@ object frmMain: TfrmMain
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '0.9.30'
+  LCLVersion = '1.0.14.0'
   object Panel1: TPanel
     Left = 0
     Height = 21
@@ -126,6 +126,7 @@ object frmMain: TfrmMain
       Top = 7
       Width = 148
       DateTime = 40216
+      TabOrder = 1
     end
   end
   object StatusBar1: TStatusBar
@@ -163,6 +164,14 @@ object frmMain: TfrmMain
         Caption = 'Zobrazit chybné objekty'
         Visible = False
         OnClick = miChybneObjektyClick
+      end
+      object miZalohaTxt: TMenuItem
+        Caption = 'Export do txt'
+        OnClick = miZalohaTxtClick
+      end
+      object miImportTxt: TMenuItem
+        Caption = 'Import z txt'
+        OnClick = miImportTxtClick
       end
       object miClose: TMenuItem
         Caption = 'Zavřít'

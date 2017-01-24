@@ -528,7 +528,7 @@ begin
         Table:=g.DataSource.Dataset;
         for i:=0 to g.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(g.SelectedRows[i]);
+          Table.Bookmark:=g.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -818,7 +818,7 @@ begin
         Table:=g.DataSource.Dataset;
         for i:=0 to g.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(g.SelectedRows[i]);
+          Table.Bookmark:=g.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1082,7 +1082,7 @@ begin
         Table:=g.DataSource.Dataset;
         for i:=0 to g.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(g.SelectedRows[i]);
+          Table.Bookmark:=g.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1279,7 +1279,7 @@ begin
         Table:=g.DataSource.Dataset;
         for i:=0 to g.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(g.SelectedRows[i]);
+          Table.Bookmark:=g.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1460,7 +1460,7 @@ begin
         Table:=g.DataSource.Dataset;
         for i:=0 to g.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(g.SelectedRows[i]);
+          Table.Bookmark:=g.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1525,7 +1525,7 @@ begin
     if frmTiskZalob.rbOznacene.Checked then
     begin
       sql_dotaz:='SELECT'+
-                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZEMREL IS NOT NULL AND ID IN ('+temp+')) AS ZEMRELI'+
+                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZEMREL IS NOT NULL AND ID IN ('+temp+')) AS ZEMRELI,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZAPLATIL_PRED_PODANIM IS NOT NULL AND ID IN ('+temp+')) AS ZAPL_PRED_ZAL,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SPIS_ZNACKA IS NOT NULL AND ID IN ('+temp+')) AS PODANE_ZALOBY,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND UHR_SOP IS NOT NULL AND ID IN ('+temp+')) AS UHR_SOP,'+
@@ -1543,6 +1543,7 @@ begin
                  'FROM '+
                  '  DUAL';
     end;
+    //ShowMessage(sql_dotaz);
     qt.SQL.Text:=sql_dotaz;
     qt.Open;
     pocet_poli:=13;//qt.Fields.Count;
@@ -1771,7 +1772,7 @@ begin
         Table:=g.DataSource.Dataset;
         for i:=0 to g.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(g.SelectedRows[i]);
+          Table.Bookmark:=g.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1800,8 +1801,10 @@ begin
                  tab+' '+
                  'WHERE '+
                  '  NVL(UZAMCENA,0)=0 '+
-                 '  AND ODVOLANI IS NULL '+
-                 '  AND (SPIS_ZNACKA IS NOT NULL AND (ROZSUDEK IS NOT NULL OR PL_PRIKAZ IS NOT NULL) AND PR_MOC IS NULL)'+
+                 '  AND ((ODVOLANI IS NULL AND ROZSUDEK IS NULL) OR (ROZSUDEK IS NOT NULL)) '+
+                 '  AND SPIS_ZNACKA IS NOT NULL'+
+                 '  AND (ROZSUDEK IS NOT NULL OR PL_PRIKAZ IS NOT NULL) '+
+                 '  AND PR_MOC IS NULL '+
                  'ORDER BY '+
                  ' DATUM_IMPORTU DESC, CISLO';
     end;
@@ -1813,8 +1816,10 @@ begin
                  tab+' '+
                  'WHERE '+
                  '  NVL(UZAMCENA,0)=0 '+
-                 '  AND ODVOLANI IS NULL '+
-                 '  AND (SPIS_ZNACKA IS NOT NULL AND (ROZSUDEK IS NOT NULL OR PL_PRIKAZ IS NOT NULL) AND PR_MOC IS NULL)'+
+                 '  AND ((ODVOLANI IS NULL AND ROZSUDEK IS NULL) OR (ROZSUDEK IS NOT NULL)) '+
+                 '  AND SPIS_ZNACKA IS NOT NULL'+
+                 '  AND (ROZSUDEK IS NOT NULL OR PL_PRIKAZ IS NOT NULL) '+
+                 '  AND PR_MOC IS NULL '+
                  '  AND DATUM_IMPORTU=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''') '+
                  'ORDER BY '+
                  ' DATUM_IMPORTU DESC, CISLO';
@@ -1827,8 +1832,10 @@ begin
                  tab+' '+
                  'WHERE '+
                  '  NVL(UZAMCENA,0)=0 '+
-                 '  AND ODVOLANI IS NULL '+
-                 '  AND (SPIS_ZNACKA IS NOT NULL AND (ROZSUDEK IS NOT NULL OR PL_PRIKAZ IS NOT NULL) AND PR_MOC IS NULL)'+
+                 '  AND ((ODVOLANI IS NULL AND ROZSUDEK IS NULL) OR (ROZSUDEK IS NOT NULL)) '+
+                 '  AND SPIS_ZNACKA IS NOT NULL'+
+                 '  AND (ROZSUDEK IS NOT NULL OR PL_PRIKAZ IS NOT NULL) '+
+                 '  AND PR_MOC IS NULL '+
                  '  AND ID IN ('+temp+') '+
                  'ORDER BY '+
                  ' DATUM_IMPORTU DESC, CISLO';
@@ -2198,7 +2205,7 @@ begin
         Table:=g.DataSource.Dataset;
         for i:=0 to g.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(g.SelectedRows[i]);
+          Table.Bookmark:=g.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2485,7 +2492,7 @@ begin
           Table:=DBGrid.DataSource.Dataset;
           for i:=0 to DBGrid.SelectedRows.Count-1 do
           begin
-            Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+            Table.Bookmark:=DBGrid.SelectedRows[i];
             if i=0 then
               temp:=Table.FieldByName('ID').AsString
             else

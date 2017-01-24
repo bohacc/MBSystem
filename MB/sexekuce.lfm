@@ -4,7 +4,7 @@ object frmSExekuce: TfrmSExekuce
   Top = 201
   Width = 320
   Caption = 'frmSExekuce'
-  LCLVersion = '1.0.2.0'
+  LCLVersion = '1.0.14.0'
   object frReport: TfrReport
     Dataset = dsMaster
     InitialZoom = pzDefault
@@ -13,9 +13,6 @@ object frmSExekuce: TfrmSExekuce
     DataType = dtDataSet
     left = 40
     top = 64
-    ReportForm = {
-      19000000
-    }
   end
   object dsMaster: TfrDBDataSet
     DataSet = qrMaster

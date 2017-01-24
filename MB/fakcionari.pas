@@ -50,6 +50,8 @@ type
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
+    miAkcionariAkcie: TMenuItem;
+    miPrezencni: TMenuItem;
     miNastaveniDividendy: TMenuItem;
     miPrevodAll: TMenuItem;
     miPrevod: TMenuItem;
@@ -108,6 +110,9 @@ type
     procedure edPrijmeniChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
+    procedure miAkcionariAkcieClick(Sender: TObject);
+    procedure miPrezencniClick(Sender: TObject);
+    procedure miSestavyClick(Sender: TObject);
     procedure miVychoziDotazClick(Sender: TObject);
     procedure NavigatorClick(Sender: TObject; Button: TDBNavButtonType);
     procedure NavigatorDragDrop(Sender, Source: TObject; X, Y: Integer);
@@ -182,7 +187,7 @@ implementation
 uses  dakcie_pohyb,uProc,Utils,ssouhrn_akcii,dprevod_akcie,sStitky,sstitky2,
       shistorie_akcie,sseznam_akcionaru2,ssouhrn_akcii2,svyplatni_listina,
       svyplatni_listina2,svyplatni_listina3,sseznam_akcionaru3,sSoucetAkciiZaTypAll,
-      svypis_akcionare,sseznam_akcionaru,Data_module,FParametry;
+      svypis_akcionare,sseznam_akcionaru,Data_module,FParametry,FSestavy;
 
 { TfrmAkcionari }
 
@@ -249,6 +254,91 @@ begin
     frmAkciePohyb.ShowModal;
   except
   end;
+end;
+
+procedure TfrmAkcionari.miAkcionariAkcieClick(Sender: TObject);
+var
+  sql_text: string;
+begin
+try
+  if not Assigned(frmSestavy) then
+    Application.CreateForm(TfrmSestavy,frmSestavy);
+
+  sql_text := 'SELECT          '+
+              '	   S.*,        '+
+              '    (SELECT NAZEV FROM LICENCE) AS FIRMA '+
+              'FROM (          '+
+              'SELECT          '+
+              '	*              '+
+              'FROM            '+
+              '(SELECT         '+
+              '	1 AS SORT,     '+
+              '	ID AS CISLO,   '+
+              '	JMENO,         '+
+              '	PRIJMENI,      '+
+              '	NULL AS TYP,   '+
+              '	NULL AS CISLO_AKCIE,  '+
+              '	NULL AS HODNOTA '+
+              'FROM        '+
+              '	AKCIONARI  '+
+              'ORDER BY    '+
+              '	PRIJMENI)  '+
+              'UNION ALL   '+
+              'SELECT      '+
+              '	2 AS SORT,  '+
+              '	CISLO,        '+
+              '	NULL AS JMENO, '+
+              '	NULL AS PRIJMENI,'+
+              '	TYP,        '+
+              '	CISLO_AKCIE,'+
+              '	HODNOTA  '+
+              'FROM      '+
+              '	AKCIE    '+
+              ') S        '+
+              'ORDER BY  '+
+              '	CISLO,    ' +
+              '	SORT ASC, '+
+              '	TYP,  '+
+              '	HODNOTA  '+
+              '	';
+  frmSestavy.qrMaster.Close;
+  frmSestavy.qrMaster.SQL.Text:=sql_text;
+  frmSestavy.qrMaster.Open;
+  frmSestavy.frReport.LoadFromFile(Replace_Char(get_param('SESTAVY')+'\','\\','\')+'PrehledAkcii.lrf');
+  frmSestavy.frReport.PrepareReport;
+  frmSestavy.frReport.ModalPreview:=true;
+  frmSestavy.frReport.ShowProgress:=true;
+  frmSestavy.frReport.ShowReport;
+  frmSestavy.qrMaster.Close;
+finally
+end;
+end;
+
+procedure TfrmAkcionari.miPrezencniClick(Sender: TObject);
+var
+  sql_text: string;
+begin
+  try
+    if not Assigned(frmSestavy) then
+      Application.CreateForm(TfrmSestavy,frmSestavy);
+
+    sql_text := 'SELECT JMENO,PRIJMENI,FORMAT_MENA((SELECT SUM(NVL(HODNOTA,0)) FROM AKCIE WHERE CISLO=A.ID),0) AS HODNOTA_AKCII,(SELECT NAZEV FROM LICENCE) AS FIRMA FROM AKCIONARI A ORDER BY PRIJMENI';
+    frmSestavy.qrMaster.Close;
+    frmSestavy.qrMaster.SQL.Text:=sql_text;
+    frmSestavy.qrMaster.Open;
+    frmSestavy.frReport.LoadFromFile(Replace_Char(get_param('SESTAVY')+'\','\\','\')+'PrezencniListina.lrf');
+    frmSestavy.frReport.PrepareReport;
+    frmSestavy.frReport.ModalPreview:=true;
+    frmSestavy.frReport.ShowProgress:=true;
+    frmSestavy.frReport.ShowReport;
+    frmSestavy.qrMaster.Close;
+  finally
+  end;
+end;
+
+procedure TfrmAkcionari.miSestavyClick(Sender: TObject);
+begin
+
 end;
 
 procedure TfrmAkcionari.miVychoziDotazClick(Sender: TObject);
@@ -394,7 +484,7 @@ begin
     Table:=DBGrid1.DataSource.Dataset;
     for i:=0 to DBGrid1.SelectedRows.Count-1 do
     begin
-      Table.Bookmark:=AnsiString(DBGrid1.SelectedRows[i]);
+      Table.Bookmark:=DBGrid1.SelectedRows[i];
       if i=0 then
         temp:=Table.FieldByName('ID').AsString
       else

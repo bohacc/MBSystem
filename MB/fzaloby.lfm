@@ -1,11 +1,11 @@
 ﻿inherited frmZaloby: TfrmZaloby
-  Left = 324
+  Left = 470
   Height = 743
-  Top = 129
+  Top = 150
   Width = 1065
   ActiveControl = RadioGroup1
   Caption = 'Žaloby'
-  ClientHeight = 723
+  ClientHeight = 718
   ClientWidth = 1065
   Constraints.MinHeight = 473
   Constraints.MinWidth = 1065
@@ -13,32 +13,22 @@
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   inherited StatusBar1: TStatusBar
-    Top = 700
+    Height = 29
+    Top = 689
     Width = 1065
   end
   inherited ToolBar1: TToolBar
     Width = 1065
-    inherited ToolButton1: TToolButton
-      Width = 5
-    end
     inherited ToolButton3: TToolButton
-      Left = 194
       OnClick = miVychoziDotazClick
     end
-    inherited ToolButton4: TToolButton
-      Left = 217
-      Width = 5
-    end
     inherited btRefresh: TToolButton
-      Left = 6
       OnClick = btRefreshClick
     end
     inherited edFind: TEdit
-      Left = 29
       OnKeyUp = edFindKeyUp
     end
     inherited Navigator: TDBNavigator
-      Left = 222
       BeforeAction = NavigatorBeforeAction
       DataSource = dsMaster
       Hints.Strings = (      )
@@ -46,28 +36,23 @@
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbEdit, nbPost, nbCancel]
     end
     inherited ToolButton10: TToolButton
-      Left = 166
       Hint = 'Vyhledá zadaný text'
       OnClick = ToolButton10Click
       ParentShowHint = False
       ShowHint = True
     end
-    inherited ToolButton5: TToolButton
-      Left = 189
-      Width = 5
-    end
   end
   inherited pcMain: TPageControl
-    Height = 615
+    Height = 604
     Top = 60
     Width = 1065
-    ActivePage = nil
-    TabIndex = -1
+    ActivePage = tsSeznam
+    TabIndex = 0
     inherited tsSeznam: TTabSheet
-      ClientHeight = 587
+      ClientHeight = 571
       ClientWidth = 1057
       inherited DBGrid: TDBGrid
-        Height = 587
+        Height = 571
         Width = 1057
         Columns = <        
           item
@@ -321,11 +306,11 @@
       end
     end
     inherited tsZaznam: TTabSheet
-      ClientHeight = 587
+      ClientHeight = 571
       ClientWidth = 1057
       object PageControl1: TPageControl[0]
         Left = 0
-        Height = 155
+        Height = 139
         Top = 432
         Width = 1057
         ActivePage = tsZpravy
@@ -334,7 +319,7 @@
         TabOrder = 0
         object tsZpravy: TTabSheet
           Caption = 'Zprávy'
-          ClientHeight = 127
+          ClientHeight = 106
           ClientWidth = 1049
           object ToolBar2: TToolBar
             Left = 0
@@ -360,6 +345,7 @@
             end
             object ToolButton6: TToolButton
               Left = 47
+              Height = 22
               Top = 2
               Width = 10
               Caption = 'ToolButton6'
@@ -387,7 +373,7 @@
           end
           object DBGrid1: TDBGrid
             Left = 0
-            Height = 101
+            Height = 80
             Top = 26
             Width = 1049
             Align = alClient
@@ -415,17 +401,17 @@
         TabOrder = 1
         object Label1: TLabel
           Left = 12
-          Height = 16
+          Height = 20
           Top = 7
-          Width = 56
+          Width = 66
           Caption = 'Var. symb.'
           ParentColor = False
         end
         object Label2: TLabel
           Left = 261
-          Height = 16
+          Height = 20
           Top = 7
-          Width = 32
+          Width = 38
           Caption = 'GUID'
           Font.Style = [fsBold]
           ParentColor = False
@@ -433,121 +419,121 @@
         end
         object Label3: TLabel
           Left = 607
-          Height = 16
+          Height = 20
           Top = 7
-          Width = 12
+          Width = 15
           Caption = 'ID'
           ParentColor = False
         end
         object Label4: TLabel
           Left = 532
-          Height = 16
+          Height = 20
           Top = 44
-          Width = 62
+          Width = 75
           Caption = 'Uzamknuto'
           ParentColor = False
         end
         object Label5: TLabel
           Left = 532
-          Height = 16
+          Height = 20
           Top = 70
-          Width = 91
+          Width = 112
           Caption = 'Datum uzamčení'
           ParentColor = False
         end
         object Label6: TLabel
           Left = 532
-          Height = 16
+          Height = 20
           Top = 94
-          Width = 83
+          Width = 102
           Caption = 'Datum importu'
           ParentColor = False
         end
         object Label7: TLabel
           Left = 12
-          Height = 16
+          Height = 20
           Top = 44
-          Width = 37
+          Width = 45
           Caption = 'Datum'
           ParentColor = False
         end
         object Label8: TLabel
           Left = 12
-          Height = 16
+          Height = 20
           Top = 70
-          Width = 36
+          Width = 43
           Caption = 'Jméno'
           ParentColor = False
         end
         object Label9: TLabel
           Left = 12
-          Height = 16
+          Height = 20
           Top = 119
-          Width = 27
+          Width = 33
           Caption = 'Ulice'
           ParentColor = False
         end
         object Label10: TLabel
           Left = 12
-          Height = 16
+          Height = 20
           Top = 94
-          Width = 47
+          Width = 57
           Caption = 'Rodné č.'
           ParentColor = False
         end
         object Label11: TLabel
           Left = 260
-          Height = 16
+          Height = 20
           Top = 44
-          Width = 73
+          Width = 91
           Caption = 'Dlužná částka'
           ParentColor = False
         end
         object Label12: TLabel
           Left = 261
-          Height = 16
+          Height = 20
           Top = 69
-          Width = 38
+          Width = 44
           Caption = 'Pokuta'
           ParentColor = False
         end
         object Label13: TLabel
           Left = 261
-          Height = 16
+          Height = 20
           Top = 94
-          Width = 33
+          Width = 41
           Caption = 'Jízdné'
           ParentColor = False
         end
         object Label14: TLabel
           Left = 260
-          Height = 16
+          Height = 20
           Top = 145
-          Width = 37
+          Width = 45
           Caption = 'Obvod'
           ParentColor = False
         end
         object Label15: TLabel
           Left = 12
-          Height = 16
+          Height = 20
           Top = 145
-          Width = 34
+          Width = 41
           Caption = 'Město'
           ParentColor = False
         end
         object Label16: TLabel
           Left = 12
-          Height = 16
+          Height = 20
           Top = 170
-          Width = 19
+          Width = 21
           Caption = 'Psč'
           ParentColor = False
         end
         object Label17: TLabel
           Left = 261
-          Height = 16
+          Height = 20
           Top = 120
-          Width = 22
+          Width = 24
           Caption = 'Č.p.'
           ParentColor = False
         end
@@ -785,38 +771,38 @@
           Top = 0
           Width = 335
           Caption = 'Přijaté typy zpráv'
-          ClientHeight = 125
+          ClientHeight = 118
           ClientWidth = 331
           TabOrder = 17
           object Label18: TLabel
             Left = 3
-            Height = 16
+            Height = 20
             Top = 10
-            Width = 150
+            Width = 186
             Caption = 'Potvrzení o doručení podání'
             ParentColor = False
           end
           object Label19: TLabel
             Left = 3
-            Height = 16
+            Height = 20
             Top = 37
-            Width = 269
+            Width = 336
             Caption = 'Potvrzení o ověření elektronického podpisu podání'
             ParentColor = False
           end
           object Label20: TLabel
             Left = 3
-            Height = 16
+            Height = 20
             Top = 64
-            Width = 150
+            Width = 188
             Caption = 'Elektronický Platební Rozkaz'
             ParentColor = False
           end
           object Label21: TLabel
             Left = 3
-            Height = 16
+            Height = 20
             Top = 91
-            Width = 218
+            Width = 274
             Caption = 'Potvrzení o předání podání k zapracování'
             ParentColor = False
           end
@@ -871,13 +857,13 @@
           Top = 320
           Width = 776
           Caption = 'Vykonávací řízení'
-          ClientHeight = 86
+          ClientHeight = 79
           ClientWidth = 772
           ParentFont = False
           TabOrder = 18
           object DBEdit19: TDBEdit
             Left = 7
-            Height = 23
+            Height = 28
             Top = 17
             Width = 80
             DataField = 'NAVRH'
@@ -888,7 +874,7 @@
           end
           object DBEdit20: TDBEdit
             Left = 118
-            Height = 23
+            Height = 28
             Top = 17
             Width = 80
             DataField = 'EXEKUCNI_PRIKAZ'
@@ -899,7 +885,7 @@
           end
           object DBEdit21: TDBEdit
             Left = 7
-            Height = 23
+            Height = 28
             Top = 58
             Width = 80
             DataField = 'PRIKAZ'
@@ -910,7 +896,7 @@
           end
           object DBEdit22: TDBEdit
             Left = 266
-            Height = 23
+            Height = 28
             Top = 58
             Width = 80
             DataField = 'SKONCENO'
@@ -921,58 +907,58 @@
           end
           object Label23: TLabel
             Left = 7
-            Height = 16
+            Height = 20
             Top = 3
-            Width = 33
+            Width = 39
             Caption = 'Návrh'
             ParentColor = False
           end
           object Label24: TLabel
             Left = 7
-            Height = 16
+            Height = 20
             Top = 43
-            Width = 86
+            Width = 105
             Caption = 'Datum usnesení'
             ParentColor = False
           end
           object Label25: TLabel
             Left = 118
-            Height = 16
+            Height = 20
             Top = 3
-            Width = 81
+            Width = 101
             Caption = 'Exekuční příkaz'
             ParentColor = False
           end
           object Label26: TLabel
             Left = 266
-            Height = 16
+            Height = 20
             Top = 40
-            Width = 53
+            Width = 64
             Caption = 'Skončeno'
             ParentColor = False
           end
           object cbExekutor: TDBComboBox
             Left = 374
-            Height = 23
+            Height = 28
             Top = 17
             Width = 192
             DataField = 'EXEKUTOR'
             DataSource = dsMaster
-            ItemHeight = 15
+            ItemHeight = 20
             MaxLength = 0
             TabOrder = 4
           end
           object Label47: TLabel
             Left = 374
-            Height = 16
+            Height = 20
             Top = 3
-            Width = 46
+            Width = 57
             Caption = 'Exekutor'
             ParentColor = False
           end
           object DBEdit41: TDBEdit
             Left = 267
-            Height = 23
+            Height = 28
             Top = 17
             Width = 81
             DataField = 'VYMOZENO'
@@ -983,18 +969,18 @@
           end
           object Label48: TLabel
             Left = 266
-            Height = 16
+            Height = 20
             Top = 3
-            Width = 57
+            Width = 70
             Caption = 'Vymoženo'
             ParentColor = False
           end
           object cbSkoncenoDuvod: TComboBox
             Left = 374
-            Height = 23
+            Height = 28
             Top = 58
             Width = 192
-            ItemHeight = 15
+            ItemHeight = 20
             ItemIndex = 0
             Items.Strings = (
               ''
@@ -1009,15 +995,15 @@
           end
           object Label49: TLabel
             Left = 374
-            Height = 16
+            Height = 20
             Top = 40
-            Width = 90
+            Width = 110
             Caption = 'Skončeno důvod'
             ParentColor = False
           end
           object DBEdit42: TDBEdit
             Left = 118
-            Height = 23
+            Height = 28
             Top = 58
             Width = 80
             DataField = 'USNESENI_DATUM'
@@ -1028,9 +1014,9 @@
           end
           object Label50: TLabel
             Left = 118
-            Height = 16
+            Height = 20
             Top = 43
-            Width = 129
+            Width = 159
             Caption = 'Právní moc exe. nákladů'
             ParentColor = False
             OnClick = Label50Click
@@ -1042,12 +1028,12 @@
           Top = 200
           Width = 1042
           Caption = 'Údaje související s vedením sporu - nalézací řízení'
-          ClientHeight = 102
+          ClientHeight = 95
           ClientWidth = 1038
           TabOrder = 19
           object DBEdit18: TDBEdit
             Left = 92
-            Height = 23
+            Height = 28
             Top = 72
             Width = 80
             DataField = 'ODVOLANI'
@@ -1058,7 +1044,7 @@
           end
           object DBEdit24: TDBEdit
             Left = 871
-            Height = 23
+            Height = 28
             Top = 24
             Width = 80
             DataField = 'UHR_SOP'
@@ -1069,7 +1055,7 @@
           end
           object DBEdit25: TDBEdit
             Left = 697
-            Height = 23
+            Height = 28
             Top = 24
             Width = 170
             DataField = 'SPIS_ZNACKA'
@@ -1080,7 +1066,7 @@
           end
           object DBEdit26: TDBEdit
             Left = 465
-            Height = 23
+            Height = 28
             Top = 24
             Width = 230
             DataField = 'CU_SOUDU'
@@ -1091,18 +1077,20 @@
           end
           object DBEdit27: TDBEdit
             Left = 350
-            Height = 23
+            Height = 28
             Top = 24
             Width = 113
             DataField = 'VS_SOUDU'
             DataSource = dsMaster
             CharCase = ecNormal
+            Font.Color = 13477812
             MaxLength = 0
+            ParentFont = False
             TabOrder = 4
           end
           object DBEdit29: TDBEdit
             Left = 266
-            Height = 23
+            Height = 28
             Top = 24
             Width = 80
             DataField = 'ZALOBA'
@@ -1113,7 +1101,7 @@
           end
           object DBEdit30: TDBEdit
             Left = 6
-            Height = 23
+            Height = 28
             Top = 24
             Width = 256
             DataField = 'SOUD'
@@ -1124,7 +1112,7 @@
           end
           object DBEdit31: TDBEdit
             Left = 348
-            Height = 23
+            Height = 28
             Top = 72
             Width = 80
             DataField = 'PR_MOC'
@@ -1135,7 +1123,7 @@
           end
           object DBEdit32: TDBEdit
             Left = 431
-            Height = 23
+            Height = 28
             Top = 72
             Width = 85
             DataField = 'UHRADA'
@@ -1146,7 +1134,7 @@
           end
           object DBEdit33: TDBEdit
             Left = 263
-            Height = 23
+            Height = 28
             Top = 72
             Width = 80
             DataField = 'ROZSUDEK'
@@ -1157,7 +1145,7 @@
           end
           object DBEdit34: TDBEdit
             Left = 179
-            Height = 23
+            Height = 28
             Top = 72
             Width = 80
             DataField = 'JEDNANI'
@@ -1168,95 +1156,95 @@
           end
           object Label28: TLabel
             Left = 6
-            Height = 16
+            Height = 20
             Top = 5
-            Width = 28
+            Width = 34
             Caption = 'Soud'
             ParentColor = False
           end
           object Label29: TLabel
             Left = 267
-            Height = 16
+            Height = 20
             Top = 5
-            Width = 37
+            Width = 47
             Caption = 'Žaloba'
             ParentColor = False
           end
           object Label31: TLabel
             Left = 350
-            Height = 16
+            Height = 20
             Top = 5
-            Width = 50
+            Width = 61
             Caption = 'VS soudu'
             ParentColor = False
           end
           object Label32: TLabel
             Left = 465
-            Height = 16
+            Height = 20
             Top = 5
-            Width = 61
+            Width = 71
             Caption = 'Č. ú. soudu'
             ParentColor = False
           end
           object Label33: TLabel
             Left = 697
-            Height = 16
+            Height = 20
             Top = 5
-            Width = 43
+            Width = 52
             Caption = 'Spis. zn.'
             ParentColor = False
           end
           object Label34: TLabel
             Left = 871
-            Height = 16
+            Height = 20
             Top = 5
-            Width = 48
+            Width = 57
             Caption = 'Úhr. SOP'
             ParentColor = False
           end
           object Label36: TLabel
             Left = 92
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 37
+            Width = 44
             Caption = 'Zrušen'
             ParentColor = False
           end
           object Label37: TLabel
             Left = 179
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 41
+            Width = 50
             Caption = 'Jednání'
             ParentColor = False
           end
           object Label38: TLabel
             Left = 263
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 51
+            Width = 63
             Caption = 'Rozsudek'
             ParentColor = False
           end
           object Label39: TLabel
             Left = 348
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 42
+            Width = 49
             Caption = 'Pr. moc'
             ParentColor = False
           end
           object Label40: TLabel
             Left = 431
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 39
+            Width = 48
             Caption = 'Úhrada'
             ParentColor = False
           end
           object DBEdit23: TDBEdit
             Left = 6
-            Height = 23
+            Height = 28
             Top = 72
             Width = 80
             DataField = 'PL_PRIKAZ'
@@ -1267,15 +1255,15 @@
           end
           object Label35: TLabel
             Left = 7
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 50
+            Width = 62
             Caption = 'Pl. rozkaz'
             ParentColor = False
           end
           object DBEdit37: TDBEdit
             Left = 518
-            Height = 23
+            Height = 28
             Top = 71
             Width = 80
             DataField = 'DATUM_UHRADY'
@@ -1286,17 +1274,17 @@
           end
           object Label42: TLabel
             Left = 518
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 77
+            Width = 94
             Caption = 'Datum úhrady'
             ParentColor = False
           end
           object Label46: TLabel
             Left = 654
-            Height = 16
+            Height = 20
             Top = 56
-            Width = 48
+            Width = 58
             Caption = 'Usnesení'
             ParentColor = False
           end
@@ -1321,7 +1309,7 @@
         end
         object DBEdit35: TDBEdit
           Left = 624
-          Height = 23
+          Height = 28
           Top = 119
           Width = 80
           DataField = 'SPLATNOST'
@@ -1332,9 +1320,9 @@
         end
         object Label27: TLabel
           Left = 532
-          Height = 16
+          Height = 20
           Top = 119
-          Width = 50
+          Width = 62
           Caption = 'Splatnost'
           ParentColor = False
         end
@@ -1359,15 +1347,15 @@
         end
         object Label30: TLabel
           Left = 532
-          Height = 16
+          Height = 20
           Top = 145
-          Width = 33
+          Width = 40
           Caption = 'Nárok'
           ParentColor = False
         end
         object DBEdit36: TDBEdit
           Left = 213
-          Height = 23
+          Height = 28
           Top = 5
           Width = 43
           DataField = 'CISLO'
@@ -1379,7 +1367,7 @@
         end
         object Label41: TLabel
           Left = 202
-          Height = 16
+          Height = 20
           Top = 12
           Width = 10
           Caption = 'č.'
@@ -1387,15 +1375,15 @@
         end
         object Label43: TLabel
           Left = 262
-          Height = 16
+          Height = 20
           Top = 170
-          Width = 38
+          Width = 47
           Caption = 'Zemřel'
           ParentColor = False
         end
         object DBEdit38: TDBEdit
           Left = 340
-          Height = 23
+          Height = 28
           Top = 168
           Width = 80
           DataField = 'ZEMREL'
@@ -1425,17 +1413,17 @@
         end
         object Label44: TLabel
           Left = 464
-          Height = 16
+          Height = 20
           Top = 170
-          Width = 155
+          Width = 198
           Caption = 'Zaplatil před podáním žaloby'
           ParentColor = False
         end
         object Label45: TLabel
           Left = 719
-          Height = 16
+          Height = 20
           Top = 170
-          Width = 56
+          Width = 71
           Caption = 'Zaplatil Kč'
           ParentColor = False
         end
@@ -1479,7 +1467,7 @@
         end
         object DBEdit43: TDBEdit
           Left = 794
-          Height = 23
+          Height = 28
           Top = 371
           Width = 80
           DataField = 'OPRAVNE_USNESENI_DATUM'
@@ -1490,9 +1478,9 @@
         end
         object Label51: TLabel
           Left = 794
-          Height = 16
+          Height = 20
           Top = 357
-          Width = 158
+          Width = 195
           Caption = 'Opravné usnesení ze dne / č.j.'
           ParentColor = False
         end
@@ -1517,7 +1505,7 @@
         end
         object DBEdit44: TDBEdit
           Left = 875
-          Height = 23
+          Height = 28
           Top = 371
           Width = 176
           DataField = 'USNESENI_CJ'
@@ -1528,9 +1516,9 @@
         end
         object lbSplatkKal: TLabel
           Left = 812
-          Height = 19
+          Height = 18
           Top = 330
-          Width = 133
+          Width = 131
           Caption = 'Splátkový kalendář'
           Color = clDefault
           Font.CharSet = EASTEUROPE_CHARSET
@@ -1545,9 +1533,9 @@
         end
         object lbInsolvence: TLabel
           Left = 973
-          Height = 19
+          Height = 18
           Top = 330
-          Width = 73
+          Width = 72
           Caption = 'Insolvence'
           Color = clDefault
           Font.CharSet = EASTEUROPE_CHARSET
@@ -1564,7 +1552,7 @@
     end
   end
   inherited pOK: TPanel
-    Top = 675
+    Top = 664
     Width = 1065
     ClientWidth = 1065
     inherited btStorno: TButton
@@ -1601,7 +1589,7 @@
       ChildSizing.ShrinkVertical = crsScaleChilds
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 4
-      ClientHeight = 15
+      ClientHeight = 8
       ClientWidth = 256
       Columns = 4
       ItemIndex = 2
@@ -1634,18 +1622,18 @@
     end
     object Label22: TLabel
       Left = 267
-      Height = 16
+      Height = 20
       Top = 13
-      Width = 71
+      Width = 87
       Caption = 'Datum dávky'
       ParentColor = False
     end
     object cbDatumy: TComboBox
       Left = 344
-      Height = 23
+      Height = 28
       Top = 6
       Width = 80
-      ItemHeight = 15
+      ItemHeight = 20
       OnChange = cbDatumyChange
       Style = csDropDownList
       TabOrder = 3
@@ -1829,6 +1817,7 @@
       end
       object miExekuceBayerOI: TMenuItem
         Caption = 'Exekuce Bayer - Ostravská inkasní'
+        Visible = False
         OnClick = miExekuceBayerOIClick
       end
       object miExekuceTunkl: TMenuItem
@@ -1841,7 +1830,12 @@
       end
       object miExekuceTunklOI: TMenuItem
         Caption = 'Exekuce Tunkl - Ostravská inkasní'
+        Visible = False
         OnClick = miExekuceTunklOIClick
+      end
+      object miExekuceHanakOI: TMenuItem
+        Caption = 'Exekuce Hanák - Ostravská inkasní'
+        OnClick = miExekuceHanakOIClick
       end
     end
     object miImporty: TMenuItem[5]
@@ -1899,21 +1893,21 @@
       '  ZALOBY '
       'WHERE'
       '  ('
-      '  UPPER(VAR_SYMB) LIKE ''%''||:HLEDAT_VAR_SYMB||''%'''
-      '  OR UPPER(JMENO_CP) LIKE ''%''||:HLEDAT_JMENO_CP||''%'''
-      '  OR UPPER(DATUM_CAS) LIKE ''%''||:HLEDAT_DATUM_CAS||''%'''
-      '  OR UPPER(DLUZNA_CASTKA) LIKE ''%''||:HLEDAT_DLUZNA_CASTKA||''%'''
-      '  OR UPPER(JIZDNE) LIKE ''%''||:HLEDAT_JIZDNE||''%'''
-      '  OR UPPER(POKUTA) LIKE ''%''||:HLEDAT_POKUTA||''%'''
-      '  OR UPPER(RODNE_CISLO) LIKE ''%''||:HLEDAT_RODNE_CISLO||''%'''
-      '  OR UPPER(ULICE) LIKE ''%''||:HLEDAT_ULICE||''%'''
-      '  OR UPPER(CISLO_DOMU) LIKE ''%''||:HLEDAT_CISLO_DOMU||''%'''
-      '  OR UPPER(MESTO) LIKE ''%''||:HLEDAT_MESTO||''%'''
-      '  OR UPPER(OBVOD) LIKE ''%''||:HLEDAT_OBVOD||''%'''
-      '  OR UPPER(PSC) LIKE ''%''||:HLEDAT_PSC||''%'''
+      '  LOWER(VAR_SYMB) LIKE ''%''||LOWER(:HLEDAT_VAR_SYMB)||''%'''
+      '  OR LOWER(JMENO_CP) LIKE ''%''||LOWER(:HLEDAT_JMENO_CP)||''%'''
+      '  OR LOWER(DATUM_CAS) LIKE ''%''||LOWER(:HLEDAT_DATUM_CAS)||''%'''
+      '  OR LOWER(DLUZNA_CASTKA) LIKE ''%''||LOWER(:HLEDAT_DLUZNA_CASTKA)||''%'''
+      '  OR LOWER(JIZDNE) LIKE ''%''||LOWER(:HLEDAT_JIZDNE)||''%'''
+      '  OR LOWER(POKUTA) LIKE ''%''||LOWER(:HLEDAT_POKUTA)||''%'''
+      '  OR LOWER(RODNE_CISLO) LIKE ''%''||LOWER(:HLEDAT_RODNE_CISLO)||''%'''
+      '  OR LOWER(ULICE) LIKE ''%''||LOWER(:HLEDAT_ULICE)||''%'''
+      '  OR LOWER(CISLO_DOMU) LIKE ''%''||LOWER(:HLEDAT_CISLO_DOMU)||''%'''
+      '  OR LOWER(MESTO) LIKE ''%''||LOWER(:HLEDAT_MESTO)||''%'''
+      '  OR LOWER(OBVOD) LIKE ''%''||LOWER(:HLEDAT_OBVOD)||''%'''
+      '  OR LOWER(PSC) LIKE ''%''||LOWER(:HLEDAT_PSC)||''%'''
       '  OR TO_CHAR(DATUM_IMPORTU,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_DATUM_IMPORTU||''%'''
       '  OR TO_CHAR(SPLATNOST,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_SPLATNOST||''%'''
-      '  OR UPPER(SOUD) LIKE ''%''||:HLEDAT_SOUD||''%'''
+      '  OR LOWER(SOUD) LIKE ''%''||LOWER(:HLEDAT_SOUD)||''%'''
       '  OR TO_CHAR(ZALOBA,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_ZALOBA||''%'''
       '  OR TO_CHAR(NAROK) LIKE ''%''||:HLEDAT_NAROK||''%'''
       '  OR VS_SOUDU LIKE ''%''||:HLEDAT_VS_SOUDU||''%'''
@@ -2112,12 +2106,12 @@
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftDate
         Name = 'DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftInteger
         Name = 'UZAMCENA'
         ParamType = ptUnknown
       end>
@@ -2296,12 +2290,12 @@
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftDate
         Name = 'DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftInteger
         Name = 'UZAMCENA'
         ParamType = ptUnknown
       end>
@@ -3173,7 +3167,7 @@
         ParamType = ptUnknown
       end>
   end
-  inherited dsMaster: TDatasource[8]
+  inherited dsMaster: TDataSource[8]
     OnDataChange = dsMasterDataChange
     left = 112
     top = 16
@@ -3183,7 +3177,7 @@
     left = 312
     top = 24
   end
-  object dsZpravy: TDatasource[10]
+  object dsZpravy: TDataSource[10]
     DataSet = qrZpravy
     left = 448
     top = 496

@@ -15,45 +15,31 @@
   end
   inherited ToolBar1: TToolBar
     Width = 1071
-    inherited ToolButton1: TToolButton
-      Width = 5
-    end
     inherited ToolButton3: TToolButton
-      Left = 194
       OnClick = miVychoziDotazClick
     end
-    inherited ToolButton4: TToolButton
-      Left = 217
-      Width = 5
-    end
     inherited btRefresh: TToolButton
-      Left = 6
       OnClick = btRefreshClick
     end
     inherited edFind: TEdit
-      Left = 29
       OnKeyUp = edFindKeyUp
     end
     inherited Navigator: TDBNavigator
-      Left = 222
       BeforeAction = NavigatorBeforeAction
       DataSource = dsMaster
       Hints.Strings = (      )
       OnClick = NavigatorClick
     end
     inherited ToolButton10: TToolButton
-      Left = 166
       OnClick = ToolButton10Click
-    end
-    inherited ToolButton5: TToolButton
-      Left = 189
-      Width = 5
     end
   end
   inherited pcMain: TPageControl
     Height = 625
     Top = 60
     Width = 1071
+    ActivePage = nil
+    TabIndex = -1
     inherited tsSeznam: TTabSheet
       ClientHeight = 597
       ClientWidth = 1063
@@ -1515,21 +1501,21 @@
       '  ZALOBY_MLCOCH'
       'WHERE'
       '  ('
-      '  UPPER(VAR_SYMB) LIKE ''%''||:HLEDAT_VAR_SYMB||''%'''
-      '  OR UPPER(JMENO_CP) LIKE ''%''||:HLEDAT_JMENO_CP||''%'''
-      '  OR UPPER(DATUM_CAS) LIKE ''%''||:HLEDAT_DATUM_CAS||''%'''
-      '  OR UPPER(DLUZNA_CASTKA) LIKE ''%''||:HLEDAT_DLUZNA_CASTKA||''%'''
-      '  OR UPPER(JIZDNE) LIKE ''%''||:HLEDAT_JIZDNE||''%'''
-      '  OR UPPER(POKUTA) LIKE ''%''||:HLEDAT_POKUTA||''%'''
-      '  OR UPPER(RODNE_CISLO) LIKE ''%''||:HLEDAT_RODNE_CISLO||''%'''
-      '  OR UPPER(ULICE) LIKE ''%''||:HLEDAT_ULICE||''%'''
-      '  OR UPPER(CISLO_DOMU) LIKE ''%''||:HLEDAT_CISLO_DOMU||''%'''
-      '  OR UPPER(MESTO) LIKE ''%''||:HLEDAT_MESTO||''%'''
-      '  OR UPPER(OBVOD) LIKE ''%''||:HLEDAT_OBVOD||''%'''
-      '  OR UPPER(PSC) LIKE ''%''||:HLEDAT_PSC||''%'''
+      '  LOWER(VAR_SYMB) LIKE ''%''||LOWER(:HLEDAT_VAR_SYMB)||''%'''
+      '  OR LOWER(JMENO_CP) LIKE ''%''||LOWER(:HLEDAT_JMENO_CP)||''%'''
+      '  OR LOWER(DATUM_CAS) LIKE ''%''||LOWER(:HLEDAT_DATUM_CAS)||''%'''
+      '  OR LOWER(DLUZNA_CASTKA) LIKE ''%''||LOWER(:HLEDAT_DLUZNA_CASTKA)||''%'''
+      '  OR LOWER(JIZDNE) LIKE ''%''||LOWER(:HLEDAT_JIZDNE)||''%'''
+      '  OR LOWER(POKUTA) LIKE ''%''||LOWER(:HLEDAT_POKUTA)||''%'''
+      '  OR LOWER(RODNE_CISLO) LIKE ''%''||LOWER(:HLEDAT_RODNE_CISLO)||''%'''
+      '  OR LOWER(ULICE) LIKE ''%''||LOWER(:HLEDAT_ULICE)||''%'''
+      '  OR LOWER(CISLO_DOMU) LIKE ''%''||LOWER(:HLEDAT_CISLO_DOMU)||''%'''
+      '  OR LOWER(MESTO) LIKE ''%''||LOWER(:HLEDAT_MESTO)||''%'''
+      '  OR LOWER(OBVOD) LIKE ''%''||LOWER(:HLEDAT_OBVOD)||''%'''
+      '  OR LOWER(PSC) LIKE ''%''||LOWER(:HLEDAT_PSC)||''%'''
       '  OR TO_CHAR(DATUM_IMPORTU,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_DATUM_IMPORTU||''%'''
       '  OR TO_CHAR(SPLATNOST,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_SPLATNOST||''%'''
-      '  OR UPPER(SOUD) LIKE ''%''||:HLEDAT_SOUD||''%'''
+      '  OR LOWER(SOUD) LIKE ''%''||LOWER(:HLEDAT_SOUD)||''%'''
       '  OR TO_CHAR(ZALOBA,''DD.MM.YYYY'') LIKE ''%''||:HLEDAT_ZALOBA||''%'''
       '  OR TO_CHAR(NAROK) LIKE ''%''||:HLEDAT_NAROK||''%'''
       '  OR VS_SOUDU LIKE ''%''||:HLEDAT_VS_SOUDU||''%'''
@@ -1728,15 +1714,17 @@
         ParamType = ptUnknown
       end    
       item
-        DataType = ftUnknown
+        DataType = ftDate
         Name = 'DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftUnknown
+        DataType = ftInteger
         Name = 'UZAMCENA'
         ParamType = ptUnknown
       end>
+    left = 104
+    top = 48
     ParamData = <    
       item
         DataType = ftUnknown
@@ -1909,12 +1897,12 @@
         ParamType = ptUnknown
       end    
       item
-        DataType = ftUnknown
+        DataType = ftDate
         Name = 'DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftUnknown
+        DataType = ftInteger
         Name = 'UZAMCENA'
         ParamType = ptUnknown
       end>

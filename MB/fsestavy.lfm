@@ -1,0 +1,34 @@
+object frmSestavy: TfrmSestavy
+  Left = 443
+  Height = 240
+  Top = 291
+  Width = 320
+  Caption = 'frmSestavy'
+  LCLVersion = '0.9.30'
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 45
+    top = 40
+    ReportForm = {
+      19000000
+    }
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    SQL.Strings = (
+      'SELECT * FROM AKCIONARI'
+    )
+    Params = <>
+    left = 144
+    top = 40
+  end
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    left = 232
+    top = 40
+  end
+end

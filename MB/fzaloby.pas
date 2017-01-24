@@ -116,6 +116,7 @@ type
     lbOvereni: TLabel;
     lbPlatba: TLabel;
     lbZpracovani: TLabel;
+    miExekuceHanakOI: TMenuItem;
     miExekuceTunklOI: TMenuItem;
     miExekuceTunklDomifin: TMenuItem;
     miExekuceBayerOI: TMenuItem;
@@ -309,6 +310,7 @@ type
     procedure miExekuceBayerDomifinClick(Sender: TObject);
     procedure miExekuceBayerOIClick(Sender: TObject);
     procedure miExekuceClick(Sender: TObject);
+    procedure miExekuceHanakOIClick(Sender: TObject);
     procedure miExekuceTunklClick(Sender: TObject);
     procedure miExekuceTunklDomifinClick(Sender: TObject);
     procedure miExekuceTunklOIClick(Sender: TObject);
@@ -488,7 +490,7 @@ begin
 
     qrMaster.Close;
     if cbDatumy.ItemIndex=0 then
-      qrMaster.ParamByName('DATUM_IMPORTU').AsString:=''
+      qrMaster.ParamByName('DATUM_IMPORTU').Clear
     else
       qrMaster.ParamByName('DATUM_IMPORTU').AsDate:=StrToDate(cbDatumy.text);
     qrMaster.Open;
@@ -633,20 +635,20 @@ begin
   if not qrMaster.FieldByName('EXEKUTOR').IsNull then
   begin
     if TDBGrid(Sender).Canvas.Brush.Color<>TDBGrid(Sender).SelectedColor then
-      //TDBGrid(Sender).Canvas.Brush.Color:=$00ACD5AE;//$00E4D2C9;
       if qrMaster.FieldByName('EXEKUTOR').AsString = 'BAYER' then
       begin
         TDBGrid(Sender).Canvas.Brush.Color:=$00EFA5F1;
-        //cbExekutor.Color:=$00EFA5F1;
       end
       else
         if qrMaster.FieldByName('EXEKUTOR').AsString = 'TUNKL' then
         begin
           TDBGrid(Sender).Canvas.Brush.Color:=$0079ECAA;
-          //cbExekutor.Color:=$0079ECAA;
-        end;
-        //else
-          //cbExekutor.Color:=clDefault;
+        end
+        else
+          if qrMaster.FieldByName('EXEKUTOR').AsString = 'HANAK' then
+          begin
+            TDBGrid(Sender).Canvas.Brush.Color:=$00CDA7B4;
+          end;
   end
   else
   begin
@@ -695,7 +697,12 @@ begin
       cbExekutor.Color:=$0079ECAA;
     end
     else
-      cbExekutor.Color:=clDefault;
+      if qrMaster.FieldByName('EXEKUTOR').AsString = 'HANAK' then
+      begin
+        cbExekutor.Color:=$00CDA7B4;
+      end
+      else
+        cbExekutor.Color:=clDefault;
 
   if (not qrMaster.FieldByName('SKONCENO_DUVOD').IsNull) or (qrMaster.FieldByName('SKONCENO_DUVOD').AsInteger<>0) then  // puvodne ZAPLATIL_CASTKA
     cbSkoncenoDuvod.Color:=$00FEB7A5
@@ -786,7 +793,7 @@ try
       Table:=DBGrid.DataSource.Dataset;
       for i:=0 to DBGrid.SelectedRows.Count-1 do
       begin
-        Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+        Table.Bookmark:=DBGrid.SelectedRows[i];
         if i=0 then
           temp:=Table.FieldByName('ID').AsString
         else
@@ -941,7 +948,7 @@ try
       Table:=DBGrid.DataSource.Dataset;
       for i:=0 to DBGrid.SelectedRows.Count-1 do
       begin
-        Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+        Table.Bookmark:=DBGrid.SelectedRows[i];
         if i=0 then
           temp:=Table.FieldByName('ID').AsString
         else
@@ -1173,7 +1180,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1239,7 +1246,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1305,7 +1312,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -1397,6 +1404,26 @@ finally
 end;
 end;
 
+procedure TfrmZaloby.miExekuceHanakOIClick(Sender: TObject);
+var
+  sql_text:string;
+begin
+try
+  sql_text:=getTiskExekuce;
+  frmSExekuce.qrMaster.Close;
+  frmSExekuce.qrMaster.SQL.Text:=sql_text;
+  frmSExekuce.qrMaster.Open;
+  frmSExekuce.frReport.LoadFromFile(Replace_Char(get_param('SESTAVY')+'\','\\','\')+'SexekuceHanakOI.lrf');
+  frmSExekuce.frReport.PrepareReport;
+  frmSExekuce.frReport.ModalPreview:=true;
+  frmSExekuce.frReport.ShowProgress:=true;
+  frmSExekuce.frReport.ShowReport;
+  frmSExekuce.qrMaster.Close;
+
+finally
+end;
+end;
+
 function TfrmZaloby.getTiskExekuce: string;
 var
   qrTemp : TSQLQuery;
@@ -1424,7 +1451,7 @@ try
       Table:=DBGrid.DataSource.Dataset;
       for i:=0 to DBGrid.SelectedRows.Count-1 do
       begin
-        Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+        Table.Bookmark:=DBGrid.SelectedRows[i];
         if i=0 then
           temp:=Table.FieldByName('ID').AsString
         else
@@ -1438,7 +1465,7 @@ try
     sql_text:='SELECT '+
               '  ROWNUM AS RADEK,'+
               '  Z.*,'+
-              '  CEIL(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)) AS NAKLADY,'+
+              '  DECODE( FLOOR(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)), (NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)), FORMAT_MENA(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0),0)||'',-'', FORMAT_MENA(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0),2) ) AS NAKLADY,'+
               '  CEIL((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))) AS SAZBA,'+
               '  CEIL((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))/2) AS PUL_SAZBA,'+
               '  CEIL((((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))/2)+600)*(1.21)) AS ODMENA,'+
@@ -1627,7 +1654,7 @@ try
     sql_text:='SELECT '+
               '  ROWNUM AS RADEK,'+
               '  Z.*,'+
-              '  CEIL(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)) AS NAKLADY,'+
+              '  DECODE( FLOOR(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)), (NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)), FORMAT_MENA(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0),0)||'',-'', FORMAT_MENA(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0),2) ) AS NAKLADY,'+
               '  CEIL((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))) AS SAZBA,'+
               '  CEIL((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))/2) AS PUL_SAZBA,'+
               '  CEIL((((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))/2)+600)*(1.21)) AS ODMENA,'+
@@ -1814,7 +1841,7 @@ try
     sql_text:='SELECT '+
               '  ROWNUM AS RADEK,'+
               '  Z.*,'+
-              '  CEIL(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)) AS NAKLADY,'+
+              '  DECODE( FLOOR(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)), (NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0)), FORMAT_MENA(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0),0)||'',-'', FORMAT_MENA(NVL(Z.NAROK,0)-NVL(DLUZNA_CASTKA,0),2) ) AS NAKLADY,'+
               '  CEIL((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))) AS SAZBA,'+
               '  CEIL((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))/2) AS PUL_SAZBA,'+
               '  CEIL((((SELECT MAX(SAZBA) FROM EXEKUTORI_SAZBY_ODMEN WHERE CASTKA_OD <= (NVL(Z.NAROK,0)) AND CASTKA_DO >= (NVL(Z.NAROK,0)))/2)+600)*(1.21)) AS ODMENA,'+
@@ -2157,7 +2184,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2222,7 +2249,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2266,7 +2293,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2317,7 +2344,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           ExecSql('UPDATE ZALOBY SET UZAMCENA=0,DATUM_UZAMCENI=NULL WHERE ID='+Table.FieldByName('ID').AsString);
         end;
         DBGrid.SelectedRows.Clear;
@@ -2381,7 +2408,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2434,7 +2461,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2486,7 +2513,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2703,7 +2730,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           if i=0 then
             temp:=Table.FieldByName('ID').AsString
           else
@@ -2769,7 +2796,7 @@ try
       Table:=DBGrid.DataSource.Dataset;
       for i:=0 to DBGrid.SelectedRows.Count-1 do
       begin
-        Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+        Table.Bookmark:=DBGrid.SelectedRows[i];
         if i=0 then
           temp:=Table.FieldByName('ID').AsString
         else
@@ -2920,7 +2947,7 @@ begin
         Table:=DBGrid.DataSource.Dataset;
         for i:=0 to DBGrid.SelectedRows.Count-1 do
         begin
-          Table.Bookmark:=AnsiString(DBGrid.SelectedRows[i]);
+          Table.Bookmark:=DBGrid.SelectedRows[i];
           ExecSql('UPDATE ZALOBY SET UZAMCENA=1,DATUM_UZAMCENI=SYSDATE WHERE ID='+Table.FieldByName('ID').AsString);
         end;
         DBGrid.SelectedRows.Clear;

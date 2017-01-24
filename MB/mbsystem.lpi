@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
     <Version Value="9"/>
@@ -11,7 +11,6 @@
       <Title Value="MB system"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
-      <ActiveWindowIndexAtStart Value="0"/>
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
@@ -19,7 +18,7 @@
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="20"/>
+      <BuildNr Value="32"/>
       <Language Value="0405"/>
       <CharSet Value="04E2"/>
       <StringTable ProductVersion="0.0.0.5"/>
@@ -71,14 +70,12 @@
         <PackageName Value="LCL"/>
       </Item8>
     </RequiredPackages>
-    <Units Count="104">
+    <Units Count="87">
       <Unit0>
         <Filename Value="mbsystem.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="mbsystem"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="20"/>
-        <CursorPos X="19" Y="42"/>
+        <TopLine Value="21"/>
+        <CursorPos X="43" Y="36"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -89,13 +86,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FMain"/>
-        <EditorIndex Value="5"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="98"/>
-        <CursorPos X="15" Y="105"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="491"/>
+        <CursorPos X="20" Y="494"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -104,8 +98,6 @@
         <ComponentName Value="frmLogin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="flogin"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="65"/>
         <CursorPos X="63" Y="68"/>
         <UsageCount Value="200"/>
@@ -115,7 +107,6 @@
         <Filename Value="uconsts.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uConsts"/>
-        <TopLine Value="1"/>
         <CursorPos X="26" Y="9"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -127,10 +118,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="Data_module"/>
-        <EditorIndex Value="0"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="26" Y="17"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="42" Y="10"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -142,10 +132,9 @@
         <ComponentName Value="frmSablona"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fsablona"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="76"/>
-        <CursorPos X="3" Y="94"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="332"/>
+        <CursorPos X="44" Y="357"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
@@ -156,10 +145,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FAkcionari"/>
-        <EditorIndex Value="3"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="384"/>
-        <CursorPos X="34" Y="397"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="470"/>
+        <CursorPos X="46" Y="487"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -170,8 +158,6 @@
         <ComponentName Value="frmTypyAkcii"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="ftypy_akcii"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="2"/>
         <CursorPos X="28" Y="26"/>
         <UsageCount Value="200"/>
@@ -183,8 +169,6 @@
         <ComponentName Value="frmAkcie"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fakcie"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="26"/>
         <CursorPos X="28" Y="48"/>
         <UsageCount Value="200"/>
@@ -196,9 +180,6 @@
         <ComponentName Value="frmPsc"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fpsc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="3" Y="15"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -210,7 +191,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FFirma"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="150"/>
         <CursorPos X="55" Y="168"/>
         <UsageCount Value="200"/>
@@ -229,276 +209,202 @@
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit11>
       <Unit12>
-        <Filename Value="fdatamodule.pas"/>
-        <ComponentName Value="frmDataModule"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="FDataModule"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="4"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit12>
-      <Unit13>
         <Filename Value="utils.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Utils"/>
-        <EditorIndex Value="4"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="13"/>
-        <CursorPos X="52" Y="1189"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="232"/>
+        <CursorPos X="51" Y="237"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit13>
-      <Unit14>
+      </Unit12>
+      <Unit13>
         <Filename Value="sseznam_akcionaru.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSeznamAkcionaru"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="sseznam_akcionaru"/>
-        <TopLine Value="1"/>
         <CursorPos X="45" Y="16"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit14>
-      <Unit15>
+      </Unit13>
+      <Unit14>
         <Filename Value="svypis_akcionare.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVypisAkcionare"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="svypis_akcionare"/>
-        <TopLine Value="1"/>
         <CursorPos X="12" Y="20"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit15>
-      <Unit16>
+      </Unit14>
+      <Unit15>
         <Filename Value="ssoucetakciizatypall.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSSoucetAkciiZaTypAll"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="sSoucetAkciiZaTypAll"/>
-        <TopLine Value="1"/>
         <CursorPos X="13" Y="18"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit16>
-      <Unit17>
+      </Unit15>
+      <Unit16>
         <Filename Value="sseznam_akcionaru3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSeznamAkcionaru3"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="sseznam_akcionaru3"/>
-        <TopLine Value="1"/>
         <CursorPos X="12" Y="20"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit17>
-      <Unit18>
+      </Unit16>
+      <Unit17>
         <Filename Value="svyplatni_listina3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVyplatniListina3"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="svyplatni_listina3"/>
-        <TopLine Value="1"/>
         <CursorPos X="14" Y="17"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit18>
-      <Unit19>
+      </Unit17>
+      <Unit18>
         <Filename Value="svyplatni_listina2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVyplatniListina2"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="svyplatni_listina2"/>
-        <TopLine Value="1"/>
-        <CursorPos X="24" Y="1"/>
+        <CursorPos X="24"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit19>
-      <Unit20>
+      </Unit18>
+      <Unit19>
         <Filename Value="svyplatni_listina.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVyplatniListina"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="svyplatni_listina"/>
-        <TopLine Value="1"/>
-        <CursorPos X="23" Y="1"/>
+        <CursorPos X="23"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit20>
-      <Unit21>
+      </Unit19>
+      <Unit20>
         <Filename Value="ssouhrn_akcii2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSouhrnAkcii2"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="ssouhrn_akcii2"/>
-        <TopLine Value="1"/>
         <CursorPos X="14" Y="17"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit21>
-      <Unit22>
+      </Unit20>
+      <Unit21>
         <Filename Value="dprevod_akcie.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPrevodAkcie"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dprevod_akcie"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="83"/>
         <CursorPos X="22" Y="105"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit22>
-      <Unit23>
+      </Unit21>
+      <Unit22>
         <Filename Value="sseznam_akcionaru2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSeznamAkcionaru2"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="sseznam_akcionaru2"/>
-        <TopLine Value="1"/>
         <CursorPos X="12" Y="20"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit23>
-      <Unit24>
+      </Unit22>
+      <Unit23>
         <Filename Value="shistorie_akcie.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmHistorie_akcie"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="shistorie_akcie"/>
-        <TopLine Value="1"/>
         <CursorPos X="14" Y="17"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit24>
-      <Unit25>
+      </Unit23>
+      <Unit24>
         <Filename Value="sstitky2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmStitkyII"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="sstitky2"/>
-        <TopLine Value="1"/>
         <CursorPos X="59" Y="10"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit25>
-      <Unit26>
+      </Unit24>
+      <Unit25>
         <Filename Value="sstitky.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmStitkyI"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="sstitky"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit26>
-      <Unit27>
+      </Unit25>
+      <Unit26>
         <Filename Value="ssouhrn_akcii.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSouhrnAkcii"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="ssouhrn_akcii"/>
-        <TopLine Value="1"/>
         <CursorPos X="19" Y="6"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit27>
-      <Unit28>
+      </Unit26>
+      <Unit27>
         <Filename Value="dakcie_pohyb.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmAkciePohyb"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dakcie_pohyb"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="49"/>
         <CursorPos X="39" Y="65"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit28>
-      <Unit29>
+      </Unit27>
+      <Unit28>
         <Filename Value="uproc.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uProc"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2476"/>
-        <CursorPos X="40" Y="2488"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="2480"/>
+        <CursorPos X="51" Y="2495"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="..\..\components\ODAC\Packages\dac10.pas"/>
+        <UsageCount Value="1"/>
       </Unit29>
       <Unit30>
-        <Filename Value="..\..\ideintf\componenttreeview.pas"/>
-        <UnitName Value="ComponentTreeView"/>
-        <TopLine Value="23"/>
-        <CursorPos X="5" Y="41"/>
-        <UsageCount Value="10"/>
+        <Filename Value="..\..\components\ODAC\Packages\dacvcl10.pas"/>
+        <UsageCount Value="1"/>
       </Unit30>
       <Unit31>
-        <Filename Value="..\..\components\ODAC\Packages\dac10.pas"/>
-        <UnitName Value="dac10"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
-      </Unit31>
-      <Unit32>
-        <Filename Value="..\..\components\ODAC\Packages\dacvcl10.pas"/>
-        <UnitName Value="dacvcl10"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
-      </Unit32>
-      <Unit33>
-        <Filename Value="uconstsmenu.pas"/>
-        <UnitName Value="uConstsMenu"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="2"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit33>
-      <Unit34>
-        <Filename Value="..\..\components\sqldb\sqldblaz.pas"/>
-        <UnitName Value="SQLDBLaz"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="2"/>
-      </Unit34>
-      <Unit35>
         <Filename Value="fheslo.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmHeslo"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fheslo"/>
         <TopLine Value="13"/>
         <CursorPos X="52" Y="21"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit35>
-      <Unit36>
+      </Unit31>
+      <Unit32>
         <Filename Value="dheslo.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmHesloD"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dheslo"/>
         <TopLine Value="32"/>
         <CursorPos X="37" Y="39"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit36>
-      <Unit37>
+      </Unit32>
+      <Unit33>
         <Filename Value="dpoznamka.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPoznamka"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dpoznamka"/>
-        <TopLine Value="1"/>
         <CursorPos X="54" Y="5"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit37>
-      <Unit38>
+      </Unit33>
+      <Unit34>
         <Filename Value="fpartneri.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPartneri"/>
@@ -508,503 +414,377 @@
         <CursorPos X="13" Y="69"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit38>
-      <Unit39>
+      </Unit34>
+      <Unit35>
         <Filename Value="fpartneriosoby.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPartneriOsoby"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fpartneriosoby"/>
         <TopLine Value="47"/>
         <CursorPos X="23" Y="50"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit39>
-      <Unit40>
+      </Unit35>
+      <Unit36>
         <Filename Value="fpartneriadresy.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPartneriAdresy"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fpartneriadresy"/>
         <TopLine Value="53"/>
         <CursorPos X="13" Y="76"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit40>
-      <Unit41>
+      </Unit36>
+      <Unit37>
         <Filename Value="fpartnerispojeni.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPartneriSpojeni"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fpartnerispojeni"/>
         <TopLine Value="40"/>
         <CursorPos X="35" Y="44"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit41>
-      <Unit42>
+      </Unit37>
+      <Unit38>
         <Filename Value="fdanovesazby.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDanoveSazby"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fdanovesazby"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="32"/>
         <CursorPos X="21" Y="38"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit42>
-      <Unit43>
+      </Unit38>
+      <Unit39>
         <Filename Value="fprodukty.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmProdukty"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fprodukty"/>
         <TopLine Value="48"/>
         <CursorPos X="25" Y="51"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit43>
-      <Unit44>
+      </Unit39>
+      <Unit40>
         <Filename Value="fnabidky.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmNabidky"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fnabidky"/>
         <TopLine Value="75"/>
         <CursorPos X="34" Y="85"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit44>
-      <Unit45>
+      </Unit40>
+      <Unit41>
         <Filename Value="fukoly.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmUkoly"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fukoly"/>
         <TopLine Value="89"/>
         <CursorPos X="13" Y="91"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit45>
-      <Unit46>
+      </Unit41>
+      <Unit42>
         <Filename Value="fudalosti.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmUdalosti"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fudalosti"/>
         <TopLine Value="79"/>
         <CursorPos X="13" Y="99"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit46>
-      <Unit47>
+      </Unit42>
+      <Unit43>
         <Filename Value="fprilohy.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPrilohy"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fprilohy"/>
-        <TopLine Value="37"/>
-        <CursorPos X="67" Y="41"/>
+        <TopLine Value="22"/>
+        <CursorPos X="3" Y="36"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit47>
-      <Unit48>
+      </Unit43>
+      <Unit44>
         <Filename Value="..\..\components\sdf\sdflaz.pas"/>
         <UnitName Value="SDFLaz"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="7"/>
-      </Unit48>
-      <Unit49>
+        <UsageCount Value="2"/>
+      </Unit44>
+      <Unit45>
         <Filename Value="..\..\lcl\lresources.pp"/>
         <UnitName Value="LResources"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="7"/>
-      </Unit49>
-      <Unit50>
+        <UsageCount Value="2"/>
+      </Unit45>
+      <Unit46>
         <Filename Value="fzaloby.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmZaloby"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FZaloby"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2904"/>
-        <CursorPos X="33" Y="2912"/>
+        <TopLine Value="2934"/>
+        <CursorPos X="49" Y="2950"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit50>
-      <Unit51>
-        <Filename Value="..\..\lcl\include\customform.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="65"/>
-        <CursorPos X="1" Y="82"/>
-        <UsageCount Value="9"/>
-      </Unit51>
-      <Unit52>
-        <Filename Value="..\..\lcl\include\application.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2102"/>
-        <CursorPos X="1" Y="2117"/>
-        <UsageCount Value="9"/>
-      </Unit52>
-      <Unit53>
-        <Filename Value="..\..\fpc\2.2.4\source\rtl\inc\wstringh.inc"/>
-        <TopLine Value="73"/>
-        <CursorPos X="20" Y="86"/>
-        <UsageCount Value="3"/>
-      </Unit53>
-      <Unit54>
+      </Unit46>
+      <Unit47>
         <Filename Value="soznamenipostupiteleopostoupenipohledavky.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSOznameniPostupiteleOPostoupeniPohledavky"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SOznameniPostupiteleOPostoupeniPohledavky"/>
-        <TopLine Value="1"/>
         <CursorPos X="59" Y="8"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit54>
-      <Unit55>
+      </Unit47>
+      <Unit48>
         <Filename Value="duzamknoutzaloby.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmUzamknoutZaloby"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DUzamknoutZaloby"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="21" Y="12"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit55>
-      <Unit56>
+      </Unit48>
+      <Unit49>
         <Filename Value="doznamenipostupiteleopostoupenipohledavky.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmTiskZalob"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DOznameniPostupiteleOPostoupeniPohledavky"/>
-        <TopLine Value="48"/>
-        <CursorPos X="21" Y="60"/>
+        <TopLine Value="18"/>
+        <CursorPos X="47" Y="26"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit56>
-      <Unit57>
+      </Unit49>
+      <Unit50>
         <Filename Value="ddatum.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dlgDatum"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DDatum"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="15"/>
         <CursorPos X="36" Y="35"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit57>
-      <Unit58>
+      </Unit50>
+      <Unit51>
         <Filename Value="..\..\lcl\menus.pp"/>
         <UnitName Value="Menus"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="513"/>
-        <CursorPos X="24" Y="536"/>
-        <UsageCount Value="4"/>
-      </Unit58>
-      <Unit59>
+        <TopLine Value="515"/>
+        <CursorPos X="24" Y="538"/>
+        <UsageCount Value="6"/>
+      </Unit51>
+      <Unit52>
         <Filename Value="fsopopppodacilist.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSOPOPPPodaciList"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FSOPOPPPodaciList"/>
-        <TopLine Value="1"/>
         <CursorPos X="71" Y="13"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit59>
-      <Unit60>
+      </Unit52>
+      <Unit53>
         <Filename Value="fsopopppredavaciprotokol.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSOPOPPPredavaciProtokol"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FSopopppredavaciprotokol"/>
-        <TopLine Value="1"/>
         <CursorPos X="38" Y="16"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit60>
-      <Unit61>
+      </Unit53>
+      <Unit54>
         <Filename Value="dproces.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmProces"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dproces"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="12"/>
-        <CursorPos X="44" Y="15"/>
+        <CursorPos X="14" Y="3"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit61>
-      <Unit62>
+      </Unit54>
+      <Unit55>
         <Filename Value="fzalobyhistorie.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmZalobyHistorie"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FZalobyHistorie"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="13"/>
         <CursorPos X="37" Y="14"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit62>
-      <Unit63>
+      </Unit55>
+      <Unit56>
         <Filename Value="dpop3pripojeni.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmpop3pripojeni"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dpop3pripojeni"/>
         <TopLine Value="6"/>
         <CursorPos X="25" Y="17"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit63>
-      <Unit64>
+      </Unit56>
+      <Unit57>
         <Filename Value="fzalobytypyzprav.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmZalobyTypyZprav"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FZalobyTypyZprav"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="202"/>
         <CursorPos X="42" Y="214"/>
         <UsageCount Value="201"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit64>
-      <Unit65>
-        <Filename Value="..\..\fpc\2.4.0\source\rtl\inc\ustringh.inc"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="87"/>
-        <CursorPos X="5" Y="89"/>
-        <UsageCount Value="9"/>
-      </Unit65>
-      <Unit66>
+      </Unit57>
+      <Unit58>
         <Filename Value="dzpravydetail.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmZpravyDetail"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DZpravyDetail"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="80"/>
-        <CursorPos X="111" Y="88"/>
+        <TopLine Value="71"/>
+        <CursorPos X="108" Y="96"/>
         <UsageCount Value="201"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit66>
-      <Unit67>
+      </Unit58>
+      <Unit59>
         <Filename Value="cestina.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="cestina"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="23" Y="13"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit67>
-      <Unit68>
-        <Filename Value="fzaloby.lfm"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="73"/>
-        <CursorPos X="20" Y="74"/>
-        <UsageCount Value="2"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit68>
-      <Unit69>
+      </Unit59>
+      <Unit60>
         <Filename Value="ssopopppodacilist2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSOPOPPPodaciList2"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SSOPOPPPodaciList2"/>
-        <TopLine Value="1"/>
         <CursorPos X="66" Y="6"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit69>
-      <Unit70>
+      </Unit60>
+      <Unit61>
         <Filename Value="..\..\fpc\2.4.0\source\packages\fcl-db\src\base\db.pas"/>
-        <UnitName Value="db"/>
         <TopLine Value="508"/>
         <CursorPos X="3" Y="523"/>
-        <UsageCount Value="8"/>
-      </Unit70>
-      <Unit71>
+        <UsageCount Value="3"/>
+      </Unit61>
+      <Unit62>
         <Filename Value="sproc.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="SProc"/>
-        <TopLine Value="1"/>
         <CursorPos X="13" Y="22"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit71>
-      <Unit72>
+      </Unit62>
+      <Unit63>
         <Filename Value="fzalobyarchiv.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmZalobyArchiv"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fzalobyarchiv"/>
         <TopLine Value="108"/>
         <CursorPos X="8" Y="116"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit72>
-      <Unit73>
-        <Filename Value="..\..\components\synapse\mimemess.pas"/>
-        <UnitName Value="mimemess"/>
-        <TopLine Value="256"/>
-        <CursorPos X="25" Y="276"/>
-        <UsageCount Value="4"/>
-      </Unit73>
-      <Unit74>
+      </Unit63>
+      <Unit64>
         <Filename Value="fzaloby_ostatni.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmZalobyOstatni"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FZaloby_ostatni"/>
-        <EditorIndex Value="6"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2218"/>
-        <CursorPos X="38" Y="2230"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="2214"/>
+        <CursorPos X="27" Y="2230"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit74>
-      <Unit75>
+      </Unit64>
+      <Unit65>
         <Filename Value="fskzaplaceni.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSKUhrade"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fskzaplaceni"/>
-        <TopLine Value="1"/>
         <CursorPos X="3" Y="26"/>
         <UsageCount Value="203"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit75>
-      <Unit76>
+      </Unit65>
+      <Unit66>
         <Filename Value="fsnezaplacene.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSNezaplacene"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FSNezaplacene"/>
-        <TopLine Value="1"/>
         <CursorPos X="61" Y="10"/>
         <UsageCount Value="203"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit76>
-      <Unit77>
+      </Unit66>
+      <Unit67>
         <Filename Value="fszaplacene.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSZaplacene"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fszaplacene"/>
-        <TopLine Value="1"/>
         <CursorPos X="67" Y="13"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit77>
-      <Unit78>
+      </Unit67>
+      <Unit68>
         <Filename Value="fsbez_guidu.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSBezGuidu"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fsbez_guidu"/>
-        <TopLine Value="1"/>
         <CursorPos X="54" Y="10"/>
         <UsageCount Value="201"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit78>
-      <Unit79>
+      </Unit68>
+      <Unit69>
         <Filename Value="fsbezudajuplatby.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSBezUdajuPlatby"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fsbezudajuplatby"/>
-        <TopLine Value="1"/>
         <CursorPos X="53" Y="7"/>
         <UsageCount Value="201"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit79>
-      <Unit80>
-        <Filename Value="..\..\components\Zeosdbo7\src\component\ZDatasetUtils.pas"/>
-        <UnitName Value="ZDatasetUtils"/>
-        <TopLine Value="378"/>
-        <CursorPos X="16" Y="394"/>
-        <UsageCount Value="5"/>
-      </Unit80>
-      <Unit81>
+      </Unit69>
+      <Unit70>
         <Filename Value="dprocesquery.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmProcesQuery"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dprocesquery"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
         <CursorPos X="3" Y="25"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit81>
-      <Unit82>
+      </Unit70>
+      <Unit71>
         <Filename Value="..\..\fpc\2.4.0\source\rtl\objpas\objpas.pp"/>
-        <UnitName Value="objpas"/>
         <TopLine Value="28"/>
         <CursorPos X="8" Y="28"/>
-        <UsageCount Value="8"/>
-      </Unit82>
-      <Unit83>
+        <UsageCount Value="3"/>
+      </Unit71>
+      <Unit72>
         <Filename Value="dprogram.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="dlgProgram"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="dprogram"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="6"/>
-        <CursorPos X="3" Y="34"/>
+        <CursorPos X="44" Y="18"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit83>
-      <Unit84>
-        <Filename Value="..\..\lcl\fileutil.pas"/>
-        <UnitName Value="FileUtil"/>
-        <TopLine Value="52"/>
-        <CursorPos X="29" Y="74"/>
-        <UsageCount Value="1"/>
-      </Unit84>
-      <Unit85>
+      </Unit72>
+      <Unit73>
         <Filename Value="..\..\fpc\2.4.0\source\rtl\win\sysutils.pp"/>
-        <UnitName Value="sysutils"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="1187"/>
         <CursorPos X="28" Y="16"/>
-        <UsageCount Value="7"/>
-      </Unit85>
-      <Unit86>
-        <Filename Value="..\..\fpc\2.4.0\source\rtl\inc\mathh.inc"/>
-        <TopLine Value="55"/>
-        <CursorPos X="31" Y="64"/>
-        <UsageCount Value="3"/>
-      </Unit86>
-      <Unit87>
-        <Filename Value="..\..\components\powerpdf_20100305\PowerPdf.pas"/>
-        <UnitName Value="PowerPdf"/>
-        <TopLine Value="23"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="10"/>
-      </Unit87>
-      <Unit88>
+        <UsageCount Value="2"/>
+      </Unit73>
+      <Unit74>
         <Filename Value="fchybneobjekty.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmChybneObjekty"/>
@@ -1014,72 +794,40 @@
         <CursorPos X="35" Y="42"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit88>
-      <Unit89>
+      </Unit74>
+      <Unit75>
         <Filename Value="ssopopppodacilist3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSOPOPPPodaciList3"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="ssopopppodacilist3"/>
-        <TopLine Value="1"/>
         <CursorPos X="58" Y="10"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit89>
-      <Unit90>
-        <Filename Value="fzaloby_mlcoch.pas"/>
-        <ComponentName Value="frmZaloby_Mlcoch"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="FZaloby_mlcoch"/>
-        <TopLine Value="3"/>
-        <CursorPos X="5" Y="21"/>
-        <UsageCount Value="4"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit90>
-      <Unit91>
-        <Filename Value="fzaloby_mlcoch.lfm"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="1"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit91>
-      <Unit92>
+      </Unit75>
+      <Unit76>
         <Filename Value="fzalobymlcoch.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmZalobyMlcoch"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="fzalobymlcoch"/>
-        <EditorIndex Value="8"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2224"/>
-        <CursorPos X="38" Y="2236"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="2220"/>
+        <CursorPos X="27" Y="2236"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit92>
-      <Unit93>
+      </Unit76>
+      <Unit77>
         <Filename Value="dpoznamkausneseni.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPoznamkaUsneseni"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="dpoznamkaUsneseni"/>
-        <TopLine Value="1"/>
         <CursorPos X="82" Y="15"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit93>
-      <Unit94>
-        <Filename Value="..\..\components\zeosdbo\src\component\ZPropertyEditor.pas"/>
-        <UnitName Value="ZPropertyEditor"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="409"/>
-        <CursorPos X="35" Y="420"/>
-        <UsageCount Value="15"/>
-      </Unit94>
-      <Unit95>
+      </Unit77>
+      <Unit78>
         <Filename Value="sopopp2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSOPOPP2"/>
@@ -1090,209 +838,195 @@
         <CursorPos X="46" Y="14"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit95>
-      <Unit96>
+      </Unit78>
+      <Unit79>
         <Filename Value="sexekuce.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSExekuce"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SExekuce"/>
-        <EditorIndex Value="7"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="43" Y="15"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <CursorPos X="21" Y="7"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit96>
-      <Unit97>
+      </Unit79>
+      <Unit80>
         <Filename Value="sopopp3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSOPOPP3"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="sopopp3"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="11"/>
         <CursorPos X="35" Y="17"/>
         <UsageCount Value="200"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit97>
-      <Unit98>
-        <Filename Value="..\..\lcl\stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="888"/>
-        <CursorPos X="3" Y="902"/>
-        <UsageCount Value="9"/>
-      </Unit98>
-      <Unit99>
+      </Unit80>
+      <Unit81>
         <Filename Value="snesparovane_zpravy.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmNesparovaneZpravy"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="snesparovane_zpravy"/>
-        <WindowIndex Value="0"/>
         <TopLine Value="7"/>
         <CursorPos X="54" Y="16"/>
-        <UsageCount Value="167"/>
+        <UsageCount Value="204"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit99>
-      <Unit100>
-        <Filename Value="C:\lazarus_9283\components\zeosdbo\src\component\ZDataset.pas"/>
-        <UnitName Value="ZDataset"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="71"/>
-        <CursorPos X="3" Y="85"/>
-        <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit100>
-      <Unit101>
-        <Filename Value="..\..\lcl\dbctrls.pp"/>
-        <UnitName Value="DbCtrls"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="685"/>
-        <CursorPos X="3" Y="700"/>
-        <UsageCount Value="1"/>
-      </Unit101>
-      <Unit102>
-        <Filename Value="ftypy_akcii.lfm"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="153"/>
-        <CursorPos X="27" Y="153"/>
-        <UsageCount Value="9"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit102>
-      <Unit103>
+      </Unit81>
+      <Unit82>
         <Filename Value="fakcie.lfm"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="1"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit103>
+      </Unit82>
+      <Unit83>
+        <Filename Value="fsestavy.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSestavy"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FSestavy"/>
+        <CursorPos X="57" Y="10"/>
+        <UsageCount Value="177"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="..\..\components\zeosdb\examples\blobs\ZBlobs.dpr"/>
+        <UsageCount Value="6"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1278"/>
+        <CursorPos X="3" Y="1295"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\rtl\objpas\sysutils\sysutilh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="88"/>
+        <CursorPos X="10" Y="104"/>
+        <UsageCount Value="6"/>
+      </Unit86>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="883" Column="36" TopLine="870"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="1473" Column="49" TopLine="1458"/>
       </Position1>
       <Position2>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1055" Column="36" TopLine="1042"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="1555" Column="49" TopLine="1540"/>
       </Position2>
       <Position3>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1220" Column="38" TopLine="1208"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="1606" Column="49" TopLine="1591"/>
       </Position3>
       <Position4>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1337" Column="61" TopLine="1325"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="1656" Column="49" TopLine="1640"/>
       </Position4>
       <Position5>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1403" Column="38" TopLine="1391"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="1721" Column="49" TopLine="1706"/>
       </Position5>
       <Position6>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1469" Column="38" TopLine="1457"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="1774" Column="49" TopLine="1759"/>
       </Position6>
       <Position7>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1561" Column="38" TopLine="1549"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="1827" Column="49" TopLine="1812"/>
       </Position7>
       <Position8>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1612" Column="38" TopLine="1600"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="2013" Column="49" TopLine="1998"/>
       </Position8>
       <Position9>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1662" Column="38" TopLine="1649"/>
+        <Filename Value="fzaloby_ostatni.pas"/>
+        <Caret Line="2079" Column="47" TopLine="2064"/>
       </Position9>
       <Position10>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1727" Column="38" TopLine="1714"/>
+        <Caret Line="1942" Column="97" TopLine="1940"/>
       </Position10>
       <Position11>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1780" Column="38" TopLine="1768"/>
+        <Caret Line="731" Column="47" TopLine="716"/>
       </Position11>
       <Position12>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1833" Column="38" TopLine="1821"/>
+        <Caret Line="883" Column="25" TopLine="868"/>
       </Position12>
       <Position13>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="2019" Column="38" TopLine="2007"/>
+        <Caret Line="1055" Column="25" TopLine="1040"/>
       </Position13>
       <Position14>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="2085" Column="36" TopLine="2072"/>
+        <Caret Line="1220" Column="27" TopLine="1205"/>
       </Position14>
       <Position15>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="1809" Column="109" TopLine="1778"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1337" Column="27" TopLine="1322"/>
       </Position15>
       <Position16>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="791" Column="35" TopLine="770"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1403" Column="27" TopLine="1388"/>
       </Position16>
       <Position17>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="944" Column="59" TopLine="926"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1469" Column="27" TopLine="1454"/>
       </Position17>
       <Position18>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="1176" Column="61" TopLine="1158"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1561" Column="27" TopLine="1546"/>
       </Position18>
       <Position19>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="1242" Column="61" TopLine="1224"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1612" Column="27" TopLine="1597"/>
       </Position19>
       <Position20>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="1308" Column="61" TopLine="1290"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1662" Column="27" TopLine="1648"/>
       </Position20>
       <Position21>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="1427" Column="59" TopLine="1409"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1727" Column="27" TopLine="1712"/>
       </Position21>
       <Position22>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2160" Column="38" TopLine="2142"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1780" Column="27" TopLine="1765"/>
       </Position22>
       <Position23>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2225" Column="38" TopLine="2207"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1833" Column="27" TopLine="1818"/>
       </Position23>
       <Position24>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2269" Column="38" TopLine="2251"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="2019" Column="27" TopLine="2004"/>
       </Position24>
       <Position25>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2320" Column="38" TopLine="2301"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="2085" Column="25" TopLine="2070"/>
       </Position25>
       <Position26>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2384" Column="38" TopLine="2366"/>
+        <Filename Value="utils.pas"/>
+        <Caret Line="760" Column="26" TopLine="743"/>
       </Position26>
       <Position27>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2437" Column="38" TopLine="2419"/>
+        <Filename Value="utils.pas"/>
+        <Caret Line="239" Column="43" TopLine="223"/>
       </Position27>
       <Position28>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2489" Column="38" TopLine="2471"/>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
+        <Caret Line="1388" Column="35" TopLine="1372"/>
       </Position28>
       <Position29>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2706" Column="38" TopLine="2688"/>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
+        <Caret Line="1669" Column="14" TopLine="1655"/>
       </Position29>
       <Position30>
-        <Filename Value="fzaloby.pas"/>
-        <Caret Line="2772" Column="36" TopLine="2754"/>
+        <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
+        <Caret Line="1295" Column="3" TopLine="1278"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -1316,12 +1050,6 @@
         </Win32>
       </Options>
     </Linking>
-    <Other>
-      <CompilerMessages>
-        <UseMsgFile Value="True"/>
-      </CompilerMessages>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
   </CompilerOptions>
   <Debugging>
     <BreakPoints Count="4">

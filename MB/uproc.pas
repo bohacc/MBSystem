@@ -1673,6 +1673,14 @@ begin
            '      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>'+
            '    </Borders>'+
            '  </Style>'+
+           '  <Style ss:ID="s69">'+
+           '    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>'+
+           '    <Borders/>'+
+           '    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="14"/>'+
+           '    <Interior/>'+
+           '    <NumberFormat ss:Format="0"/>'+
+           '    <Protection/>'+
+           '  </Style>'+
            '</Styles>';
 
     // HLAVICKA
@@ -1707,15 +1715,15 @@ begin
           '<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
           '<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
           '<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
-          '<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
-          '<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
-          '<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
           '<Column ss:AutoFitWidth="0" ss:Width="99"/>');
+          //'<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
+          //'<Column ss:AutoFitWidth="0" ss:Width="99"/>'+
+          //'<Column ss:AutoFitWidth="0" ss:Width="99"/>');
 
     // TELO
     Datum:=frmTiskZalob.edDatumImportu.Text;
-    s.Add('<Row><Cell></Cell><Cell></Cell><Cell ss:StyleID="s62"><Data ss:Type="String">Průběh dávky</Data></Cell><Cell ss:StyleID="s63"><Data ss:Type="Number">'+pocet+'</Data></Cell><Cell></Cell><Cell></Cell></Row>');
-    s.Add('<Row><Cell></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell ss:StyleID="s62"><Data ss:Type="String">Průběh dávky</Data></Cell><Cell ss:StyleID="s69"><Data ss:Type="Number">'+pocet+'</Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell></Row>');
     s.Add('<Row><Cell><Data ss:Type="String">Popis</Data></Cell><Cell ss:StyleID="s64"><Data ss:Type="String">'+Datum+'</Data></Cell></Row>');
 
     // TELO - VYPIS DAT

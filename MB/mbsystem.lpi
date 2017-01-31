@@ -18,7 +18,7 @@
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="32"/>
+      <BuildNr Value="35"/>
       <Language Value="0405"/>
       <CharSet Value="04E2"/>
       <StringTable ProductVersion="0.0.0.5"/>
@@ -118,9 +118,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="Data_module"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
-        <CursorPos X="42" Y="10"/>
+        <CursorPos X="45" Y="11"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -360,9 +359,10 @@
         <Filename Value="uproc.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uProc"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="2480"/>
-        <CursorPos X="51" Y="2495"/>
+        <TopLine Value="1705"/>
+        <CursorPos X="70" Y="1727"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -523,8 +523,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FZaloby"/>
-        <TopLine Value="2934"/>
-        <CursorPos X="49" Y="2950"/>
+        <TopLine Value="2226"/>
+        <CursorPos X="36" Y="2228"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -884,7 +884,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FSestavy"/>
         <CursorPos X="57" Y="10"/>
-        <UsageCount Value="177"/>
+        <UsageCount Value="179"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit83>
       <Unit84>
@@ -896,7 +896,7 @@
         <EditorIndex Value="6"/>
         <TopLine Value="1278"/>
         <CursorPos X="3" Y="1295"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit85>
       <Unit86>
@@ -910,123 +910,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1473" Column="49" TopLine="1458"/>
+        <Caret Line="1827" Column="49" TopLine="1812"/>
       </Position1>
       <Position2>
         <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1555" Column="49" TopLine="1540"/>
+        <Caret Line="2013" Column="49" TopLine="1998"/>
       </Position2>
       <Position3>
         <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1606" Column="49" TopLine="1591"/>
+        <Caret Line="2079" Column="47" TopLine="2064"/>
       </Position3>
       <Position4>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1656" Column="49" TopLine="1640"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1942" Column="97" TopLine="1940"/>
       </Position4>
       <Position5>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1721" Column="49" TopLine="1706"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="731" Column="47" TopLine="716"/>
       </Position5>
       <Position6>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1774" Column="49" TopLine="1759"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="883" Column="25" TopLine="868"/>
       </Position6>
       <Position7>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="1827" Column="49" TopLine="1812"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1055" Column="25" TopLine="1040"/>
       </Position7>
       <Position8>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="2013" Column="49" TopLine="1998"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1220" Column="27" TopLine="1205"/>
       </Position8>
       <Position9>
-        <Filename Value="fzaloby_ostatni.pas"/>
-        <Caret Line="2079" Column="47" TopLine="2064"/>
+        <Filename Value="fzalobymlcoch.pas"/>
+        <Caret Line="1337" Column="27" TopLine="1322"/>
       </Position9>
       <Position10>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1942" Column="97" TopLine="1940"/>
+        <Caret Line="1403" Column="27" TopLine="1388"/>
       </Position10>
       <Position11>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="731" Column="47" TopLine="716"/>
+        <Caret Line="1469" Column="27" TopLine="1454"/>
       </Position11>
       <Position12>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="883" Column="25" TopLine="868"/>
+        <Caret Line="1561" Column="27" TopLine="1546"/>
       </Position12>
       <Position13>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1055" Column="25" TopLine="1040"/>
+        <Caret Line="1612" Column="27" TopLine="1597"/>
       </Position13>
       <Position14>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1220" Column="27" TopLine="1205"/>
+        <Caret Line="1662" Column="27" TopLine="1648"/>
       </Position14>
       <Position15>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1337" Column="27" TopLine="1322"/>
+        <Caret Line="1727" Column="27" TopLine="1712"/>
       </Position15>
       <Position16>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1403" Column="27" TopLine="1388"/>
+        <Caret Line="1780" Column="27" TopLine="1765"/>
       </Position16>
       <Position17>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1469" Column="27" TopLine="1454"/>
+        <Caret Line="1833" Column="27" TopLine="1818"/>
       </Position17>
       <Position18>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1561" Column="27" TopLine="1546"/>
+        <Caret Line="2019" Column="27" TopLine="2004"/>
       </Position18>
       <Position19>
         <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1612" Column="27" TopLine="1597"/>
+        <Caret Line="2085" Column="25" TopLine="2070"/>
       </Position19>
       <Position20>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1662" Column="27" TopLine="1648"/>
-      </Position20>
-      <Position21>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1727" Column="27" TopLine="1712"/>
-      </Position21>
-      <Position22>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1780" Column="27" TopLine="1765"/>
-      </Position22>
-      <Position23>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="1833" Column="27" TopLine="1818"/>
-      </Position23>
-      <Position24>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="2019" Column="27" TopLine="2004"/>
-      </Position24>
-      <Position25>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="2085" Column="25" TopLine="2070"/>
-      </Position25>
-      <Position26>
         <Filename Value="utils.pas"/>
         <Caret Line="760" Column="26" TopLine="743"/>
-      </Position26>
-      <Position27>
+      </Position20>
+      <Position21>
         <Filename Value="utils.pas"/>
         <Caret Line="239" Column="43" TopLine="223"/>
-      </Position27>
-      <Position28>
+      </Position21>
+      <Position22>
         <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
         <Caret Line="1388" Column="35" TopLine="1372"/>
-      </Position28>
-      <Position29>
+      </Position22>
+      <Position23>
         <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
         <Caret Line="1669" Column="14" TopLine="1655"/>
-      </Position29>
-      <Position30>
+      </Position23>
+      <Position24>
         <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
         <Caret Line="1295" Column="3" TopLine="1278"/>
+      </Position24>
+      <Position25>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2950" Column="49" TopLine="2934"/>
+      </Position25>
+      <Position26>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="2228" Column="36" TopLine="2226"/>
+      </Position26>
+      <Position27>
+        <Filename Value="uproc.pas"/>
+        <Caret Line="23" Column="23" TopLine="7"/>
+      </Position27>
+      <Position28>
+        <Filename Value="uproc.pas"/>
+        <Caret Line="1694" Column="103" TopLine="1694"/>
+      </Position28>
+      <Position29>
+        <Filename Value="uproc.pas"/>
+        <Caret Line="1710" Column="60" TopLine="1694"/>
+      </Position29>
+      <Position30>
+        <Filename Value="uproc.pas"/>
+        <Caret Line="1254" Column="31" TopLine="1238"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

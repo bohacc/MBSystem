@@ -1,11 +1,10 @@
 ﻿inherited frmZalobyOstatni: TfrmZalobyOstatni
-  Left = 359
   Height = 703
-  Top = 131
+  Top = 311
   Width = 1065
   ActiveControl = RadioGroup1
   Caption = 'Žaloby ostatní'
-  ClientHeight = 683
+  ClientHeight = 678
   ClientWidth = 1065
   Constraints.MinHeight = 473
   Constraints.MinWidth = 1065
@@ -13,7 +12,8 @@
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   inherited StatusBar1: TStatusBar
-    Top = 660
+    Height = 29
+    Top = 649
     Width = 1065
   end
   inherited ToolBar1: TToolBar
@@ -41,7 +41,7 @@
     end
   end
   inherited pcMain: TPageControl
-    Height = 575
+    Height = 564
     Top = 60
     Width = 1065
     ActivePage = nil
@@ -333,6 +333,7 @@
             end
             object ToolButton6: TToolButton
               Left = 47
+              Height = 22
               Top = 2
               Width = 10
               Caption = 'ToolButton6'
@@ -724,7 +725,7 @@
           Top = 0
           Width = 335
           Caption = 'Přijaté typy zpráv'
-          ClientHeight = 124
+          ClientHeight = 117
           ClientWidth = 331
           TabOrder = 16
           object Label18: TLabel
@@ -810,7 +811,7 @@
           Top = 320
           Width = 1039
           Caption = 'Vykonávací řízení'
-          ClientHeight = 63
+          ClientHeight = 56
           ClientWidth = 1035
           ParentFont = False
           TabOrder = 17
@@ -900,12 +901,12 @@
           end
           object cbExekutor: TDBComboBox
             Left = 438
-            Height = 23
+            Height = 28
             Top = 3
             Width = 192
             DataField = 'EXEKUTOR'
             DataSource = dsMaster
-            ItemHeight = 15
+            ItemHeight = 20
             MaxLength = 0
             TabOrder = 4
           end
@@ -938,10 +939,10 @@
           end
           object cbSkoncenoDuvod: TComboBox
             Left = 438
-            Height = 23
+            Height = 28
             Top = 32
             Width = 192
-            ItemHeight = 15
+            ItemHeight = 20
             ItemIndex = 0
             Items.Strings = (
               ''
@@ -961,7 +962,7 @@
           Top = 200
           Width = 1042
           Caption = 'Údaje související s vedením sporu - nalézací řízení'
-          ClientHeight = 102
+          ClientHeight = 95
           ClientWidth = 1038
           TabOrder = 18
           object DBEdit18: TDBEdit
@@ -1380,7 +1381,7 @@
     end
   end
   inherited pOK: TPanel
-    Top = 635
+    Top = 624
     Width = 1065
     ClientWidth = 1065
     inherited btStorno: TButton
@@ -1417,7 +1418,7 @@
       ChildSizing.ShrinkVertical = crsScaleChilds
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 4
-      ClientHeight = 15
+      ClientHeight = 8
       ClientWidth = 256
       Columns = 4
       ItemIndex = 2
@@ -1450,19 +1451,19 @@
     end
     object Label22: TLabel
       Left = 267
-      Height = 16
+      Height = 20
       Top = 13
-      Width = 71
+      Width = 87
       Caption = 'Datum dávky'
       ParentColor = False
       Visible = False
     end
     object cbDatumy: TComboBox
       Left = 344
-      Height = 23
+      Height = 28
       Top = 6
       Width = 80
-      ItemHeight = 15
+      ItemHeight = 20
       OnChange = cbDatumyChange
       Style = csDropDownList
       TabOrder = 3
@@ -1618,6 +1619,10 @@
       object miProPrikaz: TMenuItem
         Caption = 'K úhradě'
         OnClick = miProPrikazClick
+      end
+      object miKuhrade2: TMenuItem
+        Caption = 'K úhradě - sumář'
+        OnClick = miKuhrade2Click
       end
       object miZaplacene: TMenuItem
         Caption = 'Zaplacené'
@@ -2901,7 +2906,7 @@
         ParamType = ptUnknown
       end>
   end
-  inherited dsMaster: TDatasource[8]
+  inherited dsMaster: TDataSource[8]
     OnDataChange = dsMasterDataChange
     left = 112
     top = 24
@@ -2911,7 +2916,7 @@
     left = 360
     top = 32
   end
-  object dsZpravy: TDatasource[10]
+  object dsZpravy: TDataSource[10]
     DataSet = qrZpravy
     left = 432
     top = 504

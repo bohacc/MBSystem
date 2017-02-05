@@ -46,8 +46,6 @@
     Height = 604
     Top = 60
     Width = 1065
-    ActivePage = tsSeznam
-    TabIndex = 0
     inherited tsSeznam: TTabSheet
       ClientHeight = 571
       ClientWidth = 1057
@@ -1792,6 +1790,10 @@
       object miProPrikaz: TMenuItem
         Caption = 'K úhradě'
         OnClick = miProPrikazClick
+      end
+      object miKuhrade2: TMenuItem
+        Caption = 'K úhradě - sumář'
+        OnClick = miKuhrade2Click
       end
       object miZaplacene: TMenuItem
         Caption = 'Zaplacené'

@@ -711,12 +711,12 @@ begin
 
     // TELO
     Datum:=ExecSQL_old('SELECT GET_PARAM(''ZALOBY_DATUM_PREDANI'') FROM DUAL');
-    s.Add('<Row><Cell></Cell><Cell></Cell><Cell></Cell><Cell></Cell><Cell></Cell><Cell ss:StyleID="s62"><Data ss:Type="String">'+'Předávací protokol'+'</Data></Cell></Row>');
-    s.Add('<Row><Cell></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell ss:StyleID="s62"><Data ss:Type="String">'+'Předávací protokol'+'</Data></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell></Row>');
     s.Add('<Row><Cell><Data ss:Type="String">Dne '+Datum+' byla  v souladu se Smlouvou  o postoupení pohledávek č. ODB20100134 postupitelem předána listinná dokumentace k níže uvedeným pohledávkám.'+'</Data></Cell></Row>');
     S.Add('<Row><Cell><Data ss:Type="String">'+'Současně postupník předal postupiteli ke každé postupované pohledávce písemné oznámení o postoupení pohledávky, a to včetně poštovní obálky.'+'</Data></Cell></Row>');
-    S.Add('<Row><Cell></Cell></Row>');
-    S.Add('<Row><Cell></Cell></Row>');
+    S.Add('<Row><Cell><Data ss:Type="String"></Data></Cell></Row>');
+    S.Add('<Row><Cell><Data ss:Type="String"></Data></Cell></Row>');
 
     // TELO - VYPIS DAT
     s.Add(data);
@@ -724,48 +724,48 @@ begin
     // TELO
     s.Add('<Row>');
       s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String">Celkem</Data></Cell>');
-      s.Add('<Cell ss:StyleID="s63"></Cell>');
+      s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String"></Data></Cell>');
       s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String">'+Celkem_jizdne+'</Data></Cell>');
       s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String">'+Celkem_prirazka+'</Data></Cell>');
     s.Add('</Row>');
-    s.Add('<Row><Cell></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell></Row>');
     s.Add('<Row>');
       s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String">'+'Celkový počet postoupených pohledávek'+'</Data></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
       s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String">'+Celkem_zaznamu+'</Data></Cell><Cell><Data ss:Type="String">ks</Data></Cell>');
     s.Add('</Row>');
     s.Add('<Row>');
       s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String">'+'Celková výše postoupených pohledávek'+'</Data></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
       s.Add('<Cell ss:StyleID="s63"><Data ss:Type="String">'+Celkem+'</Data></Cell><Cell><Data ss:Type="String">'+'Kč'+'</Data></Cell>');
     s.Add('</Row>');
-    s.Add('<Row><Cell></Cell></Row>');
-    s.Add('<Row><Cell></Cell></Row>');
-    s.Add('<Row><Cell></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell></Row>');
+    s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell></Row>');
     s.Add('<Row>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
       s.Add('<Cell><Data ss:Type="String">podpis</Data></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
       s.Add('<Cell><Data ss:Type="String">podpis</Data></Cell>');
     s.Add('</Row>');
     s.Add('<Row>');
-      s.Add('<Cell></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
       s.Add('<Cell><Data ss:Type="String">'+'Za DPO předal:'+'</Data></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
-      s.Add('<Cell></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
+      s.Add('<Cell><Data ss:Type="String"></Data></Cell>');
       s.Add('<Cell><Data ss:Type="String">'+'Za spol. FENICIA,  spol. s r.o. převzal:'+'</Data></Cell>');
     s.Add('</Row>');
 
@@ -779,6 +779,8 @@ begin
       s.SaveToFile(sd.FileName);
     qt.Close;
     frmProcesQuery.Close;
+
+    ShowMessage('Export skončil');
 
   finally
     qt.Free;
@@ -1041,6 +1043,8 @@ begin
       s.SaveToFile(sd.FileName);
     qt.Close;
     frmProcesQuery.Close;
+
+    ShowMessage('Export skončil');
 
   finally
     qt.Free;
@@ -1739,6 +1743,7 @@ begin
       s.SaveToFile(sd.FileName);
     qt.Close;
     frmProcesQuery.Close;
+
     ShowMessage('Export skončil');
 
   finally
@@ -1797,6 +1802,7 @@ begin
     sd:=TSaveDialog.Create(nil);
     s:=TStringList.Create;
     tmps:=TStringList.Create;
+    tmps.Text := ' ';
     pocet_poli:=1;
     pocet_zaznamu:=1;
     qt.Connection:=DM.OracleConnection;
@@ -1849,7 +1855,7 @@ begin
                  ' DATUM_IMPORTU DESC, CISLO';
     end;
 
-    data:=data+'<Row>';
+    data:='<Row>';
       data:=data+'<Cell><Data ss:Type="String">ID</Data></Cell>';
       data:=data+'<Cell><Data ss:Type="String">Číslo</Data></Cell>';
       data:=data+'<Cell><Data ss:Type="String">Jméno a příjmení</Data></Cell>';
@@ -1859,6 +1865,9 @@ begin
       data:=data+'<Cell><Data ss:Type="String">Rozsudek</Data></Cell>';
       data:=data+'<Cell><Data ss:Type="String">Právní moc</Data></Cell>';
     data:=data+'</Row>';
+
+    tmps.Text := data;
+    data:='';
 
     qt.SQL.Text:=sql_dotaz;
     qt.Open;
@@ -1986,7 +1995,7 @@ begin
 
     // PATICKA
     s.Add('</Table></Worksheet></Workbook>');
-    s.Text:=bez_diakritiky(s.Text);
+    //s.Text:=bez_diakritiky(s.Text);
 
     sd.DefaultExt:='xml';
     sd.Filter:='Soubory typu XML(*.xml)|*.xml';

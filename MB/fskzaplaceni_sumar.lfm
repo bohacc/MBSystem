@@ -1,0 +1,29 @@
+object frmSKuhradeSumar: TfrmSKuhradeSumar
+  Left = 513
+  Height = 240
+  Top = 186
+  Width = 320
+  Caption = 'K ůhradě - sumář'
+  LCLVersion = '1.6.2.0'
+  object frReport: TfrReport
+    Dataset = dsMaster
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    left = 56
+    top = 56
+  end
+  object dsMaster: TfrDBDataSet
+    DataSet = qrMaster
+    OnCheckEOF = dsMasterCheckEOF
+    left = 165
+    top = 56
+  end
+  object qrMaster: TZQuery
+    Connection = DM.OracleConnection
+    Params = <>
+    left = 270
+    top = 56
+  end
+end

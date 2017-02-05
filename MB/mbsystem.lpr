@@ -25,7 +25,8 @@ uses
   SSOPOPPPodaciList2, SProc, fzalobyarchiv, FZaloby_ostatni, fskzaplaceni,
   FSNezaplacene, fszaplacene, fsbez_guidu, fsbezudajuplatby, dprocesquery,
   dprogram, FChybneObjekty, ssopopppodacilist3, fzalobymlcoch,
-  dpoznamkaUsneseni, SOPOPP2, SExekuce, sopopp3, snesparovane_zpravy, FSestavy;
+  dpoznamkaUsneseni, SOPOPP2, SExekuce, sopopp3, snesparovane_zpravy, FSestavy,
+  fskzaplaceni_sumar;
 
 //{$IFDEF WINDOWS}{$R mbsystem.rc}{$ENDIF}
 
@@ -43,6 +44,7 @@ begin
     frmLogin.ShowModal;
     frmLogin.Free;
   Application.CreateForm(TfrmSestavy, frmSestavy);
+  Application.CreateForm(TfrmSKuhradeSumar, frmSKuhradeSumar);
   Application.Run;
 end.
 

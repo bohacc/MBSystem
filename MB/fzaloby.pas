@@ -116,6 +116,7 @@ type
     lbOvereni: TLabel;
     lbPlatba: TLabel;
     lbZpracovani: TLabel;
+    miKuhrade2: TMenuItem;
     miExekuceHanakOI: TMenuItem;
     miExekuceTunklOI: TMenuItem;
     miExekuceTunklDomifin: TMenuItem;
@@ -323,6 +324,7 @@ type
     procedure miImportZalob2Click(Sender: TObject);
     procedure miImportZalobClick(Sender: TObject);
     procedure miKontrolaPrijmuClick(Sender: TObject);
+    procedure miKuhrade2Click(Sender: TObject);
     procedure miPodaciList3Click(Sender: TObject);
     procedure miPoslatPrikazClick(Sender: TObject);
     procedure miPrubehClick(Sender: TObject);
@@ -396,7 +398,8 @@ uses DOznameniPostupiteleOPostoupeniPohledavky,DDatum,FSOPOPPPodaciList,
      FSopopppredavaciprotokol,DProces,FZalobyHistorie,DPOP3Pripojeni,FZalobyTypyZprav,
      DZpravyDetail,SSOPOPPPodaciList2,SProc,fzalobyarchiv,SOznameniPostupiteleOPostoupeniPohledavky,
      FSNezaplacene,FSKzaplaceni,fszaplacene,fsbez_guidu,fsbezudajuplatby,DProcesQuery,
-     ssopopppodacilist3,dPoznamkaUsneseni,SOPOPP2,SExekuce,SOPOPP3,Data_module;
+     ssopopppodacilist3,dPoznamkaUsneseni,SOPOPP2,SExekuce,SOPOPP3,Data_module,
+     fskzaplaceni_sumar;
 
 procedure TfrmZaloby.btRefreshClick(Sender: TObject);
 var
@@ -2162,6 +2165,85 @@ procedure TfrmZaloby.miKontrolaPrijmuClick(Sender: TObject);
 begin
   ExecSQL('UPDATE NASTAVENI_SYSTEMU SET ZALOBY_PRIJEM = 0');
   ShowMessage('Resetování stavu příjmu žalob bylo provedeno.');
+end;
+
+procedure TfrmZaloby.miKuhrade2Click(Sender: TObject);
+var
+  sql_text,temp: string;
+  table : TDataSet;
+  i : Integer;
+begin
+  if not Assigned(frmTiskZalob) then
+    Application.CreateForm(TfrmTiskZalob,frmTiskZalob);
+
+  frmTiskZalob.FSelRows:=DBGrid.SelectedRows.Count;
+  frmTiskZalob.ShowModal;
+  if frmTiskZalob.ModalResult=mrOK then
+  begin
+
+    if frmTiskZalob.rbOznacene.Checked then
+    begin
+      if DBGrid.SelectedRows.CurrentRowSelected then
+      begin
+        Table:=DBGrid.DataSource.Dataset;
+        for i:=0 to DBGrid.SelectedRows.Count-1 do
+        begin
+          Table.Bookmark:=DBGrid.SelectedRows[i];
+          if i=0 then
+            temp:=Table.FieldByName('ID').AsString
+          else
+            temp:=temp+','+Table.FieldByName('ID').AsString;
+        end;
+      end;
+    end;
+
+    sql_text:=
+      'SELECT ' +
+      '  Z.DATUM_IMPORTU AS DATUM, ' +
+      '  SUM(Z.NAROK) AS KUHRADE, ' +
+      '  SUM(Z.ZAPLATIL_CASTKA) AS ZAPLACENO, ' +
+      '  SUM(Z.NAROK) - SUM(Z.ZAPLATIL_CASTKA) AS ROZDIL ' +
+      'FROM ' +
+      '  ZALOBY Z ' +
+      'GROUP BY ' +
+      '  Z.DATUM_IMPORTU ' +
+      'ORDER BY ' +
+      '  Z.DATUM_IMPORTU DESC';
+
+    if (frmTiskZalob.rbDatum.Checked) and (frmTiskZalob.edDatumImportu.Text<>'') then
+      sql_text:='SELECT * FROM ('+sql_text+') WHERE DATUM=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''') ORDER BY DATUM DESC';
+    if frmTiskZalob.rbOznacene.Checked then
+    begin
+      if temp='' then temp:='0';
+         sql_text:=
+      'SELECT ' +
+      '  Z.DATUM_IMPORTU AS DATUM, ' +
+      '  SUM(Z.NAROK) AS KUHRADE, ' +
+      '  SUM(Z.ZAPLATIL_CASTKA) AS ZAPLACENO, ' +
+      '  SUM(Z.NAROK) - SUM(Z.ZAPLATIL_CASTKA) AS ROZDIL ' +
+      'FROM ' +
+      '  ZALOBY Z ' +
+      'WHERE ' +
+      '  ID IN ('+temp+')' +
+      'GROUP BY ' +
+      '  Z.DATUM_IMPORTU ' +
+      'ORDER BY ' +
+      '  Z.DATUM_IMPORTU DESC';
+      //sql_text:='SELECT * FROM ('+sql_text+') WHERE ID IN ('+temp+') ORDER BY DATUM DESC';
+    end;
+
+    if not Assigned(frmSKuhradeSumar) then
+      Application.CreateForm(TfrmSKuhradeSumar,frmSKuhradeSumar);
+    frmSKuhradeSumar.qrMaster.Close;
+    frmSKuhradeSumar.qrMaster.SQL.Text:=sql_text;
+    frmSKuhradeSumar.qrMaster.Open;
+    frmSKuhradeSumar.frReport.LoadFromFile(Replace(get_param('SESTAVY')+'\','\\','\')+'ZalobyKZaplaceniSumar.lrf');
+    frmSKuhradeSumar.frReport.PrepareReport;
+    frmSKuhradeSumar.frReport.ModalPreview:=true;
+    frmSKuhradeSumar.frReport.ShowProgress:=true;
+    frmSKuhradeSumar.frReport.ShowReport;
+    frmSKuhradeSumar.qrMaster.Close;
+  end;
 end;
 
 procedure TfrmZaloby.miPodaciList3Click(Sender: TObject);

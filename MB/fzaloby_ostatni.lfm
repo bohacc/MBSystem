@@ -1,6 +1,6 @@
 ﻿inherited frmZalobyOstatni: TfrmZalobyOstatni
   Height = 703
-  Top = 311
+  Top = 288
   Width = 1065
   ActiveControl = RadioGroup1
   Caption = 'Žaloby ostatní'

@@ -2198,6 +2198,7 @@ begin
     end;
 
     sql_text:=
+      'SELECT S.*, ROWNUM AS CISLO FROM ( ' +
       'SELECT ' +
       '  Z.DATUM_IMPORTU AS DATUM, ' +
       '  SUM(Z.NAROK) AS KUHRADE, ' +
@@ -2208,7 +2209,7 @@ begin
       'GROUP BY ' +
       '  Z.DATUM_IMPORTU ' +
       'ORDER BY ' +
-      '  Z.DATUM_IMPORTU DESC';
+      '  Z.DATUM_IMPORTU ASC) S';
 
     if (frmTiskZalob.rbDatum.Checked) and (frmTiskZalob.edDatumImportu.Text<>'') then
       sql_text:='SELECT * FROM ('+sql_text+') WHERE DATUM=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''') ORDER BY DATUM DESC';
@@ -2216,19 +2217,20 @@ begin
     begin
       if temp='' then temp:='0';
          sql_text:=
-      'SELECT ' +
-      '  Z.DATUM_IMPORTU AS DATUM, ' +
-      '  SUM(Z.NAROK) AS KUHRADE, ' +
-      '  SUM(Z.ZAPLATIL_CASTKA) AS ZAPLACENO, ' +
-      '  SUM(Z.NAROK) - SUM(Z.ZAPLATIL_CASTKA) AS ROZDIL ' +
-      'FROM ' +
-      '  ZALOBY Z ' +
-      'WHERE ' +
-      '  ID IN ('+temp+')' +
-      'GROUP BY ' +
-      '  Z.DATUM_IMPORTU ' +
-      'ORDER BY ' +
-      '  Z.DATUM_IMPORTU DESC';
+           'SELECT S.*, ROWNUM AS CISLO FROM ( ' +
+           'SELECT ' +
+           '  Z.DATUM_IMPORTU AS DATUM, ' +
+           '  SUM(Z.NAROK) AS KUHRADE, ' +
+           '  SUM(Z.ZAPLATIL_CASTKA) AS ZAPLACENO, ' +
+           '  SUM(Z.NAROK) - SUM(Z.ZAPLATIL_CASTKA) AS ROZDIL ' +
+           'FROM ' +
+           '  ZALOBY Z ' +
+           'WHERE ' +
+           '  ID IN ('+temp+')' +
+           'GROUP BY ' +
+           '  Z.DATUM_IMPORTU ' +
+           'ORDER BY ' +
+           '  Z.DATUM_IMPORTU ASC) S ';
       //sql_text:='SELECT * FROM ('+sql_text+') WHERE ID IN ('+temp+') ORDER BY DATUM DESC';
     end;
 

@@ -2,7 +2,7 @@
 
 LazarusResources.Add('TfrmZalobyOstatni','FORMDATA',[
   'TPF0'#241#17'TfrmZalobyOstatni'#16'frmZalobyOstatni'#6'Height'#3#191#2#3'Top'
-  +#3'7'#1#5'Width'#3')'#4#13'ActiveControl'#7#11'RadioGroup1'#7'Caption'#6#16
+  +#3' '#1#5'Width'#3')'#4#13'ActiveControl'#7#11'RadioGroup1'#7'Caption'#6#16
   +#197#189'aloby ostatn'#195#173#12'ClientHeight'#3#166#2#11'ClientWidth'#3')'
   +#4#21'Constraints.MinHeight'#3#217#1#20'Constraints.MinWidth'#3')'#4#10'OnAc'
   +'tivate'#7#12'FormActivate'#8'OnCreate'#7#10'FormCreate'#9'OnDestroy'#7#11'F'

@@ -7,7 +7,7 @@
     <KeyWords Value=""/>
     <Comments Value=""/>
     <ReportCreateDate Value="2017-02-05 12:58:02"/>
-    <ReportLastChange Value="2017-02-05 16:11:22"/>
+    <ReportLastChange Value="2017-02-12 10:45:22"/>
     <ReportVersionBuild Value=""/>
     <ReportVersionMajor Value=""/>
     <ReportVersionMinor Value=""/>
@@ -124,6 +124,34 @@
           <Child Value=""/>
         </Object3>
         <Object4>
+          <Name Value="ReportSummary1"/>
+          <ClassName Value="TfrBandView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtBand"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="0"/>
+            <Top Value="344"/>
+            <Width Value="752"/>
+            <Height Value="28"/>
+          </Size>
+          <Flags Value="48"/>
+          <Data>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Frames>
+            <Restrictions Value=""/>
+          </Frames>
+          <BandType Value="btReportSummary"/>
+          <Condition Value=""/>
+          <DatasetStr Value=""/>
+          <Child Value=""/>
+        </Object4>
+        <Object5>
           <Name Value="Memo1"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -178,8 +206,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object4>
-        <Object5>
+        </Object5>
+        <Object6>
           <Name Value="Memo2"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -234,17 +262,17 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object5>
-        <Object6>
+        </Object6>
+        <Object7>
           <Name Value="Memo3"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
           <Typ Value="gtMemo"/>
           <StreamMode Value="0"/>
           <Size>
-            <Left Value="273"/>
+            <Left Value="249"/>
             <Top Value="60"/>
-            <Width Value="176"/>
+            <Width Value="200"/>
             <Height Value="18"/>
           </Size>
           <Flags Value="3"/>
@@ -253,7 +281,7 @@
             <FrameColor Value="clBlack"/>
             <FrameStyle Value="frsSolid"/>
             <FrameWidth Value="1"/>
-            <FrameBorders Value=""/>
+            <FrameBorders Value="frbBottom"/>
             <Restrictions Value=""/>
           </Frames>
           <Data>
@@ -277,7 +305,7 @@
             <Size Value="12"/>
             <Color Value="clBlack"/>
             <Charset Value="0"/>
-            <Style Value=""/>
+            <Style Value="fsBold"/>
           </Font>
           <Highlight>
             <FontStyle Value="2"/>
@@ -290,15 +318,15 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object6>
-        <Object7>
+        </Object7>
+        <Object8>
           <Name Value="Memo5"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
           <Typ Value="gtMemo"/>
           <StreamMode Value="0"/>
           <Size>
-            <Left Value="14"/>
+            <Left Value="49"/>
             <Top Value="98"/>
             <Width Value="79"/>
             <Height Value="20"/>
@@ -346,8 +374,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object7>
-        <Object8>
+        </Object8>
+        <Object9>
           <Name Value="Memo6"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -402,8 +430,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object8>
-        <Object9>
+        </Object9>
+        <Object10>
           <Name Value="Memo8"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -458,8 +486,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object9>
-        <Object10>
+        </Object10>
+        <Object11>
           <Name Value="Memo10"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -514,15 +542,15 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object10>
-        <Object11>
+        </Object11>
+        <Object12>
           <Name Value="Memo18"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
           <Typ Value="gtMemo"/>
           <StreamMode Value="0"/>
           <Size>
-            <Left Value="14"/>
+            <Left Value="49"/>
             <Top Value="168"/>
             <Width Value="78"/>
             <Height Value="18"/>
@@ -570,8 +598,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object11>
-        <Object12>
+        </Object12>
+        <Object13>
           <Name Value="Memo19"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -626,8 +654,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object12>
-        <Object13>
+        </Object13>
+        <Object14>
           <Name Value="Memo21"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -682,8 +710,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object13>
-        <Object14>
+        </Object14>
+        <Object15>
           <Name Value="Memo7"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -738,8 +766,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object14>
-        <Object15>
+        </Object15>
+        <Object16>
           <Name Value="Memo9"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -794,8 +822,8 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object15>
-        <Object16>
+        </Object16>
+        <Object17>
           <Name Value="Memo11"/>
           <ClassName Value="TfrMemoView"/>
           <Visible Value="True"/>
@@ -850,8 +878,400 @@
           <Angle Value="0"/>
           <Justify Value="False"/>
           <Cursor Value="0"/>
-        </Object16>
-        <ObjectCount Value="16"/>
+        </Object17>
+        <Object18>
+          <Name Value="Memo4"/>
+          <ClassName Value="TfrMemoView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtMemo"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="16"/>
+            <Top Value="348"/>
+            <Width Value="96"/>
+            <Height Value="18"/>
+          </Size>
+          <Flags Value="3"/>
+          <FillColor Value="clNone"/>
+          <Frames>
+            <FrameColor Value="clBlack"/>
+            <FrameStyle Value="frsSolid"/>
+            <FrameWidth Value="1"/>
+            <FrameBorders Value=""/>
+            <Restrictions Value=""/>
+          </Frames>
+          <Data>
+            <Format Value="556"/>
+            <FormatStr Value=""/>
+            <Memo Value="Celkem&#xD;&#xA;"/>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+            <OnClick Value=""/>
+            <OnMouseEnter Value=""/>
+            <OnMouseLeave Value=""/>
+            <DetailReport Value=""/>
+            <ParagraphGap Value="0"/>
+            <LineSpacing Value="2"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Font>
+            <Name Value="Arial"/>
+            <Size Value="10"/>
+            <Color Value="clBlack"/>
+            <Charset Value="0"/>
+            <Style Value="fsBold"/>
+          </Font>
+          <Highlight>
+            <FontStyle Value="2"/>
+            <FontColor Value="clBlack"/>
+            <FillColor Value="clWhite"/>
+            <HighlightStr Value=""/>
+          </Highlight>
+          <Alignment Value="taLeftJustify"/>
+          <Layout Value="tlTop"/>
+          <Angle Value="0"/>
+          <Justify Value="False"/>
+          <Cursor Value="0"/>
+        </Object18>
+        <Object19>
+          <Name Value="Memo12"/>
+          <ClassName Value="TfrMemoView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtMemo"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="211"/>
+            <Top Value="348"/>
+            <Width Value="99"/>
+            <Height Value="18"/>
+          </Size>
+          <Flags Value="3"/>
+          <FillColor Value="clNone"/>
+          <Frames>
+            <FrameColor Value="clBlack"/>
+            <FrameStyle Value="frsSolid"/>
+            <FrameWidth Value="1"/>
+            <FrameBorders Value=""/>
+            <Restrictions Value=""/>
+          </Frames>
+          <Data>
+            <Format Value="17039916"/>
+            <FormatStr Value="### ### ##0.00"/>
+            <Memo Value="[SUM([qrMaster.&quot;KUHRADE&quot;])]&#xD;&#xA;"/>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+            <OnClick Value=""/>
+            <OnMouseEnter Value=""/>
+            <OnMouseLeave Value=""/>
+            <DetailReport Value=""/>
+            <ParagraphGap Value="0"/>
+            <LineSpacing Value="2"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Font>
+            <Name Value="Arial"/>
+            <Size Value="10"/>
+            <Color Value="clBlack"/>
+            <Charset Value="0"/>
+            <Style Value="fsBold"/>
+          </Font>
+          <Highlight>
+            <FontStyle Value="2"/>
+            <FontColor Value="clBlack"/>
+            <FillColor Value="clWhite"/>
+            <HighlightStr Value=""/>
+          </Highlight>
+          <Alignment Value="taRightJustify"/>
+          <Layout Value="tlTop"/>
+          <Angle Value="0"/>
+          <Justify Value="False"/>
+          <Cursor Value="0"/>
+        </Object19>
+        <Object20>
+          <Name Value="Memo13"/>
+          <ClassName Value="TfrMemoView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtMemo"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="16"/>
+            <Top Value="348"/>
+            <Width Value="720"/>
+            <Height Value="1"/>
+          </Size>
+          <Flags Value="3"/>
+          <FillColor Value="clNone"/>
+          <Frames>
+            <FrameColor Value="clBlack"/>
+            <FrameStyle Value="frsSolid"/>
+            <FrameWidth Value="1"/>
+            <FrameBorders Value="frbTop"/>
+            <Restrictions Value=""/>
+          </Frames>
+          <Data>
+            <Format Value="556"/>
+            <FormatStr Value=""/>
+            <Memo Value=""/>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+            <OnClick Value=""/>
+            <OnMouseEnter Value=""/>
+            <OnMouseLeave Value=""/>
+            <DetailReport Value=""/>
+            <ParagraphGap Value="0"/>
+            <LineSpacing Value="2"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Font>
+            <Name Value="Arial"/>
+            <Size Value="10"/>
+            <Color Value="clBlack"/>
+            <Charset Value="0"/>
+            <Style Value=""/>
+          </Font>
+          <Highlight>
+            <FontStyle Value="2"/>
+            <FontColor Value="clBlack"/>
+            <FillColor Value="clWhite"/>
+            <HighlightStr Value=""/>
+          </Highlight>
+          <Alignment Value="taRightJustify"/>
+          <Layout Value="tlTop"/>
+          <Angle Value="0"/>
+          <Justify Value="False"/>
+          <Cursor Value="0"/>
+        </Object20>
+        <Object21>
+          <Name Value="Memo14"/>
+          <ClassName Value="TfrMemoView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtMemo"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="326"/>
+            <Top Value="349"/>
+            <Width Value="96"/>
+            <Height Value="18"/>
+          </Size>
+          <Flags Value="3"/>
+          <FillColor Value="clNone"/>
+          <Frames>
+            <FrameColor Value="clBlack"/>
+            <FrameStyle Value="frsSolid"/>
+            <FrameWidth Value="1"/>
+            <FrameBorders Value=""/>
+            <Restrictions Value=""/>
+          </Frames>
+          <Data>
+            <Format Value="17039404"/>
+            <FormatStr Value="### ### ##0.00"/>
+            <Memo Value="[SUM([qrMaster.&quot;ZAPLACENO&quot;])]&#xD;&#xA;"/>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+            <OnClick Value=""/>
+            <OnMouseEnter Value=""/>
+            <OnMouseLeave Value=""/>
+            <DetailReport Value=""/>
+            <ParagraphGap Value="0"/>
+            <LineSpacing Value="2"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Font>
+            <Name Value="Arial"/>
+            <Size Value="10"/>
+            <Color Value="clBlack"/>
+            <Charset Value="0"/>
+            <Style Value="fsBold"/>
+          </Font>
+          <Highlight>
+            <FontStyle Value="2"/>
+            <FontColor Value="clBlack"/>
+            <FillColor Value="clWhite"/>
+            <HighlightStr Value=""/>
+          </Highlight>
+          <Alignment Value="taRightJustify"/>
+          <Layout Value="tlTop"/>
+          <Angle Value="0"/>
+          <Justify Value="False"/>
+          <Cursor Value="0"/>
+        </Object21>
+        <Object22>
+          <Name Value="Memo15"/>
+          <ClassName Value="TfrMemoView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtMemo"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="441"/>
+            <Top Value="350"/>
+            <Width Value="96"/>
+            <Height Value="18"/>
+          </Size>
+          <Flags Value="3"/>
+          <FillColor Value="clNone"/>
+          <Frames>
+            <FrameColor Value="clBlack"/>
+            <FrameStyle Value="frsSolid"/>
+            <FrameWidth Value="1"/>
+            <FrameBorders Value=""/>
+            <Restrictions Value=""/>
+          </Frames>
+          <Data>
+            <Format Value="17039404"/>
+            <FormatStr Value="### ### ##0.00"/>
+            <Memo Value="[SUM([qrMaster.&quot;ROZDIL&quot;])]&#xD;&#xA;"/>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+            <OnClick Value=""/>
+            <OnMouseEnter Value=""/>
+            <OnMouseLeave Value=""/>
+            <DetailReport Value=""/>
+            <ParagraphGap Value="0"/>
+            <LineSpacing Value="2"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Font>
+            <Name Value="Arial"/>
+            <Size Value="10"/>
+            <Color Value="clBlack"/>
+            <Charset Value="0"/>
+            <Style Value="fsBold"/>
+          </Font>
+          <Highlight>
+            <FontStyle Value="2"/>
+            <FontColor Value="clBlack"/>
+            <FillColor Value="clWhite"/>
+            <HighlightStr Value=""/>
+          </Highlight>
+          <Alignment Value="taRightJustify"/>
+          <Layout Value="tlTop"/>
+          <Angle Value="0"/>
+          <Justify Value="False"/>
+          <Cursor Value="0"/>
+        </Object22>
+        <Object23>
+          <Name Value="Memo16"/>
+          <ClassName Value="TfrMemoView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtMemo"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="12"/>
+            <Top Value="98"/>
+            <Width Value="24"/>
+            <Height Value="18"/>
+          </Size>
+          <Flags Value="3"/>
+          <FillColor Value="clNone"/>
+          <Frames>
+            <FrameColor Value="clBlack"/>
+            <FrameStyle Value="frsSolid"/>
+            <FrameWidth Value="1"/>
+            <FrameBorders Value=""/>
+            <Restrictions Value=""/>
+          </Frames>
+          <Data>
+            <Format Value="556"/>
+            <FormatStr Value=""/>
+            <Memo Value="Č.&#xD;&#xA;"/>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+            <OnClick Value=""/>
+            <OnMouseEnter Value=""/>
+            <OnMouseLeave Value=""/>
+            <DetailReport Value=""/>
+            <ParagraphGap Value="0"/>
+            <LineSpacing Value="2"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Font>
+            <Name Value="Arial"/>
+            <Size Value="10"/>
+            <Color Value="clBlack"/>
+            <Charset Value="0"/>
+            <Style Value=""/>
+          </Font>
+          <Highlight>
+            <FontStyle Value="2"/>
+            <FontColor Value="clBlack"/>
+            <FillColor Value="clWhite"/>
+            <HighlightStr Value=""/>
+          </Highlight>
+          <Alignment Value="taRightJustify"/>
+          <Layout Value="tlTop"/>
+          <Angle Value="0"/>
+          <Justify Value="False"/>
+          <Cursor Value="0"/>
+        </Object23>
+        <Object24>
+          <Name Value="Memo17"/>
+          <ClassName Value="TfrMemoView"/>
+          <Visible Value="True"/>
+          <Typ Value="gtMemo"/>
+          <StreamMode Value="0"/>
+          <Size>
+            <Left Value="12"/>
+            <Top Value="168"/>
+            <Width Value="24"/>
+            <Height Value="18"/>
+          </Size>
+          <Flags Value="3"/>
+          <FillColor Value="clNone"/>
+          <Frames>
+            <FrameColor Value="clBlack"/>
+            <FrameStyle Value="frsSolid"/>
+            <FrameWidth Value="1"/>
+            <FrameBorders Value=""/>
+            <Restrictions Value=""/>
+          </Frames>
+          <Data>
+            <Format Value="556"/>
+            <FormatStr Value=""/>
+            <Memo Value="[qrMaster.&quot;CISLO&quot;]&#xD;&#xA;"/>
+            <Script Value=""/>
+            <GapX Value="0"/>
+            <GapY Value="0"/>
+            <OnClick Value=""/>
+            <OnMouseEnter Value=""/>
+            <OnMouseLeave Value=""/>
+            <DetailReport Value=""/>
+            <ParagraphGap Value="0"/>
+            <LineSpacing Value="2"/>
+          </Data>
+          <Tag Value=""/>
+          <FURLInfo Value=""/>
+          <Font>
+            <Name Value="Arial"/>
+            <Size Value="10"/>
+            <Color Value="clBlack"/>
+            <Charset Value="0"/>
+            <Style Value=""/>
+          </Font>
+          <Highlight>
+            <FontStyle Value="2"/>
+            <FontColor Value="clBlack"/>
+            <FillColor Value="clWhite"/>
+            <HighlightStr Value=""/>
+          </Highlight>
+          <Alignment Value="taRightJustify"/>
+          <Layout Value="tlTop"/>
+          <Angle Value="0"/>
+          <Justify Value="False"/>
+          <Cursor Value="0"/>
+        </Object24>
+        <ObjectCount Value="24"/>
       </Page1>
       <FVal>
         <Count Value="0"/>

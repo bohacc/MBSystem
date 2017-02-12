@@ -1444,11 +1444,13 @@ var
   h,telo,t,sql_dotaz,styl,Datum,celkem_jizdne,
   celkem_prirazka,celkem_zaznamu,celkem,temp,
   sql_dotaz2,data,pocet: string;
-  row_count,col_count,pocet_poli,pocet_zaznamu,i : Integer;
+  all, row_count,col_count,pocet_poli,pocet_zaznamu,i : Integer;
   qt : TZQuery;
   table : TDataSet;
   w: WideString;
 begin
+  all := 0;
+
   if not Assigned(frmTiskZalob) then
     Application.CreateForm(TfrmTiskZalob,frmTiskZalob);
   frmTiskZalob.FSelRows:=g.SelectedRows.Count;
@@ -1486,8 +1488,11 @@ begin
 
     if frmTiskZalob.rbVse.Checked then
     begin
+      all := 1;
       sql_dotaz:='SELECT'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZEMREL IS NOT NULL) AS ZEMRELI,'+
+                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SKONCENO_DUVOD = 4) AS NEEXISTUJICI,'+
+                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SKONCENO_duVOD = 2) AS ZAMITNUTO,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZAPLATIL_PRED_PODANIM IS NOT NULL) AS ZAPL_PRED_ZAL,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SPIS_ZNACKA IS NOT NULL) AS PODANE_ZALOBY,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND UHR_SOP IS NOT NULL) AS UHR_SOP,'+
@@ -1509,6 +1514,8 @@ begin
     begin
       sql_dotaz:='SELECT'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZEMREL IS NOT NULL AND DATUM_IMPORTU=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''')) AS ZEMRELI,'+
+                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SKONCENO_DUVOD = 4 AND DATUM_IMPORTU=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''')) AS NEEXISTUJICI,'+
+                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SKONCENO_DUVOD = 2 AND DATUM_IMPORTU=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''')) AS ZAMITNUTO,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZAPLATIL_PRED_PODANIM IS NOT NULL AND DATUM_IMPORTU=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''')) AS ZAPL_PRED_ZAL,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SPIS_ZNACKA IS NOT NULL AND DATUM_IMPORTU=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''')) AS PODANE_ZALOBY,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND UHR_SOP IS NOT NULL AND DATUM_IMPORTU=TO_DATE('''+frmTiskZalob.edDatumImportu.Text+''')) AS UHR_SOP,'+
@@ -1530,6 +1537,8 @@ begin
     begin
       sql_dotaz:='SELECT'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZEMREL IS NOT NULL AND ID IN ('+temp+')) AS ZEMRELI,'+
+                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SKONCENO_DUVOD = 4 AND ID IN ('+temp+')) AS NEEXISTUJICI,'+
+                 '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SKONCENO_DUVOD = 2 AND ID IN ('+temp+')) AS ZAMITNUTO,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND ZAPLATIL_PRED_PODANIM IS NOT NULL AND ID IN ('+temp+')) AS ZAPL_PRED_ZAL,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND SPIS_ZNACKA IS NOT NULL AND ID IN ('+temp+')) AS PODANE_ZALOBY,'+
                  '  (SELECT COUNT(*) FROM '+tab+' WHERE NVL(UZAMCENA,0)=0 AND UHR_SOP IS NOT NULL AND ID IN ('+temp+')) AS UHR_SOP,'+
@@ -1560,59 +1569,67 @@ begin
       begin
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zemřeli</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('ZEMRELI').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('ZEMRELI').AsString+'</Data></Cell>';
+        data:=data+'</Row>';
+        data:=data+'<Row>';
+          data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Neexistující</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('NEEXISTUJICI').AsString+'</Data></Cell>';
+        data:=data+'</Row>';
+        data:=data+'<Row>';
+          data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zamítnuto</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('ZAMITNUTO').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zapl. před žal</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('ZAPL_PRED_ZAL').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('ZAPL_PRED_ZAL').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Podané žaloby</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('PODANE_ZALOBY').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('PODANE_ZALOBY').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Úhr. SOP</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('UHR_SOP').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('UHR_SOP').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Vydané EPR</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('VYDANE_EPR').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('VYDANE_EPR').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zrušen EPR</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('ZRUSENE_EPR').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('ZRUSENE_EPR').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Vydané rozsudky</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('VYDANE_ROZSUDKY').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('VYDANE_ROZSUDKY').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zapl. v naléz řízení</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('ZAPL_V_NALEZ_RIZ').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('ZAPL_V_NALEZ_RIZ').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Návrh na exekuci</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('NAVRH_NA_EXEKUCI').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('NAVRH_NA_EXEKUCI').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Exekuční příkaz</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('EXEKUCNI_PRIKAZ').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('EXEKUCNI_PRIKAZ').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zapl. v exekuci</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('ZAPL_V_EXEKUCI').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s66"><Data ss:Type="Number">'+qt.FieldByName('ZAPL_V_EXEKUCI').AsString+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Nárok</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('NAROK').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+Replace(qt.FieldByName('NAROK').AsString, ',', '.')+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zaplaceno</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('ZAPLATIL').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+Replace(qt.FieldByName('ZAPLATIL').AsString, ',', '.')+'</Data></Cell>';
         data:=data+'</Row>';
         data:=data+'<Row>';
           data:=data+'<Cell ss:StyleID="s67"><Data ss:Type="String">Zbývá zaplatit</Data></Cell>';
-          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+qt.FieldByName('ZBYVA_ZAPLATIT').AsString+'</Data></Cell>';
+          data:=data+'<Cell ss:StyleID="s64"><Data ss:Type="Number">'+Replace(qt.FieldByName('ZBYVA_ZAPLATIT').AsString, ',', '.')+'</Data></Cell>';
         data:=data+'</Row>';
       end;
       {data:=data+'<Row>';
@@ -1662,11 +1679,8 @@ begin
            //'    </Borders>'+
            '  </Style>'+
            '  <Style ss:ID="s66">'+
-           //'    <Borders>'+
-           //'      <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>'+
-           //'      <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>'+
-           //'      <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>'+
-           //'    </Borders>'+
+           '    <Alignment ss:Horizontal="Right" ss:Vertical="Bottom"/>'+
+           '    <NumberFormat/>'+
            '  </Style>'+
            '  <Style ss:ID="s67">'+
            '    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Bold="1"/>'+
@@ -1711,7 +1725,7 @@ begin
 
     // KONEC HLAVICKY
     s.Add('<Worksheet ss:Name="Sheet1">');
-    s.Add('<Table ss:ExpandedColumnCount="'+IntToStr(pocet_poli)+'" ss:ExpandedRowCount="'+IntToStr(pocet_zaznamu+16)+'" x:FullColumns="1" x:FullRows="1">');
+    s.Add('<Table ss:ExpandedColumnCount="'+IntToStr(pocet_poli)+'" ss:ExpandedRowCount="'+IntToStr(pocet_zaznamu+18)+'" x:FullColumns="1" x:FullRows="1">');
 
     // COLUMNS
     s.Add('<Column ss:AutoFitWidth="0" ss:Width="150"/>'+
@@ -1725,7 +1739,12 @@ begin
           //'<Column ss:AutoFitWidth="0" ss:Width="99"/>');
 
     // TELO
-    Datum:=frmTiskZalob.edDatumImportu.Text;
+    Datum := frmTiskZalob.edDatumImportu.Text;
+    if (all = 1) then
+    begin
+      Datum := '';
+    end;
+
     s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell ss:StyleID="s62"><Data ss:Type="String">Průběh dávky</Data></Cell><Cell ss:StyleID="s69"><Data ss:Type="Number">'+pocet+'</Data></Cell><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell></Row>');
     s.Add('<Row><Cell><Data ss:Type="String"></Data></Cell><Cell><Data ss:Type="String"></Data></Cell></Row>');
     s.Add('<Row><Cell><Data ss:Type="String">Popis</Data></Cell><Cell ss:StyleID="s64"><Data ss:Type="String">'+Datum+'</Data></Cell></Row>');

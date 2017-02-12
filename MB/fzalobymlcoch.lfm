@@ -1,7 +1,7 @@
 ﻿inherited frmZalobyMlcoch: TfrmZalobyMlcoch
   Left = 349
   Height = 753
-  Top = 237
+  Top = 238
   Width = 1071
   Caption = 'Žaloby Mlčoch'
   ClientHeight = 728

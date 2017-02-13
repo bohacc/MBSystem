@@ -18,7 +18,7 @@
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="52"/>
+      <BuildNr Value="90"/>
       <Language Value="0405"/>
       <CharSet Value="04E2"/>
       <StringTable ProductVersion="0.0.0.5"/>
@@ -70,13 +70,12 @@
         <PackageName Value="LCL"/>
       </Item8>
     </RequiredPackages>
-    <Units Count="82">
+    <Units Count="83">
       <Unit0>
         <Filename Value="mbsystem.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
         <TopLine Value="18"/>
-        <CursorPos X="53" Y="37"/>
+        <CursorPos Y="49"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -88,10 +87,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FMain"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="748"/>
-        <CursorPos X="20" Y="494"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="539"/>
+        <CursorPos X="55" Y="551"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit1>
       <Unit2>
@@ -100,9 +101,11 @@
         <ComponentName Value="frmLogin"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="65"/>
-        <CursorPos X="63" Y="68"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="71"/>
+        <CursorPos Y="77"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
@@ -120,11 +123,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="Data_module"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="45" Y="11"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
       <Unit5>
@@ -133,10 +134,12 @@
         <ComponentName Value="frmSablona"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="332"/>
-        <CursorPos X="44" Y="357"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="356"/>
+        <CursorPos X="24" Y="368"/>
         <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
@@ -212,9 +215,9 @@
         <Filename Value="utils.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Utils"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="232"/>
-        <CursorPos X="51" Y="237"/>
+        <CursorPos X="14" Y="236"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -360,12 +363,10 @@
         <Filename Value="uproc.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uProc"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1617"/>
-        <CursorPos X="29" Y="1633"/>
+        <CursorPos X="17" Y="1619"/>
         <UsageCount Value="201"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit28>
       <Unit29>
@@ -506,8 +507,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FZaloby"/>
-        <TopLine Value="2310"/>
-        <CursorPos X="3" Y="2312"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="3201"/>
+        <CursorPos X="5" Y="3207"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -539,11 +542,10 @@
         <ComponentName Value="frmTiskZalob"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DOznameniPostupiteleOPostoupeniPohledavky"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos X="3" Y="34"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit45>
       <Unit46>
@@ -658,7 +660,7 @@
         <Filename Value="..\..\fpc\2.4.0\source\packages\fcl-db\src\base\db.pas"/>
         <TopLine Value="508"/>
         <CursorPos X="3" Y="523"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit57>
       <Unit58>
         <Filename Value="sproc.pas"/>
@@ -686,12 +688,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FZaloby_ostatni"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1234"/>
         <CursorPos X="24" Y="1260"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit60>
       <Unit61>
@@ -756,7 +756,7 @@
         <Filename Value="..\..\fpc\2.4.0\source\rtl\objpas\objpas.pp"/>
         <TopLine Value="28"/>
         <CursorPos X="8" Y="28"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit67>
       <Unit68>
         <Filename Value="dprogram.pas"/>
@@ -793,12 +793,10 @@
         <ComponentName Value="frmZalobyMlcoch"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1233"/>
         <CursorPos X="51" Y="1242"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit71>
       <Unit72>
@@ -872,10 +870,10 @@
       </Unit78>
       <Unit79>
         <Filename Value="C:\lazarus\fpc\3.0.0\source\packages\fcl-db\src\base\db.pas"/>
-        <EditorIndex Value="8"/>
-        <TopLine Value="1278"/>
-        <CursorPos X="3" Y="1295"/>
-        <UsageCount Value="50"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="1655"/>
+        <CursorPos X="41" Y="1668"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
       </Unit79>
       <Unit80>
@@ -891,135 +889,141 @@
         <ComponentName Value="frmSKuhradeSumar"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="24" Y="25"/>
-        <UsageCount Value="50"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <UsageCount Value="57"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit81>
+      <Unit82>
+        <Filename Value="C:\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="600"/>
+        <CursorPos X="14" Y="614"/>
+        <UsageCount Value="10"/>
+      </Unit82>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="fzalobymlcoch.pas"/>
-        <Caret Line="364" Column="33" TopLine="364"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="482" Column="48" TopLine="468"/>
       </Position1>
       <Position2>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2216" Column="44" TopLine="2198"/>
+        <Caret Line="483" Column="48" TopLine="469"/>
       </Position2>
       <Position3>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2128" Column="3" TopLine="2126"/>
+        <Caret Line="484" Column="48" TopLine="470"/>
       </Position3>
       <Position4>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="25" Column="21" TopLine="9"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="485" Column="48" TopLine="471"/>
       </Position4>
       <Position5>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2128" Column="54" TopLine="2126"/>
+        <Caret Line="486" Column="48" TopLine="472"/>
       </Position5>
       <Position6>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2211" Column="18" TopLine="2206"/>
+        <Caret Line="487" Column="48" TopLine="473"/>
       </Position6>
       <Position7>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2314" Column="72" TopLine="2314"/>
+        <Caret Line="488" Column="48" TopLine="474"/>
       </Position7>
       <Position8>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2312" Column="3" TopLine="2310"/>
+        <Caret Line="489" Column="48" TopLine="475"/>
       </Position8>
       <Position9>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="23" Column="23" TopLine="7"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="490" Column="48" TopLine="476"/>
       </Position9>
       <Position10>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1444" Column="32" TopLine="1444"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="491" Column="48" TopLine="477"/>
       </Position10>
       <Position11>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1497" Column="84" TopLine="1471"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="492" Column="48" TopLine="478"/>
       </Position11>
       <Position12>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1508" Column="64" TopLine="1482"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="493" Column="48" TopLine="479"/>
       </Position12>
       <Position13>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1511" Column="148" TopLine="1485"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="494" Column="48" TopLine="480"/>
       </Position13>
       <Position14>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1512" Column="122" TopLine="1486"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="495" Column="48" TopLine="481"/>
       </Position14>
       <Position15>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1527" Column="76" TopLine="1502"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="496" Column="48" TopLine="482"/>
       </Position15>
       <Position16>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1539" Column="84" TopLine="1513"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="497" Column="48" TopLine="483"/>
       </Position16>
       <Position17>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1439" Column="15" TopLine="1439"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="498" Column="48" TopLine="484"/>
       </Position17>
       <Position18>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2345" Column="28" TopLine="2345"/>
+        <Caret Line="499" Column="48" TopLine="485"/>
       </Position18>
       <Position19>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2312" Column="3" TopLine="2310"/>
+        <Caret Line="500" Column="48" TopLine="486"/>
       </Position19>
       <Position20>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="23" Column="23" TopLine="7"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="501" Column="48" TopLine="487"/>
       </Position20>
       <Position21>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1550" Column="108" TopLine="1529"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="502" Column="48" TopLine="488"/>
       </Position21>
       <Position22>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1664" Column="32" TopLine="1638"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="503" Column="48" TopLine="489"/>
       </Position22>
       <Position23>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1840" Column="70" TopLine="1840"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="504" Column="48" TopLine="490"/>
       </Position23>
       <Position24>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2312" Column="3" TopLine="2310"/>
+        <Caret Line="505" Column="48" TopLine="491"/>
       </Position24>
       <Position25>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="23" Column="23" TopLine="7"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="506" Column="48" TopLine="492"/>
       </Position25>
       <Position26>
-        <Filename Value="mbsystem.lpr"/>
-        <Caret Line="36" Column="43" TopLine="18"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="507" Column="48" TopLine="493"/>
       </Position26>
       <Position27>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="1624" Column="37" TopLine="1615"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="508" Column="48" TopLine="494"/>
       </Position27>
       <Position28>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="2358" Column="12" TopLine="2355"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="509" Column="48" TopLine="495"/>
       </Position28>
       <Position29>
         <Filename Value="fzaloby.pas"/>
-        <Caret Line="2312" Column="3" TopLine="2310"/>
+        <Caret Line="510" Column="48" TopLine="496"/>
       </Position29>
       <Position30>
-        <Filename Value="uproc.pas"/>
-        <Caret Line="23" Column="23" TopLine="7"/>
+        <Filename Value="fzaloby.pas"/>
+        <Caret Line="511" Column="122" TopLine="497"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

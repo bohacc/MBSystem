@@ -1,21 +1,21 @@
 object frmSablona: TfrmSablona
-  Left = 466
+  Left = 1146
   Height = 229
-  Top = 304
+  Top = 221
   Width = 538
   Align = alClient
   Caption = 'frmSablona'
-  ClientHeight = 209
+  ClientHeight = 204
   ClientWidth = 538
   Menu = MainMenu
   OnActivate = FormActivate
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.0.14.0'
+  LCLVersion = '1.6.2.0'
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 23
-    Top = 186
+    Height = 29
+    Top = 175
     Width = 538
     Panels = <    
       item
@@ -35,6 +35,7 @@ object frmSablona: TfrmSablona
     TabOrder = 1
     object ToolButton1: TToolButton
       Left = 1
+      Height = 22
       Top = 2
       Width = 5
       Caption = 'ToolButton1'
@@ -52,6 +53,7 @@ object frmSablona: TfrmSablona
     end
     object ToolButton4: TToolButton
       Left = 217
+      Height = 22
       Top = 2
       Width = 5
       Caption = 'ToolButton4'
@@ -107,6 +109,7 @@ object frmSablona: TfrmSablona
     end
     object ToolButton5: TToolButton
       Left = 189
+      Height = 22
       Top = 2
       Width = 5
       Caption = 'ToolButton5'
@@ -115,7 +118,7 @@ object frmSablona: TfrmSablona
   end
   object pcMain: TPageControl
     Left = 0
-    Height = 135
+    Height = 124
     Top = 26
     Width = 538
     ActivePage = tsZaznam
@@ -145,12 +148,13 @@ object frmSablona: TfrmSablona
     end
     object tsZaznam: TTabSheet
       Caption = 'Záznam'
+      OnContextPopup = tsZaznamContextPopup
     end
   end
   object pOK: TPanel
     Left = 0
     Height = 25
-    Top = 161
+    Top = 150
     Width = 538
     Align = alBottom
     BevelOuter = bvNone
@@ -233,15 +237,15 @@ object frmSablona: TfrmSablona
       'SELECT * FROM DUAL'
     )
     Params = <>
-    left = 72
-    top = 56
+    left = 80
+    top = 32
   end
   object UpdateMaster: TZUpdateSQL
     UseSequenceFieldForRefreshSQL = False
     left = 16
     top = 72
   end
-  object dsMaster: TDatasource
+  object dsMaster: TDataSource
     DataSet = qrMaster
     left = 156
     top = 65

@@ -7,7 +7,8 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   sqldb, db, Data_module, Menus, ComCtrls, ExtCtrls, StdCtrls, DbCtrls,
-  ButtonPanel, DBGrids, ZDataset, ZSqlUpdate, Utils, OracleConnection;
+  ButtonPanel, DBGrids, ZDataset, ZSqlUpdate, ZGroupedConnection, Utils,
+  OracleConnection, Types;
 
 type
 
@@ -69,6 +70,9 @@ type
     procedure qrMasterBeforePost(DataSet: TDataSet);
     procedure qrMasterNewRecord(DataSet: TDataSet);
     procedure ToolButton10Click(Sender: TObject);
+    procedure tsZaznamContextPopup(Sender: TObject; MousePos: TPoint;
+      var Handled: Boolean);
+    procedure ZGroupedConnection1AfterConnect(Sender: TObject);
   private
     sql_dotaz: string;
     FTitleClick : integer;
@@ -112,6 +116,17 @@ end;
 procedure TfrmSablona.ToolButton10Click(Sender: TObject);
 begin
   najdi(edFind.Text);
+end;
+
+procedure TfrmSablona.tsZaznamContextPopup(Sender: TObject; MousePos: TPoint;
+  var Handled: Boolean);
+begin
+
+end;
+
+procedure TfrmSablona.ZGroupedConnection1AfterConnect(Sender: TObject);
+begin
+
 end;
 
 procedure TfrmSablona.btRefreshClick(Sender: TObject);
@@ -344,7 +359,7 @@ procedure TfrmSablona.najdi(s: string);
 var
   sql_puv,sql_find,podminka: string;
   i: integer;
-  Book : TBookmarkStr;
+  //Book : TBookmarkStr;
 begin
 
 try
@@ -354,7 +369,11 @@ try
   for i:=0 to qrMaster.Params.Count-1 do
   begin
     if copy(qrMaster.Params.Items[i].Name,1,7)='HLEDAT_' then
-      qrMaster.Params.Items[i].AsString:=s;
+    begin
+       qrMaster.Params.Items[i].DataType := ftMemo;
+       qrMaster.Params.Items[i].ParamType := ptinput;
+       qrMaster.Params.Items[i].AsString := s;
+    end;
   end;
   qrMaster.Open;
   {
@@ -427,8 +446,8 @@ begin
   try
     //qrMaster.DisableControls;
     qrMaster.Close;
-    qrMaster.SQL.Text:=sql_dotaz;
-    qrMaster.ReadOnly:=False;
+    //qrMaster.SQL.Text:=sql_dotaz;
+    //qrMaster.ReadOnly:=False;
     qrMaster.Open;
     //qrMaster.EnableControls;
   except

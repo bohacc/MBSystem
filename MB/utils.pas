@@ -231,12 +231,12 @@ end;
 }
 procedure Refresh_DataSet(_DataSet: TDataSet; _Query: TZQuery = nil);
 var
-  _save: TBookmarkStr;
+  _save: TBookmark;
 begin
   try
-    try
+    //try
       //_save := _DataSet.Bookmark;
-      _save := AnsiString(_Query.Bookmark);
+      _save := _Query.Bookmark;
       //_DataSet.DisableControls;
       //((_DataSet)as TQuery).Database.StartTransaction;
       //((_DataSet)as TQuery).Close;
@@ -254,14 +254,14 @@ begin
       //_DataSet.Refresh;
       //_Query.Database.Commit;
       //((_DataSet)as TQuery).Database.Commit;
-    finally
+    //finally
       //_DataSet.EnableControls;
       //_DataSet.Bookmark:=_save;
-      _Query.Bookmark := TBytes(_save);
+      _Query.Bookmark := _save;
       //else
       //  ;
       //_Query.Bookmark:=_savebookmark;
-    end;
+    //end;
   except
   end;
 end;

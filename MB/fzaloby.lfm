@@ -1,7 +1,7 @@
 ﻿inherited frmZaloby: TfrmZaloby
-  Left = 470
+  Left = 494
   Height = 743
-  Top = 150
+  Top = 253
   Width = 1065
   ActiveControl = RadioGroup1
   Caption = 'Žaloby'
@@ -13,7 +13,6 @@
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   inherited StatusBar1: TStatusBar
-    Height = 29
     Top = 689
     Width = 1065
   end
@@ -306,6 +305,7 @@
     inherited tsZaznam: TTabSheet
       ClientHeight = 571
       ClientWidth = 1057
+      OnContextPopup = nil
       object PageControl1: TPageControl[0]
         Left = 0
         Height = 139
@@ -545,7 +545,7 @@
           AutoSize = False
           CharCase = ecNormal
           Color = clBtnFace
-          MaxLength = 80
+          MaxLength = 320
           TabOrder = 0
         end
         object DBEdit2: TDBEdit
@@ -585,7 +585,7 @@
           AutoSize = False
           CharCase = ecNormal
           Color = clBtnFace
-          MaxLength = 120
+          MaxLength = 240
           TabOrder = 3
         end
         object DBEdit5: TDBEdit
@@ -598,7 +598,7 @@
           AutoSize = False
           CharCase = ecNormal
           Font.Style = [fsBold]
-          MaxLength = 240
+          MaxLength = 960
           ParentFont = False
           TabOrder = 4
         end
@@ -652,7 +652,7 @@
           AutoSize = False
           CharCase = ecNormal
           Color = clBtnFace
-          MaxLength = 240
+          MaxLength = 960
           TabOrder = 8
         end
         object DBEdit10: TDBEdit
@@ -678,7 +678,7 @@
           AutoSize = False
           CharCase = ecNormal
           Color = clBtnFace
-          MaxLength = 80
+          MaxLength = 320
           TabOrder = 10
         end
         object DBEdit12: TDBEdit
@@ -692,7 +692,7 @@
           CharCase = ecNormal
           Color = clBtnFace
           Font.Style = [fsBold]
-          MaxLength = 120
+          MaxLength = 480
           ParentFont = False
           TabOrder = 11
         end
@@ -734,7 +734,7 @@
           AutoSize = False
           CharCase = ecNormal
           Color = clBtnFace
-          MaxLength = 120
+          MaxLength = 800
           TabOrder = 14
         end
         object DBEdit16: TDBEdit
@@ -747,7 +747,7 @@
           AutoSize = False
           CharCase = ecNormal
           Color = clBtnFace
-          MaxLength = 40
+          MaxLength = 160
           TabOrder = 15
         end
         object DBEdit17: TDBEdit
@@ -760,7 +760,7 @@
           AutoSize = False
           CharCase = ecNormal
           Color = clBtnFace
-          MaxLength = 120
+          MaxLength = 480
           TabOrder = 16
         end
         object GroupBox1: TGroupBox
@@ -1059,7 +1059,7 @@
             DataField = 'SPIS_ZNACKA'
             DataSource = dsMaster
             CharCase = ecNormal
-            MaxLength = 0
+            MaxLength = 480
             TabOrder = 2
           end
           object DBEdit26: TDBEdit
@@ -1070,7 +1070,7 @@
             DataField = 'CU_SOUDU'
             DataSource = dsMaster
             CharCase = ecNormal
-            MaxLength = 0
+            MaxLength = 480
             TabOrder = 3
           end
           object DBEdit27: TDBEdit
@@ -1082,7 +1082,7 @@
             DataSource = dsMaster
             CharCase = ecNormal
             Font.Color = 13477812
-            MaxLength = 0
+            MaxLength = 160
             ParentFont = False
             TabOrder = 4
           end
@@ -1105,7 +1105,7 @@
             DataField = 'SOUD'
             DataSource = dsMaster
             CharCase = ecNormal
-            MaxLength = 0
+            MaxLength = 1600
             TabOrder = 6
           end
           object DBEdit31: TDBEdit
@@ -1509,7 +1509,7 @@
           DataField = 'USNESENI_CJ'
           DataSource = dsMaster
           CharCase = ecNormal
-          MaxLength = 0
+          MaxLength = 160
           TabOrder = 29
         end
         object lbSplatkKal: TLabel
@@ -1888,6 +1888,7 @@
     BeforeEdit = qrMasterBeforeEdit
     BeforePost = qrMasterBeforePost
     AfterPost = qrMasterAfterPost
+    Active = True
     SQL.Strings = (
       'SELECT '
       '  * '
@@ -1895,8 +1896,8 @@
       '  ZALOBY '
       'WHERE'
       '  ('
-      '  LOWER(VAR_SYMB) LIKE ''%''||LOWER(:HLEDAT_VAR_SYMB)||''%'''
-      '  OR LOWER(JMENO_CP) LIKE ''%''||LOWER(:HLEDAT_JMENO_CP)||''%'''
+      '    LOWER(VAR_SYMB) LIKE ''%''||LOWER(:HLEDAT_VAR_SYMB)||''%'''
+      'OR LOWER(JMENO_CP) LIKE ''%''||LOWER(:HLEDAT_JMENO_CP)||''%'''
       '  OR LOWER(DATUM_CAS) LIKE ''%''||LOWER(:HLEDAT_DATUM_CAS)||''%'''
       '  OR LOWER(DLUZNA_CASTKA) LIKE ''%''||LOWER(:HLEDAT_DLUZNA_CASTKA)||''%'''
       '  OR LOWER(JIZDNE) LIKE ''%''||LOWER(:HLEDAT_JIZDNE)||''%'''
@@ -1935,70 +1936,71 @@
       '  AND (GET_ZOBRAZIT_DAVKU(DATUM_IMPORTU) = 1 OR GET_ZOBRAZIT_DAVKU(DATUM_IMPORTU) = -1)'
       'ORDER BY '
       '  VAR_SYMB'
+      '  '
     )
     Params = <    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_VAR_SYMB'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_JMENO_CP'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_DATUM_CAS'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_DLUZNA_CASTKA'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_JIZDNE'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_POKUTA'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_RODNE_CISLO'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_ULICE'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_CISLO_DOMU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_MESTO'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_OBVOD'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_PSC'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
@@ -2108,12 +2110,12 @@
         ParamType = ptUnknown
       end    
       item
-        DataType = ftDate
+        DataType = ftUnknown
         Name = 'DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftInteger
+        DataType = ftUnknown
         Name = 'UZAMCENA'
         ParamType = ptUnknown
       end>
@@ -2122,67 +2124,67 @@
     top = 16
     ParamData = <    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_VAR_SYMB'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_JMENO_CP'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_DATUM_CAS'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_DLUZNA_CASTKA'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_JIZDNE'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_POKUTA'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_RODNE_CISLO'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_ULICE'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_CISLO_DOMU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_MESTO'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_OBVOD'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_PSC'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftString
+        DataType = ftUnknown
         Name = 'HLEDAT_DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
@@ -2292,433 +2294,374 @@
         ParamType = ptUnknown
       end    
       item
-        DataType = ftDate
+        DataType = ftUnknown
         Name = 'DATUM_IMPORTU'
         ParamType = ptUnknown
       end    
       item
-        DataType = ftInteger
+        DataType = ftUnknown
         Name = 'UZAMCENA'
         ParamType = ptUnknown
       end>
-    object qrMasterCISLO: TLongintField[0]
-      DisplayWidth = 10
+    object qrMasterID: TLongintField[0]
       FieldKind = fkData
-      FieldName = 'CISLO'
+      FieldName = 'ID'
       Index = 0
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = True
-      Required = False
+      ReadOnly = False
+      Required = True
     end
-    object qrMasterID: TLongintField[1]
-      DisplayWidth = 10
+    object qrMasterVAR_SYMB: TStringField[1]
       FieldKind = fkData
-      FieldName = 'ID'
+      FieldName = 'VAR_SYMB'
       Index = 1
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = True
+      ReadOnly = False
       Required = False
+      Size = 480
     end
-    object qrMasterVAR_SYMB: TStringField[2]
-      DisplayWidth = 120
+    object qrMasterJMENO_CP: TStringField[2]
       FieldKind = fkData
-      FieldName = 'VAR_SYMB'
+      FieldName = 'JMENO_CP'
       Index = 2
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 120
+      Size = 960
     end
-    object qrMasterJMENO_CP: TStringField[3]
-      DisplayWidth = 240
+    object qrMasterDATUM_CAS: TDateTimeField[3]
       FieldKind = fkData
-      FieldName = 'JMENO_CP'
+      FieldName = 'DATUM_CAS'
       Index = 3
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 240
     end
-    object qrMasterDATUM_CAS: TDateField[4]
-      DisplayWidth = 10
+    object qrMasterDLUZNA_CASTKA: TFloatField[4]
       FieldKind = fkData
-      FieldName = 'DATUM_CAS'
+      FieldName = 'DLUZNA_CASTKA'
       Index = 4
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      DisplayFormat = '### ### ##0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 12
     end
-    object qrMasterDLUZNA_CASTKA: TFloatField[5]
-      DisplayWidth = 10
+    object qrMasterJIZDNE: TFloatField[5]
       FieldKind = fkData
-      FieldName = 'DLUZNA_CASTKA'
+      FieldName = 'JIZDNE'
       Index = 5
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
       DisplayFormat = '### ### ##0.00'
-      EditFormat = '#########.00'
       MaxValue = 0
       MinValue = 0
       Precision = 12
     end
-    object qrMasterJIZDNE: TFloatField[6]
-      DisplayWidth = 10
+    object qrMasterPOKUTA: TFloatField[6]
       FieldKind = fkData
-      FieldName = 'JIZDNE'
+      FieldName = 'POKUTA'
       Index = 6
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
       DisplayFormat = '### ### ##0.00'
-      EditFormat = '#########.00'
       MaxValue = 0
       MinValue = 0
       Precision = 12
     end
-    object qrMasterPOKUTA: TFloatField[7]
-      DisplayWidth = 10
+    object qrMasterRODNE_CISLO: TStringField[7]
       FieldKind = fkData
-      FieldName = 'POKUTA'
+      FieldName = 'RODNE_CISLO'
       Index = 7
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '### ### ##0.00'
-      EditFormat = '#########.00'
-      MaxValue = 0
-      MinValue = 0
-      Precision = 12
+      Size = 320
     end
-    object qrMasterRODNE_CISLO: TStringField[8]
-      DisplayWidth = 80
+    object qrMasterULICE: TStringField[8]
       FieldKind = fkData
-      FieldName = 'RODNE_CISLO'
+      FieldName = 'ULICE'
       Index = 8
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 80
+      Size = 480
     end
-    object qrMasterULICE: TStringField[9]
-      DisplayWidth = 120
+    object qrMasterCISLO_DOMU: TStringField[9]
       FieldKind = fkData
-      FieldName = 'ULICE'
+      FieldName = 'CISLO_DOMU'
       Index = 9
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 120
+      Size = 320
     end
-    object qrMasterCISLO_DOMU: TStringField[10]
-      DisplayWidth = 80
+    object qrMasterMESTO: TStringField[10]
       FieldKind = fkData
-      FieldName = 'CISLO_DOMU'
+      FieldName = 'MESTO'
       Index = 10
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 80
+      Size = 800
     end
-    object qrMasterMESTO: TStringField[11]
-      DisplayWidth = 120
-      FieldKind = fkData
-      FieldName = 'MESTO'
-      Index = 11
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 120
-    end
-    object qrMasterOBVOD: TStringField[12]
-      DisplayWidth = 120
+    object qrMasterOBVOD: TStringField[11]
       FieldKind = fkData
       FieldName = 'OBVOD'
-      Index = 12
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 120
-    end
-    object qrMasterPSC: TStringField[13]
-      DisplayWidth = 40
-      FieldKind = fkData
-      FieldName = 'PSC'
-      Index = 13
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 40
-    end
-    object qrMasterREF_KOD: TStringField[14]
-      DisplayWidth = 240
-      FieldKind = fkData
-      FieldName = 'REF_KOD'
-      Index = 14
+      Index = 11
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
       Size = 240
     end
-    object qrMasterUZAMCENA: TSmallintField[15]
-      DisplayWidth = 10
+    object qrMasterPSC: TStringField[12]
+      FieldKind = fkData
+      FieldName = 'PSC'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 160
+    end
+    object qrMasterREF_KOD: TStringField[13]
+      FieldKind = fkData
+      FieldName = 'REF_KOD'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 960
+    end
+    object qrMasterUZAMCENA: TSmallintField[14]
       FieldKind = fkData
       FieldName = 'UZAMCENA'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterDATUM_IMPORTU: TDateTimeField[15]
+      FieldKind = fkData
+      FieldName = 'DATUM_IMPORTU'
       Index = 15
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = True
+      ReadOnly = False
       Required = False
     end
-    object qrMasterDATUM_IMPORTU: TDateField[16]
-      DisplayWidth = 10
+    object qrMasterDATUM_UZAMCENI: TDateTimeField[16]
       FieldKind = fkData
-      FieldName = 'DATUM_IMPORTU'
+      FieldName = 'DATUM_UZAMCENI'
       Index = 16
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = True
+      ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterDATUM_UZAMCENI: TDateField[17]
-      DisplayWidth = 10
+    object qrMasterPL_PRIKAZ: TDateTimeField[17]
       FieldKind = fkData
-      FieldName = 'DATUM_UZAMCENI'
+      FieldName = 'PL_PRIKAZ'
       Index = 17
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = True
+      ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterPL_PRIKAZ: TDateField[18]
-      DisplayWidth = 10
+    object qrMasterUHRADA: TFloatField[18]
       FieldKind = fkData
-      FieldName = 'PL_PRIKAZ'
+      FieldName = 'UHRADA'
       Index = 18
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 9
     end
-    object qrMasterUHRADA: TFloatField[19]
-      DisplayWidth = 10
+    object qrMasterSPLATNOST: TDateTimeField[19]
       FieldKind = fkData
-      FieldName = 'UHRADA'
+      FieldName = 'SPLATNOST'
       Index = 19
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '### ### ##0 Kč'
-      EditFormat = '#########'
-      MaxValue = 0
-      MinValue = 0
-      Precision = 9
     end
-    object qrMasterSPLATNOST: TDateField[20]
-      DisplayWidth = 10
+    object qrMasterSOUD: TStringField[20]
       FieldKind = fkData
-      FieldName = 'SPLATNOST'
+      FieldName = 'SOUD'
       Index = 20
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
+      Size = 1600
     end
-    object qrMasterSOUD: TStringField[21]
-      DisplayWidth = 200
+    object qrMasterZALOBA: TDateTimeField[21]
       FieldKind = fkData
-      FieldName = 'SOUD'
+      FieldName = 'ZALOBA'
       Index = 21
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 100
     end
-    object qrMasterZALOBA: TDateField[22]
-      DisplayWidth = 10
+    object qrMasterNAROK: TFloatField[22]
       FieldKind = fkData
-      FieldName = 'ZALOBA'
+      FieldName = 'NAROK'
       Index = 22
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 9
     end
-    object qrMasterNAROK: TFloatField[23]
-      DisplayWidth = 10
+    object qrMasterVS_SOUDU: TStringField[23]
       FieldKind = fkData
-      FieldName = 'NAROK'
+      FieldName = 'VS_SOUDU'
       Index = 23
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '### ### ##0.00'
-      EditFormat = '#########.00'
-      MaxValue = 0
-      MinValue = 0
-      Precision = 9
+      Size = 160
     end
-    object qrMasterVS_SOUDU: TStringField[24]
-      DisplayWidth = 120
+    object qrMasterCU_SOUDU: TStringField[24]
       FieldKind = fkData
-      FieldName = 'VS_SOUDU'
+      FieldName = 'CU_SOUDU'
       Index = 24
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 10
+      Size = 480
     end
-    object qrMasterCU_SOUDU: TStringField[25]
-      DisplayWidth = 240
+    object qrMasterSPIS_ZNACKA: TStringField[25]
       FieldKind = fkData
-      FieldName = 'CU_SOUDU'
+      FieldName = 'SPIS_ZNACKA'
       Index = 25
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 30
+      Size = 480
     end
-    object qrMasterSPIS_ZNACKA: TStringField[26]
-      DisplayWidth = 30
+    object qrMasterUHR_SOP: TDateTimeField[26]
       FieldKind = fkData
-      FieldName = 'SPIS_ZNACKA'
+      FieldName = 'UHR_SOP'
       Index = 26
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 30
     end
-    object qrMasterUHR_SOP: TDateField[27]
-      DisplayWidth = 10
+    object qrMasterODVOLANI: TDateTimeField[27]
       FieldKind = fkData
-      FieldName = 'UHR_SOP'
+      FieldName = 'ODVOLANI'
       Index = 27
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterODVOLANI: TDateField[28]
-      DisplayWidth = 10
+    object qrMasterJEDNANI: TDateTimeField[28]
       FieldKind = fkData
-      FieldName = 'ODVOLANI'
+      FieldName = 'JEDNANI'
       Index = 28
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterJEDNANI: TDateField[29]
-      DisplayWidth = 10
+    object qrMasterROZSUDEK: TDateTimeField[29]
       FieldKind = fkData
-      FieldName = 'JEDNANI'
+      FieldName = 'ROZSUDEK'
       Index = 29
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterROZSUDEK: TDateField[30]
-      DisplayWidth = 10
+    object qrMasterPR_MOC: TDateTimeField[30]
       FieldKind = fkData
-      FieldName = 'ROZSUDEK'
+      FieldName = 'PR_MOC'
       Index = 30
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterPR_MOC: TDateField[31]
-      DisplayWidth = 10
+    object qrMasterNAVRH: TDateTimeField[31]
       FieldKind = fkData
-      FieldName = 'PR_MOC'
+      FieldName = 'NAVRH'
       Index = 31
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterNAVRH: TDateField[32]
-      DisplayWidth = 10
+    object qrMasterPRIKAZ: TDateTimeField[32]
       FieldKind = fkData
-      FieldName = 'NAVRH'
+      FieldName = 'PRIKAZ'
       Index = 32
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterPRIKAZ: TDateField[33]
-      DisplayWidth = 10
+    object qrMasterCASTKA: TFloatField[33]
       FieldKind = fkData
-      FieldName = 'PRIKAZ'
+      FieldName = 'CASTKA'
       Index = 33
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 9
     end
-    object qrMasterCASTKA: TFloatField[34]
-      DisplayWidth = 10
+    object qrMasterSKONCENO: TDateTimeField[34]
       FieldKind = fkData
-      FieldName = 'CASTKA'
+      FieldName = 'SKONCENO'
       Index = 34
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '### ### ##0.00'
-      EditFormat = '#########.00'
-      MaxValue = 0
-      MinValue = 0
-      Precision = 9
     end
-    object qrMasterSKONCENO: TDateField[35]
-      DisplayWidth = 10
+    object qrMasterCISLO: TLongintField[35]
       FieldKind = fkData
-      FieldName = 'SKONCENO'
+      FieldName = 'CISLO'
       Index = 35
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterDATUM_UHRADY: TDateField[36]
-      DisplayWidth = 10
+    object qrMasterDATUM_UHRADY: TDateTimeField[36]
       FieldKind = fkData
       FieldName = 'DATUM_UHRADY'
       Index = 36
@@ -2726,11 +2669,8 @@
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterZEMREL: TDateField[37]
-      DisplayLabel = 'Zemřel'
-      DisplayWidth = 10
+    object qrMasterZEMREL: TDateTimeField[37]
       FieldKind = fkData
       FieldName = 'ZEMREL'
       Index = 37
@@ -2738,11 +2678,8 @@
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
-    object qrMasterZAPLATIL_PRED_PODANIM: TDateField[38]
-      DisplayLabel = 'Zaplatil před pod.'
-      DisplayWidth = 10
+    object qrMasterZAPLATIL_PRED_PODANIM: TDateTimeField[38]
       FieldKind = fkData
       FieldName = 'ZAPLATIL_PRED_PODANIM'
       Index = 38
@@ -2750,11 +2687,8 @@
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = 'DD.MM.YYYY'
     end
     object qrMasterZAPLATIL_CASTKA: TFloatField[39]
-      DisplayLabel = 'Zaplatil částka'
-      DisplayWidth = 10
       FieldKind = fkData
       FieldName = 'ZAPLATIL_CASTKA'
       Index = 39
@@ -2762,14 +2696,11 @@
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      DisplayFormat = '### ### ##0.00'
-      EditFormat = '#########.00'
       MaxValue = 0
       MinValue = 0
       Precision = 12
     end
     object qrMasterUSNESENI: TStringField[40]
-      DisplayWidth = 4000
       FieldKind = fkData
       FieldName = 'USNESENI'
       Index = 40
@@ -2777,11 +2708,9 @@
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 4000
+      Size = 16000
     end
     object qrMasterEXEKUTOR: TStringField[41]
-      DisplayLabel = 'Exekutor'
-      DisplayWidth = 30
       FieldKind = fkData
       FieldName = 'EXEKUTOR'
       Index = 41
@@ -2789,14 +2718,48 @@
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 30
+      Size = 120
     end
-    object qrMasterVYMOZENO: TFloatField[42]
-      DisplayLabel = 'Vymoženo'
-      DisplayWidth = 10
+    object qrMasterZPRAVA_DORUCENI: TSmallintField[42]
+      FieldKind = fkData
+      FieldName = 'ZPRAVA_DORUCENI'
+      Index = 42
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterZPRAVA_OVERENI: TSmallintField[43]
+      FieldKind = fkData
+      FieldName = 'ZPRAVA_OVERENI'
+      Index = 43
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterZPRAVA_PL_ROZKAZ: TSmallintField[44]
+      FieldKind = fkData
+      FieldName = 'ZPRAVA_PL_ROZKAZ'
+      Index = 44
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterZPRAVA_ZAPRACOVANI: TSmallintField[45]
+      FieldKind = fkData
+      FieldName = 'ZPRAVA_ZAPRACOVANI'
+      Index = 45
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterVYMOZENO: TFloatField[46]
       FieldKind = fkData
       FieldName = 'VYMOZENO'
-      Index = 42
+      Index = 46
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
@@ -2805,79 +2768,65 @@
       MinValue = 0
       Precision = 12
     end
-    object qrMasterSKONCENO_DUVOD: TSmallintField[43]
-      DisplayLabel = 'Skončeno důvod'
-      DisplayWidth = 10
+    object qrMasterSKONCENO_DUVOD: TSmallintField[47]
       FieldKind = fkData
       FieldName = 'SKONCENO_DUVOD'
-      Index = 43
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object qrMasterINSOLVENCE: TSmallintField[44]
-      DisplayLabel = 'Insolvence'
-      DisplayWidth = 10
-      FieldKind = fkData
-      FieldName = 'INSOLVENCE'
-      Index = 44
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object qrMasterSPLATKOVY_KALENDAR: TSmallintField[45]
-      DisplayLabel = 'Splátkový kalendář'
-      DisplayWidth = 10
-      FieldKind = fkData
-      FieldName = 'SPLATKOVY_KALENDAR'
-      Index = 45
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object qrMasterUSNESENI_DATUM: TDateField[46]
-      DisplayLabel = 'Usnesení datum'
-      DisplayWidth = 10
-      FieldKind = fkData
-      FieldName = 'USNESENI_DATUM'
-      Index = 46
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object qrMasterOPRAVNE_USNESENI_DATUM: TDateField[47]
-      DisplayLabel = 'Opravné usnesení ze dne'
-      DisplayWidth = 10
-      FieldKind = fkData
-      FieldName = 'OPRAVNE_USNESENI_DATUM'
       Index = 47
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
     end
-    object qrMasterUSNESENI_CJ: TStringField[48]
-      DisplayLabel = 'Usnesení č.j.'
-      DisplayWidth = 40
+    object qrMasterINSOLVENCE: TSmallintField[48]
       FieldKind = fkData
-      FieldName = 'USNESENI_CJ'
+      FieldName = 'INSOLVENCE'
       Index = 48
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      Size = 40
     end
-    object qrMasterEXEKUCNI_PRIKAZ: TDateField[49]
-      DisplayLabel = 'Exekuční příkaz'
-      DisplayWidth = 10
+    object qrMasterSPLATKOVY_KALENDAR: TSmallintField[49]
+      FieldKind = fkData
+      FieldName = 'SPLATKOVY_KALENDAR'
+      Index = 49
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterUSNESENI_DATUM: TDateTimeField[50]
+      FieldKind = fkData
+      FieldName = 'USNESENI_DATUM'
+      Index = 50
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterOPRAVNE_USNESENI_DATUM: TDateTimeField[51]
+      FieldKind = fkData
+      FieldName = 'OPRAVNE_USNESENI_DATUM'
+      Index = 51
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrMasterUSNESENI_CJ: TStringField[52]
+      FieldKind = fkData
+      FieldName = 'USNESENI_CJ'
+      Index = 52
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 160
+    end
+    object qrMasterEXEKUCNI_PRIKAZ: TDateTimeField[53]
       FieldKind = fkData
       FieldName = 'EXEKUCNI_PRIKAZ'
-      Index = 49
+      Index = 53
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False

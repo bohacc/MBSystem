@@ -564,23 +564,108 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +'CASTKA||''%'''#6#3'  )'#6'>  AND (DATUM_IMPORTU=:DATUM_IMPORTU OR :DATUM_IM'
   +'PORTU IS NULL)'#6'>  AND (NVL(UZAMCENA,0)=NVL(:UZAMCENA,0) OR NVL(:UZAMCENA'
   +',0)=2)'#6'W  AND (GET_ZOBRAZIT_DAVKU(DATUM_IMPORTU) = 1 OR GET_ZOBRAZIT_DAV'
-  +'KU(DATUM_IMPORTU) = -1)'#6#9'ORDER BY '#6#10'  VAR_SYMB'#6#2'  '#0#9'WhereM'
-  +'ode'#7#10'wmWhereAll'#4'left'#3#0#1#3'top'#2#16#0#242#2#0#13'TLongintField'
-  +#10'qrMasterID'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#0#11
-  +'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnl'
-  +'y'#8#8'Required'#9#0#0#242#2#1#12'TStringField'#16'qrMasterVAR_SYMB'#9'Fiel'
-  +'dKind'#7#6'fkData'#9'FieldName'#6#8'VAR_SYMB'#5'Index'#2#1#11'LookupCache'#8
-  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
-  +#8#4'Size'#3#224#1#0#0#242#2#2#12'TStringField'#16'qrMasterJMENO_CP'#9'Field'
-  +'Kind'#7#6'fkData'#9'FieldName'#6#8'JMENO_CP'#5'Index'#2#2#11'LookupCache'#8
-  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
-  +#8#4'Size'#3#192#3#0#0#242#2#3#14'TDateTimeField'#17'qrMasterDATUM_CAS'#9'Fi'
-  +'eldKind'#7#6'fkData'#9'FieldName'#6#9'DATUM_CAS'#5'Index'#2#3#11'LookupCach'
-  +'e'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Req'
-  ,'uired'#8#0#0#242#2#4#11'TFloatField'#21'qrMasterDLUZNA_CASTKA'#9'FieldKind'
-  +#7#6'fkData'#9'FieldName'#6#13'DLUZNA_CASTKA'#5'Index'#2#4#11'LookupCache'#8
-  +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
-  +#8#13'DisplayFormat'#6#14'### ### ##0.00'#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
+  +'KU(DATUM_IMPORTU) = -1)'#6#9'ORDER BY '#6#10'  VAR_SYMB'#6#2'  '#0#6'Params'
+  +#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_VAR_SYMB'#9'ParamType'#7
+  +#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_JMENO_CP'#9
+  +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#16'HLEDA'
+  +'T_DATUM_CAS'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'N'
+  +'ame'#6#20'HLEDAT_DLUZNA_CASTKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'
+  +#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_JIZDNE'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_POKUTA'#9'ParamType'#7#9'ptUnk'
+  +'nown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#18'HLEDAT_RODNE_CISLO'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_U'
+  +'LICE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#17'HLEDAT_CISLO_DOMU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnk'
+  +'nown'#4'Name'#6#12'HLEDAT_MESTO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'
+  ,#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_OBVOD'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#10'HLEDAT_PSC'#9'ParamType'#7#9'ptUnknow'
+  +'n'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#20'HLEDAT_DATUM_IMPORTU'#9'Para'
+  +'mType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#16'HLEDAT_SP'
+  +'LATNOST'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#11'HLEDAT_SOUD'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#13'HLEDAT_ZALOBA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
+  +'ftUnknown'#4'Name'#6#12'HLEDAT_NAROK'#9'ParamType'#7#9'ptUnknown'#0#1#8'Dat'
+  +'aType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_VS_SOUDU'#9'ParamType'#7#9'ptUnkn'
+  +'own'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_CU_SOUDU'#9'ParamTy'
+  +'pe'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#18'HLEDAT_SPIS_'
+  +'ZNACKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#14'HLEDAT_UHR_SOP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknow'
+  +'n'#4'Name'#6#16'HLEDAT_PL_PRIKAZ'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataTyp'
+  +'e'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_ODVOLANI'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'HLEDAT_JEDNANI'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_ROZSUDEK'#9'P'
+  +'aramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT'
+  +'_PR_MOC'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#13'HLEDAT_UHRADA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkno'
+  +'wn'#4'Name'#6#12'HLEDAT_NAVRH'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#13'HLEDAT_PRIKAZ'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_CASTKA'#9'ParamType'#7#9'ptUnk'
+  +'nown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_SKONCENO'#9'ParamT'
+  +'ype'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_ZEMR'
+  +'EL'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#28
+  +'HLEDAT_ZAPLATIL_PRED_PODANIM'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#22'HLEDAT_ZAPLATIL_CASTKA'#9'ParamType'#7#9'ptUnknow'
+  +'n'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'DATUM_IMPORTU'#9'ParamType'#7
+  +#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#8'UZAMCENA'#9'ParamTy'
+  +'pe'#7#9'ptUnknown'#0#0#9'WhereMode'#7#10'wmWhereAll'#4'left'#3#0#1#3'top'#2
+  +#16#9'ParamData'#14#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_VAR_SYM'
+  +'B'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15
+  +'HLEDAT_JMENO_CP'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'
+  +#4'Name'#6#16'HLEDAT_DATUM_CAS'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7
+  +#9'ftUnknown'#4'Name'#6#20'HLEDAT_DLUZNA_CASTKA'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_JIZDNE'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_POKUTA'#9'Par'
+  +'amType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#18'HLEDAT_R'
+  +'ODNE_CISLO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Na'
+  +'me'#6#12'HLEDAT_ULICE'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUn'
+  +'known'#4'Name'#6#17'HLEDAT_CISLO_DOMU'#9'ParamType'#7#9'ptUnknown'#0#1#8'Da'
+  +'taType'#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_MESTO'#9'ParamType'#7#9'ptUnknow'
+  +'n'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_OBVOD'#9'ParamType'#7
+  +#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#10'HLEDAT_PSC'#9'Para'
+  +'mType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#20'HLEDAT_DA'
+  +'TUM_IMPORTU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'N'
+  +'ame'#6#16'HLEDAT_SPLATNOST'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
+  +'ftUnknown'#4'Name'#6#11'HLEDAT_SOUD'#9'ParamType'#7#9'ptUnknown'#0#1#8'Data'
+  +'Type'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_ZALOBA'#9'ParamType'#7#9'ptUnknown'
+  +#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_NAROK'#9'ParamType'#7#9
+  +'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_VS_SOUDU'#9'P'
+  +'aramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT'
+  +'_CU_SOUDU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Nam'
+  +'e'#6#18'HLEDAT_SPIS_ZNACKA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
+  +'ftUnknown'#4'Name'#6#14'HLEDAT_UHR_SOP'#9'ParamType'#7#9'ptUnknown'#0#1#8'D'
+  +'ataType'#7#9'ftUnknown'#4'Name'#6#16'HLEDAT_PL_PRIKAZ'#9'ParamType'#7#9'ptU'
+  +'nknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDAT_ODVOLANI'#9'Para'
+  +'mType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#14'HLEDAT_JE'
+  +'DNANI'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6
+  +#15'HLEDAT_ROZSUDEK'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkno'
+  +'wn'#4'Name'#6#13'HLEDAT_PR_MOC'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'
+  +#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_UHRADA'#9'ParamType'#7#9'ptUnknown'#0#1#8
+  +'DataType'#7#9'ftUnknown'#4'Name'#6#12'HLEDAT_NAVRH'#9'ParamType'#7#9'ptUnkn'
+  ,'own'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_PRIKAZ'#9'ParamType'
+  +#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'HLEDAT_CASTKA'#9
+  +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#15'HLEDA'
+  +'T_SKONCENO'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Na'
+  +'me'#6#13'HLEDAT_ZEMREL'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftU'
+  +'nknown'#4'Name'#6#28'HLEDAT_ZAPLATIL_PRED_PODANIM'#9'ParamType'#7#9'ptUnkno'
+  +'wn'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#22'HLEDAT_ZAPLATIL_CASTKA'#9'P'
+  +'aramType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#13'DATUM_'
+  +'IMPORTU'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +#6#8'UZAMCENA'#9'ParamType'#7#9'ptUnknown'#0#0#0#242#2#0#13'TLongintField'#10
+  +'qrMasterID'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#2'ID'#5'Index'#2#0#11'L'
+  +'ookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'
+  +#8#8'Required'#9#0#0#242#2#1#12'TStringField'#16'qrMasterVAR_SYMB'#9'FieldKi'
+  +'nd'#7#6'fkData'#9'FieldName'#6#8'VAR_SYMB'#5'Index'#2#1#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#4'Size'#3#224#1#0#0#242#2#2#12'TStringField'#16'qrMasterJMENO_CP'#9'FieldKi'
+  +'nd'#7#6'fkData'#9'FieldName'#6#8'JMENO_CP'#5'Index'#2#2#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#4'Size'#3#192#3#0#0#242#2#3#14'TDateTimeField'#17'qrMasterDATUM_CAS'#9'Fiel'
+  +'dKind'#7#6'fkData'#9'FieldName'#6#9'DATUM_CAS'#5'Index'#2#3#11'LookupCache'
+  +#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Requir'
+  +'ed'#8#0#0#242#2#4#11'TFloatField'#21'qrMasterDLUZNA_CASTKA'#9'FieldKind'#7#6
+  +'fkData'#9'FieldName'#6#13'DLUZNA_CASTKA'#5'Index'#2#4#11'LookupCache'#8#13
+  +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
+  +#13'DisplayFormat'#6#14'### ### ##0.00'#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8
   +'MinValue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#12#0#0#242#2#5#11'TFloatFiel'
   +'d'#14'qrMasterJIZDNE'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#6'JIZDNE'#5'I'
   +'ndex'#2#5#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
@@ -620,7 +705,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +'y'#8#8'Required'#8#0#0#242#2#16#14'TDateTimeField'#22'qrMasterDATUM_UZAMCEN'
   +'I'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'DATUM_UZAMCENI'#5'Index'#2#16
   +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
-  +'Only'#8#8'Required'#8#0#0#242#2#17#14'TDateTimeField'#17'qrMasterPL_PRIKAZ'
+  ,'Only'#8#8'Required'#8#0#0#242#2#17#14'TDateTimeField'#17'qrMasterPL_PRIKAZ'
   +#9'FieldKind'#7#6'fkData'#9'FieldName'#6#9'PL_PRIKAZ'#5'Index'#2#17#11'Looku'
   +'pCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8
   +'Required'#8#0#0#242#2#18#11'TFloatField'#14'qrMasterUHRADA'#9'FieldKind'#7#6
@@ -641,7 +726,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +'re'#0#8'ReadOnly'#8#8'Required'#8#8'MaxValue'#5#0#0#0#0#0#0#0#0#0#0#8'MinVa'
   +'lue'#5#0#0#0#0#0#0#0#0#0#0#9'Precision'#2#9#0#0#242#2#23#12'TStringField'#16
   +'qrMasterVS_SOUDU'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'VS_SOUDU'#5'Ind'
-  ,'ex'#2#23#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
+  +'ex'#2#23#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'
   +#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#160#0#0#0#242#2#24#12'TStringField'
   +#16'qrMasterCU_SOUDU'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#8'CU_SOUDU'#5
   +'Index'#2#24#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhe'
@@ -684,7 +769,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +#0#0#242#2'%'#14'TDateTimeField'#14'qrMasterZEMREL'#9'FieldKind'#7#6'fkData'
   +#9'FieldName'#6#6'ZEMREL'#5'Index'#2'%'#11'LookupCache'#8#13'ProviderFlags'
   +#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#242#2'&'#14
-  +'TDateTimeField'#29'qrMasterZAPLATIL_PRED_PODANIM'#9'FieldKind'#7#6'fkData'#9
+  ,'TDateTimeField'#29'qrMasterZAPLATIL_PRED_PODANIM'#9'FieldKind'#7#6'fkData'#9
   +'FieldName'#6#21'ZAPLATIL_PRED_PODANIM'#5'Index'#2'&'#11'LookupCache'#8#13'P'
   +'roviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8#0
   +#0#242#2''''#11'TFloatField'#23'qrMasterZAPLATIL_CASTKA'#9'FieldKind'#7#6'fk'
@@ -705,7 +790,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'Read'
   +'Only'#8#8'Required'#8#0#0#242#2','#14'TSmallintField'#24'qrMasterZPRAVA_PL_'
   +'ROZKAZ'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#16'ZPRAVA_PL_ROZKAZ'#5'Inde'
-  ,'x'#2','#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
+  +'x'#2','#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0
   +#8'ReadOnly'#8#8'Required'#8#0#0#242#2'-'#14'TSmallintField'#26'qrMasterZPRA'
   +'VA_ZAPRACOVANI'#9'FieldKind'#7#6'fkData'#9'FieldName'#6#18'ZPRAVA_ZAPRACOVA'
   +'NI'#5'Index'#2'-'#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'p'
@@ -748,7 +833,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +'ROZSUDEK,'#6#16'PR_MOC =:PR_MOC,'#6#16'UHRADA =:UHRADA,'#6#14'NAVRH =:NAVRH'
   +','#6#16'PRIKAZ =:PRIKAZ,'#6#16'CASTKA =:CASTKA,'#6#20'SKONCENO =:SKONCENO,'
   +#6#28'DATUM_UHRADY =:DATUM_UHRADY,'#6#17'ZEMREL = :ZEMREL,'#6'/ZAPLATIL_PRED'
-  +'_PODANIM = :ZAPLATIL_PRED_PODANIM,'#6'#ZAPLATIL_CASTKA = :ZAPLATIL_CASTKA,'
+  ,'_PODANIM = :ZAPLATIL_PRED_PODANIM,'#6'#ZAPLATIL_CASTKA = :ZAPLATIL_CASTKA,'
   +#6#21'USNESENI = :USNESENI,'#6#20'EXEKUTOR= :EXEKUTOR,'#6#20'VYMOZENO= :VYMO'
   +'ZENO,'#6' SKONCENO_DUVOD= :SKONCENO_DUVOD,'#6#23'INSOLVENCE=:INSOLVENCE,'#6
   +'''SPLATKOVY_KALENDAR=:SPLATKOVY_KALENDAR,'#6#31'USNESENI_DATUM=:USNESENI_DA'
@@ -769,7 +854,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#3'PSC'#9
   +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#7'REF_KO'
   +'D'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#9'S'
-  ,'PLATNOST'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
+  +'PLATNOST'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
   +#6#4'SOUD'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'
   +#6#6'ZALOBA'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Na'
   +'me'#6#5'NAROK'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4
@@ -812,7 +897,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +#192#1#3'top'#3#240#1#0#0#242#2#11#7'TZQuery'#13'qrImportZprav'#10'Connectio'
   +'n'#7#19'DM.OracleConnection'#12'UpdateObject'#7#17'UpdateImportZprav'#11'SQ'
   +'L.Strings'#1#6#27'SELECT * FROM ZALOBY_ZPRAVY'#0#6'Params'#14#0#4'left'#3'P'
-  +#3#0#0#242#2#12#11'TZUpdateSQL'#17'UpdateImportZprav'#17'InsertSQL.Strings'#1
+  ,#3#0#0#242#2#12#11'TZUpdateSQL'#17'UpdateImportZprav'#17'InsertSQL.Strings'#1
   +#6#12' INSERT INTO'#6'lZALOBY_ZPRAVY(REF_KOD,DATUM_STAZENI,ID,TYP_ZPRAVY,PRE'
   +'DMET,DATUM_ODESLANI,ODESILATEL,ID_ZPRAVY,UCET,VAR_SYMB,'#6'X  PODANI_DORUCE'
   +'NE_DATUM,BEZNE_CISLO,PODANI_OVERENO_DATUM,ZASLANYCH_PRILOH,ZPUSOB_PODANI,'#6
@@ -833,7 +918,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +'me'#6#9'ID_ZPRAVY'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknow'
   +'n'#4'Name'#6#4'UCET'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnkn'
   +'own'#4'Name'#6#8'VAR_SYMB'#9'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9
-  ,'ftUnknown'#4'Name'#6#21'PODANI_DORUCENE_DATUM'#9'ParamType'#7#9'ptUnknown'#0
+  +'ftUnknown'#4'Name'#6#21'PODANI_DORUCENE_DATUM'#9'ParamType'#7#9'ptUnknown'#0
   +#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#11'BEZNE_CISLO'#9'ParamType'#7#9'ptU'
   +'nknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#20'PODANI_OVERENO_DATUM'#9
   +'ParamType'#7#9'ptUnknown'#0#1#8'DataType'#7#9'ftUnknown'#4'Name'#6#16'ZASLA'
@@ -876,7 +961,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +#12'DisplayWidth'#2#5#9'FieldKind'#7#6'fkData'#9'FieldName'#6#10'TYP_ZPRAVY'
   +#5'Index'#2#3#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWh'
   +'ere'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#2'x'#0#0#10'TDateField'#22'qrZpr'
-  +'avyDATUM_ODESLANI'#12'DisplayLabel'#6#16'Datum odesl'#195#161'n'#195#173#12
+  ,'avyDATUM_ODESLANI'#12'DisplayLabel'#6#16'Datum odesl'#195#161'n'#195#173#12
   +'DisplayWidth'#2#10#9'FieldKind'#7#6'fkData'#9'FieldName'#6#14'DATUM_ODESLAN'
   +'I'#5'Index'#2#4#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfI'
   +'nWhere'#0#8'ReadOnly'#8#8'Required'#8#0#0#12'TStringField'#12'qrZpravyUCET'
@@ -897,7 +982,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +'ata'#9'FieldName'#6#20'PODANI_OVERENO_DATUM'#5'Index'#2#8#11'LookupCache'#8
   +#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'
   +#8#4'Size'#2'x'#0#0#12'TStringField'#21'qrZpravyKE_ZPRACOVANI'#12'DisplayLab'
-  ,'el'#6#15'Ke zpracov'#195#161'n'#195#173#12'DisplayWidth'#2#5#9'FieldKind'#7
+  +'el'#6#15'Ke zpracov'#195#161'n'#195#173#12'DisplayWidth'#2#5#9'FieldKind'#7
   +#6'fkData'#9'FieldName'#6#13'KE_ZPRACOVANI'#5'Index'#2#9#11'LookupCache'#8#13
   +'ProviderFlags'#11#10'pfInUpdate'#9'pfInWhere'#0#8'ReadOnly'#8#8'Required'#8
   +#4'Size'#2'x'#0#0#14'TSmallintField'#24'qrZpravyZASLANYCH_PRILOH'#12'Display'
@@ -940,7 +1025,7 @@ LazarusResources.Add('TfrmZaloby','FORMDATA',[
   +#5'Index'#2#19#11'LookupCache'#8#13'ProviderFlags'#11#10'pfInUpdate'#9'pfInW'
   +'here'#0#8'ReadOnly'#8#8'Required'#8#4'Size'#3#240#0#0#0#0#242#2#15#11'TZUpd'
   +'ateSQL'#12'UpdateZpravy'#29'UseSequenceFieldForRefreshSQL'#8#4'left'#3'`'#1
-  +#3'top'#3#232#1#0#0#242#2#16#15'TZReadOnlyQuery'#8'qrDatumy'#10'Connection'#7
+  ,#3'top'#3#232#1#0#0#242#2#16#15'TZReadOnlyQuery'#8'qrDatumy'#10'Connection'#7
   +#19'DM.OracleConnection'#11'SQL.Strings'#1#6#7'SELECT '#6'#  DISTINCT(DATUM_'
   +'IMPORTU) AS DATUM '#6#5'FROM '#6#9'  ZALOBY '#6#6'WHERE '#6#20'  NVL(UZAMCE'
   +'NA,0)=0 '#6'W  AND (GET_ZOBRAZIT_DAVKU(DATUM_IMPORTU) = 1 OR GET_ZOBRAZIT_D'

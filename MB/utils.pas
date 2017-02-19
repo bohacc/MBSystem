@@ -1711,6 +1711,8 @@ begin
                        ':KE_ZPRACOVANI,'+
                        ':TELO'+
                        ')';
+          qt.ParamCheck:=false;
+          qt.ParamCheck:=true;
           qt.ParamByName('REF_KOD').DataType:=ftString;
           qt.ParamByName('REF_KOD').AsString:=ref_kod;
           qt.ParamByName('DATUM_STAZENI').DataType:=ftString;
@@ -1764,6 +1766,8 @@ begin
         if Length(_list_telo.Text) > 0 then
         begin
           qt.SQL.Text := 'UPDATE '+tbl+' SET TELO = :TELO WHERE ID = :ID';
+          qt.ParamCheck:=false;
+          qt.ParamCheck:=true;
           qt.ParamByName('ID').DataType:=ftInteger;
           qt.ParamByName('ID').AsInteger:=StrToInt(id);
           qt.ParamByName('TELO').DataType:=ftOraClob;
@@ -2072,6 +2076,8 @@ begin
                        vice_sql+
                        ':EXEKUCNI_PRIKAZ'+
                        ')';
+        qt.ParamCheck:=false;
+        qt.ParamCheck:=true;
         qt.ParamByName('ID').DataType:=ftString;
         qt.ParamByName('ID').AsString:=id;
         qt.ParamByName('VAR_SYMB').DataType:=ftString;

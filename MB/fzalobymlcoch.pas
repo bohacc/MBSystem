@@ -458,10 +458,17 @@ begin
   end;}
 
     qrMaster.Close;
+    qrMaster.ParamCheck:=false;
+    qrMaster.ParamCheck:=true;
     if cbDatumy.ItemIndex=0 then
-      qrMaster.ParamByName('DATUM_IMPORTU').AsString:=''
+    begin
+      qrMaster.ParamByName('DATUM_IMPORTU').Clear;
+    end
     else
+    begin
+      qrMaster.ParamByName('DATUM_IMPORTU').DataType := ftDate;
       qrMaster.ParamByName('DATUM_IMPORTU').AsDate:=StrToDate(cbDatumy.text);
+    end;
     qrMaster.Open;
 
 end;
@@ -2461,12 +2468,15 @@ var
   sql_puv: string;
 begin
   qrMaster.Close;
+  qrMaster.ParamCheck:=false;
+  qrMaster.ParamCheck:=true;
+  qrMaster.ParamByName('UZAMCENA').DataType := ftSmallInt;
   if RadioGroup1.ItemIndex=2 then
-    qrMaster.ParamByName('UZAMCENA').AsInteger:=0;
+    qrMaster.ParamByName('UZAMCENA').AsSmallInt:=0;
   if RadioGroup1.ItemIndex=1 then
-    qrMaster.ParamByName('UZAMCENA').AsInteger:=1;
+    qrMaster.ParamByName('UZAMCENA').AsSmallInt:=1;
   if RadioGroup1.ItemIndex=0 then
-    qrMaster.ParamByName('UZAMCENA').AsInteger:=2;
+    qrMaster.ParamByName('UZAMCENA').AsSmallInt:=2;
   qrMaster.Open;
 {
   try

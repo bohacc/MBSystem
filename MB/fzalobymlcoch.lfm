@@ -10,7 +10,6 @@
   OnActivate = FormActivate
   OnCreate = FormCreate
   inherited StatusBar1: TStatusBar
-    Height = 29
     Top = 699
     Width = 1071
   end

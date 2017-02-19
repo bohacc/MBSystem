@@ -434,73 +434,12 @@ var
   sql_puv,sql,aWhere,aSelect,aOrder,aDatum,aFrom: String;
   delka_datum : Integer;
 begin
-{  sql_puv:=qrMaster.SQL.Text;
-  sql:=qrMaster.SQL.Text;
-  if pos('ORDER',UpperCase(sql))>0 then
-    aOrder:=copy(sql,pos('ORDER',UpperCase(sql)),length(sql)-pos('ORDER',UpperCase(sql)));
-  if pos('WHERE',UpperCase(sql))>0 then
-    if length(aOrder)>0 then
-      aWhere:=copy(sql,pos('WHERE',UpperCase(sql)),pos('ORDER',copy(sql,pos('WHERE',UpperCase(sql)),length(sql)-pos('WHERE',UpperCase(sql))))-1)
-    else
-      aWhere:=copy(sql,pos('WHERE',UpperCase(sql)),length(sql)-pos('WHERE',UpperCase(sql)));
-  if pos('FROM',UpperCase(sql))>0 then
-    aSelect:=copy(sql,1,pos('FROM',UpperCase(sql))-1)
-  else
-    aSelect:='SELECT NULL AS ERROR';
-  if length(aWhere)>0 then
-  begin
-    aFrom:=copy(sql,pos('FROM',UpperCase(sql)),pos('WHERE',UpperCase(sql))-1-length(aSelect));
-  end
-  else
-    if length(aOrder)>0 then
-      aFrom:=copy(sql,pos('FROM',UpperCase(sql)),pos('ORDER',UpperCase(sql))-1-length(aSelect))
-    else
-      aFrom:=copy(sql,pos('FROM',UpperCase(sql)),length(sql)-pos('FROM',UpperCase(sql)));
-
-  // -- doplneni datumu
-  if (pos('DATUM_IMPORTU',UpperCase(aWhere))>0) and (cbDatumy.Text<>'Všechny') then
-  begin
-    delka_datum:=pos('AND',UpperCase(copy(aWhere,pos('DATUM_IMPORTU',UpperCase(aWhere)),length(aWhere)-pos('DATUM_IMPORTU',UpperCase(aWhere)))));
-    if delka_datum>0 then
-      aDatum:=trim(copy(aWhere,pos('DATUM_IMPORTU',UpperCase(aWhere)),delka_datum-1));
-    if length(aDatum)=0 then
-    begin
-      delka_datum:=pos('ORDER',UpperCase(aWhere));
-      if delka_datum>0 then
-        aDatum:=trim(copy(aWhere,pos('DATUM_IMPORTU',UpperCase(aWhere)),delka_datum-1));
-    end;
-    if length(aDatum)=0 then
-      aDatum:=copy(aWhere,pos('DATUM_IMPORTU',aWhere),length(aWhere)-pos('DATUM_IMPORTU',aWhere));
-  end;
-  if (length(aDatum)>0) then
-    if cbDatumy.Text<>'' then
-      aWhere:=Replace_string(aWhere,aDatum,'DATUM_IMPORTU=TO_DATE('''+cbDatumy.Text+''') ')
-  else
-    if cbDatumy.Text<>'' then
-      if length(aWhere)>0 then
-        aWhere:=aWhere+' AND DATUM_IMPORTU=TO_DATE('''+cbDatumy.Text+''')'
-      else
-        aWhere:=aWhere+'WHERE DATUM_IMPORTU=TO_DATE('''+cbDatumy.Text+''')';
-
-  if cbDatumy.Text<>'' then
-  begin
-    sql:=Trim(aSelect)+' '+aFrom+' '+Trim(aWhere)+' '+Trim(aOrder);
-    qrMaster.Close;
-    qrMaster.SQL.Text:=sql;
-    qrMaster.Open;
-    //ShowMessage(aSelect);
-    //ShowMessage(aWhere);
-    //ShowMessage(aOrder);
-    //ShowMessage(aFrom);
-    //ShowMessage(sql);
-  end;}
-
     qrMaster.Close;
     qrMaster.ParamCheck:=false;
     qrMaster.ParamCheck:=true;
     if cbDatumy.ItemIndex=0 then
     begin
-      qrMaster.ParamByName('DATUM_IMPORTU').Clear
+      qrMaster.ParamByName('DATUM_IMPORTU').Clear;
     end
     else
     begin

@@ -444,6 +444,8 @@ begin
                     qt:=TZQuery.Create(nil);
                     qt.Connection:=DM.OracleConnection;
                     qt.SQL.Add('UPDATE ZALOBY_ZPRAVY SET TELO = :TELO WHERE ID = :ID');
+                    qt.ParamCheck:=false;
+                    qt.ParamCheck:=true;
                     qt.ParamByName('ID').DataType:=ftInteger;
                     qt.ParamByName('ID').AsInteger:=id;
                     qt.ParamByName('TELO').DataType:=ftOraClob;

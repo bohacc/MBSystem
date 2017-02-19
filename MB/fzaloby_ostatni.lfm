@@ -12,7 +12,6 @@
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   inherited StatusBar1: TStatusBar
-    Height = 29
     Top = 649
     Width = 1065
   end

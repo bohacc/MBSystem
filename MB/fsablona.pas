@@ -366,15 +366,19 @@ try
   //qrMaster.DisableControls;
   sql_puv:=sql_dotaz;
   qrMaster.Close;
+  qrMaster.ParamCheck:=false;
+  qrMaster.ParamCheck:=true;
   for i:=0 to qrMaster.Params.Count-1 do
   begin
     if copy(qrMaster.Params.Items[i].Name,1,7)='HLEDAT_' then
     begin
        qrMaster.Params.Items[i].DataType := ftMemo;
-       qrMaster.Params.Items[i].ParamType := ptinput;
+       //qrMaster.Params.Items[i].ParamType := ptinput;
        qrMaster.Params.Items[i].AsString := s;
     end;
   end;
+  qrMaster.ParamByName('UZAMCENA').DataType := ftSmallInt;
+  qrMaster.ParamByName('DATUM_IMPORTU').DataType := ftDate;
   qrMaster.Open;
   {
   qrMaster.Open;
